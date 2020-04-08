@@ -1,0 +1,146 @@
+@font-face {
+  font-family: 'fontawesome';
+  src:  url('../webfonts/fontawesome.eot?m879jw');
+  src:  url('../webfonts/fontawesome.eot?m879jw#iefix') format('embedded-opentype'),
+    url('../webfonts/fontawesome.ttf?m879jw') format('truetype'),
+    url('../webfonts/fontawesome.woff?m879jw') format('woff'),
+    url('../webfonts/fontawesome.svg?m879jw#fontawesome') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+.fa,
+.fas,
+.far,
+.fal,
+.fab{
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'fontawesome' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.fa-search:before {
+  content: "\f002";
+}
+.fa-envelope:before {
+  content: "\f003";
+}
+.fa-th:before {
+  content: "\f00a";
+}
+.fa-list:before {
+  content: "\f00b";
+}
+.fa-tags:before {
+  content: "\f02c";
+}
+.fa-edit:before {
+  content: "\f044";
+}
+
+.fa-arrow-up:before {
+  content: "\f062";
+}
+.fa-calendar-alt:before {
+  content: "\f073";
+}
+.fa-shopping-cart:before {
+  content: "\f07a";
+}
+.fa-twitter:before {
+  content: "\f099";
+}
+.fa-facebook:before {
+  content: "\f09a";
+}
+.fa-facebook-f:before {
+  content: "\f09a";
+}
+.fa-pinterest:before {
+  content: "\f0d2";
+}
+.fa-google-plus:before {
+  content: "\f0d5";
+}
+.fa-linkedin-in:before {
+  content: "\f0e1";
+}
+.fa-comment-alt:before {
+  content: "\f0e5";
+}
+.fa-angle-up:before {
+  content: "\f106";
+}
+.fa-angle-down:before {
+  content: "\f107";
+}
+.fa-phone:before {
+  content: "\f095";
+}
+.fa-mobile:before {
+  content: "\f10b";
+}
+.fa-mobile-phone:before {
+  content: "\f10b";
+}
+.fa-youtube-play:before {
+  content: "\f16a";
+}
+.fa-dropbox:before {
+  content: "\f16b";
+}
+.fa-stack-overflow:before {
+  content: "\f16c";
+}
+.fa-instagram:before {
+  content: "\f16d";
+}
+.fa-tumblr:before {
+  content: "\f173";
+}
+.fa-long-arrow-up:before {
+  content: "\f176";
+}
+.fa-dribbble:before {
+  content: "\f17d";
+}
+.fa-skype:before {
+  content: "\f17e";
+}
+.fa-slack:before {
+  content: "\f198";
+}
+.fa-soundcloud:before {
+  content: "\f1be";
+}
+.fa-pinterest-p:before {
+  content: "\f231";
+}
+.fa-map:before {
+  content: "\f278";
+}
+.fa-user:before {
+  content: "\f2c0";
+}
+.fa-bars:before {
+  content: "\f0c9";
+}
+.fa-times:before {
+  content: "\f00d";
+}
+.fa-arrow-left:before {
+  content: "\f060";
+}
+.fa-arrow-right:before {
+  content: "\f061";
+}
