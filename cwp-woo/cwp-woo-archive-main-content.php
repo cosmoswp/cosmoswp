@@ -20,8 +20,8 @@ $woo_archive_default_view = cosmoswp_get_theme_options('cwc-archive-default-view
                     if ($woo_archive_show_grid_list) {
                         ?>
                         <div class="cwp-woo-view-switcher">
-                            <span class="fas fa-th <?php echo 'grid' == $woo_archive_default_view ? 'active' : '' ?>"></span>
-                            <span class="fas fa-list <?php echo 'list' == $woo_archive_default_view ? 'active' : '' ?>"></span>
+                            <span class="cwp-trigger-grid <?php echo esc_attr(cosmoswp_get_correct_fa_font('fas fa-th'));?> <?php echo 'grid' == $woo_archive_default_view ? 'active' : '' ?>"></span>
+                            <span class="cwp-trigger-list <?php echo esc_attr(cosmoswp_get_correct_fa_font('fas fa-list'));?> <?php echo 'list' == $woo_archive_default_view ? 'active' : '' ?>"></span>
                         </div>
                         <?php
                     }

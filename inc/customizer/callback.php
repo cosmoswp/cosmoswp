@@ -1920,29 +1920,6 @@ if (!function_exists('cosmoswp_enable_overlay_active')) :
     }
 endif;
 
-if (!function_exists('cosmoswp_overlay_color_active')) :
-
-    /**
-     * Overlay color callback
-     *
-     * @since cosmoswp 1.0.0
-     *
-     * @param null
-     * @return boolean
-     *
-     */
-    /*active callback function for banner section for overlay set */
-    function cosmoswp_overlay_color_active() {
-        $enable_overlay         = cosmoswp_get_theme_options('enable-banner-overlay-color');
-        $banner_section_display = cosmoswp_get_theme_options('banner-section-display');
-        $overlay_not_display    = array('hide', 'color');
-        if ((!in_array($banner_section_display, $overlay_not_display)) && $enable_overlay == true) {
-            return true;
-        }
-        return false;
-    }
-endif;
-
 if (!function_exists('cosmoswp_banner_height_activecallback')) :
 
     /**

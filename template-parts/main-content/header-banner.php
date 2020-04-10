@@ -17,7 +17,7 @@ $breadcrumb_after_banner  = cosmoswp_get_theme_options('breadcrumb-after-banner-
 $banner_title_align       = cosmoswp_get_theme_options('banner-section-title-align');
 $banner_content_position  = cosmoswp_get_theme_options('banner-section-content-position');
 $banner_display_option    = cosmoswp_get_theme_options('banner-section-display');
-$enable_banner            = (cosmoswp_get_theme_options('enable-banner-overlay-color')) ? 'cwp-enable-overlay' : '';
+$enable_banner            = 'color' != $banner_display_option && cosmoswp_get_theme_options('enable-banner-overlay-color') ? 'cwp-enable-overlay' : '';
 $banner_image_url         = apply_filters('cosmoswp_banner_image',get_header_image()  );
 if ('bg-image' == $banner_display_option) {
     $bg_image = 'style=background-image:url("' . esc_url($banner_image_url) . '");';

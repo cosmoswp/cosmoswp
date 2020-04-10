@@ -768,7 +768,7 @@ if (!class_exists('CosmosWP_Edd_Advanced_Styling')) :
                 $edd_dynamic_css['all'] .= $edd_success_message_dynamic_css;
             }
 
-            /*Image Width color*/
+            /*Edd Archive List media width*/
             $edd_list_image_width    = cosmoswp_get_theme_options('edd-archive-list-media-width');
             $edd_list_image_width    = json_decode($edd_list_image_width, true);
             $image_width_desktop_css = $edd_list_image_width['desktop'] . '%';

@@ -8,7 +8,7 @@ $dd_search_placeholder = ($dd_search_placeholder) ? $dd_search_placeholder : '';
 <div class="search cwp-search-dropdown <?php echo esc_attr($dd_search_icon_align); ?>">
 
 	<a id="search-icon" class="search-icon" href="#">
-		<i class="fas fa-search"></i>
+		<i class="<?php echo esc_attr(cosmoswp_get_correct_fa_font('fas fa-search'));?>"></i>
 	</a>
 
     <div class="cwp-search-form-wrapper" id="cwp-dropdown-search-form-wrapper">
@@ -17,7 +17,7 @@ $dd_search_placeholder = ($dd_search_placeholder) ? $dd_search_placeholder : '';
                    placeholder="<?php echo esc_attr($dd_search_placeholder); ?>"
                    value="<?php echo get_search_query(); ?>">
             <button class="search-submit" type="submit">
-                <i class="fas fa-search"></i>
+                <i class="<?php echo esc_attr(cosmoswp_get_correct_fa_font('fas fa-search'));?>"></i>
             </button>
         </form>
     </div>

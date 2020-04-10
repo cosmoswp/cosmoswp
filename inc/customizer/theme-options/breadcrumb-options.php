@@ -19,7 +19,7 @@ $choices = cosmoswp_breadcrumb_options();
 $wp_customize->add_control('cosmoswp-breadcrumb-options', array(
     'choices'     => $choices,
     'label'       => esc_html__('Breadcrumb Options', 'cosmoswp'),
-    'description' => sprintf('Use any one of the plugin for Breadcrumb. %sBreadcrumb NavXT%s or %sYoast SEO%s', '<a href="https://wordpress.org/plugins/breadcrumb-navxt/" target="_blank">', '</a>', '<a href="https://wordpress.org/plugins/wordpress-seo/" target="_blank">', '</a>'),
+    'description' => sprintf('Use any one of the plugin for Breadcrumb. %sBreadcrumb NavXT%s or %sYoast SEO%s or %sRank Math%s', '<a href="https://wordpress.org/plugins/breadcrumb-navxt/" target="_blank">', '</a>', '<a href="https://wordpress.org/plugins/wordpress-seo/" target="_blank">', '</a>', '<a href="https://wordpress.org/plugins/seo-by-rank-math/" target="_blank">', '</a>'),
     'section'     => $this->breadcrumb_options,
     'settings'    => 'cosmoswp-breadcrumb-options',
     'type'        => 'select'

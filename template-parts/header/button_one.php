@@ -19,8 +19,7 @@ if ($enable_icon) {
         $icon_spacer          = cosmoswp_get_icon_postion_class($button_icon_position);
     }
     else {
-
-        $button_one_structure = wp_kses_post('<i class="' . esc_attr($button_icon) . '"></i>');
+        $button_one_structure = wp_kses_post('<i class="' . esc_attr(cosmoswp_get_correct_fa_font($button_icon)) . '"></i>');
     }
 }
 else {

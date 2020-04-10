@@ -949,6 +949,24 @@
 
             wp.customize.control( 'cosmoswp-banner-height', BannerSectionHeightCondition );
         } );
+        wp.customize( 'enable-banner-overlay-color', function( setting ) {
+            let BannerSectionOverlayActive = function( control ) {
+                let setActiveState, isDisplayed;
+                isDisplayed = function() {
+                    let bannerSectionDisplay = wp.customize.value( 'banner-section-display' )();
+                    if( $.inArray( bannerSectionDisplay, overlay_not_display) === -1 && setting.get()) {
+                        return true;
+                    }
+                    return false;
+                };
+                setActiveState = function() {
+                    control.active.set( isDisplayed() );
+                };
+                setActiveState();
+                setting.bind( setActiveState );
+            };
+            wp.customize.control( 'banner-overlay-color', BannerSectionOverlayActive );
+        });
 
         customize_theme_controls.on('change', '#_customize-input-banner-section-display, #_customize-input-single-banner-section-title',function(e){
             e.preventDefault();

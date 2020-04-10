@@ -5,7 +5,7 @@ Tags: blog, e-commerce, portfolio, grid-layout, one-column	, two-columns, three-
 Requires at least: 5.0
 Tested up to: 5.4
 Requires PHP: 5.6
-Stable tag: 1.0.8
+Stable tag: 1.0.9
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -70,6 +70,18 @@ https://fontawesome.com/icons
 
 
 == Changelog ==
+
+= 1.0.9 - 2020-04-10 =
+* Added : Typography cache
+* Added : WooCommerce zoom, gallery, slider support
+* Added : Rank Math breadcrumb
+* Fixed : Site identity responsive
+* Fixed : Banner-overlay-color
+* Fixed : Customizer color picker design
+* Fixed : WooCommerce single product width
+* Fixed : EDD single download width
+* Fixed : Icon issue with some plugins
+* Fixed : Minor CSS
 
 = 1.0.8 - 2020-04-03 =
 * Fixed : WooCommerce Header Cart

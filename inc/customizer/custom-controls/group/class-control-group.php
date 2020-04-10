@@ -169,7 +169,7 @@ if ( class_exists( 'WP_Customize_Control' ) && ! class_exists( 'CosmosWP_Custom_
 									break;
 
 								case 'color':
-									echo '<div class="customize-control-alpha-color" data-color-single-name="' . esc_attr( $key ) . '"><input class="alpha-color-control" data-default-color="' . esc_attr( $default ) . '" data-default="' . esc_attr( $default ) . '" data-single-name="' . esc_attr( $key ) . '" type="text" value="' . esc_attr( $new_value ) . '"/></div>';
+									echo '<div class="customize-control-alpha-color" data-color-single-name="' . esc_attr( $key ) . '"><input class="cwp-alpha-color-control" data-default-color="' . esc_attr( $default ) . '" data-default="' . esc_attr( $default ) . '" data-single-name="' . esc_attr( $key ) . '" type="text" value="' . esc_attr( $new_value ) . '"/></div>';
 									break;
 
 								case 'text':

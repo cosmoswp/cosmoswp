@@ -2,46 +2,59 @@
 if (!defined('ABSPATH')) {
     exit;
 }
+if (!function_exists('cosmoswp_get_fa_both_icons')){
+    function cosmoswp_get_fa_both_icons(){
+        $fa_icon_list       = array(
+            'fas fa-search'         =>'cwp-fas cwp-fa-search',
+            'fas fa-envelope'       =>'cwp-fas cwp-fa-envelope',
+            'fas fa-th'             =>'cwp-fas cwp-fa-th',
+            'fas fa-list'           =>'cwp-fas cwp-fa-list',
+            'fas fa-tags'           =>'cwp-fas cwp-fa-tags',
+            'fas fa-edit'           =>'cwp-fas cwp-fa-edit',
+            'fas fa-arrow-up'       =>'cwp-fas cwp-fa-arrow-up',
+            'fas fa-calendar-alt'   =>'cwp-fas cwp-fa-calendar-alt',
+            'fas fa-shopping-cart'  =>'cwp-fas cwp-fa-shopping-cart',
+            'fas fa-comment-alt'    =>'cwp-fas cwp-fa-comment-alt',
+            'fas fa-map'            =>'cwp-fas cwp-fa-map',
+            'fas fa-user'           =>'cwp-fas cwp-fa-user',
+            'fas fa-angle-up'       =>'cwp-fas cwp-fa-angle-up',
+            'fas fa-angle-down'     =>'cwp-fas cwp-fa-angle-down',
+            'fas fa-phone'          =>'cwp-fas cwp-fa-phone',
+            'fas fa-mobile'         =>'cwp-fas cwp-fa-mobile',
+            'fa fa-long-arrow-up'   =>'cwp-fa cwp-fa-long-arrow-up',
+            'fab fa-twitter'        =>'cwp-fab cwp-fa-twitter',
+            'fab fa-facebook-f'     =>'cwp-fab cwp-fa-facebook-f',
+            'fab fa-google-plus'    =>'cwp-fab cwp-fa-google-plus',
+            'fab fa-linkedin-in'    =>'cwp-fab cwp-fa-linkedin-in',
+            'fab fa-youtube-play'   =>'cwp-fab cwp-fa-youtube-play',
+            'fab fa-dropbox'        =>'cwp-fab cwp-fa-dropbox',
+            'fab fa-stack-overflow' =>'cwp-fab cwp-fa-stack-overflow',
+            'fab fa-instagram'      =>'cwp-fab cwp-fa-instagram',
+            'fab fa-tumblr'         =>'cwp-fab cwp-fa-tumblr',
+            'fab fa-dribbble'       =>'cwp-fab cwp-fa-dribbble',
+            'fab fa-skype'          =>'cwp-fab cwp-fa-skype',
+            'fab fa-slack'          =>'cwp-fab cwp-fa-slack',
+            'fab fa-soundcloud'     =>'cwp-fab cwp-fa-soundcloud',
+            'fab fa-pinterest-p'    =>'cwp-fab cwp-fa-pinterest-p',
+            'fas fa-bars'           =>'cwp-fas cwp-fa-bars',
+            'fas fa-times'          =>'cwp-fas cwp-fa-times',
+            'fas fa-arrow-left'     =>'cwp-fas cwp-fa-arrow-left',
+            'fas fa-arrow-right'    =>'cwp-fas cwp-fa-arrow-right',
+            'far fa-calendar-alt'   =>'cwp-far cwp-fa-calendar-alt',
+            'far fa-user'           =>'cwp-far cwp-fa-user',
+            'far fa-comment-alt'    =>'cwp-far cwp-fa-comment-alt',
+            'far fa-edit'           =>'cwp-far cwp-fa-edit',
+            'far fa-envelope'       =>'cwp-far cwp-fa-envelope',
+        );
+        return $fa_icon_list;
+
+    }
+
+}
 
 if (!function_exists('cosmoswp_icons_array')) {
     function cosmoswp_icons_array(){
-        $fa_icon_list       = array(
-            'fas fa-search'         =>'f2b9',
-            'fas fa-envelope'       =>'f0e0',
-            'fas fa-th'             =>'f00a',
-            'fas fa-list'           =>'f03a',
-            'fas fa-tags'           =>'f02c',
-            'fas fa-edit'           =>'f044',
-            'fas fa-arrow-up'       =>'f062',
-            'fas fa-calendar-alt'   =>'f073',
-            'fas fa-shopping-cart'  =>'f07a',
-            'fas fa-comment-alt'    =>'f0e5',
-            'fas fa-map'            =>'f278',
-            'fas fa-user'           =>'f2c0',
-            'fas fa-angle-up'       =>'f106',
-            'fas fa-angle-down'     =>'f107',
-            'fas fa-phone'          =>'f095',
-            'fas fa-mobile'         =>'f10b',
-            'fa fa-long-arrow-up'   =>'f176',
-            'fab fa-twitter'        =>'f099',
-            'fab fa-facebook-f'     =>'f09a',
-            'fab fa-google-plus'    =>'f0d5',
-            'fab fa-linkedin-in'    =>'f0e1',
-            'fab fa-youtube-play'   =>'f16a',
-            'fab fa-dropbox'        =>'f16b',
-            'fab fa-stack-overflow' =>'f16c',
-            'fab fa-instagram'      =>'f16d',
-            'fab fa-tumblr'         =>'f173',
-            'fab fa-dribbble'       =>'f17d',
-            'fab fa-skype'          =>'f17e',
-            'fab fa-slack'          =>'f198',
-            'fab fa-soundcloud'     =>'f1be',
-            'fab fa-pinterest-p'    =>'f231',
-            'fas fa-bars'           =>'f0c9',
-            'fas fa-times'          =>'f00d',
-            'fas arrow-left'        =>'f060',
-            'fas arrow-right'       =>'f061',
-        );
+        $fa_icon_list       = cosmoswp_get_fa_both_icons();
         $fa_icon_list_array = array_keys($fa_icon_list);
         return apply_filters('cosmoswp_icons_array', $fa_icon_list_array );
     }
@@ -1173,6 +1186,28 @@ if (!function_exists('cosmoswp_add_icons_array')) {
         );
         $fa_icon_list_array = array_keys($fa_icon_list);
         return $fa_icon_list_array;
+    }
+}
+
+if (!function_exists('cosmoswp_get_correct_fa_font')) {
+
+    /**
+     * @since 1.0.9
+     *
+     * Get fontawesome icon for if Gutentor installed or not
+     *
+     * @param (string) $fa_icon
+     * @return  (string) $fa_icon
+     */
+    function cosmoswp_get_correct_fa_font($fa_icon) {
+
+        if (!defined('GUTENTOR_URL')) {
+            $fa_icon_array =  cosmoswp_get_fa_both_icons();
+            if( isset($fa_icon_array[$fa_icon])){
+                $fa_icon = $fa_icon_array[$fa_icon];
+            }
+        }
+        return $fa_icon;
     }
 }
 

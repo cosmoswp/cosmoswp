@@ -2,36 +2,6 @@
 if (!defined('ABSPATH')) {
     exit;
 }
-
-
-if (!function_exists('cosmoswp_breadcrumb_options')):
-
-    /**
-     * Add in action hook breadcrumb hook
-     * @return void
-     */
-    function cosmoswp_breadcrumb_options() {
-        if (!is_front_page()) {
-            if (function_exists('yoast_breadcrumb') && 'yoast' == $breadcrumb_options) {
-                echo "<div class='breadcrumbs init-animate'><div id='cwp-breadcrumbs' class='cwp-breadcrumbs'>";
-                yoast_breadcrumb();
-                echo "</div></div>";
-            } else if (function_exists('bcn_display') && 'bcn' == $breadcrumb_options) {
-                echo "<div class='breadcrumbs init-animate'><div id='cwp-breadcrumbs' class='cwp-breadcrumbs'>";
-                bcn_display();
-                echo "</div></div>";
-            } else if (class_exists('WooCommerce') && 'woocommerce' == $breadcrumb_options) {
-                echo "<div class='breadcrumbs init-animate'><div id='cwp-breadcrumbs' class='cwp-breadcrumbs'>";
-                woocommerce_breadcrumb();
-                echo "</div></div>";
-            }
-        }
-    }
-
-endif;
-
-
-
 if (!function_exists('cosmoswp_breadcrumb_structure')):
 
     /**
@@ -49,7 +19,13 @@ if (!function_exists('cosmoswp_breadcrumb_structure')):
                     echo "<div class='breadcrumbs init-animate'><div id='cwp-breadcrumbs' class='cwp-breadcrumbs'>";
                     yoast_breadcrumb();
                     echo "</div></div>";
-                } else if (function_exists('bcn_display') && 'bcn' == $breadcrumb_options) {
+                }
+                else if (function_exists('rank_math') && 'rank-math' == $breadcrumb_options && rank_math()->settings->get( 'general.breadcrumbs' )) {
+                    echo "<div class='breadcrumbs init-animate'><div id='cwp-breadcrumbs' class='cwp-breadcrumbs'>";
+                    rank_math_the_breadcrumbs();
+                    echo "</div></div>";
+                }
+                else if (function_exists('bcn_display') && 'bcn' == $breadcrumb_options) {
                     echo "<div class='breadcrumbs init-animate'><div id='cwp-breadcrumbs' class='cwp-breadcrumbs'>";
                     bcn_display();
                     echo "</div></div>";

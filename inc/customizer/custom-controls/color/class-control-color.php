@@ -96,7 +96,7 @@ class CosmosWP_Custom_Control_Color extends WP_Customize_Control {
 				<span class="description customize-control-description">{{{ data.description }}}</span>
 			<# } #>
 			<div>
-				<input class="alpha-color-control" type="text"  value="{{ data.value }}" data-show-opacity="{{ data.show_opacity }}" data-default-color="{{ data.default }}" {{{ data.link }}} />
+				<input class="cwp-alpha-color-control" type="text" value="{{ data.value }}" data-show-opacity="{{ data.show_opacity }}" data-default-color="{{ data.default }}" {{{ data.link }}} />
 			</div>
 		</label>
 		<?php

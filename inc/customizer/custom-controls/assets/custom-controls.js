@@ -149,9 +149,9 @@ function acp_update_alpha_value_on_alpha_slider( alpha, $alphaSlider ) {
 	$alphaSlider.find( '.ui-slider-handle' ).text( alpha.toString() );
 }
 
-function alpha_color_control( wrap, $ ){
+function cwp_alpha_color_control( wrap, $ ){
     // Loop over each control and transform it into our color picker.
-    wrap.find( '.alpha-color-control' ).each( function() {
+    wrap.find( '.cwp-alpha-color-control' ).each( function() {
 
         // Scope the vars.
         var $control, startingColor, showOpacity, defaultColor, colorPickerOptions,
@@ -315,7 +315,7 @@ function alpha_color_control( wrap, $ ){
  * Initialization trigger.
  */
 jQuery( document ).ready( function( $ ) {
-    alpha_color_control( $('body'), $ );
+    cwp_alpha_color_control( $('body'), $ );
 });
 
 
@@ -1362,12 +1362,13 @@ jQuery(document).ready( function($) {
     customize_theme_controls.on('click', '.customize-icons .single-icon', function() {
         var single_icon = $(this),
             cwp_customize_icons = single_icon.closest( '.customize-icons' ),
-            icon_value = single_icon.children('i').attr('class');
+            icon_value = single_icon.children('i').attr('data-class'),
+            icon_class = single_icon.children('i').attr('class');
 
         single_icon.siblings().removeClass('selected');
         single_icon.addClass('selected');
         cwp_customize_icons.find('.cosmoswp-icon-value').val( icon_value );
-        cwp_customize_icons.find('.icon-preview').html('<i class="' + icon_value + '"></i>');
+        cwp_customize_icons.find('.icon-preview').html('<i class="' + icon_class + '"></i>');
         cwp_customize_icons.find('.cosmoswp-icon-value').trigger('change');
     });
 

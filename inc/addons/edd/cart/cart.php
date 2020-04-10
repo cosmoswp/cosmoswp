@@ -78,7 +78,7 @@ if (!class_exists('CosmosWP_Edd_Cart_Header')) :
         public function add_defaults($default_options = array()) {
             $defaults = array(
                 'cwp-enable-edd-cart'       => 1,
-                'cwp-edd-cart-icon'         => 'fas fa-shopping-cart',
+                'cwp-edd-cart-icon'         => 'fas fa-shopping-cart',/*changed on get*/
                 'cwp-edd-cart-icon-align'   => 'cwp-flex-align-right',
 
                 'cwp-edd-cart-icon-size'         => '18',

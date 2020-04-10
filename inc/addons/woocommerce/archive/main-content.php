@@ -3,20 +3,6 @@ if (!defined('ABSPATH')) {
     exit;
 }
 
-/*Page Banner Options*/
-$wp_customize->add_setting('cwp-banner-options-woo-archive', array(
-    'default'           => $defaults['cwp-banner-options-woo-archive'],
-    'sanitize_callback' => 'cosmoswp_sanitize_select'
-));
-$choices = cosmoswp_singular_post_page_banner_option();
-$wp_customize->add_control('cwp-banner-options-woo-archive', array(
-    'label'           => esc_html__('Banner Options', 'cosmoswp'),
-    'choices'         => $choices,
-    'section'         => $this->section,
-    'settings'        => 'cwp-banner-options-woo-archive',
-    'type'            => 'select'
-));
-
 /*Woo Single Sidebar*/
 $wp_customize->add_setting('cwp-woo-archive-sidebar', array(
     'default'           => $defaults['cwp-woo-archive-sidebar'],

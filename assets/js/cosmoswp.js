@@ -648,7 +648,6 @@ jQuery(document).ready(function($){
         if( click === 0 || (paged-1) >= max_num_pages){
             return false;
         }
-        //show_more.html('<i class="fas fa-spinner fa-spin fa-fw"></i>');
         show_more.html('<img src='+cosmoswp.loadMoreGif+' alt=”animated” />');
         show_more.attr("data-click", 0);
 
@@ -694,7 +693,7 @@ jQuery(document).ready(function($){
         var cwp_woo_view_switcher = $('.cwp-woo-view-switcher'),
             cosmoswp_woo_archive_grid_row = $('.cosmoswp-woo-archive-grid-row');
 
-        cwp_woo_view_switcher.on('click','.fa-th',function(){
+        cwp_woo_view_switcher.on('click','.cwp-trigger-grid',function(){
             cosmoswp_woo_archive_grid_row.addClass('cwp-grid');
             cosmoswp_woo_archive_grid_row.removeClass('cwp-list');
             $(this).siblings().removeClass('active');
@@ -702,7 +701,7 @@ jQuery(document).ready(function($){
 
         });
 
-        cwp_woo_view_switcher.on('click','.fa-list',function(){
+        cwp_woo_view_switcher.on('click','.cwp-trigger-list',function(){
             cosmoswp_woo_archive_grid_row.addClass('cwp-list');
             cosmoswp_woo_archive_grid_row.removeClass('cwp-grid');
             $(this).siblings().removeClass('active');
@@ -718,9 +717,9 @@ jQuery(document).ready(function($){
             cosmoswp_edd_archive_grid_row = $('.cosmoswp-edd-grid-row');
 
         if(cosmoswp_edd_archive_grid_row.hasClass('cwp-grid')) {
-            $('.fa-th').addClass('active');
+            $('.cwp-trigger-grid').addClass('active');
         }
-        cwp_edd_view_switcher.on('click load','.fa-th',function(){
+        cwp_edd_view_switcher.on('click load','.cwp-trigger-grid',function(){
             cosmoswp_edd_archive_grid_row.addClass('cwp-grid');
             cosmoswp_edd_archive_grid_row.removeClass('cwp-list');
             $(this).siblings().removeClass('active');
@@ -728,7 +727,7 @@ jQuery(document).ready(function($){
 
         });
 
-        cwp_edd_view_switcher.on('click','.fa-list',function(){
+        cwp_edd_view_switcher.on('click','.cwp-trigger-list',function(){
             cosmoswp_edd_archive_grid_row.addClass('cwp-list');
             cosmoswp_edd_archive_grid_row.removeClass('cwp-grid');
             $(this).siblings().removeClass('active');

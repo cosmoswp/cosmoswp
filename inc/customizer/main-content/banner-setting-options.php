@@ -193,7 +193,6 @@ $wp_customize->add_control(
         array(
             'label'           => esc_html__('Banner Overlay Color', 'cosmoswp'),
             'section'         => 'header_image',
-            'active_callback' => 'cosmoswp_overlay_color_active',
             'settings'        => 'banner-overlay-color',
         )
     )

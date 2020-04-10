@@ -1,7 +1,7 @@
 <?php
 $menu_align             = cosmoswp_get_theme_options('primary-menu-align');
 $submenu_display_option = cosmoswp_get_theme_options('primary-menu-submenu-display-options');
-$submenu_indicator      = cosmoswp_get_theme_options('primary-menu-submenu-icon-indicator');
+$submenu_indicator      = cosmoswp_get_correct_fa_font( cosmoswp_get_theme_options('primary-menu-submenu-icon-indicator'));
 
 $primary_menu        = cosmoswp_get_menu_id_by_location('header-primary-menu');
 $primary_menu_option = cosmoswp_get_theme_options('primary_menu');

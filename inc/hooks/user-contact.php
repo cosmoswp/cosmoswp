@@ -51,89 +51,102 @@ if (!function_exists('cosmoswp_show_author_links')) :
             <?php
             if (!empty($user_url)) { ?>
                 <li class="facebook">
-                    <a href="<?php echo esc_url($user_url); ?>" data-title="Website" target="_blank"><i
-                                class="fas fa-external-link"></i></a>
+                    <a href="<?php echo esc_url($user_url); ?>" data-title="Website" target="_blank">
+                        <i class="<?php echo esc_attr(cosmoswp_get_correct_fa_font('fas fa-external-link'));?>"></i>
+                    </a>
                 </li>
             <?php }
             if (!empty($facebook)) { ?>
                 <li class="facebook">
-                    <a href="<?php echo esc_url($facebook); ?>" data-title="Facebook" target="_blank"><i
-                                class="fab fa-facebook-f"></i></a>
+                    <a href="<?php echo esc_url($facebook); ?>" data-title="Facebook" target="_blank">
+                        <i class="<?php echo esc_attr(cosmoswp_get_correct_fa_font('fab fa-facebook-f'));?>"></i>
+                    </a>
                 </li>
             <?php }
             if (!empty($twitter)) { ?>
                 <li class="twitter">
-                    <a href="<?php echo esc_url($twitter); ?>" data-title="Twitter" target="_blank"><i
-                                class="fab fa-twitter"></i></a>
+                    <a href="<?php echo esc_url($twitter); ?>" data-title="Twitter" target="_blank">
+                        <i class="<?php echo esc_attr(cosmoswp_get_correct_fa_font('fab fa-twitter'));?>"></i>
+                    </a>
                 </li>
             <?php }
             if (!empty($linkedin)) {
                 ?>
                 <li class="linkedin">
-                    <a href="<?php echo esc_url($linkedin); ?>" data-title="Linkedin" target="_blank"><i
-                                class="fab fa-linkedin-in"></i></a>
+                    <a href="<?php echo esc_url($linkedin); ?>" data-title="Linkedin" target="_blank">
+                        <i class="<?php echo esc_attr(cosmoswp_get_correct_fa_font('fab fa-linkedin-in'));?>"></i>
+                    </a>
                 </li>
                 <?php
             }
             if (!empty($instagram)) {
                 ?>
                 <li class="instagram">
-                    <a href="<?php echo esc_url($instagram); ?>" data-title="Instagram" target="_blank"><i
-                                class="fab fa-instagram"></i></a>
+                    <a href="<?php echo esc_url($instagram); ?>" data-title="Instagram" target="_blank">
+                        <i class="<?php echo esc_attr(cosmoswp_get_correct_fa_font('fab fa-instagram'));?>"></i>
+                    </a>
                 </li>
                 <?php
             }
             if (!empty($youtube)) { ?>
                 <li class="youtube">
-                    <a href="<?php echo esc_url($youtube); ?>" data-title="Youtube" target="_blank"><i
-                                class="fab fa-youtube"></i></a>
+                    <a href="<?php echo esc_url($youtube); ?>" data-title="Youtube" target="_blank">
+                        <i class="<?php echo esc_attr(cosmoswp_get_correct_fa_font('fab fa-youtube'));?>"></i>
+                    </a>
                 </li>
                 <?php
             }
             if (!empty($google_plus)) {
                 ?>
                 <li class="google-plus">
-                    <a href="<?php echo esc_url($google_plus); ?>" data-title="Google Plus" target="_blank"><i
-                                class="fab fa-google-plus-g"></i></a>
+                    <a href="<?php echo esc_url($google_plus); ?>" data-title="Google Plus" target="_blank">
+                        <i class="<?php echo esc_attr(cosmoswp_get_correct_fa_font('fab fa-google-plus-g'));?>"></i>
+                    </a>
                 </li>
                 <?php
             }
             if (!empty($pinterest)) {
                 ?>
                 <li class="pinterest">
-                    <a href="<?php echo esc_url($pinterest); ?>" data-title="Pinterest" target="_blank"><i
-                                class="fab fa-pinterest"></i></a>
+                    <a href="<?php echo esc_url($pinterest); ?>" data-title="Pinterest" target="_blank">
+                        <i class="<?php echo esc_attr(cosmoswp_get_correct_fa_font('fab fa-pinterest'));?>"></i>
+                    </a>
                 </li>
                 <?php
             }
             if (!empty($flickr)) {
                 ?>
                 <li class="flickr">
-                    <a href="<?php echo esc_url($flickr); ?>" data-title="Flickr" target="_blank"><i
-                                class="fab fa-flickr"></i></a>
+                    <a href="<?php echo esc_url($flickr); ?>" data-title="Flickr" target="_blank">
+                        <i class="<?php echo esc_attr(cosmoswp_get_correct_fa_font('fab fa-flickr'));?>"></i>
+                    </a>
                 </li>
                 <?php
             }
             if (!empty($tumblr)) {
                 ?>
                 <li class="tumblr">
-                    <a href="<?php echo esc_url($tumblr); ?>" data-title="Tumblr" target="_blank"><i
-                                class="fas fa-tumblr"></i></a>
+                    <a href="<?php echo esc_url($tumblr); ?>" data-title="Tumblr" target="_blank">
+                        <i class="<?php echo esc_attr(cosmoswp_get_correct_fa_font('fas fa-tumblr'));?>"></i>
+                    </a>
                 </li>
                 <?php
             }
             if (!empty($vk)) {
                 ?>
                 <li class="vk">
-                    <a href="<?php echo esc_url($vk); ?>" data-title="VK" target="_blank"><i class="fab fa-vk"></i></a>
+                    <a href="<?php echo esc_url($vk); ?>" data-title="VK" target="_blank">
+                        <i class="<?php echo esc_attr(cosmoswp_get_correct_fa_font('fab fa-vk'));?>"></i>
+                    </a>
                 </li>
                 <?php
             }
             if (!empty($wordpress)) {
                 ?>
                 <li class="vk">
-                    <a href="<?php echo esc_url($wordpress); ?>" data-title="WordPress" target="_blank"><i
-                                class="fab fa-wordpress"></i></a>
+                    <a href="<?php echo esc_url($wordpress); ?>" data-title="WordPress" target="_blank">
+                        <i class="<?php echo esc_attr(cosmoswp_get_correct_fa_font('fab fa-wordpress'));?>"></i>
+                    </a>
                 </li>
                 <?php
             }

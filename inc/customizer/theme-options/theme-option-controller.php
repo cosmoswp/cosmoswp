@@ -557,7 +557,7 @@ if ( ! class_exists( 'CosmosWP_Theme_Options_Controller' ) ) :
                 'scroll-top-icon-options'                     => 'icon',
                 'scroll-top-text'                        => esc_html__('Top', 'cosmoswp'),
                 'scroll-top-icon-position'                    => 'before',
-                'scroll-top-icon'                        => 'fas fa-angle-up',
+                'scroll-top-icon'                        => 'fas fa-angle-up',/*done in frontend*/
                 'scroll-top-icon-size-responsive'             => json_encode(array(
                     'desktop' => '',
                     'tablet'  => '',

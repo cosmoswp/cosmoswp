@@ -71,6 +71,9 @@ if (!class_exists('CosmosWP_WooCommerce_Single')) :
             add_action('customize_register', array($this, 'customize_register'), 100);
 
             add_action('cosmoswp_action_woocommerce_single', array($this, 'display_woo_single'), 110);
+
+            add_filter('cosmoswp_dynamic_css', array($this, 'dynamic_css'), 100);
+
         }
 
         /**
@@ -166,6 +169,64 @@ if (!class_exists('CosmosWP_WooCommerce_Single')) :
             </div>
             <!-- End of .blog-content -->
             <?php
+        }
+
+        /**
+         * Callback functions for cosmoswp_dynamic_css,
+         * Add Dynamic Css
+         *
+         * @since    1.0.9
+         * @access   public
+         *
+         * @param array $dynamic_css
+         * @return array
+         */
+        public function dynamic_css($dynamic_css) {
+            /**
+             * Blog Option Dynamic CSS
+             */
+            $woo_dynamic_css['all']     = '';
+            $woo_dynamic_css['tablet']  = '';
+            $woo_dynamic_css['desktop'] = '';
+
+            $woo_main_content_css         = '';
+            $woo_main_content_tablet_css  = '';
+            $woo_main_content_desktop_css = '';
+
+            $cwc_single_media_width           = cosmoswp_get_theme_options('cwc-single-media-width');
+            $cwc_single_media_width            = json_decode($cwc_single_media_width,true);
+
+            if( isset($cwc_single_media_width['mobile'])){
+                $woo_main_content_css .=	'width:'.$cwc_single_media_width['mobile'].'%;';
+                $woo_dynamic_css['all'] .= '
+    .woocommerce div.product div.images{
+        '.$woo_main_content_css.'
+    }';
+            }
+            if( isset($cwc_single_media_width['tablet'])){
+                $woo_main_content_tablet_css .=	'width:'.$cwc_single_media_width['tablet'].'%;';
+                $woo_dynamic_css['tablet'] .= '
+    .woocommerce div.product div.images{
+        '.$woo_main_content_tablet_css.'
+    }';
+            }
+            if( isset($cwc_single_media_width['desktop'])){
+                $woo_main_content_desktop_css .=	'width:'.$cwc_single_media_width['desktop'].'%;';
+                $woo_dynamic_css['desktop'] .= '
+    .woocommerce div.product div.images{
+        '.$woo_main_content_desktop_css.'
+    }';
+            }
+
+
+            if (is_array($dynamic_css) && !empty($dynamic_css)) {
+                $all_css = array_merge_recursive($dynamic_css, $woo_dynamic_css);
+                return $all_css;
+            }
+            else {
+                return $woo_dynamic_css;
+            }
+
         }
     }
 endif;

@@ -1117,6 +1117,9 @@ if (!function_exists('cosmoswp_breadcrumb_options')) :
         if (function_exists('yoast_breadcrumb')) {
             $cosmoswp_breadcrumb_options['yoast'] = esc_html__('Yoast', 'cosmoswp');
         }
+        if (function_exists('rank_math') && rank_math()->settings->get( 'general.breadcrumbs' )) {
+            $cosmoswp_breadcrumb_options['rank-math'] = esc_html__('Rank Math', 'cosmoswp');
+        }
         if (function_exists('bcn_display')) {
             $cosmoswp_breadcrumb_options['bcn'] = esc_html__('Breadcrumb NavXT', 'cosmoswp');
         }

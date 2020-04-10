@@ -4,7 +4,7 @@ $submenu_display_option = cosmoswp_get_theme_options('secondary-menu-submenu-dis
 $secondary_menu         = cosmoswp_get_theme_options('secondary-menu-custom-menu');
 $disable_sub_menu       = cosmoswp_get_theme_options('secondary-menu-disable-sub-menu');
 $disable_sub_menu       = ($disable_sub_menu) ? 1 : 0;
-$sub_menu_icon          = cosmoswp_get_theme_options('secondary-menu-submenu-icon-indicator');
+$sub_menu_icon          = cosmoswp_get_correct_fa_font( cosmoswp_get_theme_options('secondary-menu-submenu-icon-indicator'));
 if ($secondary_menu) {
     ?>
     <!-- Start of .navigation -->

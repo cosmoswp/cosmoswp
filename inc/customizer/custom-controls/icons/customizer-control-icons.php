@@ -5,7 +5,7 @@ if (!function_exists('cosmoswp_icon_holder')) {
 		?>
         <span class="icon-preview">
             <?php if ( ! empty( $value ) ) {
-                echo '<i class="' . esc_attr( $value ) . '"></i>';
+                echo '<i class="' . esc_attr( cosmoswp_get_correct_fa_font($value) ) . '"></i>';
             }
             ?>
         </span>
@@ -19,9 +19,9 @@ if (!function_exists('cosmoswp_icon_holder')) {
 			$fa_icon_list_array = cosmoswp_icons_array();
 			foreach ( $fa_icon_list_array as $single_icon ) {
 				if ( $value == $single_icon ) {
-					echo '<span class="single-icon selected"><i class="' . esc_attr( $single_icon ) . '"></i></span>';
+					echo '<span class="single-icon selected"><i data-class="' . esc_attr( $single_icon ) . '" class="' . esc_attr( cosmoswp_get_correct_fa_font( $single_icon ) ) . '"></i></span>';
 				} else {
-					echo '<span class="single-icon"><i class="' . esc_attr( $single_icon ) . '"></i></span>';
+					echo '<span class="single-icon"><i data-class="' . esc_attr( $single_icon ) . '" class="' . esc_attr( cosmoswp_get_correct_fa_font( $single_icon ) ) . '" ></i></span>';
 				}
 			}
 			?>

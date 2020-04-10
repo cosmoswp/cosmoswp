@@ -72,6 +72,8 @@ if (!class_exists('CosmosWP_Edd_Single')) :
 
             add_action('cosmoswp_action_edd_single', array($this, 'display_edd_single'), 100);
             add_action('cosmoswp_action_after_edd_single', array($this, 'display_edd_related'), 100, 1);
+
+            add_filter('cosmoswp_dynamic_css', array($this, 'dynamic_css'), 100);
         }
 
         /**
@@ -144,7 +146,7 @@ if (!class_exists('CosmosWP_Edd_Single')) :
         }
 
         /**
-         * Callback Function for cosmoswp_action_woocommerce_single
+         * Callback Function for cosmoswp_action_eddcommerce_single
          * Display WooCommerce Single Product
          *
          * @since    1.0.0
@@ -357,6 +359,64 @@ if (!class_exists('CosmosWP_Edd_Single')) :
                 echo '</div></div></div>';
             }
             wp_reset_query();
+        }
+
+        /**
+         * Callback functions for cosmoswp_dynamic_css,
+         * Add Dynamic Css
+         *
+         * @since    1.0.9
+         * @access   public
+         *
+         * @param array $dynamic_css
+         * @return array
+         */
+        public function dynamic_css($dynamic_css) {
+            /**
+             * Blog Option Dynamic CSS
+             */
+            $edd_dynamic_css['all']     = '';
+            $edd_dynamic_css['tablet']  = '';
+            $edd_dynamic_css['desktop'] = '';
+
+            $edd_main_content_css         = '';
+            $edd_main_content_tablet_css  = '';
+            $edd_main_content_desktop_css = '';
+
+            $edd_single_media_width           = cosmoswp_get_theme_options('edd-single-content-width');
+            $edd_single_media_width            = json_decode($edd_single_media_width,true);
+
+            if( isset($edd_single_media_width['mobile'])){
+                $edd_main_content_css .=	'width:'.$edd_single_media_width['mobile'].'%;';
+                $edd_dynamic_css['all'] .= '
+    .cosmoswp-edd-single-grid-row .cwp-edd-download-gallery-content{
+        '.$edd_main_content_css.'
+    }';
+            }
+            if( isset($edd_single_media_width['tablet'])){
+                $edd_main_content_tablet_css .=	'width:'.$edd_single_media_width['tablet'].'%;';
+                $edd_dynamic_css['tablet'] .= '
+    .cosmoswp-edd-single-grid-row .cwp-edd-download-gallery-content{
+        '.$edd_main_content_tablet_css.'
+    }';
+            }
+            if( isset($edd_single_media_width['desktop'])){
+                $edd_main_content_desktop_css .=	'width:'.$edd_single_media_width['desktop'].'%;';
+                $edd_dynamic_css['desktop'] .= '
+    .cosmoswp-edd-single-grid-row .cwp-edd-download-gallery-content{
+        '.$edd_main_content_desktop_css.'
+    }';
+            }
+
+            /*Return*/
+            if (is_array($dynamic_css) && !empty($dynamic_css)) {
+                $all_css = array_merge_recursive($dynamic_css, $edd_dynamic_css);
+                return $all_css;
+            }
+            else {
+                return $edd_dynamic_css;
+            }
+
         }
     }
 endif;

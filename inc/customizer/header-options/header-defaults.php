@@ -430,7 +430,8 @@ $header_defaults = array(
         'background-attachment' => 'scroll',
     )),
 
-    /*Header social icon*/
+    /*Header social icon
+    Icon fixed on get*/
     'header-social-icon-data'           => json_encode(array(
         array(
             'enabled'          => '1',
@@ -1474,7 +1475,7 @@ $header_defaults = array(
             )
         ),
     )),
-    'primary-menu-submenu-icon-indicator'   => 'fas fa-angle-down',
+    'primary-menu-submenu-icon-indicator'   => 'fas fa-angle-down',/*fixed on fronted*/
     'primary-menu-submenu-typography-options'    => 'inherit',
     'primary-menu-submenu-typography'       => json_encode(array(
         'font-type'       => 'google',
@@ -1739,7 +1740,7 @@ $header_defaults = array(
         ),
     )),
     'secondary-menu-submenu-display-options' => 'cwp-submenu-onhover',
-    'secondary-menu-submenu-icon-indicator' => 'fas fa-angle-down',
+    'secondary-menu-submenu-icon-indicator' => 'fas fa-angle-down',/*done in frontend*/
     'secondary-menu-submenu-bg-color'       => '#000',
     'secondary-menu-submenu-styling'        => json_encode(array(
         'normal-text-color'    => '#fff',
@@ -1897,8 +1898,8 @@ $header_defaults = array(
     'menu-close-text'                       => esc_html__('Menu Close', 'cosmoswp'),
     'menu-icon-open-icon-position'                    => 'before',
     'menu-icon-close-icon-position'                    => 'before',
-    'menu-open-icon'                        => 'fas fa-bars',
-    'menu-close-icon'                       => 'fas fa-times',
+    'menu-open-icon'                        => 'fas fa-bars',/*done in frontend*/
+    'menu-close-icon'                       => 'fas fa-times',/*done in frontend*/
     'menu-open-icon-size-responsive'             => json_encode(array(
         'desktop' => '18',
         'tablet'  => '18',
@@ -2267,7 +2268,7 @@ $header_defaults = array(
         'tablet'    => '',
         'mobile'    => 'cwp-flex-align-left'
     )),
-    'button-one-icon'                       => 'fas fa-bars',
+    'button-one-icon'                       => 'fas fa-bars',/*fixed on frontend*/
     'button-one-icon-position'              => 'before',
     'button-one-url'                        => '#',
     'button-one-open-link-new-tab'          => '1',
@@ -2410,7 +2411,8 @@ $header_defaults = array(
         ),
     )),
 
-    /*contact Information*/
+    /*contact Information
+    Fixed icon on frontend*/
     'contact-information-data'              => json_encode(array(
         array(
             'enabled'   => '1',

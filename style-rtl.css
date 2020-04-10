@@ -4,7 +4,7 @@ Theme URI: https://www.cosmoswp.com/
 Author: cosmoswp
 Author URI: https://www.cosmoswp.com/contact-us/
 Description: CosmosWP is a multi-purpose new generation modern Gutenberg WordPress theme, super-fast, easily customizable, flexible, beautiful, perfect, and highly extendable theme. With a simple download of the CosmosWP, you will have a striking and awesome theme for your website. A great way to design your website with a unique blend of style and technique. It will let you build around several kinds of a website such as a blog, portfolio, business, photography, entertainment etc. Also, specialized sites like Restaurant, Spa, Charity, Meditation, Wedding, Dentist, Education, Medical and much more. Being integrated with WooCommerce and Easy Digital Download you can even build an e-commerce based website. Besides that, it works well with almost all page builders as Gutentor, Elementor, SiteOrigin, Beaver Builder, Visual Composer, Divi, etc. Furthermore, features like SEO friendly, Responsive, RTL Ready, Translation Ready, Gutenberg compatible, and many other WordPress plugins compatible are also included in the theme. Finally, the theme already has an instant demo setup so you can commence your elegant and phenomenal website left away.
-Version: 1.0.8
+Version: 1.0.9
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: cosmoswp
@@ -4282,72 +4282,81 @@ article.post {
     width: calc(100% - 25% - 30px); }
     .cwp-edd-active .cosmoswp-edd-grid-row.cwp-list .edd-download .cwp-product-content .cwp-image-box {
       display: none; }
-.cwp-edd-active .cosmoswp-edd-single-grid-row .cwp-elements:not(:last-child):not(.cwp-edd-cat):not(.entry-header) {
-  margin-bottom: 20px;
-  margin-top: 0; }
-.cwp-edd-active .cosmoswp-edd-single-grid-row .cwp-elements.entry-header {
-  margin-bottom: 10px; }
-.cwp-edd-active .cosmoswp-edd-single-grid-row .cwp-edd-cat a {
-  font-size: 14px;
-  margin: 0 3px;
-  line-height: normal; }
-.cwp-edd-active .cosmoswp-edd-single-grid-row .cwp-edd-tag a {
-  font-size: 14px;
-  border: 1px solid;
-  padding: 2px 10px;
-  border-radius: 3px;
-  margin-bottom: 10px;
-  display: inline-block; }
-  .cwp-edd-active .cosmoswp-edd-single-grid-row .cwp-edd-tag a:not(:last-child) {
-    margin-left: 10px; }
-.cwp-edd-active .cosmoswp-edd-single-grid-row .download-author .download-author-box {
+.cwp-edd-active .cosmoswp-edd-single-grid-row {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
   display: -webkit-flex;
-  display: flex;
-  -webkit-align-items: center;
-  -moz-align-items: center;
-  -ms-align-items: center;
-  align-items: center;
-  border: 1px solid #ddd;
-  padding: 20px 30px;
-  border-radius: 2px;
-  background: #f5f5f5; }
-  .cwp-edd-active .cosmoswp-edd-single-grid-row .download-author .download-author-box .download-author-avatar {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    overflow: hidden;
-    margin-left: 20px; }
-  .cwp-edd-active .cosmoswp-edd-single-grid-row .download-author .download-author-box ul {
-    list-style-type: none;
-    margin-right: 0;
-    margin-left: 0; }
-    .cwp-edd-active .cosmoswp-edd-single-grid-row .download-author .download-author-box ul li span:first-child {
-      width: 140px;
-      display: inline-block; }
-.cwp-edd-active .cosmoswp-edd-single-grid-row .cosmoswp-edd-single-sidebar .download-author {
-  text-align: center; }
-  .cwp-edd-active .cosmoswp-edd-single-grid-row .cosmoswp-edd-single-sidebar .download-author .download-author-box {
-    -webkit-flex-direction: column;
-    -moz-flex-direction: column;
-    -ms-flex-direction: column;
-    flex-direction: column; }
-    .cwp-edd-active .cosmoswp-edd-single-grid-row .cosmoswp-edd-single-sidebar .download-author .download-author-box .download-author-avatar {
-      margin: 0 auto 15px; }
-    .cwp-edd-active .cosmoswp-edd-single-grid-row .cosmoswp-edd-single-sidebar .download-author .download-author-box ul li {
-      margin-bottom: 10px;
-      line-height: normal; }
-      .cwp-edd-active .cosmoswp-edd-single-grid-row .cosmoswp-edd-single-sidebar .download-author .download-author-box ul li span {
+  display: flex; }
+  .cwp-edd-active .cosmoswp-edd-single-grid-row .cwp-elements:not(:last-child):not(.cwp-edd-cat):not(.entry-header) {
+    margin-bottom: 20px;
+    margin-top: 0; }
+  .cwp-edd-active .cosmoswp-edd-single-grid-row .cwp-elements.entry-header {
+    margin-bottom: 10px; }
+  .cwp-edd-active .cosmoswp-edd-single-grid-row .cwp-edd-cat a {
+    font-size: 14px;
+    margin: 0 3px;
+    line-height: normal; }
+  .cwp-edd-active .cosmoswp-edd-single-grid-row .cwp-edd-tag a {
+    font-size: 14px;
+    border: 1px solid;
+    padding: 2px 10px;
+    border-radius: 3px;
+    margin-bottom: 10px;
+    display: inline-block; }
+    .cwp-edd-active .cosmoswp-edd-single-grid-row .cwp-edd-tag a:not(:last-child) {
+      margin-left: 10px; }
+  .cwp-edd-active .cosmoswp-edd-single-grid-row .download-author .download-author-box {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    align-items: center;
+    border: 1px solid #ddd;
+    padding: 20px 30px;
+    border-radius: 2px;
+    background: #f5f5f5; }
+    .cwp-edd-active .cosmoswp-edd-single-grid-row .download-author .download-author-box .download-author-avatar {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      overflow: hidden;
+      margin-left: 20px; }
+    .cwp-edd-active .cosmoswp-edd-single-grid-row .download-author .download-author-box ul {
+      list-style-type: none;
+      margin-right: 0;
+      margin-left: 0; }
+      .cwp-edd-active .cosmoswp-edd-single-grid-row .download-author .download-author-box ul li span:first-child {
+        width: 140px;
+        display: inline-block; }
+  @media (min-width: 768px) {
+    .cwp-edd-active .cosmoswp-edd-single-grid-row .cosmoswp-edd-single-sidebar {
+      margin-right: 40px; } }
+  .cwp-edd-active .cosmoswp-edd-single-grid-row .cosmoswp-edd-single-sidebar .download-author {
+    text-align: center; }
+    .cwp-edd-active .cosmoswp-edd-single-grid-row .cosmoswp-edd-single-sidebar .download-author .download-author-box {
+      -webkit-flex-direction: column;
+      -moz-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column; }
+      .cwp-edd-active .cosmoswp-edd-single-grid-row .cosmoswp-edd-single-sidebar .download-author .download-author-box .download-author-avatar {
+        margin: 0 auto 15px; }
+      .cwp-edd-active .cosmoswp-edd-single-grid-row .cosmoswp-edd-single-sidebar .download-author .download-author-box ul li {
+        margin-bottom: 10px;
         line-height: normal; }
-        .cwp-edd-active .cosmoswp-edd-single-grid-row .cosmoswp-edd-single-sidebar .download-author .download-author-box ul li span:first-child {
-          width: 100%;
-          display: inline-block;
-          font-weight: bold;
-          font-size: 14px; }
-.cwp-edd-active .cosmoswp-edd-single-grid-row .cosmoswp-edd-single-sidebar .cwp-edd-cat + .cwp-edd-tag {
-  margin-top: 15px; }
+        .cwp-edd-active .cosmoswp-edd-single-grid-row .cosmoswp-edd-single-sidebar .download-author .download-author-box ul li span {
+          line-height: normal; }
+          .cwp-edd-active .cosmoswp-edd-single-grid-row .cosmoswp-edd-single-sidebar .download-author .download-author-box ul li span:first-child {
+            width: 100%;
+            display: inline-block;
+            font-weight: bold;
+            font-size: 14px; }
+  .cwp-edd-active .cosmoswp-edd-single-grid-row .cosmoswp-edd-single-sidebar .cwp-edd-cat + .cwp-edd-tag {
+    margin-top: 15px; }
 
 /*-------------------------------
 	EDD Header Minicart

@@ -208,6 +208,10 @@ if (!function_exists('cosmoswp_setup')) :
 
         /*woocommerce support*/
         add_theme_support('woocommerce');
+        /*Set up the woocommerce Gallery Lightbox*/
+        add_theme_support( 'wc-product-gallery-zoom' );
+        add_theme_support( 'wc-product-gallery-lightbox' );
+        add_theme_support( 'wc-product-gallery-slider' );
 
 	    /*block press support*/
 	    add_theme_support( 'gutentor' );

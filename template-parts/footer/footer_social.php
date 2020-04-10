@@ -39,8 +39,9 @@ $social_icon_align_mobile  = cosmoswp_responsive_button_value($social_icon_align
                 $hover_color  = cosmoswp_ifset($data['hover-color']); ?>
                 <li class="<?php echo str_replace(' ', '-', $social_icon); ?>">
                     <a href="<?php echo esc_url($icon_link); ?>" <?php echo esc_attr($target_blank); ?>>
-                        <?php if ($social_icon) { ?>
-                            <i class="<?php echo esc_attr($social_icon); ?>"></i>
+                        <?php if ($social_icon) {
+                            ?>
+                            <i class="<?php echo esc_attr(cosmoswp_get_correct_fa_font($social_icon)); ?>"></i>
                         <?php } ?>
                     </a>
                 </li>

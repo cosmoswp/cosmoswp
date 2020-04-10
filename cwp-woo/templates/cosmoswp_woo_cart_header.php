@@ -1,6 +1,6 @@
 <?php
 $is_enable    = cosmoswp_get_theme_options('cwp-enable-woo-cart');
-$icon   = cosmoswp_get_theme_options('cwp-woo-cart-icon');
+$icon   = cosmoswp_get_correct_fa_font(cosmoswp_get_theme_options('cwp-woo-cart-icon'));
 $align   = cosmoswp_get_theme_options('cwp-woo-cart-icon-align');
 if ( $is_enable ) : ?>
     <div class="cwp-wc-cart-section">

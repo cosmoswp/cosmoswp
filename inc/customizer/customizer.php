@@ -282,9 +282,14 @@ function cosmoswp_customize_controls_scripts() {
 
     wp_enqueue_style( 'cosmoswp-general', COSMOSWP_URL . '/inc/customizer/custom-controls/assets/custom-controls.min.css' );
 
-	wp_enqueue_script( 'cosmoswp-general', COSMOSWP_URL . '/inc/customizer/custom-controls/assets/custom-controls.min.js', array( 'jquery','wp-color-picker','customize-base','jquery-ui-core','jquery-ui-slider','jquery-ui-sortable','jquery-ui-draggable',), false, true );
-	
-	wp_localize_script( 'cosmoswp-general', 'cwp_general', array(
+	wp_enqueue_script(
+	    'cosmoswp-general',
+        COSMOSWP_URL. '/inc/customizer/custom-controls/assets/custom-controls' . COSMOSWP_SCRIPT_PREFIX . '.js',
+        array( 'jquery','wp-color-picker','customize-base','jquery-ui-core','jquery-ui-slider','jquery-ui-sortable','jquery-ui-draggable'),
+        COSMOSWP_VERSION,
+        true
+    );
+    wp_localize_script( 'cosmoswp-general', 'cwp_general', array(
 		'ajaxurl'          => admin_url( 'admin-ajax.php' ),
 		'wpnonce'          => wp_create_nonce( 'cwp_general_nonce' ),
 	) );

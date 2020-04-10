@@ -1,6 +1,6 @@
 <?php
 $is_enable    = cosmoswp_get_theme_options('cwp-enable-edd-cart');
-$icon   = cosmoswp_get_theme_options('cwp-edd-cart-icon');
+$icon   = cosmoswp_get_correct_fa_font(cosmoswp_get_theme_options('cwp-edd-cart-icon'));
 $align   = cosmoswp_get_theme_options('cwp-edd-cart-icon-align');
 
 if ( $is_enable ) : ?>

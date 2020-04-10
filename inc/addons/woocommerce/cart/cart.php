@@ -81,7 +81,7 @@ if (!class_exists('CosmosWP_WooCommerce_Cart_Header')) :
         public function add_defaults($default_options = array()) {
             $defaults = array(
                 'cwp-enable-woo-cart'       => 1,
-                'cwp-woo-cart-icon'         => 'fas fa-shopping-cart',
+                'cwp-woo-cart-icon'         => 'fas fa-shopping-cart',/*change on get*/
                 'cwp-woo-cart-icon-align'   => 'cwp-flex-align-right',
 
                 'cwp-woo-cart-icon-size'         => '18',

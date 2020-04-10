@@ -886,7 +886,7 @@ if (!function_exists('cosmoswp_meta_collection')) :
                     '%s',
                     '<a href="' . esc_url(get_permalink()) . '" rel="bookmark">' . $time_string . '</a>'
                 );
-                echo '<span class="posted-on"><i class="far fa-calendar-alt"></i> ' . $posted_on . '</span>'; // WPCS: XSS OK.
+                echo '<span class="posted-on"><i class="'.esc_attr(cosmoswp_get_correct_fa_font('far fa-calendar-alt')).'"></i> ' . $posted_on . '</span>'; // WPCS: XSS OK.
             }
             elseif ('updated-date' == $element) {
                 $time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
@@ -901,31 +901,31 @@ if (!function_exists('cosmoswp_meta_collection')) :
                     '%s',
                     '<a href="' . esc_url(get_permalink()) . '" rel="bookmark">' . $time_string . '</a>'
                 );
-                echo '<span class="posted-on"><i class="far fa-calendar-alt"></i> ' . $posted_on . '</span>'; // WPCS: XSS OK.
+                echo '<span class="posted-on"><i class="'.esc_attr(cosmoswp_get_correct_fa_font('far fa-calendar-alt')).'"></i> ' . $posted_on . '</span>'; // WPCS: XSS OK.
             }
             elseif ('author' == $element) {
                 printf(
                     '%s',
-                    '<span class="author vcard"><i class="far fa-user"></i><a class="url fn n" href="' . esc_url(get_author_posts_url(get_the_author_meta('ID'))) . '">' . esc_html(get_the_author()) . '</a></span>'
+                    '<span class="author vcard"><i class="'.esc_attr(cosmoswp_get_correct_fa_font('far fa-user')).'"></i><a class="url fn n" href="' . esc_url(get_author_posts_url(get_the_author_meta('ID'))) . '">' . esc_html(get_the_author()) . '</a></span>'
                 );
             }
             elseif ('categories' == $element) {
 
                 $categories_list = get_the_category_list(esc_html__(', ', 'cosmoswp'));
                 if ($categories_list) {
-                    printf('<span class="cat-links"><i class="fas fa-tags"></i> %1$s</span>', $categories_list); // WPCS: XSS OK.
+                    printf('<span class="cat-links"><i class="'.esc_attr(cosmoswp_get_correct_fa_font('fas fa-tags')).'"></i> %1$s</span>', $categories_list); // WPCS: XSS OK.
                 }
             }
             elseif ('tags' == $element) {
                 /* translators: used between list items, there is a space after the comma */
                 $tags_list = get_the_tag_list('', esc_html__(', ', 'cosmoswp'));
                 if ($tags_list) {
-                    printf('<span class="tags-links"><i class="fas fa-tags"></i>%1$s</span>', $tags_list); // WPCS: XSS OK.
+                    printf('<span class="tags-links"><i class="'.esc_attr(cosmoswp_get_correct_fa_font('fas fa-tags')).'"></i>%1$s</span>', $tags_list); // WPCS: XSS OK.
                 }
             }
             elseif ('comments' == $element) {
                 if (!post_password_required() && (comments_open() || get_comments_number())) {
-                    echo '<span class="comments-link"><i class="far fa-comment-alt"></i>';
+                    echo '<span class="comments-link"><i class="'.esc_attr(cosmoswp_get_correct_fa_font('far fa-comment-alt')).'"></i>';
                     comments_popup_link(esc_html__('Leave a comment', 'cosmoswp'), esc_html__('1 Comment', 'cosmoswp'), esc_html__('% Comments', 'cosmoswp'));
                     echo '</span>';
                 }
@@ -941,7 +941,7 @@ if (!function_exists('cosmoswp_meta_collection')) :
                     esc_html__('Edit %s', 'cosmoswp'),
                     the_title('<span class="screen-reader-text">"', '"</span>', false)
                 ),
-                '<span class="edit-link"><i class="far fa-edit "></i>',
+                '<span class="edit-link"><i class="'.esc_attr(cosmoswp_get_correct_fa_font('far fa-edit')).'"></i>',
                 '</span>'
             );
         endif;

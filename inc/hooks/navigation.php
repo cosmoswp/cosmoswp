@@ -61,8 +61,8 @@ if (!function_exists('cosmoswp_post_navigation')) :
         if ('default' == $blog_navigation_options) {
             // Previous/next page navigation.
             $args = array(
-                'prev_text' => '<span class="title"><i class="fas fa-arrow-left"></i>' . esc_html__('Previous Post', 'cosmoswp') . '</span><span class="post-title">%title</span>',
-                'next_text' => '<span class="title"><i class="fas fa-arrow-right"></i>' . esc_html__('Next Post', 'cosmoswp') . '</span><span class="post-title">%title</span>',
+                'prev_text' => '<span class="title"><i class="'.esc_attr(cosmoswp_get_correct_fa_font('fas fa-arrow-left')).'"></i>' . esc_html__('Previous Post', 'cosmoswp') . '</span><span class="post-title">%title</span>',
+                'next_text' => '<span class="title"><i class="'.esc_attr(cosmoswp_get_correct_fa_font('fas fa-arrow-right')).'"></i>' . esc_html__('Next Post', 'cosmoswp') . '</span><span class="post-title">%title</span>',
             );
             the_post_navigation($args);
         }

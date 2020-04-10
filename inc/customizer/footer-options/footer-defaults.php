@@ -1093,7 +1093,8 @@ $footer_defaults = array(
         ),
     )),
 
-    /*footer social*/
+    /*footer social
+    Icon fixed on get*/
     'footer_social'                                   => json_encode(array(
         array(
             'enabled'          => '1',

@@ -45,7 +45,7 @@ $contact_information_data   = apply_filters('cosmoswp_contact_information_data',
                 <div class="cwp-contact-info-item">
                     <?php if ($contact_icon) { ?>
                         <span class="cwp-contact-info-icon">
-						<i class="<?php echo esc_attr($contact_icon); ?>"></i>
+						<i class="<?php echo esc_attr(cosmoswp_get_correct_fa_font($contact_icon)); ?>"></i>
 					</span>
                     <?php } ?>
                     <span class="cwp-contact-info-content">

@@ -71,7 +71,6 @@ if (!class_exists('CosmosWP_WooCommerce_Archive')) :
             add_action('customize_register', array($this, 'customize_register'), 100);
 
             add_action('cosmoswp_action_woocommerce_archive', array($this, 'display_woo_archive'), 110);
-            add_filter('cosmoswp_banner-section-display', array($this, 'customize_banner_section_display'),900);
 
         }
 
@@ -88,7 +87,6 @@ if (!class_exists('CosmosWP_WooCommerce_Archive')) :
         public function defaults($default_options = array()) {
             $defaults = array(
 
-                'cwp-banner-options-woo-archive'          => 'default',
                 /*Sidebar*/
                 'cwp-woo-archive-sidebar'    => 'ct-ps',
 
@@ -177,29 +175,6 @@ if (!class_exists('CosmosWP_WooCommerce_Archive')) :
             </div>
             <!-- End of .blog-content -->
             <?php
-        }
-
-
-        /**
-         *  Call back function for cosmoswp_general_setting_layout_body_class
-         *  Change Site Layout Manually(post/page)
-         *
-         * @since    1.0.0
-         * @access   public
-         *
-         * @param $banner_options string
-         * @return string
-         */
-        public function customize_banner_section_display( $banner_options ){
-
-            if( cosmoswp_is_woocommerce_archive() ){
-                $banner_options_post    = cosmoswp_get_theme_options('cwp-banner-options-woo-archive');
-
-                if( 'default' != $banner_options_post ){
-                    $banner_options = $banner_options_post;
-                }
-            }
-            return apply_filters('cosmoswp_banner_section_display', $banner_options );
         }
     }
 endif;

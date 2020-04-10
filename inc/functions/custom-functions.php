@@ -414,7 +414,7 @@ if (!function_exists('cosmoswp_get_icon_structure')) {
         }
         elseif ('icon' == $icon_type) {
             if ($open_icon) {
-                $icon_content = wp_kses_post('<i class="' . esc_attr($open_icon) . '"></i>');
+                $icon_content = wp_kses_post('<i class="' . esc_attr(cosmoswp_get_correct_fa_font($open_icon)) . '"></i>');
             }
         }
         elseif ('both' == $icon_type) {
@@ -450,7 +450,7 @@ if (!function_exists('cosmoswp_get_button_structure')) {
     function cosmoswp_get_button_structure($button_text, $button_icon, $icon_position) {
 
         $after_icon  = $before_icon = '';
-        $icon_html   = ($button_icon) ? '<i class="' . esc_attr($button_icon) . '"></i>' : '';
+        $icon_html   = ($button_icon) ? '<i class="' . esc_attr(cosmoswp_get_correct_fa_font($button_icon)) . '"></i>' : '';
         $button_text = ($button_icon) ? esc_html($button_text) : '';
         if ($icon_position) {
 

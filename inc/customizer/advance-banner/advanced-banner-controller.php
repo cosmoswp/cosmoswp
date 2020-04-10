@@ -252,18 +252,18 @@ if (!class_exists('CosmosWP_Advanced_Banner_Controller')) :
          */
         public function customize_banner_section_display( $banner_options ){
 
-            if( is_singular( array( 'post', 'page' ) ) ){
-                if(is_singular('post' )){
+            if( is_singular() ){
+                if(is_singular('page' )){
+                    $banner_options_page = cosmoswp_get_theme_options('cosmoswp-banner-options-page');
+                    if( 'default' != $banner_options_page ){
+                        $banner_options = $banner_options_page;
+                    }
+                }
+                else {
                     $banner_options_post    = cosmoswp_get_theme_options('cosmoswp-banner-options-post');
 
                     if( 'default' != $banner_options_post ){
                         $banner_options = $banner_options_post;
-                    }
-                }
-                else {
-                    $banner_options_page = cosmoswp_get_theme_options('cosmoswp-banner-options-page');
-                    if( 'default' != $banner_options_page ){
-                        $banner_options = $banner_options_page;
                     }
                 }
                 $cosmoswp_site_layout_value = get_post_meta(get_the_ID(), 'cosmoswp_banner_options_layout', true);
