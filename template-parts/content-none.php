@@ -9,7 +9,7 @@
  */
 
 ?>
-<div class="no-results not-found init-animate">
+<div class="no-results not-found">
     <header>
         <h2 class="page-title"><?php esc_html_e('Nothing Found', 'cosmoswp'); ?></h2>
     </header>

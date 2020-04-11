@@ -561,7 +561,6 @@ if (!class_exists('CosmosWP_Header_Builder')) :
                                 }
                             }
                             cosmoswp_header_builder()->mobile_header($mobile_builder);
-
                         }
 			        }
 			        ?>

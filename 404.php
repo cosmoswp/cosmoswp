@@ -12,7 +12,7 @@ get_header();
 ?>
     <section class="cwp-error-404 not-found cwp-text-center">
     <div class="grid-container">
-        <header class="entry-header init-animate">
+        <header class="entry-header">
             <h1 class="page-title">
 
                 <?php esc_html_e('Oops! That page can&rsquo;t be found.', 'cosmoswp'); ?>

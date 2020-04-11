@@ -12,6 +12,9 @@ $woo_archive_default_view = cosmoswp_get_theme_options('cwc-archive-default-view
 
         do_action('woocommerce_before_shop_loop');
 
+        woocommerce_product_loop_start();
+
+
         if (wc_get_loop_prop('total')) {
             ?>
             <div class="grid-12">
@@ -49,6 +52,7 @@ $woo_archive_default_view = cosmoswp_get_theme_options('cwc-archive-default-view
 
             }
         }
+        woocommerce_product_loop_end();
         do_action('woocommerce_after_shop_loop');
 
     } else {

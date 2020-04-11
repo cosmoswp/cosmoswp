@@ -29,8 +29,7 @@ $wp_customize->add_control('footer-general-layout', array(
 /*Footer Display Style*/
 $wp_customize->add_setting('footer-display-style', array(
     'default'           => $footer_defaults['footer-display-style'],
-    'sanitize_callback' => 'cosmoswp_sanitize_select',
-    'transport'         => 'postMessage'
+    'sanitize_callback' => 'cosmoswp_sanitize_select'
 ));
 $choices = cosmoswp_site_footer_display_style_option();
 $wp_customize->add_control('footer-display-style', array(

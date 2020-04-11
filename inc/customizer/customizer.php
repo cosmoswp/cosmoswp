@@ -10,8 +10,8 @@ if ( ! defined( 'ABSPATH' ) ) {
  * @subpackage CosmosWP
  */
 
-require cosmoswp_file_directory('inc/customizer/options.php');
 require cosmoswp_file_directory('inc/customizer/defaults.php');
+require cosmoswp_file_directory('inc/customizer/options.php');
 require cosmoswp_file_directory('inc/customizer/sanitize.php');
 require cosmoswp_file_directory('inc/customizer/callback.php');
 require cosmoswp_file_directory('inc/customizer/selective-refresh.php');

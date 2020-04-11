@@ -130,11 +130,8 @@ if (!function_exists('cosmoswp_get_schema_markup')) {
         elseif ('image' == $location) {
             $schema = 'itemprop="image"';
         }
-
         return ' ' . apply_filters('cosmoswp_schema_markup', $schema, $location);
-
     }
-
 }
 
 if (!function_exists('cosmoswp_schema_markup')) {
@@ -496,10 +493,8 @@ if (!function_exists('cosmoswp_post_thumbnail')) :
         if (post_password_required() || is_attachment() || !has_post_thumbnail()) {
             return;
         }
-
         if (is_singular()) :
             ?>
-
             <div class="post-thumbnail">
                 <?php the_post_thumbnail($size); ?>
             </div><!-- .post-thumbnail -->
@@ -517,31 +512,6 @@ if (!function_exists('cosmoswp_post_thumbnail')) :
                 </a>
             </div>
         <?php endif; // End is_singular().
-    }
-endif;
-
-if (!function_exists('get_customizer_object')):
-
-    /**
-     * Return Customize object
-     * get_customizer_object
-     * @since CosmosWP 1.0.0
-     *
-     * @param null
-     * @return array
-     *
-     */
-    function get_customizer_object($type, $id) {
-        $accepted_types = array('setting', 'control', 'section', 'panel');
-        if (!in_array($type, $accepted_types)) {
-            return null;
-        }
-        $object = call_user_func_array(array($wp_customize, 'get_' . $type), array($id));
-        if (empty($object)) {
-            return null;
-        }
-
-        return $object;
     }
 endif;
 

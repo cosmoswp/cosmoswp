@@ -12,7 +12,6 @@ if ( ! class_exists( 'CosmosWP_Editor_Style' ) ) :
 
 	class CosmosWP_Editor_Style {
 
-
 		/**
 		 * Main Instance
 		 *
@@ -47,10 +46,8 @@ if ( ! class_exists( 'CosmosWP_Editor_Style' ) ) :
 		 * @return void
 		 */
 		public function run() {
-
-			add_action( 'enqueue_block_editor_assets',     array( $this, 'add_editor_dynamic_styles' ) );
-			add_action( 'after_setup_theme',     array( $this, 'add_editor_styles' ) );
-
+			add_action( 'enqueue_block_editor_assets', array( $this, 'add_editor_dynamic_styles' ) );
+			add_action( 'after_setup_theme', array( $this, 'add_editor_styles' ) );
 		}
 
 		public function dynamic_css(){
@@ -532,24 +529,6 @@ if ( ! class_exists( 'CosmosWP_Editor_Style' ) ) :
 		 * @since    1.0.0
 		 * @access   public
 		 *
-		 * @return string
-		 */
-		public function add_editor_google_fonts(){
-            // For the Block Editor.
-            $font_url = cosmoswp_typography_fonts()->get_google_font_url();
-			if ($font_url) {
-				return $font_url;
-			}
-			return false;
-		}
-
-		/**
-		 *  Call back function for cosmoswp_column_elements
-		 *  Change Post/Page builder layout
-		 *
-		 * @since    1.0.0
-		 * @access   public
-		 *
 		 * @return void
 		 */
 		public function add_editor_dynamic_styles(){
@@ -590,14 +569,7 @@ if ( ! class_exists( 'CosmosWP_Editor_Style' ) ) :
 			}
 			$output = cosmoswp_dynamic_css()->minify_css( $getCSS );
 			$styles = $output;
-		
-			if( $this->add_editor_google_fonts()){
-				wp_enqueue_style( 'cosmmoswp-block-google-fonts', $this->add_editor_google_fonts(), false, '1.0' );
-				/**
-				 * Styles from the customizer
-				 */
-				wp_add_inline_style( 'cosmmoswp-block-google-fonts', $styles );
-			}
+            wp_add_inline_style( 'cosmmoswp-block-google-fonts', $styles );
 		}
 
         /**
@@ -610,10 +582,11 @@ if ( ! class_exists( 'CosmosWP_Editor_Style' ) ) :
          * @return void
          */
         public function add_editor_styles(){
-            if( $this->add_editor_google_fonts()){
-                add_editor_style( $this->add_editor_google_fonts() );
+            // For the Block Editor.
+            $font_url = cosmoswp_typography_fonts()->get_google_font_url();
+            if ($font_url) {
+                add_editor_style( $font_url);
             }
-
         }
 	}
 

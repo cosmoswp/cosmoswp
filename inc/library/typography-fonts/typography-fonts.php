@@ -38,8 +38,11 @@ class CosmosWP_Typography_Fonts {
 
 		add_action( 'wp_ajax_cosmoswp_customizer_ajax_google_fonts', array( $this, 'google_fonts' ) );
 		add_action( 'wp_ajax_cosmoswp_customizer_ajax_custom_fonts', array( $this, 'custom_fonts' ) );
+        /*save google fonts to theme mod*/
+        add_action('customize_save_after', array($this, 'save_dynamic_fonts'), 9999);
+
 		add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_google_fonts' ),1 );
-	}
+    }
 
 	function google_fonts() {
         $google_fonts = get_transient( 'cosmoswp_google_fonts' );
@@ -63,7 +66,15 @@ class CosmosWP_Typography_Fonts {
         wp_send_json_success( apply_filters( 'cosmoswp_google_fonts', $google_fonts ) );
     }
 
-	function get_google_font_url(){
+	function get_google_font_url($is_fresh = false){
+        $previous_version = false;
+        if( !$is_fresh){
+            $cwp_dynamic_css = get_theme_mod('cwp_dynamic_fonts');
+            if( !empty( $cwp_dynamic_css )){
+                return $cwp_dynamic_css;
+            }
+            $previous_version = true;
+        }
 		/*font family wp_enqueue_style*/
 		$all_google_fonts = apply_filters('cosmoswp_enqueue_google_fonts',array() );
 
@@ -100,17 +111,34 @@ class CosmosWP_Typography_Fonts {
 				'family' => $google_font_family
 			), '//fonts.googleapis.com/css');
 
+            /*previous version fixed*/
+            if( $previous_version ){
+                set_theme_mod('cwp_dynamic_fonts', $fonts_url);
+            }
 			return $fonts_url;
 		}
 		return false;
 	}
 
-	function enqueue_google_fonts() {
+    /**
+     * Callback function for admin_bar_init
+     *
+     * @since    1.2.0
+     * @access   public
+     *
+     * @return void
+     */
+	public function save_dynamic_fonts(){
+        $fonts_url = $this->get_google_font_url(true);
+	    if( $fonts_url ){
+            set_theme_mod('cwp_dynamic_fonts', $fonts_url);
+        }
+    }
 
+	function enqueue_google_fonts() {
 		if( cosmoswp_typography_fonts()->get_google_font_url()){
 			wp_enqueue_style( 'cosmoswp-google-fonts', $this->get_google_font_url(), array(), false );
 		}
-
 	}
 
 }

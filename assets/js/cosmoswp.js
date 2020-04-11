@@ -611,15 +611,6 @@ jQuery(document).ready(function($){
         toggleMenu();
     });
 
-    /*animation with wow*/
-    if(typeof WOW !== 'undefined'){
-        eb_wow = new WOW({
-                boxClass: 'init-animate'
-            }
-        );
-        eb_wow.init();
-    }
-
     //webTicker
     if( typeof $.fn.webTicker !== 'undefined' ){
         $('#webTicker').show().webTicker({

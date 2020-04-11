@@ -119,9 +119,7 @@ if (!class_exists('CosmosWP_Edd')) :
          * @return array $classes modified to include 'edd-active' class
          */
         public function edd_body_class($classes) {
-            if (cosmoswp_is_edd_active()) {
-                $classes[] = 'cwp-edd-active';
-            }
+            $classes[] = 'cwp-edd-active';
             if (cosmoswp_is_edd_page()) {
                 $classes[] = 'cwp-edd-page';
             }

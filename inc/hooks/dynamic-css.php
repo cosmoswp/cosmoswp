@@ -52,9 +52,9 @@ if (!class_exists('CosmosWP_Dynamic_CSS')):
             add_filter('wp_head', array($this, 'dynamic_css'));
 
             /*Dynamic CSS file*/
-//            add_action('admin_bar_init', array($this, 'add_edit_dynamic_css_file'), 9999);
-            add_action('advanced_import_before_complete_screen', array($this, 'add_edit_dynamic_css_file'), 9999);
-            add_action('customize_save_after', array($this, 'add_edit_dynamic_css_file'), 9999);
+//            add_action('admin_bar_init', array($this, 'save_dynamic_css'), 9999);
+            add_action('advanced_import_before_complete_screen', array($this, 'save_dynamic_css'), 9999);
+            add_action('customize_save_after', array($this, 'save_dynamic_css'), 9999);
 
             add_action('wp_enqueue_scripts', array($this, 'dynamic_css_enqueue'), 9999);
 
@@ -118,7 +118,15 @@ if (!class_exists('CosmosWP_Dynamic_CSS')):
          * );
          * @return mixed
          */
-        public function get_dynamic_css($dynamic_css = array()) {
+        public function get_dynamic_css($dynamic_css = array(), $is_fresh = false) {
+            $previous_version = false;
+            if( !$is_fresh){
+                $cwp_dynamic_css = get_theme_mod('cwp_dynamic_css');
+                if( !empty( $cwp_dynamic_css )){
+                    return $cwp_dynamic_css;
+                }
+                $previous_version = true;
+            }
 
             $getCSS      = '';
             $dynamic_css = apply_filters('cosmoswp_dynamic_css', $dynamic_css);
@@ -157,6 +165,10 @@ if (!class_exists('CosmosWP_Dynamic_CSS')):
             }
             $output = cosmoswp_dynamic_css()->minify_css( $getCSS );
 
+            /*previous version fixed*/
+            if( $previous_version ){
+                set_theme_mod('cwp_dynamic_css', $output);
+            }
             return $output;
         }
 
@@ -170,13 +182,11 @@ if (!class_exists('CosmosWP_Dynamic_CSS')):
          */
         public static function dynamic_css() {
 
-            $output = cosmoswp_dynamic_css()->get_dynamic_css();
-
             if ('file' == cosmoswp_get_theme_options('dynamic-css-options')) {
 
                 global $wp_customize;
                 $upload_dir = wp_upload_dir();
-
+                $output = cosmoswp_dynamic_css()->get_dynamic_css();
                 if (isset($wp_customize) || !file_exists($upload_dir['basedir'] . '/cosmoswp/dynamic-style.css')) {
 
                     // Render CSS in the head
@@ -186,14 +196,12 @@ if (!class_exists('CosmosWP_Dynamic_CSS')):
                 }
 
             } else {
-
+                $output = cosmoswp_dynamic_css()->get_dynamic_css();
                 // Render CSS in the head
                 if (!empty($output)) {
                     echo "<!-- CosmosWP Dynamic CSS -->\n<style type=\"text/css\" id='cosmoswp-head-dynamic-css'>\n" . wp_strip_all_tags($output) . "\n</style>";
                 }
-
             }
-
         }
 
         /**
@@ -204,14 +212,14 @@ if (!class_exists('CosmosWP_Dynamic_CSS')):
          *
          * @return void
          */
-        public static function add_edit_dynamic_css_file() {
+        public static function save_dynamic_css() {
 
-            // If Custom File is not selected
-            if ('file' != cosmoswp_get_theme_options('dynamic-css-options')) {
-                return;
-            }
+            $output = cosmoswp_dynamic_css()->get_dynamic_css(array(), true);
 
-            $output = cosmoswp_dynamic_css()->get_dynamic_css();
+            /*Get and Set Dynamic Css for later use
+            Both in options and file
+            */
+            set_theme_mod('cwp_dynamic_css', $output);
 
             // We will probably need to load this file
             require_once(ABSPATH . 'wp-admin' . DIRECTORY_SEPARATOR . 'includes' . DIRECTORY_SEPARATOR . 'file.php');
@@ -222,7 +230,7 @@ if (!class_exists('CosmosWP_Dynamic_CSS')):
 
             WP_Filesystem();
             $wp_filesystem->mkdir($dir);
-            $wp_filesystem->put_contents($dir . 'dynamic-style.css', $output, 0644);
+            $wp_filesystem->put_contents($dir . 'dynamic-style.css', $output, 0644 );
 
         }
 

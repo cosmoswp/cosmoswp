@@ -43,11 +43,15 @@ if (!class_exists('CosmosWP_WooCommerce')) :
             if(cosmoswp_is_woocommerce_active()){
                 $this->load_file();
 
+                /*Add dedicated widget for woocommerce*/
                 add_filter('widgets_init', array($this, 'cosmoswp_woo_widget_init'));
 
+                /*Add dedicated class for woocommerce*/
                 add_filter('body_class', array($this, 'woocommerce_body_class'));
 
+                /*show/hide "Description" text from single product */
                 add_filter('woocommerce_product_description_heading', array($this, 'product_description_setting'), 10);
+                /*show hide "Additional information" text from single product*/
                 add_filter('woocommerce_product_additional_information_heading', array($this, 'product_additional_information_heading_setting'), 10);
 
                 /*remove common hooks*/
@@ -67,6 +71,9 @@ if (!class_exists('CosmosWP_WooCommerce')) :
 
                 /*add woocommerce single elements*/
                 $this->add_single_elements();
+
+                /*add woocommerce_shop_loop_subcategory_title*/
+                add_action('woocommerce_shop_loop_subcategory_title', array($this, 'woocommerce_template_loop_category_title'), 10);
 
                 /*add woocommerce theme sidebar*/
                 add_action('cosmoswp_woo_primary_sidebar', array($this, 'primary_sidebar'), 10);
@@ -207,6 +214,9 @@ if (!class_exists('CosmosWP_WooCommerce')) :
             remove_action('woocommerce_before_main_content', 'woocommerce_output_content_wrapper', 10);
             remove_action('woocommerce_after_main_content', 'woocommerce_output_content_wrapper_end', 10);
             remove_action('woocommerce_sidebar', 'woocommerce_get_sidebar', 10);
+
+            /*Remove category title hook to add own html and title*/
+            remove_action('woocommerce_shop_loop_subcategory_title', 'woocommerce_template_loop_category_title', 10);
         }
 
         /**
@@ -314,6 +324,25 @@ if (!class_exists('CosmosWP_WooCommerce')) :
          */
         function woocommerce_output_content_wrapper_end() {
             echo '</div><!-- .cosmoswp-woocommerce -->';
+        }
+
+        /**
+         * Show the subcategory title in the product loop.
+         * Original function wp-content\plugins\woocommerce\includes\wc-template-functions.php line 1128
+         * @param object $category Category object.
+         */
+        function woocommerce_template_loop_category_title( $category ) {
+            ?>
+            <h2 class="woocommerce-loop-category__title entry-title">
+                <?php
+                echo esc_html( $category->name );
+
+                if ( $category->count > 0 ) {
+                    echo apply_filters( 'woocommerce_subcategory_count_html', ' <mark class="count">' . esc_html( $category->count ) . esc_html__( 'Products','cosmoswp' ).'</mark>', $category ); // WPCS: XSS ok.
+                }
+                ?>
+            </h2>
+            <?php
         }
 
         /**

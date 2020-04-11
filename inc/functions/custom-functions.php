@@ -88,9 +88,6 @@ if (!function_exists('cosmoswp_responsive_button_value')) {
     }
 }
 
-/*enable yoast seo*/
-add_theme_support('yoast-seo-breadcrumbs');
-
 if (!function_exists('cosmoswp_cssbox_values_inline')) {
 
     /**
@@ -767,4 +764,35 @@ if (!function_exists('cosmoswp_get_grid_class')) :
         return $grid;
     }
 
+endif;
+
+if (!function_exists('cosmoswp_is_edit_page')) {
+    function cosmoswp_is_edit_page() {
+        //make sure we are on the backend
+        if (!is_admin()) {
+            return false;
+        }
+        global $pagenow;
+        return in_array($pagenow, array('post.php', 'post-new.php'));
+    }
+}
+
+if (!function_exists('cosmoswp_is_scrollbar_js')) :
+
+    /**
+     * Check if scrollbar_js needed
+     *$cosmoswp_get_non_empty_categories
+     * @since cosmoswp 1.2.0
+     *
+     * @param null
+     * @return bool
+     *
+     */
+    function cosmoswp_is_scrollbar_js() {
+        $footer_display_style = cosmoswp_get_theme_options('footer-display-style');
+        if (!empty($footer_display_style) && ('cwp-normal-footer' != $footer_display_style)){
+            return true;
+        }
+        return false;
+    }
 endif;

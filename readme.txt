@@ -29,12 +29,7 @@ The exceptions to license are as follows:
 * Google Fonts - Apache License, version 2.0
 * normalize.css http://necolas.github.io/normalize.css/, (C) 2012-2015 Nicolas Gallagher and Jonathan Neal, [MIT](http://opensource.org/licenses/MIT)
 * Font Awesome Free 5 by @fontawesome - https://fontawesome.com, License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
-* html5shiv https://github.com/afarkas/html5shiv  by @afarkas @jdalton @jon_neal @rem | MIT/GPL2 Licensed
 * jQuery CSS Customizable Scrollbar Copyright 2015, Yuriy Khabarov, Dual licensed under the MIT or GPL Version 2 licenses.
-* respond.min.js, Copyright Scott Jehl, [MIT](http://opensource.org/licenses/MIT)
-* theia-sticky-sidebar https://github.com/WeCodePixels/theia-sticky-sidebar [MIT](http://opensource.org/licenses/MIT), Copyright 2013-2016 WeCodePixels and other contributors
-* Web Ticker https://github.com/mazedigital/Web-Ticker [MIT](http://opensource.org/licenses/MIT), Copyright 2011 Jonathan Mifsud
-* WOW (c) 2015 Matthieu Aussaguel; Licensed MIT
 * wpness-grid Licensed MIT, Copyright © 2020, AcmeIT
 
 == Screenshots ==

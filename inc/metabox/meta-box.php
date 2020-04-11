@@ -67,8 +67,8 @@ if ( ! class_exists( 'CosmosWP_Custom_Meta_Box' ) ) :
          * Enqueue scripts
          * return void
          */
-        public function enqueue_meta_box_script($hook) {
-            if ( is_admin() ) {
+        public function enqueue_meta_box_script() {
+            if ( cosmoswp_is_edit_page()) {
                 wp_enqueue_style( 'cosmoswp-meta-box-css', COSMOSWP_URL . '/inc/metabox/meta-box.css', array(), '1.0.0' );
             }
         }
@@ -84,7 +84,7 @@ if ( ! class_exists( 'CosmosWP_Custom_Meta_Box' ) ) :
 		 */
 		public function meta_sidebar_value( $sidebar ){
 
-			$sidebar_layout                  = get_post_meta(get_the_ID(), 'cosmoswp_sidebar_options', true);
+			$sidebar_layout = get_post_meta(get_the_ID(), 'cosmoswp_sidebar_options', true);
 			if (!$sidebar_layout || $sidebar_layout == 'default'){
 				return $sidebar;
 			}

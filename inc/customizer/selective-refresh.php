@@ -130,7 +130,7 @@ if (!function_exists('cosmoswp_customize_partial_refresh_dynamic_css')) :
 	function cosmoswp_customize_partial_refresh_typography() {
 
 		$dynamic_css = cosmoswp_customize_partial_refresh_dynamic_css();
-		$font_url = cosmoswp_typography_fonts()->get_google_font_url();
+		$font_url = cosmoswp_typography_fonts()->get_google_font_url(true);
 		$output = array(
 			'dynamic_css' => $dynamic_css,
 			'google_font_url' => $font_url,
