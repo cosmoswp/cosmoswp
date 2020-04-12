@@ -1350,7 +1350,7 @@ if ( $site_title_hover_color ){
 	$site_title_hover_css .= 'color:'.$site_title_hover_color.';';
 }
 if ( !empty( $site_title_hover_css )){
-	$site_title_hover_dynamic_css = '.cwp-logo .site-title:hover, .cwp-logo .site-title:hover a,.site-title:focus,.site-title:focus a{ 
+	$site_title_hover_dynamic_css = '.cwp-logo .site-title:hover, .cwp-logo .site-title:hover a,.site-title:focus-within,.site-title:focus-within a{ 
 		'.$site_title_hover_css.'
 	}';
 	$local_dynamic_css['all'] .= $site_title_hover_dynamic_css;
