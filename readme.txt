@@ -73,6 +73,7 @@ https://fontawesome.com/icons
 * Removed : Unnecessary Library
 * Fixed : Customizer slow loading
 * Fixed : Site Identity missing on responsive
+* Fixed : Site color hover color
 
 = 1.0.9 - 2020-04-10 =
 * Added : Typography cache
