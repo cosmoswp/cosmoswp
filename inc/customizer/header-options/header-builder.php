@@ -231,6 +231,8 @@ if (!class_exists('CosmosWP_Header_Builder')) :
          */
         public function run() {
 
+            add_action('customize_register', array($this, 'set_customizer'), 1);
+
             add_filter('cosmoswp_default_theme_options', array($this, 'header_defaults'));
             add_filter('cosmoswp_builders', array($this, 'header_builder'));
             add_action('customize_register', array($this, 'customize_register'), 100);
@@ -238,6 +240,24 @@ if (!class_exists('CosmosWP_Header_Builder')) :
             add_action('cosmoswp_action_header', array($this, 'display_header'), 100);
             add_filter('cosmoswp_dynamic_css', array($this, 'dynamic_css'), 100);
             add_filter('cosmoswp_enqueue_google_fonts', array($this, 'enqueue_google_fonts'), 1);
+        }
+
+        /**
+         * Callback functions for customize_register,
+         * Fixed previous array issue
+         *
+         * @since    1.1.0
+         * @access   public
+         *
+         * @param null
+         * @return void
+         */
+        public function set_customizer(){
+            $builder = cosmoswp_get_theme_options(cosmoswp_header_builder()->builder_section_controller);
+            if ( is_array( $builder ) ) {
+                $builder = json_encode( urldecode_deep( $builder ), true );
+            }
+            set_theme_mod(cosmoswp_header_builder()->builder_section_controller,$builder);
         }
 
         /**
@@ -533,6 +553,9 @@ if (!class_exists('CosmosWP_Header_Builder')) :
                 <header id="cwp-header-wrap" <?php cosmoswp_header_wrap_classes(); ?>>
 			        <?php
 			        $builder = cosmoswp_get_theme_options(cosmoswp_header_builder()->builder_section_controller);
+                    if ( ! is_array( $builder ) ) {
+                        $builder = json_decode( urldecode_deep( $builder ), true );
+                    }
 			        if (isset($builder['desktop']) && !empty($builder['desktop'])) {
 				        $desktop_builder = $builder['desktop'];
 				        foreach ($desktop_builder as $key => $single_row) {

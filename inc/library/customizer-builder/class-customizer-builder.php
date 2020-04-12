@@ -33,6 +33,7 @@ if( !function_exists( 'cosmoswp_customizer_builder_sanitize_field')){
 			$input = json_decode( urldecode_deep( $input ), true );
 		}
 		$output = cosmoswp_customizer_builder_sanitize_field_recursive($input);
+		$output = json_encode($output);
 		return $output;
 	}
 }

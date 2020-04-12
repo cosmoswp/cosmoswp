@@ -156,6 +156,8 @@ if (!class_exists('CosmosWP_Footer_Builder')) :
          */
         public function run() {
 
+            add_action('customize_register', array($this, 'set_customizer'), 1);
+
             add_filter('cosmoswp_default_theme_options', array($this, 'footer_defaults'));
             add_filter('cosmoswp_builders', array($this, 'footer_builder'));
             add_action('customize_register', array($this, 'customize_register'), 100);
@@ -163,6 +165,24 @@ if (!class_exists('CosmosWP_Footer_Builder')) :
             add_filter('cosmoswp_dynamic_css', array($this, 'dynamic_css'), 100);
             add_filter('cosmoswp_enqueue_google_fonts', array($this, 'enqueue_google_fonts'), 1);
 
+        }
+
+        /**
+         * Callback functions for customize_register,
+         * Fixed previous array issue
+         *
+         * @since    1.1.0
+         * @access   public
+         *
+         * @param null
+         * @return void
+         */
+        public function set_customizer(){
+            $builder = cosmoswp_get_theme_options(cosmoswp_footer_builder()->builder_section_controller);
+            if ( is_array( $builder ) ) {
+                $builder = json_encode( urldecode_deep( $builder ), true );
+            }
+            set_theme_mod(cosmoswp_footer_builder()->builder_section_controller,$builder);
         }
 
         /**
@@ -331,7 +351,14 @@ if (!class_exists('CosmosWP_Footer_Builder')) :
             /**
              * Builder Section use for builder only
              */
-            $wp_customize->add_section(cosmoswp_footer_builder()->builder_section_controller, array('title' => esc_html__('Footer Builder', 'cosmoswp'), 'priority' => 10, 'panel' => cosmoswp_footer_builder()->panel,));
+            $wp_customize->add_section(
+                cosmoswp_footer_builder()->builder_section_controller,
+                array(
+                    'title' => esc_html__('Footer Builder', 'cosmoswp'),
+                    'priority' => 10,
+                    'panel' => cosmoswp_footer_builder()->panel
+                )
+            );
 
             /**
              * Builder control and setting
@@ -345,7 +372,15 @@ if (!class_exists('CosmosWP_Footer_Builder')) :
                 )
             );
 
-            $wp_customize->add_control(cosmoswp_footer_builder()->builder_section_controller, array('label' => esc_html__('Footer Builder', 'cosmoswp'), 'section' => cosmoswp_footer_builder()->builder_section_controller, 'settings' => cosmoswp_footer_builder()->builder_section_controller, 'type' => 'text'));
+            $wp_customize->add_control(
+                    cosmoswp_footer_builder()->builder_section_controller,
+                    array(
+                        'label' => esc_html__('Footer Builder', 'cosmoswp'),
+                        'section' => cosmoswp_footer_builder()->builder_section_controller,
+                        'settings' => cosmoswp_footer_builder()->builder_section_controller,
+                        'type' => 'text'
+                    )
+            );
 
             /*Footer Defaults Layout*/
             require cosmoswp_file_directory('inc/customizer/footer-options/footer-general.php');
@@ -456,6 +491,9 @@ if (!class_exists('CosmosWP_Footer_Builder')) :
                 <div class="cwp-scrollbar cwp-scrollbar-inner">
                     <?php
                     $builder = cosmoswp_get_theme_options(cosmoswp_footer_builder()->builder_section_controller);
+                    if ( ! is_array( $builder ) ) {
+                        $builder = json_decode( urldecode_deep( $builder ), true );
+                    }
                     if (isset($builder['desktop']) && !empty($builder['desktop'])) {
                         $desktop_builder = $builder['desktop'];
                         foreach ($desktop_builder as $key => $single_row) {
@@ -482,11 +520,11 @@ if (!class_exists('CosmosWP_Footer_Builder')) :
          * @return
          */
         public function desktop_footer($desktop_builder) {
-            /* header top */
+            /* footer top widget title align */
             $top_widget_title_align   = cosmoswp_get_theme_options('footer-top-widget-title-align');
             $top_widget_content_align = cosmoswp_get_theme_options('footer-top-widget-content-align');
 
-            /* header main */
+            /* footer main widget title align */
             $main_widget_title_align   = cosmoswp_get_theme_options('footer-main-widget-title-align');
             $main_widget_content_align = cosmoswp_get_theme_options('footer-main-widget-content-align');
 

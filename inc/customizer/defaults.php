@@ -42,7 +42,7 @@ if (!function_exists('cosmoswp_get_theme_options')) :
     function cosmoswp_get_theme_options($key = '') {
         if (!empty($key)) {
             $cosmoswp_default_theme_options = cosmoswp_get_default_theme_options();
-            $cosmoswp_get_theme_options     = get_theme_mod($key, $cosmoswp_default_theme_options[$key]);
+            $cosmoswp_get_theme_options     = get_theme_mod($key, isset($cosmoswp_default_theme_options[$key])?$cosmoswp_default_theme_options[$key]:'');
             return apply_filters( 'cosmoswp_'.$key, $cosmoswp_get_theme_options );
         }
         return false;
