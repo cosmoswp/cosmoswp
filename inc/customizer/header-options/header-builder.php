@@ -639,8 +639,8 @@ if (!class_exists('CosmosWP_Header_Builder')) :
                         <a class="cwp-close-btn" href="#"><?php echo $icon_structure ?></a>
                     </div>
 				    <?php
-				    $builder = cosmoswp_get_theme_options('cosmoswp_header_builder_section_controller');
-				    if (isset($builder['all']['sidebar']) && !empty($builder['all']['sidebar'])) {
+                    $builder = cosmoswp_header_builder()->get_builder();
+                    if (isset($builder['all']['sidebar']) && !empty($builder['all']['sidebar'])) {
 					    $sidebar_element = $builder['all']['sidebar'];
 					    if (is_array($sidebar_element)) {
 						    foreach ($sidebar_element as $key) {
