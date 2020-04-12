@@ -100,7 +100,7 @@ if (!class_exists('CosmosWP_WooCommerce_Archive')) :
                 'cwc-archive-list-media-width'   => json_encode(array(
                     'desktop' => '40',
                     'tablet'  => '40',
-                    'mobile'  => '100',
+                    'mobile'  => '40',
                 )),
             );
 

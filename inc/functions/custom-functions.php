@@ -782,7 +782,7 @@ if (!function_exists('cosmoswp_is_scrollbar_js')) :
     /**
      * Check if scrollbar_js needed
      *$cosmoswp_get_non_empty_categories
-     * @since cosmoswp 1.2.0
+     * @since cosmoswp 1.1.0
      *
      * @param null
      * @return bool

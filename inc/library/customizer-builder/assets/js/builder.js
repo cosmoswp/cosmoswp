@@ -1425,7 +1425,12 @@
 
                 var data = wp_customize.control( that.controlId ).setting._value;
                 if ( ! _.isObject( data ) ) {
-                    data = {};
+                    if (data) {
+                        data = JSON.parse(data);
+                    }
+                    else{
+                        data = {};
+                    }
                 }
                 _.each( that.panels, function( $rows,  device ) {
                     var device_data = {};

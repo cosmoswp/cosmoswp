@@ -261,6 +261,23 @@ if (!class_exists('CosmosWP_Header_Builder')) :
         }
 
         /**
+         * Get header builder
+         *
+         * @since    1.1.0
+         * @access   public
+         *
+         * @param null
+         * @return void
+         */
+        public function get_builder(){
+            $builder = cosmoswp_get_theme_options(cosmoswp_header_builder()->builder_section_controller);
+            if ( ! is_array( $builder ) ) {
+                $builder = json_decode( urldecode_deep( $builder ), true );
+            }
+            return $builder;
+        }
+
+        /**
          * Callback functions for cosmoswp_default_theme_options,
          * Add Header Builder defaults values
          *
@@ -552,10 +569,7 @@ if (!class_exists('CosmosWP_Header_Builder')) :
 		        ?>
                 <header id="cwp-header-wrap" <?php cosmoswp_header_wrap_classes(); ?>>
 			        <?php
-			        $builder = cosmoswp_get_theme_options(cosmoswp_header_builder()->builder_section_controller);
-                    if ( ! is_array( $builder ) ) {
-                        $builder = json_decode( urldecode_deep( $builder ), true );
-                    }
+                    $builder = cosmoswp_header_builder()->get_builder();
 			        if (isset($builder['desktop']) && !empty($builder['desktop'])) {
 				        $desktop_builder = $builder['desktop'];
 				        foreach ($desktop_builder as $key => $single_row) {
@@ -575,14 +589,6 @@ if (!class_exists('CosmosWP_Header_Builder')) :
 					        }
 				        }
 				        if (!empty($mobile_builder)) {
-                            foreach ($mobile_builder as $key => $single_row) {
-                                foreach ($single_row as $row => $row_val) {
-                                    if($row_val['id'] == 'title_tagline'){
-                                        $mobile_builder[$key][$row]['id'] = 'tagline_mobile';
-                                        break;
-                                    }
-                                }
-                            }
                             cosmoswp_header_builder()->mobile_header($mobile_builder);
                         }
 			        }

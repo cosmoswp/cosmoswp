@@ -186,6 +186,23 @@ if (!class_exists('CosmosWP_Footer_Builder')) :
         }
 
         /**
+         * Get footer builder
+         *
+         * @since    1.1.0
+         * @access   public
+         *
+         * @param null
+         * @return void
+         */
+        public function get_builder(){
+            $builder = cosmoswp_get_theme_options(cosmoswp_footer_builder()->builder_section_controller);
+            if ( ! is_array( $builder ) ) {
+                $builder = json_decode( urldecode_deep( $builder ), true );
+            }
+            return $builder;
+        }
+
+        /**
          * Callback functions for cosmoswp_default_theme_options,
          * Add Footer Builder defaults values
          *
@@ -490,10 +507,7 @@ if (!class_exists('CosmosWP_Footer_Builder')) :
                 <?php do_action('cosmoswp_action_sticky_footer'); ?>
                 <div class="cwp-scrollbar cwp-scrollbar-inner">
                     <?php
-                    $builder = cosmoswp_get_theme_options(cosmoswp_footer_builder()->builder_section_controller);
-                    if ( ! is_array( $builder ) ) {
-                        $builder = json_decode( urldecode_deep( $builder ), true );
-                    }
+                    $builder = cosmoswp_footer_builder()->get_builder();
                     if (isset($builder['desktop']) && !empty($builder['desktop'])) {
                         $desktop_builder = $builder['desktop'];
                         foreach ($desktop_builder as $key => $single_row) {

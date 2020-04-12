@@ -5,7 +5,7 @@ Tags: blog, e-commerce, portfolio, grid-layout, one-column	, two-columns, three-
 Requires at least: 5.0
 Tested up to: 5.4
 Requires PHP: 5.6
-Stable tag: 1.0.9
+Stable tag: 1.1.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -65,6 +65,14 @@ https://fontawesome.com/icons
 
 
 == Changelog ==
+
+= 1.1.0 - 2020-04-12 =
+* Fixed : WooCommerce Product Catalog shop page and category page display
+* Update : Dynamic css and Typography
+* Update : Some optimization
+* Removed : Unnecessary Library
+* Fixed : Customizer slow loading
+* Fixed : Site Identity missing on responsive
 
 = 1.0.9 - 2020-04-10 =
 * Added : Typography cache

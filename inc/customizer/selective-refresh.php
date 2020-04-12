@@ -37,7 +37,7 @@ if (!function_exists('cosmoswp_customize_partial_header')) :
 	function cosmoswp_customize_partial_header() {
 		ob_start();
 
-		$builder = cosmoswp_get_theme_options(cosmoswp_header_builder()->builder_section_controller);
+		$builder = cosmoswp_header_builder()->get_builder();
 		if (isset($builder['desktop']) && !empty($builder['desktop'])) {
 			$desktop_builder = $builder['desktop'];
 			foreach ($desktop_builder as $key => $single_row) {
@@ -75,7 +75,7 @@ if (!function_exists('cosmoswp_customize_partial_footer')) :
 	function cosmoswp_customize_partial_footer() {
 		ob_start();
 
-        $builder = cosmoswp_get_theme_options(cosmoswp_footer_builder()->builder_section_controller);
+        $builder = cosmoswp_footer_builder()->get_builder();
         if (isset($builder['desktop']) && !empty($builder['desktop'])) {
             $desktop_builder = $builder['desktop'];
             foreach ($desktop_builder as $key => $single_row) {
