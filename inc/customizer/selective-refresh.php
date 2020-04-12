@@ -116,8 +116,8 @@ if (!function_exists('cosmoswp_customize_partial_refresh_dynamic_css')) :
 	 * @return string
 	 */
 	function cosmoswp_customize_partial_refresh_dynamic_css() {
-		$output = cosmoswp_dynamic_css()->get_dynamic_css();
-		return wp_strip_all_tags($output);
+        $output = cosmoswp_dynamic_css()->get_dynamic_css(array(), true);
+        return wp_strip_all_tags($output);
 	}
 
 	function cosmoswp_customize_partial_refresh_ajax_dynamic_css() {

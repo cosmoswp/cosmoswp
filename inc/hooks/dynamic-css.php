@@ -186,9 +186,8 @@ if (!class_exists('CosmosWP_Dynamic_CSS')):
 
                 global $wp_customize;
                 $upload_dir = wp_upload_dir();
-                $output = cosmoswp_dynamic_css()->get_dynamic_css();
                 if (isset($wp_customize) || !file_exists($upload_dir['basedir'] . '/cosmoswp/dynamic-style.css')) {
-
+                    $output = cosmoswp_dynamic_css()->get_dynamic_css();
                     // Render CSS in the head
                     if (!empty($output)) {
                         echo "<!-- CosmosWP Dynamic CSS -->\n<style type=\"text/css\" id='cosmoswp-head-dynamic-css'>\n" . wp_strip_all_tags($output) . "\n</style>";
