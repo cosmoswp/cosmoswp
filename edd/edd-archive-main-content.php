@@ -16,10 +16,10 @@ if (have_posts()) :
     }
     $edd_archive_show_sort_bar  = cosmoswp_get_theme_options('edd-archive-show-sort-bar');
     $edd_archive_default_view   = cosmoswp_get_theme_options('edd-archive-default-view');
-    $edd_archive_elements_align = cosmoswp_get_theme_options('edd-archive-grid-elements-align');
+    $edd_archive_elements_align = cosmoswp_get_theme_options('edd-archive-elements-align');
     $edd_archive_show_grid_list = cosmoswp_get_theme_options('edd-archive-show-grid-list');
 
-    echo '<div class="grid-row cosmoswp-edd-grid-row ' . esc_attr($edd_archive_default_view) . ' ' . esc_attr($edd_archive_elements_align) . '">';
+    echo '<div class="grid-row cosmoswp-edd-grid-row ' . esc_attr($edd_archive_default_view) .'">';
     ?>
     <div class="grid-12">
         <div class="cwp-edd-archive-toolbar">
@@ -27,8 +27,8 @@ if (have_posts()) :
             if ($edd_archive_show_grid_list) {
                 ?>
                 <div class="cwp-edd-view-switcher">
-                    <span class="cwp-trigger-grid <?php echo esc_attr(cosmoswp_get_correct_fa_font('fas fa-th'));?> <?php echo 'grid' == $woo_archive_default_view ? 'active' : '' ?>"></span>
-                    <span class="cwp-trigger-list <?php echo esc_attr(cosmoswp_get_correct_fa_font('fas fa-list'));?> <?php echo 'list' == $woo_archive_default_view ? 'active' : '' ?>"></span>
+                    <span class="cwp-trigger-grid <?php echo esc_attr(cosmoswp_get_correct_fa_font('fas fa-th'));?> <?php echo 'grid' == $edd_archive_default_view ? 'active' : '' ?>"></span>
+                    <span class="cwp-trigger-list <?php echo esc_attr(cosmoswp_get_correct_fa_font('fas fa-list'));?> <?php echo 'list' == $edd_archive_default_view ? 'active' : '' ?>"></span>
                 </div>
                 <?php
             }
@@ -43,25 +43,17 @@ if (have_posts()) :
     while (have_posts()) : the_post();
 
         global $post;
-        $columns = cosmoswp_get_theme_options('edd-show-downloads-per-row');
-        if (1 == $columns) {
-            $grid = 'grid-12';
-        }
-        elseif (2 == $columns) {
-            $grid = 'grid-6';
-        }
-        elseif (3 == $columns) {
-            $grid = 'grid-4';
-        }
-        elseif (4 == $columns) {
-            $grid = 'grid-3';
-        }
-        elseif (5 == $columns) {
-            $grid = 'grid-xs-2m3';
-        }
-        else {
-            $grid = 'grid-2';
-        }
+        $columns    = cosmoswp_get_theme_options('edd-show-downloads-per-row');
+        $columns    = json_decode($columns, true);
+        $l_col   = $columns['desktop'];
+        $t_col   = $columns['tablet'];
+        $s_col   = $columns['mobile'];
+
+        $grid = esc_attr(cosmoswp_get_l_grid_class($l_col));
+        $grid .= ' '.esc_attr(cosmoswp_get_grid_class($t_col));
+        $grid .= ' '.esc_attr(cosmoswp_get_s_grid_class($s_col));
+
+        $grid.= ' '.esc_attr($edd_archive_elements_align)
         ?>
         <div id="download-<?php the_ID(); ?>" <?php post_class($grid); ?>>
             <?php
@@ -117,8 +109,9 @@ if (have_posts()) :
                 }
                 elseif ('price' == $element) {
                     if (!edd_has_variable_prices(get_the_ID())) {
-
+                        echo "<div class='cwp-edd-price cwp-elements'>";
                         echo esc_html(edd_get_download_price(get_the_ID()));
+                        echo "</div>";
                     }
                 }
                 elseif ('cart' == $element) {

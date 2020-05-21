@@ -9,17 +9,21 @@ $woo_archive_default_view = cosmoswp_get_theme_options('cwc-archive-default-view
         $woo_archive_show_result_number = cosmoswp_get_theme_options('cwc-archive-show-result-number');
         $woo_archive_show_sort_bar      = cosmoswp_get_theme_options('cwc-archive-show-sort-bar');
         $woo_archive_show_grid_list     = cosmoswp_get_theme_options('cwc-archive-show-grid-list');
+        $cwc_archive_psp_sm     = cosmoswp_get_theme_options('cwc-archive-psp-sm');
+        $sidebar = cosmoswp_get_theme_options('cwp-woo-archive-sidebar');
 
         do_action('woocommerce_before_shop_loop');
 
         woocommerce_product_loop_start();
-
 
         if (wc_get_loop_prop('total')) {
             ?>
             <div class="grid-12">
                 <div class="cwp-woo-archive-toolbar">
                     <?php
+                    if( $cwc_archive_psp_sm && ($sidebar == 'ps-ct' || $sidebar == 'ct-ps' || $sidebar == 'ss-ct-ps' || $sidebar == 'ss-ps-ct' || $sidebar == 'ct-ps-ss')){
+                        echo '<a class="cwc-archive-psp-sm cwc-archive-psp-sm-toggle" href="#">'.wp_kses_post(cosmoswp_get_theme_options('cwc-archive-psp-sm-open-text')).'</a>';
+                    }
                     if ($woo_archive_show_grid_list) {
                         ?>
                         <div class="cwp-woo-view-switcher">

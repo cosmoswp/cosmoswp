@@ -591,6 +591,7 @@ $header_defaults = array(
     //drop down
     'dd-search-placeholder'             => esc_html__('Search', 'cosmoswp'),
     'dd-search-icon-align'              => 'cwp-flex-align-right',
+    'dd-search-form-align'              => 'cwp-search-align-left',
     'drop-down-search-input-height'     => '45',
     'drop-down-search-padding'          => json_encode(array(
         'desktop' => array(

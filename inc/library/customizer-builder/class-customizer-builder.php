@@ -114,12 +114,12 @@ class CosmosWP_Customizer_Builder {
 	 */
     function enqueue() {
 
-	    wp_enqueue_script( 'customizer-builder', COSMOSWP_URL. '/inc/library/customizer-builder/assets/js/builder.js', array(
+	    wp_enqueue_script( 'customizer-builder', COSMOSWP_URL. '/inc/library/customizer-builder/assets/js/builder' . COSMOSWP_SCRIPT_PREFIX . '.js', array(
             'customize-controls',
             'jquery-ui-resizable',
             'jquery-ui-droppable',
             'jquery-ui-draggable'
-        ), false, true );
+        ), COSMOSWP_VERSION, true );
 
         wp_localize_script( 'customizer-builder', 'CosmosWP_Customizer_Builder', array(
             'footer_moved_widgets_text' => '',

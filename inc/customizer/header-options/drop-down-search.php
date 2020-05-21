@@ -31,13 +31,13 @@ $wp_customize->add_control(
         $wp_customize,
         'dd-search-layout-msg',
         array(
-            'label'   => esc_html__('Search Icon Layout', 'cosmoswp'),
+            'label'   => esc_html__('Search Layout', 'cosmoswp'),
             'section' => $this->drop_down_search,
         )
     )
 );
 
-/*DropDown Search align*/
+/*DropDown Search Icon Align*/
 $wp_customize->add_setting('dd-search-icon-align', array(
     'default'           => $header_defaults['dd-search-icon-align'],
     'sanitize_callback' => 'cosmoswp_sanitize_select',
@@ -53,6 +53,26 @@ $wp_customize->add_control(
             'label'    => esc_html__('Search Icon Alignment', 'cosmoswp'),
             'section'  => $this->drop_down_search,
             'settings' => 'dd-search-icon-align',
+        )
+    )
+);
+
+/*DropDown Search align*/
+$wp_customize->add_setting('dd-search-form-align', array(
+    'default'           => $header_defaults['dd-search-form-align'],
+    'sanitize_callback' => 'cosmoswp_sanitize_select',
+    'transport'         => 'postMessage'
+));
+$choices = cosmoswp_dd_search_form_align();
+$wp_customize->add_control(
+    new CosmosWP_Custom_Control_Buttonset(
+        $wp_customize,
+        'dd-search-form-align',
+        array(
+            'choices'  => $choices,
+            'label'    => esc_html__('Search Form Alignment', 'cosmoswp'),
+            'section'  => $this->drop_down_search,
+            'settings' => 'dd-search-form-align',
         )
     )
 );

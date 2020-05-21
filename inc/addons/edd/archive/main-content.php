@@ -2,6 +2,21 @@
 if (!defined('ABSPATH')) {
     exit;
 }
+/*Grid Elements*/
+$wp_customize->add_setting('edd-archive-url-msg', array(
+    'sanitize_callback' => 'wp_kses_post',
+));
+$description =  sprintf(esc_html__('The options will work on %1$sEDD Archive %2$s page', 'cosmoswp'), "<a href='".esc_url(get_post_type_archive_link("download"))."' target='_blank'>", '</a>');
+$wp_customize->add_control(
+    new CosmosWP_Custom_Control_Message(
+        $wp_customize,
+        'edd-archive-url-msg',
+        array(
+            'description' => $description,
+            'section'     => $this->section,
+        )
+    )
+);
 
 /*EDD Single Sidebar*/
 $wp_customize->add_setting('cwp-edd-archive-sidebar', array(
@@ -83,6 +98,23 @@ $wp_customize->add_control('edd-archive-show-grid-list', array(
     'type'     => 'checkbox'
 ));
 
+/*Downloads Per Row*/
+$wp_customize->add_setting('edd-show-downloads-per-row', array(
+    'default'           => $defaults['edd-show-downloads-per-row'],
+    'sanitize_callback' => 'cosmoswp_sanitize_number',
+));
+$wp_customize->add_control(
+    new CosmosWP_Custom_Control_Slider(
+        $wp_customize,
+        'edd-show-downloads-per-row',
+        array(
+            'label'       => esc_html__('Downloads Per Row', 'cosmoswp'),
+            'section'     => $this->section,
+            'settings'    => 'edd-show-downloads-per-row',
+            'input_attrs' => array('min' => 1, 'max' => 12, 'step' => 1)
+        )
+    )
+);
 /*Grid Elements*/
 $wp_customize->add_setting('edd-archive-grid-elements-msg', array(
     'sanitize_callback' => 'wp_kses_post',
@@ -92,7 +124,7 @@ $wp_customize->add_control(
         $wp_customize,
         'edd-archive-grid-elements-msg',
         array(
-            'label'   => esc_html__('Grid Elements', 'cosmoswp'),
+            'label'   => esc_html__('Elements', 'cosmoswp'),
             'section' => $this->section,
         )
     )
@@ -116,51 +148,20 @@ $wp_customize->add_control(
 );
 
 /*Title align*/
-$wp_customize->add_setting('edd-archive-grid-elements-align', array(
-    'default'           => $defaults['edd-archive-grid-elements-align'],
+$wp_customize->add_setting('edd-archive-elements-align', array(
+    'default'           => $defaults['edd-archive-elements-align'],
     'sanitize_callback' => 'cosmoswp_sanitize_select',
 ));
 $choices = cosmoswp_text_align();
 $wp_customize->add_control(
     new CosmosWP_Custom_Control_Buttonset(
         $wp_customize,
-        'edd-archive-grid-elements-align',
+        'edd-archive-elements-align',
         array(
             'choices'  => $choices,
             'label'    => esc_html__('Elements Alignment', 'cosmoswp'),
             'section'  => $this->section,
-            'settings' => 'edd-archive-grid-elements-align',
-        )
-    )
-);
-
-/*List Elements*/
-$wp_customize->add_setting('edd-archive-list-elements-msg', array(
-    'sanitize_callback' => 'wp_kses_post',
-));
-$wp_customize->add_control(
-    new CosmosWP_Custom_Control_Heading(
-        $wp_customize,
-        'edd-archive-list-elements-msg',
-        array(
-            'label'   => esc_html__('List Elements', 'cosmoswp'),
-            'section' => $this->section,
-        )
-    )
-);
-$wp_customize->add_setting('edd-archive-list-elements', array(
-    'default'           => $defaults['edd-archive-list-elements'],
-    'sanitize_callback' => 'cosmoswp_sanitize_multi_choices',
-));
-$choices = cosmoswp_edd_archive_list_elements_sorting();
-$wp_customize->add_control(
-    new CosmosWP_Custom_Control_Sortable(
-        $wp_customize,
-        'edd-archive-list-elements',
-        array(
-            'choices'  => $choices,
-            'section'  => $this->section,
-            'settings' => 'edd-archive-list-elements'
+            'settings' => 'edd-archive-elements-align',
         )
     )
 );
@@ -196,25 +197,6 @@ $wp_customize->add_control(
                 'max'  => 100,
                 'step' => 1,
             ),
-        )
-    )
-);
-
-/*Title align*/
-$wp_customize->add_setting('edd-archive-list-elements-align', array(
-    'default'           => $defaults['edd-archive-list-elements-align'],
-    'sanitize_callback' => 'cosmoswp_sanitize_select',
-));
-$choices = cosmoswp_text_align();
-$wp_customize->add_control(
-    new CosmosWP_Custom_Control_Buttonset(
-        $wp_customize,
-        'edd-archive-list-elements-align',
-        array(
-            'choices'  => $choices,
-            'label'    => esc_html__('Elements Alignment', 'cosmoswp'),
-            'section'  => $this->section,
-            'settings' => 'edd-archive-list-elements-align',
         )
     )
 );

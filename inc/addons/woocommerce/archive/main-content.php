@@ -15,7 +15,6 @@ $wp_customize->add_control('cwp-woo-archive-sidebar', array(
     'settings'    => 'cwp-woo-archive-sidebar',
     'type'        => 'select',
 ));
-
 /*Feature Layout*/
 $wp_customize->add_setting('cwc-archive-default-view', array(
     'default'           => $defaults['cwc-archive-default-view'],
@@ -32,6 +31,39 @@ $wp_customize->add_control('cwc-archive-default-view', array(
     'type'     => 'select'
 ));
 
+/*Woo Single Sidebar Responsive Icon*/
+$wp_customize->add_setting('cwc-archive-psp-sm', array(
+    'default'           => $defaults['cwc-archive-psp-sm'],
+    'sanitize_callback' => 'cosmoswp_sanitize_checkbox'
+));
+$wp_customize->add_control('cwc-archive-psp-sm', array(
+    'label'    => esc_html__('Popup primary sidebar on Small Device', 'cosmoswp'),
+    'section'  => $this->section,
+    'settings' => 'cwc-archive-psp-sm',
+    'type'     => 'checkbox'
+));
+$wp_customize->add_setting('cwc-archive-psp-sm-open-text', array(
+    'default'           => $defaults['cwc-archive-psp-sm-open-text'],
+    'sanitize_callback' => 'cosmoswp_sanitize_allowed_html',
+));
+$wp_customize->add_control('cwc-archive-psp-sm-open-text', array(
+    'label'       => esc_html__('Popup open text/html', 'cosmoswp'),
+    'section'     => $this->section,
+    'settings'    => 'cwc-archive-psp-sm-open-text',
+    'type'        => 'text',
+    'active_callback' => 'cosmoswp_is_wc_archive_psp_sm',
+));
+$wp_customize->add_setting('cwc-archive-psp-sm-close-text', array(
+    'default'           => $defaults['cwc-archive-psp-sm-close-text'],
+    'sanitize_callback' => 'cosmoswp_sanitize_allowed_html',
+));
+$wp_customize->add_control('cwc-archive-psp-sm-close-text', array(
+    'label'       => esc_html__('Popup close text/html', 'cosmoswp'),
+    'section'     => $this->section,
+    'settings'    => 'cwc-archive-psp-sm-close-text',
+    'type'        => 'text',
+    'active_callback' => 'cosmoswp_is_wc_archive_psp_sm',
+));
 /*Top Toolbar*/
 $wp_customize->add_setting('cwc-archive-general-setting-msg', array(
     'sanitize_callback' => 'wp_kses_post',

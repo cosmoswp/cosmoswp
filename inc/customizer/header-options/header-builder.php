@@ -652,6 +652,9 @@ if (!class_exists('CosmosWP_Header_Builder')) :
 					    }
 				    }
 				    ?>
+                    <div class="screen-reader-text">
+                        <a class="cwp-hms-last-focus" href="#"><?php echo $icon_structure ?></a>
+                    </div>
                 </div>
 			    <?php
 		    }

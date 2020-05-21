@@ -2,8 +2,15 @@
 	box-sizing:border-box;
 	-webkit-box-sizing:border-box;
 	-moz-box-sizing:border-box;
+	width: 100%;
 }
-
+.cosmowp-custom-meta .components-base-control__field{
+	margin-bottom: 8px;
+}
+.cosmowp-custom-meta .components-base-control__label{
+	margin-bottom: 4px;
+	display: inline-block;
+}
 .cosmowp-custom-meta .cosmoswp-banner-img-wrap .button,
 .cosmowp-custom-meta .cwp-video-upload-wrap .button{
 	display: block;

@@ -98,7 +98,7 @@ $wp_customize->add_control(
         $wp_customize,
         'menu-icon-sidebar-bg-styling-msg',
         array(
-            'label'   => esc_html__('Menu Item Color Options', 'cosmoswp'),
+            'label'   => esc_html__('Menu Icon Sidebar Color Options', 'cosmoswp'),
             'section' => 'cosmoswp_header_sidebar',
         )
     )
@@ -122,7 +122,7 @@ $wp_customize->add_control(
         array(
             'background-color' => array(
                 'type'  => 'color',
-                'label' => esc_html__('Background Color', 'cosmoswp'),
+                'label' => esc_html__('Menu Icon Sidebar Background Color', 'cosmoswp'),
             ),
             'text-color'       => array(
                 'type'  => 'color',

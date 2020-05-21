@@ -726,11 +726,10 @@ add_filter('header_video_settings', function ($args)
 
 });
 
-
 if (!function_exists('cosmoswp_get_grid_class')) :
 
     /**
-     * Categories List
+     * Get Grid Class
      *$cosmoswp_get_non_empty_categories
      * @since cosmoswp 1.0.0
      *
@@ -738,28 +737,106 @@ if (!function_exists('cosmoswp_get_grid_class')) :
      * @return void
      *
      */
-    function cosmoswp_get_grid_class($columns) {
+    function cosmoswp_get_grid_class($col) {
 
-        if (empty($columns)) {
-            return false;
+        if (empty($col)) {
+            return '';
         }
-        if (1 == $columns) {
+        if (1 == $col) {
             $grid = 'grid-md-12';
         }
-        elseif (2 == $columns) {
+        elseif (2 == $col) {
             $grid = 'grid-md-6';
         }
-        elseif (3 == $columns) {
+        elseif (3 == $col) {
             $grid = 'grid-md-4';
         }
-        elseif (4 == $columns) {
+        elseif (4 == $col) {
             $grid = 'grid-md-3';
         }
-        elseif (5 == $columns) {
+        elseif (5 == $col) {
             $grid = 'grid-xs-2m3';
         }
         else {
-            $grid = 'grid-md-2';
+            $grid = 'grid-md-3';
+        }
+        return $grid;
+    }
+
+endif;
+
+if (!function_exists('cosmoswp_get_l_grid_class')) :
+
+    /**
+     * Get large grid class
+     *$cosmoswp_get_non_empty_categories
+     * @since cosmoswp 1.1.5
+     *
+     * @param null
+     * @return string|boolean
+     *
+     */
+    function cosmoswp_get_l_grid_class($col) {
+
+        if (empty($col)) {
+            return '';
+        }
+        if (1 == $col) {
+            $grid = 'grid-lg-12';
+        }
+        elseif (2 == $col) {
+            $grid = 'grid-lg-6';
+        }
+        elseif (3 == $col) {
+            $grid = 'grid-lg-4';
+        }
+        elseif (4 == $col) {
+            $grid = 'grid-lg-3';
+        }
+        elseif (5 == $col) {
+            $grid = 'grid-lg-2m3';
+        }
+        else {
+            $grid = 'grid-lg-3';
+        }
+        return $grid;
+    }
+
+endif;
+
+if (!function_exists('cosmoswp_get_s_grid_class')) :
+
+    /**
+     * Get small grid class
+     *$cosmoswp_get_non_empty_categories
+     * @since cosmoswp 1.1.5
+     *
+     * @param null
+     * @return string|boolean
+     *
+     */
+    function cosmoswp_get_s_grid_class($col) {
+
+        if (empty($col)) {
+            return '';
+        }
+        if (1 == $col) {
+            $grid = 'grid-12';
+        }
+        elseif (2 == $col) {
+            $grid = 'grid-6';
+        }
+        elseif (3 == $col) {
+            $grid = 'grid-4';
+        }
+        elseif (4 == $col) {
+            $grid = 'grid-3';
+        }
+        elseif (5 == $col) {
+            $grid = 'grid-2m3';
+        }
+        else {
+            $grid = 'grid-3';
         }
         return $grid;
     }
@@ -790,9 +867,10 @@ if (!function_exists('cosmoswp_is_scrollbar_js')) :
      */
     function cosmoswp_is_scrollbar_js() {
         $footer_display_style = cosmoswp_get_theme_options('footer-display-style');
+        $is_enable = false;
         if (!empty($footer_display_style) && ('cwp-normal-footer' != $footer_display_style)){
-            return true;
+            $is_enable = true;
         }
-        return false;
+        return apply_filters('cosmoswp_is_scrollbar_js',$is_enable);
     }
 endif;

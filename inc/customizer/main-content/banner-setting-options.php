@@ -44,10 +44,10 @@ $wp_customize->add_setting('single-banner-title-tag', array(
     'sanitize_callback' => 'cosmoswp_sanitize_select',
     'transport'         => 'postMessage'
 ));
-$tag = cosmoswp_single_banner_title_tag();
+$cwp_tag = cosmoswp_single_banner_title_tag();
 $wp_customize->add_control('single-banner-title-tag', array(
     'label'           => esc_html__('Single Banner Title Tag', 'cosmoswp'),
-    'choices'         => $tag,
+    'choices'         => $cwp_tag,
     'section'         => 'header_image',
     'settings'        => 'single-banner-title-tag',
     'active_callback' => 'cosmoswp_single_custom_banner_title_tag_active',

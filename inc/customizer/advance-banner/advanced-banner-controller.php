@@ -242,7 +242,7 @@ if (!class_exists('CosmosWP_Advanced_Banner_Controller')) :
 
         /**
          *  Call back function for cosmoswp_general_setting_layout_body_class
-         *  Change Site Layout Manually(post/page)
+         *  Change Site Layout Manually(post/page and blog page not front)
          *
          * @since    1.0.0
          * @access   public
@@ -251,26 +251,28 @@ if (!class_exists('CosmosWP_Advanced_Banner_Controller')) :
          * @return string
          */
         public function customize_banner_section_display( $banner_options ){
-
-            if( is_singular() ){
-                if(is_singular('page' )){
-                    $banner_options_page = cosmoswp_get_theme_options('cosmoswp-banner-options-page');
+            if(is_singular(array( 'post', 'page' )) || ( is_home() && !is_front_page())){
+                if(is_singular('post' )){
+                    $banner_options_page = cosmoswp_get_theme_options('cosmoswp-banner-options-post');
                     if( 'default' != $banner_options_page ){
                         $banner_options = $banner_options_page;
                     }
                 }
                 else {
-                    $banner_options_post    = cosmoswp_get_theme_options('cosmoswp-banner-options-post');
+                    $banner_options_post    = cosmoswp_get_theme_options('cosmoswp-banner-options-page');
 
                     if( 'default' != $banner_options_post ){
                         $banner_options = $banner_options_post;
                     }
                 }
-                $cosmoswp_site_layout_value = get_post_meta(get_the_ID(), 'cosmoswp_banner_options_layout', true);
+                /*Meta for singular or blog page*/
+                $post_id = is_singular()?get_the_ID():get_option( 'page_for_posts' );
+                $cosmoswp_site_layout_value = get_post_meta($post_id, 'cosmoswp_banner_options_layout', true);
                 if( $cosmoswp_site_layout_value && 'default' != $cosmoswp_site_layout_value  ){
                     $banner_options = $cosmoswp_site_layout_value;
                 }
             }
+
             return apply_filters('cosmoswp_banner_section_display', $banner_options );
         }
     }

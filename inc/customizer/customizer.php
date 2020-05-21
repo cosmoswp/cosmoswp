@@ -46,7 +46,7 @@ require cosmoswp_file_directory('inc/customizer/blog-options/blog-builder.php');
 require cosmoswp_file_directory('inc/customizer/post-options/post-builder.php');
 
 /*Page Builder*/
-require cosmoswp_file_directory('inc/customizer/page-options/page-builder.php');
+require cosmoswp_file_directory('inc/customizer/page-options/builder-page.php');
 
 /*Theme Options Controller*/
 require cosmoswp_file_directory('inc/customizer/theme-options/theme-option-controller.php');
@@ -114,6 +114,7 @@ function cosmoswp_customize_register( $wp_customize ) {
 			/*Dropdown Search*/
 			'dd-search-placeholder',
 			'dd-search-icon-align',
+			'dd-search-form-align',
 
 			/*Normal Search*/
 			'normal-search-placeholder',

@@ -354,11 +354,15 @@ if (!class_exists('CosmosWP_WooCommerce')) :
 
             $global_widget_title_align   = cosmoswp_get_theme_options('global-widget-title-align');
             $global_widget_content_align = cosmoswp_get_theme_options('global-widget-content-align');
+            $cwc_archive_psp_sm     = cosmoswp_get_theme_options('cwc-archive-psp-sm');
             do_action('cosmoswp_action_before_sidebar');
             ?>
-            <div class="cwp-sidebar" data-widget-title="<?php echo esc_attr($global_widget_title_align); ?>"
+            <div class="cwp-sidebar<?php echo esc_attr($cwc_archive_psp_sm?' cwc-archive-psp-sm-wrap':'')?>" data-widget-title="<?php echo esc_attr($global_widget_title_align); ?>"
                  data-widget-content="<?php echo esc_attr($global_widget_content_align); ?>">
                 <?php
+                if( $cwc_archive_psp_sm){
+                    echo '<a class="cwc-archive-psp-sm cwc-archive-psp-sm-toggle" href="#">'.wp_kses_post(cosmoswp_get_theme_options('cwc-archive-psp-sm-close-text')).'</a>';
+                }
                 if (is_active_sidebar('cosmoswp-woo-primary-sidebar')) {
                     dynamic_sidebar('cosmoswp-woo-primary-sidebar');
                 }

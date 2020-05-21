@@ -157,8 +157,7 @@ if ( $site_link_hover_color ){
 	$general_setting_dynamic_css['all']      .= '
 	a:hover, 
 	.entry-meta a:hover, 
-	.entry-meta span:hover a, 
-	.entry-meta span:hover,
+	.entry-meta span a:hover, 
 	.woocommerce .woocommerce-breadcrumb a:hover,
 	.cwp-sidebar .widget a:hover, 
 	.cwp-sidebar .widget li a:hover,

@@ -615,7 +615,7 @@ if (!class_exists('CosmosWP_Footer_Builder')) :
                             get_template_part('template-parts/footer/' . $key['id']);
                         }
                         else {
-                            echo esc_html__('Create New File ', 'cosmoswp') . 'template-parts/footer/' . $$key['id'] . '.php';
+                            echo esc_html__('Create New File ', 'cosmoswp') . 'template-parts/footer/' . $key['id'] . '.php';
                         }
                     }
                     echo '</div>';

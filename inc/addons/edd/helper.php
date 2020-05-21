@@ -25,12 +25,21 @@ if (!function_exists('cosmoswp_downloads_navigation')) :
         }
         if ('default' == $edd_navigation_options) {
             // Previous/next page navigation.
-            the_posts_navigation();
+            the_posts_navigation(
+                array(
+                    'prev_text'          => __( 'Older Downloads' , 'cosmoswp'),
+                    'next_text'          => __( 'Newer Downloads' , 'cosmoswp'),
+                    'screen_reader_text' => __( 'Downloads navigation', 'cosmoswp' ),
+                    'aria_label'         => __( 'Downloads' , 'cosmoswp'),
+                )
+            );
         } else {
             // Previous/next page navigation.
             the_posts_pagination(array(
                 'prev_text'          => '&laquo; ',
                 'next_text'          => ' &raquo;',
+                'screen_reader_text' => __( 'Downloads navigation', 'cosmoswp' ),
+                'aria_label'         => __( 'Downloads', 'cosmoswp' ),
                 'before_page_number' => '<span class="meta-nav screen-reader-text">' . __('Page', 'cosmoswp') . ' </span>',
             ));
         }
@@ -196,31 +205,6 @@ if (!function_exists('cosmoswp_edd_archive_elements_sorting')) :
             'cart'    => esc_html__('Add To Cart', 'cosmoswp'),
         );
         return apply_filters('cosmoswp_edd_archive_elements_sorting', $cosmoswp_edd_archive_elements_sorting);
-    }
-endif;
-
-/**
- * Edd Archive Elements Sorting
- *
- * @since CosmosWP 1.0.0
- *
- * @param null
- * @return array $cosmoswp_edd_archive_list_elements_sorting
- *
- */
-if (!function_exists('cosmoswp_edd_archive_list_elements_sorting')) :
-    function cosmoswp_edd_archive_list_elements_sorting() {
-        $cosmoswp_edd_archive_list_elements_sorting = array(
-            'cats'    => esc_html__('Categories', 'cosmoswp'),
-            'tags'    => esc_html__('Tags', 'cosmoswp'),
-            'author'  => esc_html__('Tags', 'cosmoswp'),
-            'title'   => esc_html__('Title', 'cosmoswp'),
-            'price'   => esc_html__('Price', 'cosmoswp'),
-            'excerpt' => esc_html__('Excerpt', 'cosmoswp'),
-            'content' => esc_html__('Content', 'cosmoswp'),
-            'cart'    => esc_html__('Add To Cart', 'cosmoswp'),
-        );
-        return apply_filters('cosmoswp_edd_archive_list_elements_sorting', $cosmoswp_edd_archive_list_elements_sorting);
     }
 endif;
 

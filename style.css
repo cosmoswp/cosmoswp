@@ -4,12 +4,11 @@ Theme URI: https://www.cosmoswp.com/
 Author: cosmoswp
 Author URI: https://www.cosmoswp.com/contact-us/
 Description: CosmosWP is a multi-purpose new generation modern Gutenberg WordPress theme, super-fast, easily customizable, flexible, beautiful, perfect, and highly extendable theme. With a simple download of the CosmosWP, you will have a striking and awesome theme for your website. A great way to design your website with a unique blend of style and technique. It will let you build around several kinds of a website such as a blog, portfolio, business, photography, entertainment etc. Also, specialized sites like Restaurant, Spa, Charity, Meditation, Wedding, Dentist, Education, Medical and much more. Being integrated with WooCommerce and Easy Digital Download you can even build an e-commerce based website. Besides that, it works well with almost all page builders as Gutentor, Elementor, SiteOrigin, Beaver Builder, Visual Composer, Divi, etc. Furthermore, features like SEO friendly, Responsive, RTL Ready, Translation Ready, Gutenberg compatible, and many other WordPress plugins compatible are also included in the theme. Finally, the theme already has an instant demo setup so you can commence your elegant and phenomenal website right away.
-Version: 1.1.1
+Version: 1.1.5
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: cosmoswp
-Tags: blog, e-commerce, portfolio, grid-layout, one-column	, two-columns, three-columns, four-columns, left-sidebar, right-sidebar, custom-background, custom-colors, custom-header, custom-logo, custom-menu, editor-style, featured-images, flexible-header, footer-widgets, full-width-template, rtl-language-support, sticky-post,theme-options	, threaded-comments, translation-ready, wide-blocks
-
+Tags: blog, e-commerce, portfolio, grid-layout, one-column, two-columns, three-columns, four-columns, left-sidebar, right-sidebar, custom-background, custom-colors, custom-header, custom-logo, custom-menu, editor-style, featured-images, flexible-header, footer-widgets, full-width-template, microformats, post-formats, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready, block-styles, wide-blocks
 */
 /*---------------------
  	Normalize
@@ -2052,7 +2051,8 @@ input[type="submit"],
     justify-content: flex-start;
     -ms-flex-pack: flex-start; }
     .cwp-logo.cwp-left-mobile .custom-logo-link + span {
-      margin-left: 15px; }
+      margin-left: 15px;
+      margin-top: 0; }
   .cwp-logo.cwp-right-mobile {
     -webkit-flex-direction: row-reverse;
     -moz-flex-direction: row-reverse;
@@ -2685,13 +2685,28 @@ input[type="submit"],
   position: absolute;
   top: 100%;
   z-index: 10;
-  right: 0;
-  min-width: 320px;
+  min-width: 285px;
   -webkit-transition: all 0.5s ease-in-out 0s;
   -moz-transition: all 0.5s ease-in-out 0s;
   -ms-transition: all 0.5s ease-in-out 0s;
   -o-transition: all 0.5s ease-in-out 0s;
   transition: all 0.5s ease-in-out 0s; }
+  .cwp-search-dropdown.is-active-dropdown .cwp-search-form-wrapper.cwp-search-align-left {
+    right: 0; }
+    .cwp-search-dropdown.is-active-dropdown .cwp-search-form-wrapper.cwp-search-align-left .search-form:before {
+      right: 15px; }
+  .cwp-search-dropdown.is-active-dropdown .cwp-search-form-wrapper.cwp-search-align-right {
+    left: 0; }
+    .cwp-search-dropdown.is-active-dropdown .cwp-search-form-wrapper.cwp-search-align-right .search-form:before {
+      left: 15px; }
+  .cwp-search-dropdown.is-active-dropdown .cwp-search-form-wrapper.cwp-search-align-center {
+    left: 0;
+    right: 0;
+    margin: 0 auto; }
+    .cwp-search-dropdown.is-active-dropdown .cwp-search-form-wrapper.cwp-search-align-center .search-form:before {
+      left: 0;
+      right: 0;
+      margin: 0 auto; }
 .cwp-search-dropdown .search-form {
   border: 1px solid #eeeeee;
   padding: 1.25em;
@@ -2710,7 +2725,6 @@ input[type="submit"],
       display: block;
       position: absolute;
       top: -5px;
-      right: 15px;
       width: 10px;
       height: 10px;
       z-index: 27;
@@ -2941,6 +2955,12 @@ input[type="submit"],
       .cwp-search-overlay-wrapper .cwp-close-btn:after {
         width: 32px; } }
 
+/*Dropdown Fix In Menu Sidebar*/
+.cwp-header-menu-sidebar .cwp-search-dropdown {
+  position: relative; }
+  .cwp-header-menu-sidebar .cwp-search-dropdown.is-active-dropdown .cwp-search-form-wrapper {
+    min-width: 100%; }
+
 /*----------------------------
 	Login / Register
 ----------------------------*/
@@ -3107,7 +3127,7 @@ input[type="submit"],
       cursor: pointer; }
   .cwp-popup-body {
     padding: 20px;
-    max-height: 90%;
+    max-height: 90vh;
     overflow: auto;
     overflow-x: hidden; }
   .cwp-popup-footer {
@@ -3543,7 +3563,8 @@ article.post {
     line-height: normal;
     font-size: 14px; }
   .single-post .navigation.post-navigation .nav-links .post-title {
-    font-size: 20px; }
+    font-size: 20px;
+    word-break: break-word; }
   .single-post .navigation.post-navigation .nav-links .nav-previous .title i {
     margin-right: 8px; }
   .single-post .navigation.post-navigation .nav-links .nav-next {
@@ -3587,6 +3608,14 @@ article.post {
   text-align: center; }
   .cwp-blog-pagination.cwp-flex-align-center .cwp-ajax-show-more {
     margin: 0 auto; }
+
+/* -----------------------
+	Related Post
+----------------------- */
+#cosmoswp-related-posts .grid-row [class*="grid-"],
+#cosmoswp-related-posts .grid-row [class^="grid-"] {
+  margin-top: 15px;
+  margin-bottom: 15px; }
 
 /*------------------------
 	Banner
@@ -4145,6 +4174,60 @@ article.post {
   /* You could think of as "step 2" */
   100% {
     opacity: 1; } }
+/*------------------------------------
+WooCommerce Responsive Primary Sidebar
+---------------------------------------*/
+.cwc-archive-psp-sm-wrap {
+  display: none; }
+
+.cwp-woo-archive-toolbar .cwp-woo-view-switcher {
+  flex-basis: 50%; }
+
+.cwc-archive-psp-sm {
+  flex-basis: 35%; }
+  .cwc-archive-psp-sm + .cwp-woo-view-switcher {
+    flex-basis: 50%; }
+
+@media (min-width: 768px) {
+  .cwc-archive-psp-sm-toggle {
+    display: none; }
+
+  .cwc-archive-psp-sm-wrap {
+    display: block; }
+
+  .cwc-archive-psp-sm + .cwp-woo-view-switcher {
+    flex-basis: auto; }
+
+  .cwp-woo-archive-toolbar .cwp-woo-view-switcher {
+    flex-basis: auto; } }
+.cwc-archive-psp-responsive-popup {
+  overflow: hidden; }
+  .cwc-archive-psp-responsive-popup.admin-bar .cwc-archive-psp-sm-wrap {
+    padding: 60px 30px 30px; }
+  .cwc-archive-psp-responsive-popup .cwc-archive-psp-sm-wrap {
+    position: fixed;
+    top: 0;
+    background: #fff;
+    width: 100%;
+    left: 0;
+    right: 0;
+    height: 100%;
+    z-index: 9999999;
+    padding: 30px;
+    display: block;
+    overflow-y: scroll;
+    overflow-x: hidden; }
+    .cwc-archive-psp-responsive-popup .cwc-archive-psp-sm-wrap .cwc-archive-psp-sm-toggle {
+      padding: 6px 12px;
+      border: 1px solid;
+      border-radius: 3px;
+      clear: both;
+      display: inline-block;
+      margin-bottom: 30px; }
+  .cwc-archive-psp-responsive-popup .cwp-dynamic-header,
+  .cwc-archive-psp-responsive-popup .cwp-scroll-to-top {
+    z-index: -1; }
+
 /*------------------------
 	EDD
 ------------------------*/
@@ -4212,7 +4295,8 @@ article.post {
       line-height: 29px;
       cursor: pointer;
       margin-right: 10px;
-      text-align: center; }
+      text-align: center;
+      display: inline-block; }
       .cwp-edd-active .cwp-edd-archive-toolbar .cwp-edd-view-switcher span.active, .cwp-edd-active .cwp-edd-archive-toolbar .cwp-edd-view-switcher span:hover {
         color: #275cf6;
         border-color: #275cf6; }
@@ -4618,6 +4702,8 @@ article.post {
   border-radius: 3px; }
   .blog-template4 .post .cat-links a:not(:last-child) {
     margin-right: 5px; }
+.blog-template4 .post .primary-meta {
+  margin-top: 20px; }
 
 /*--------------------
 	Blog Template 5

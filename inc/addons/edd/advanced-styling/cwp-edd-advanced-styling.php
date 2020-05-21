@@ -64,9 +64,6 @@ if (!class_exists('CosmosWP_Edd_Advanced_Styling')) :
         public function defaults($default_options = array()) {
             $defaults = array(
 
-                /* product catalog options */
-                'edd-show-downloads-per-row'           => 4,
-
                 /* advanced styling */
                 'edd-product-toolbar'                  => json_encode(array(
                     'background-color'      => '#f5f5f5',
@@ -82,7 +79,7 @@ if (!class_exists('CosmosWP_Edd_Advanced_Styling')) :
                     'price-hover-color'      => '#275cf6',
                     'content-font-size'      => '',
                     'content-color'          => '#333',
-                    'categories-font-size'   => '#275cf6',
+                    'categories-font-size'   => '14',
                     'categories-color'       => '#275cf6',
                     'categories-hover-color' => '#275cf6',
                     'tag-font-size'          => '14',
@@ -266,7 +263,6 @@ if (!class_exists('CosmosWP_Edd_Advanced_Styling')) :
                 'priority' => 170,
             ));
             require_once COSMOSWP_PATH.'/inc/addons/edd/advanced-styling/cwp-edd-options.php';
-            require_once COSMOSWP_PATH.'/inc/addons/edd/advanced-styling/cwp-edd-product-catalog.php';
 
         }
 
@@ -343,6 +339,7 @@ if (!class_exists('CosmosWP_Edd_Advanced_Styling')) :
             if (!empty($price_css)) {
                 $price_dynamic_css
                     = '
+    .cwp-edd-active .cwp-edd-price,
     .cwp-edd-active .edd_download_purchase_form ul li,
     .cwp-edd-active .edd_download_purchase_form ul li label{
     ' . $price_css . '
@@ -657,9 +654,10 @@ if (!class_exists('CosmosWP_Edd_Advanced_Styling')) :
             $product_remove_text_css   = '';
             $product_remove_text_color = cosmoswp_get_theme_options('edd-cart-remove-text-color-options');
             $product_remove_text_color = json_decode($product_remove_text_color, true);
+           
 
             $product_remove_text_text_color = cosmoswp_ifset($product_remove_text_color['text-color']);
-            if (!empty($product_remove_text_bg_color)) {
+            if (!empty($product_remove_text_text_color)) {
                 $product_remove_text_css .= 'color:' . $product_remove_text_text_color . ' !important;';
             }
 
@@ -672,7 +670,7 @@ if (!class_exists('CosmosWP_Edd_Advanced_Styling')) :
             }
             $product_remove_text_hover_css        = '';
             $product_remove_text_hover_text_color = cosmoswp_ifset($product_remove_text_color['text-hover-color']);
-            if (!empty($product_remove_text_hover_bg_color)) {
+            if (!empty($product_remove_text_hover_text_color)) {
                 $product_remove_text_hover_css .= 'color:' . $product_remove_text_hover_text_color . ' !important;';
             }
 
@@ -847,7 +845,7 @@ if (!class_exists('CosmosWP_Edd_Advanced_Styling')) :
             $grid_list_color = cosmoswp_ifset($product_toolbar['grid-list-color']);
             if (!empty($grid_list_color)) {
                 $grid_list_color_css
-                    = '.cwp-edd-archive-toolbar .cwp-edd-view-switcher span.dashicons{
+                    = '.cwp-edd-archive-toolbar .cwp-edd-view-switcher span{
     color:' . $grid_list_color . ';
     border-color:' . $grid_list_color . '!important;
 	}';
@@ -859,8 +857,8 @@ if (!class_exists('CosmosWP_Edd_Advanced_Styling')) :
             if (!empty($grid_list_hover_color)) {
                 $grid_list_color_hover_css
                     = '
-    .cwp-edd-archive-toolbar .cwp-edd-view-switcher span.dashicons.active,
-.cwp-edd-archive-toolbar .cwp-edd-view-switcher span.dashicons:hover{
+    .cwp-edd-archive-toolbar .cwp-edd-view-switcher span.active,
+.cwp-edd-archive-toolbar .cwp-edd-view-switcher span:hover{
     color:' . $grid_list_hover_color . '!important;
     border-color:' . $grid_list_hover_color . '!important;
 	}';

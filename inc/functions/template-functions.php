@@ -939,7 +939,7 @@ if (!function_exists('cosmoswp_sidebar_template')) {
             $content = "template-parts/main-content/post-main-content";
         }
         elseif( 'page' === $front ){
-            $content = "template-parts/main-content/page-main-content";
+            $content = "template-parts/main-content/cpage-main-content";
         }
         elseif( 'cwp-woo-archive' === $front ){
             $content = "cwp-woo/cwp-woo-archive-main-content";

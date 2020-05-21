@@ -96,3 +96,18 @@ if (!function_exists('cosmoswp_woo_single_elements')) :
         return apply_filters('cosmoswp_woo_single_elements', $cosmoswp_woo_single_elements);
     }
 endif;
+
+/**
+ * Woo Check if Mobile Primary sidebar popup enabled
+ *
+ * @since CosmosWP 1.1.2
+ *
+ * @param null
+ * @return boolean
+ *
+ */
+if (!function_exists('cosmoswp_is_wc_archive_psp_sm')) :
+    function cosmoswp_is_wc_archive_psp_sm() {
+        return cosmoswp_get_theme_options('cwc-archive-psp-sm');
+    }
+endif;

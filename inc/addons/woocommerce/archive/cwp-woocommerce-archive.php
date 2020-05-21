@@ -90,8 +90,14 @@ if (!class_exists('CosmosWP_WooCommerce_Archive')) :
                 /*Sidebar*/
                 'cwp-woo-archive-sidebar'    => 'ct-ps',
 
-                'cwc-archive-default-view'       => 'grid',
                 'cwc-archive-show-grid-list'     => 1,
+
+                'cwc-archive-default-view'       => 'grid',
+
+                'cwc-archive-psp-sm'            => 1,
+                'cwc-archive-psp-sm-open-text'  => 'Filter »',
+                'cwc-archive-psp-sm-close-text' => 'Close X',
+
                 'cwc-archive-show-result-number' => 1,
                 'cwc-archive-show-sort-bar'      => 1,
                 'cwc-archive-excerpt-length'     => 9,

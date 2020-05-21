@@ -86,18 +86,25 @@ if (!class_exists('CosmosWP_Edd_Archive')) :
         public function defaults($default_options = array()) {
             $defaults = array(
 
+                /* product catalog options */
+                'edd-show-downloads-per-row'    => json_encode(array(
+                    'desktop' => '4',
+                    'tablet'  => '3',
+                    'mobile'  => '1',
+                )),
+
                 /*Sidebar*/
                 'cwp-edd-archive-sidebar'    => 'ct-ps',
 
-                'edd-archive-main-title'          => esc_html__('Edd', 'cosmoswp'),
-                'edd-archive-default-view'        => 'cwp-grid',
-                'edd-archive-show-sort-bar'       => 1,
                 'edd-archive-show-grid-list'      => 1,
+
+                'edd-archive-default-view'        => 'cwp-grid',
+
+                'edd-archive-main-title'          => esc_html__('Edd', 'cosmoswp'),
+                'edd-archive-show-sort-bar'       => 1,
                 'edd-archive-excerpt-length'      => 9,
-                'edd-archive-grid-elements-align' => 'cwp-text-center',
-                'edd-archive-list-elements-align' => 'cwp-text-left',
+                'edd-archive-elements-align' => 'cwp-text-center',
                 'edd-archive-grid-elements'       => array('image', 'cats', 'title', 'price', 'cart'),
-                'edd-archive-list-elements'       => array('cats', 'title', 'price', 'excerpt', 'cart'),
                 'edd-archive-list-media-width'    => json_encode(array(
                     'desktop' => '40',
                     'tablet'  => '40',

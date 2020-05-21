@@ -99,10 +99,10 @@ if (!class_exists('CosmosWP_Blog_Builder')) :
                 'blog-post-exclude-categories'          => '',
 
                 /*Blog Sorting*/
-                'blog-elements-sorting'                 => array('title', 'primary-meta', 'featured-section', 'content'),
+                'blog-elements-sorting'                 => array('title', 'primary-meta', 'featured-section', 'excerpt'),
                 'blog-primary-meta-sorting'             => array('published-date', 'categories', 'author', 'comments'),
                 'blog-secondary-meta-sorting'           => '',
-                'blog-excerpt-length'                   => '30',
+                'blog-excerpt-length'                   => '100',
                 'blog-read-more-text'                   => esc_html__('Read More', 'cosmoswp'),
 
                 /*Blog feature Section */

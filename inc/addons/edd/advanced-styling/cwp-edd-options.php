@@ -50,7 +50,7 @@ $wp_customize->add_control(
             ),
             'grid-list-hover-color' => array(
                 'type'  => 'color',
-                'label' => esc_html__('Grid/List Hover Color', 'cosmoswp'),
+                'label' => esc_html__('Grid/List Hover/Active Color', 'cosmoswp'),
             ),
         )
     )
@@ -496,7 +496,7 @@ $wp_customize->add_control(
         $wp_customize,
         'edd-cart-styling-msg',
         array(
-            'label'   => esc_html__('Table', 'cosmoswp'),
+            'label'   => esc_html__('EDD Cart Table', 'cosmoswp'),
             'section' => 'edd-setting-collection',
         )
     )

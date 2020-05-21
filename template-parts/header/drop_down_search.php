@@ -1,5 +1,6 @@
 <?php
 $dd_search_icon_align  = cosmoswp_get_theme_options('dd-search-icon-align');
+$dd_search_form_align  = cosmoswp_get_theme_options('dd-search-form-align');
 $dd_search_placeholder = cosmoswp_get_theme_options('dd-search-placeholder');
 $dd_search_placeholder = apply_filters('cosmoswp_dropdown_search_placeholder', $dd_search_placeholder);
 $dd_search_placeholder = ($dd_search_placeholder) ? $dd_search_placeholder : '';
@@ -11,7 +12,7 @@ $dd_search_placeholder = ($dd_search_placeholder) ? $dd_search_placeholder : '';
 		<i class="<?php echo esc_attr(cosmoswp_get_correct_fa_font('fas fa-search'));?>"></i>
 	</a>
 
-    <div class="cwp-search-form-wrapper" id="cwp-dropdown-search-form-wrapper">
+    <div class="cwp-search-form-wrapper <?php echo esc_attr($dd_search_form_align); ?>" id="cwp-dropdown-search-form-wrapper">
         <form action="<?php echo home_url('/'); ?>" class="search-form">
             <input type="search" class="search-field" name='s'
                    placeholder="<?php echo esc_attr($dd_search_placeholder); ?>"

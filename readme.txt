@@ -1,11 +1,11 @@
 === CosmosWP ===
 
 Contributors: cosmoswp
-Tags: blog, e-commerce, portfolio, grid-layout, one-column	, two-columns, three-columns, four-columns, left-sidebar, right-sidebar, custom-background, custom-colors, custom-header, custom-logo, custom-menu, editor-style, featured-images, flexible-header, footer-widgets, full-width-template, rtl-language-support, sticky-post,theme-options	, threaded-comments, translation-ready, wide-blocks
+Tags: blog, e-commerce, portfolio, grid-layout, one-column, two-columns, three-columns, four-columns, left-sidebar, right-sidebar, custom-background, custom-colors, custom-header, custom-logo, custom-menu, editor-style, featured-images, flexible-header, footer-widgets, full-width-template, microformats, post-formats, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready, block-styles, wide-blocks
 Requires at least: 5.0
-Tested up to: 5.4
+Tested up to: 5.4.1
 Requires PHP: 5.6
-Stable tag: 1.1.1
+Stable tag: 1.1.5
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -26,7 +26,6 @@ CosmosWP is distributed under the terms of the GNU General Public License v2
 The exceptions to license are as follows:
 
 * Based on Underscores http://underscores.me/, (C) 2012-2015 Automattic, Inc., [GPLv2 or later](https://www.gnu.org/licenses/gpl-2.0.html)
-* Google Fonts - Apache License, version 2.0
 * normalize.css http://necolas.github.io/normalize.css/, (C) 2012-2015 Nicolas Gallagher and Jonathan Neal, [MIT](http://opensource.org/licenses/MIT)
 * Font Awesome Free 5 by @fontawesome - https://fontawesome.com, License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
 * jQuery CSS Customizable Scrollbar Copyright 2015, Yuriy Khabarov, Dual licensed under the MIT or GPL Version 2 licenses.
@@ -37,8 +36,8 @@ The exceptions to license are as follows:
 Logo, Copyright © 2020, AcmeIT
 License: GNU GPL, Version 3, https://www.gnu.org/licenses/gpl-3.0.html
 
-All vectors published on unDraw can be used for free (https://undraw.co/license)
-https://undraw.co/illustrations
+Vectors, Copyright © 2020, AcmeIT
+License: GNU GPL, Version 3, https://www.gnu.org/licenses/gpl-3.0.html
 
 Font Awesome Svg are all licensed under CC BY 4.0 (https://fontawesome.com/license/free)
 https://fontawesome.com/icons
@@ -66,13 +65,49 @@ https://fontawesome.com/icons
 
 == Changelog ==
 
+= 1.1.5 - 2020-05-21 =
+* Updated :  Major update specific to EDD
+* Updated :  Edd Header Cart
+* Updated :  Edd List/Grid
+* Updated :  EDD Responsive Grid
+* Updated :  EDD pagination-navigation
+* Updated :  EDD Archive Options
+* Updated :  EDD Single Options
+* Updated :  EDD various layout, color and design options
+* Fixed :  Customizer CSS Options on Customizer Refresh Values
+* Fixed :  Menu Sidebar Close Issue When Resize
+* Fixed :  Menu Sidebar Close Issue When Focus Input Search
+* Fixed :  Menu Sidebar Dropdown Search
+
+= 1.1.4 - 2020-05-08 =
+* Fixed : Banner setting for Blog Page
+* Fixed : Only show WooCommerce Popup primary sidebar on Small Device if there is Primary sidebar enabled
+* Fixed : WooCommerce toolbar design
+* Fixed : Meta box design on Classic Editor
+* Fixed : Customizer-meta options relationship
+* Fixed : Category hover
+
+= 1.1.3 - 2020-04-30 =
+* Updated : Screenshot
+* Updated : Excerpt length and excerpt default on blog
+* Updated : Renamed cosmoswp/inc/customizer/page-options/page-builder.php renamed to cosmoswp/inc/customizer/page-options/builder-page.php
+* Updated : Renamed cosmoswp/template-parts/main-content/page-main-content.php to cosmoswp/template-parts/main-content/cpage-main-content.php
+* Fixed : Parallax footer
+* Fixed : New Theme Sniffer Issues
+
+= 1.1.2 - 2020-04-21 =
+* Added : wpml-config.xml
+* Added : WooCommerce Responsive Primary Sidebar
+* Added : Drop-down Search Alignment
+* Updated : Optimization
+
 = 1.1.1 - 2020-04-13 =
 * Fixed : Missing builder added on Menu Icon Sidebar
 
 = 1.1.0 - 2020-04-12 =
 * Fixed : WooCommerce Product Catalog shop page and category page display
-* Update : Dynamic css and Typography
-* Update : Some optimization
+* Updated : Dynamic css and Typography
+* Updated : Some optimization
 * Removed : Unnecessary Library
 * Fixed : Customizer slow loading
 * Fixed : Site Identity missing on responsive
@@ -92,15 +127,15 @@ https://fontawesome.com/icons
 
 = 1.0.8 - 2020-04-03 =
 * Fixed : WooCommerce Header Cart
-* Update : Screenshot
-* Update : Default values of some customizer options
+* Updated : Screenshot
+* Updated : Default values of some customizer options
 * Fixed : Skip link focus
 * Fixed : Minor CSS
 
 = 1.0.7 - 2020-04-01 =
 * Fixed : Sticky Sidebar
 * Fixed : Easy Digital Downloads ( EDD ) Header Cart
-* Update : Dynamic CSS
+* Updated : Dynamic CSS
 * Fixed : Minor CSS
 
 = 1.0.6 - 2020-03-27 =

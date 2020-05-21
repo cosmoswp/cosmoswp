@@ -142,6 +142,23 @@ if (!function_exists('cosmoswp_setup')) :
             )
         );
 
+        /*
+        * Enable support for Post Formats.
+        * @since 1.1.3
+        * See: https://codex.wordpress.org/Post_Formats
+        */
+        add_theme_support('post-formats', array(
+            'aside',
+            'image',
+            'video',
+            'quote',
+            'link',
+            'gallery',
+            'status',
+            'audio',
+            'chat',
+        ));
+
         // Add theme support for selective refresh for widgets.
         add_theme_support('customize-selective-refresh-widgets');
 

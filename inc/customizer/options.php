@@ -621,7 +621,6 @@ if (!function_exists('cosmoswp_off_canvas_sidebar_direction')) :
     }
 endif;
 
-
 if (!function_exists('cosmoswp_flex_align')) :
 
     /**
@@ -640,6 +639,27 @@ if (!function_exists('cosmoswp_flex_align')) :
             'cwp-flex-align-right'  => esc_html__('Right', 'cosmoswp'),
         );
         return apply_filters('cosmoswp_flex_align', $cosmoswp_flex_align);
+    }
+endif;
+
+if (!function_exists('cosmoswp_dd_search_form_align')) :
+
+    /**
+     * Dropdown Search Form Align
+     *
+     * @since cosmoswp 1.1.0
+     *
+     * @param null
+     * @return array $cosmoswp_align
+     *
+     */
+    function cosmoswp_dd_search_form_align() {
+        $cosmoswp_dd_align = array(
+            'cwp-search-align-left'   => esc_html__('Left', 'cosmoswp'),
+            'cwp-search-align-center' => esc_html__('Center', 'cosmoswp'),
+            'cwp-search-align-right'  => esc_html__('Right', 'cosmoswp'),
+        );
+        return apply_filters('cosmoswp_dd_search_form_align', $cosmoswp_dd_align);
     }
 endif;
 
