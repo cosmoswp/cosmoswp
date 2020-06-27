@@ -108,11 +108,6 @@ require cosmoswp_file_directory('inc/hooks/templates.php');/*checked*/
 require cosmoswp_file_directory('inc/default-hooks.php');/*checked*/
 
 /*
-* file for user contact
-*/
-require cosmoswp_file_directory('inc/hooks/user-contact.php');/*checked*/
-
-/*
 * file for breadcrumb
 */
 require cosmoswp_file_directory('inc/hooks/breadcrumb.php');/*checked*/

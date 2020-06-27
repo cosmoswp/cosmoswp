@@ -18,21 +18,29 @@
 	});
 
 	/*Menu Icon Close/Open*/
-	$( document ).on('focus','.cwp-hms-last-focus',function(e){
+	function cwpCloseBtn(){
 		$('.cwp-close-btn').trigger('click');
 		$('#cwp-menu-icon-btn-text').focus();
+	}
+	$( document ).on('focus','.cwp-hms-last-focus',function(e){
+		e.preventDefault();
+		cwpCloseBtn();
 	});
 
 	$( document ).on('keydown','.cwp-close-btn',function(e){
-		let key = e.which;
+		let key = e.which,
+			cFocusOut = false;
 		if(key === 13) {
-			$('#cwp-menu-icon-btn-text').focus();
+			cFocusOut = true
 		}
 		else if (e.which === 9) {
 			if(e.shiftKey === true) {
-				$('.cwp-close-btn').trigger('click');
-				$('#cwp-menu-icon-btn-text').focus();
+				cFocusOut = true
 			}
+		}
+		if( cFocusOut){
+			e.preventDefault();
+			cwpCloseBtn();
 		}
 	});
 	$( document ).on('keydown','#cwp-menu-icon-btn-text',function(e){
@@ -47,8 +55,9 @@
 
 	/*Dropdown Search*/
     $( document ).on('keydown','#cwp-dropdown-search-form-wrapper',function(e){
-        let dropdownSearch = document.getElementById('cwp-dropdown-search-form-wrapper');
-        let keyCode = e.keyCode || e.which;
+        let dropdownSearch = document.getElementById('cwp-dropdown-search-form-wrapper'),
+			keyCode = e.keyCode || e.which;
+
         if (keyCode === 9) {
             dropdownSearch.addEventListener('focusout', e => {
                 let leavingSearchParent = !dropdownSearch.contains(e.relatedTarget);
@@ -92,7 +101,7 @@
 
 
 jQuery(document).ready(function($){
-    var cwp_window = $(window),
+    let cwp_window = $(window),
         cwp_body                     = $('body'),
         cwp_document                 = $(document),
         cwp_banner                  = $('.cwp-banner' ),
@@ -103,7 +112,6 @@ jQuery(document).ready(function($){
         menu_wrapper                = $('.cwp-menu-wrapper'),
         register                    = $('#register'),
         login                       = $('#login'),
-        footer_main                 = $('.cwp-dynamic-footer'),
         footer_wrapper              = $('.cwp-footer-wrapper'),
         footer_wrapper_height       = footer_wrapper.innerHeight(),
         dynamic_header              = $('.cwp-dynamic-header'),
@@ -118,10 +126,17 @@ jQuery(document).ready(function($){
         offcanvas_submenu_indicator = offcanvas_sidebar.data('submenu-icon'),
         scroll_top = $('.cwp-scroll-to-top');
 
+    //Sticky Sidebar
+    if( typeof $.fn.theiaStickySidebar !== 'undefined' ){
+        if( cwp_body.hasClass( 'add-sticky-sidebar') ){
+            $('.cwp-ms-content-grid-column').theiaStickySidebar();
+        }
+    }
+
     function add_primary_submenu_indicator() {
 
         primary_menu.find('li').each(function () {
-            var this_li = $(this);
+            let this_li = $(this);
             if (this_li.children('ul.sub-menu').length) {
                 if( this_li.children('a').children('.submenu-icon').length ){
                     this_li.find('.submenu-icon').removeClass().addClass('submenu-icon '+primary_submenu_indicator)
@@ -137,7 +152,7 @@ jQuery(document).ready(function($){
 
     function add_dropdowm_submenu_indicator() {
         dropdown_menu.find('li').each(function () {
-            var this_li = $(this);
+            let this_li = $(this);
             if (this_li.children('ul.sub-menu').length) {
                 if( this_li.children('a').children('.submenu-icon').length ){
                     this_li.find('.submenu-icon').removeClass().addClass('submenu-icon '+dropdown_submenu_indicator)
@@ -153,7 +168,7 @@ jQuery(document).ready(function($){
 
     function add_secondary_submenu_indicator() {
         secondary_menu.find('li').each(function () {
-            var this_li = $(this);
+            let this_li = $(this);
             if (this_li.children('ul.sub-menu').length) {
                 if( this_li.children('a').children('.submenu-icon').length ){
                     this_li.find('a .submenu-icon').removeClass().addClass('submenu-icon '+secondary_submenu_indicator)
@@ -168,13 +183,13 @@ jQuery(document).ready(function($){
 
     function add_offcanvas_submenu_indicator() {
         offcanvas_sidebar.find('li').each(function () {
-            var this_li = $(this);
+            let this_li = $(this);
             if (this_li.children('ul.sub-menu').length) {
                 this_li.children('a').prepend('<i class="submenu-icon '+offcanvas_submenu_indicator+'"></i>')
             }
         });
         offcanvas_sidebar.find('.widget_nav_menu').each(function () {
-            var this_nav = $(this);
+            let this_nav = $(this);
             this_nav.addClass('navigation cwp-submenu-onclick');
         });
     }
@@ -183,7 +198,7 @@ jQuery(document).ready(function($){
     //Submenu icon click function
     cwp_document.on('click','.submenu-icon',function(e){
         e.preventDefault();
-        var submenuIcon = $(this);
+        let submenuIcon = $(this);
         submenuIcon.parent('a').siblings('.sub-menu').toggleClass('open');
     });
 
@@ -196,22 +211,26 @@ jQuery(document).ready(function($){
         cwp_body.removeClass('cwp-show-menu-slide');
     }
     
-    cwp_document.on('click','.cwp-popup-btn',function(){
+    cwp_document.on('click','.cwp-popup-btn',function(e){
+        e.preventDefault();
         $('#cwp-popupModal').show();
         cwp_body.addClass('open-popup');
     });
-    cwp_document.on('click','#cwp-popupModal .cwp-close',function(){
+    cwp_document.on('click','#cwp-popupModal .cwp-close',function(e){
+        e.preventDefault();
         $('#cwp-popupModal').hide();
         cwp_body.removeClass('open-popup');
     });
 
      //fixed footer
-    var bottom_value;
+    let bottom_value;
     function stickyFooter(){
         if (cwp_body.hasClass('cwp-sticky-footer')) {
+            let footer_main  = $('.cwp-dynamic-footer');
             if (cwp_window.width() > 768) {
-                let footer_height               = $('.cwp-dynamic-footer').innerHeight();
-                let fixed_footer_trigger_height = $('.cwp-sticky-footer-wrapper').innerHeight();
+                let footer_height               = footer_main.innerHeight(),
+                    fixed_footer_trigger_height = $('.cwp-sticky-footer-wrapper').innerHeight();
+
                 bottom_value = footer_height - fixed_footer_trigger_height;
                 footer_main.css('bottom', - bottom_value);
             }
@@ -220,13 +239,15 @@ jQuery(document).ready(function($){
             }
         }
     }
-    $('.cwp-sticky-footer-btn').on('click',function(){
+    $('.cwp-sticky-footer-btn').on('click',function(e){
+        e.preventDefault();
         if (!cwp_body.hasClass('cwp-sticky-footer')) {
             return;
         }
         if (cwp_window.width() <= 768) {
             return;
         }
+        let footer_main = $('.cwp-dynamic-footer');
         footer_main.toggleClass('open-footer');
         if( footer_wrapper_height >= cwp_window.height()/2 ){
             footer_wrapper.addClass('scroll-footer');
@@ -239,7 +260,7 @@ jQuery(document).ready(function($){
 
     //footer parallax
     function parallaxFooter(){
-       var win = cwp_window.height(),
+       let win = cwp_window.height(),
             parallaxFooterHeight = win*0.5;
 
         if (cwp_body.hasClass('cwp-parallax-footer')) {
@@ -247,7 +268,7 @@ jQuery(document).ready(function($){
                 let footer_height               = $('.cwp-dynamic-footer').innerHeight();
                 main_body_wrapper.css('margin-bottom', footer_height);
                 if( footer_height > parallaxFooterHeight ){
-                    var scrollbar_inner = $('.cwp-scrollbar-inner');
+                    let scrollbar_inner = $('.cwp-scrollbar-inner');
                     main_body_wrapper.css('margin-bottom', parallaxFooterHeight);
                     scrollbar_inner.css('max-height', parallaxFooterHeight);
                     scrollbar_inner.scrollbar();
@@ -255,7 +276,7 @@ jQuery(document).ready(function($){
                           
             }
             else{
-                var main_body_wrapper_style = main_body_wrapper.attr('style');
+                let main_body_wrapper_style = main_body_wrapper.attr('style');
                 if (typeof main_body_wrapper_style !== typeof undefined && main_body_wrapper_style !== false) {
                     main_body_wrapper.removeAttr('style');
                 }
@@ -267,7 +288,7 @@ jQuery(document).ready(function($){
     //Blog grid convert in mobile devices
     function blogMainGridConvert(){
         if (cwp_window.width() < 992) {
-            for (var i = 1; i<= 12; i++) {
+            for (let i = 1; i<= 12; i++) {
                 //$('.cwp-dynamic-footer .grid-'+i+'').removeClass('grid-'+i+'').addClass( 'grid-md-'+i+'');
                 $('.cwp-body-main-wrap .cwp-grid-column.grid-'+i+', .cwp-dynamic-footer .cwp-grid-column.grid-'+i+'').removeClass('grid-'+i+'').addClass( 'grid-md-'+i+'');
             }
@@ -277,7 +298,7 @@ jQuery(document).ready(function($){
 
     //What happen on window scroll
     function stickyMenu() {
-        var scrollTop = cwp_window.scrollTop();
+        let scrollTop = cwp_window.scrollTop();
         if ( scrollTop > 250 ) {
             $('.cosmoswp-sticky').addClass('add-sticky');
             $('.scrollup').show();
@@ -293,7 +314,7 @@ jQuery(document).ready(function($){
 
     // mobile devices sticky menu fix
     function menuStickyFix(){
-        var scrollMobile = cwp_window.scrollTop();
+        let scrollMobile = cwp_window.scrollTop();
         if (cwp_body.hasClass('admin-bar')) {
             if (cwp_window.width() < 768) {
                 if ( scrollMobile > 0 ) {
@@ -308,16 +329,16 @@ jQuery(document).ready(function($){
     }
 
     /*scroll top*/
-    scroll_top.click(function(event) {      // When arrow is clicked
+    scroll_top.click(function(e) {      // When arrow is clicked
         $('body,html').animate({
             scrollTop : 0                       // Scroll to top of body
         }, 500);
-        event.preventDefault();
+        e.preventDefault();
     });
 
     //overlay fixed header top spacing
     function overlayFixedAndTransparentHeaderSpacing(){
-        var added_height = 40;
+        let added_height = 40;
         if(cwp_body.hasClass('gutentor-active')){
             added_height = 0;
         }
@@ -347,10 +368,10 @@ jQuery(document).ready(function($){
 
     function cosmoswpMasonry() {
         if ( cwp_body.hasClass('cwp-masonry-blog') ){
-            var $masonry_boxes = $( '.cwp-dynamic-blog-content' );
+            let $masonry_boxes = $( '.cwp-dynamic-blog-content' );
             $masonry_boxes.hide();
 
-            var $container = $( '.cwp-blog-grid-row' );
+            let $container = $( '.cwp-blog-grid-row' );
             $container.imagesLoaded( function(){
                 $masonry_boxes.fadeIn( 'slow' );
                 $container.masonry({
@@ -368,17 +389,14 @@ jQuery(document).ready(function($){
 
     cwp_window.on("load", function() {
 
-        //Sticky Sidebar
-        if( typeof $.fn.theiaStickySidebar !== 'undefined' ){
-            if( cwp_body.hasClass( 'add-sticky-sidebar') ){
-                $('.cwp-ms-content-grid-column').theiaStickySidebar();
-            }
-        }
-
         /*parallax scolling*/
-        $('a[href*="\\#"]').click(function(event){
-            var cwp_offset= $.attr(this, 'href');
-            var id = cwp_offset.substring(1, cwp_offset.length);
+        $('a[href*="\\#"]').click(function(e){
+            let cwp_offset= $.attr(this, 'href'),
+                id = cwp_offset.substring(1, cwp_offset.length);
+
+            if ( ! ( /^[A-z0-9_-]+$/.test( id ) ) ) {
+                return;
+            }
             if ( ! document.getElementById( id ) ) {
                 return;
             }
@@ -386,7 +404,7 @@ jQuery(document).ready(function($){
                 $('html, body').animate({
                     scrollTop: $( cwp_offset ).offset().top-$('#navbar').height()
                 }, 1000);
-                event.preventDefault();
+                e.preventDefault();
             }
         });
 
@@ -399,48 +417,55 @@ jQuery(document).ready(function($){
 
         //search click function
         cwp_document.on('click','#search-icon',function(e){
-            $('.cwp-search-dropdown').toggleClass('is-active-dropdown');
             e.preventDefault();
+            $('.cwp-search-dropdown').toggleClass('is-active-dropdown');
         });
 
         //search full screen
-        cwp_document.on('click','#search-fullscreen-icon',function(){
+        cwp_document.on('click','#search-fullscreen-icon',function(e){
+            e.preventDefault();
             $('.cwp-search-fullscreen-wrapper').addClass('cwp-show-search');
         });
 
         //search overlay screen
-        cwp_document.on('click','#search-overlay-icon',function(){
+        cwp_document.on('click','#search-overlay-icon',function(e){
+            e.preventDefault();
             search_overlay_wrapper.addClass('cwp-show-search');
             search_overlay_wrapper.closest('.grid-container').addClass('hide-elements');
         });
 
         //Global Close Button
         cwp_document.on('click','.cwp-close-btn',function(e){
+            e.preventDefault();
             header_menu_sidebar_toggle();
         });
 
     
         //login/register
-        $('.login').on('click','.login-icon-text',function(){
+        $('.login').on('click','.login-icon-text',function(e){
+            e.preventDefault();
             $('.form-wrapper').toggleClass('show-form');
         });
         register.hide();
-        $('#register-form').on('click',function(){
+        $('#register-form').on('click',function(e){
+            e.preventDefault();
             login.hide();
             $register.show();
         });
-        $('#login-form').on('click',function(){
+        $('#login-form').on('click',function(e){
+            e.preventDefault();
             login.show();
             register.hide();      
         });
 
         //Toggle Dropdown Menu
-        cwp_document.on('click','.cwp-toggle-dropdown-btn',function(){
-            var btn_this = $(this);
+        cwp_document.on('click','.cwp-toggle-dropdown-btn',function(e){
+            e.preventDefault();
+            let btn_this = $(this);
             $('.cwp-header-menu-toggle-dropdown').animate({
                 height:"toggle"
             },500);
-            var clicks = btn_this.data('clicks');
+            let clicks = btn_this.data('clicks');
             if (clicks) {
                 btn_this.find(".cwp-open-icon").show();
                 btn_this.find(".cwp-close-icon").hide();
@@ -475,12 +500,13 @@ jQuery(document).ready(function($){
         }
 
         cwp_document.on('click','.cwp-offcanvas-btn',function(e){
+            e.preventDefault();
             cwp_body.addClass('cwp-show-offcanvas-sidebar');
         });
 
 
         // Scrollup & Scrolldown sticky header
-        var previousscroll    = 0,
+        let previousscroll    = 0,
         scrollup              = false,
         scrolldown            = true,
         prevhighestdownscroll = 0,
@@ -490,8 +516,8 @@ jQuery(document).ready(function($){
         trigger_height        =   main_wrap.data('height-trigger-sticky'),
         sticky_color          =   main_wrap.data('sticky-color');
 
-        cwp_window.scroll(function(event){
-            var scrolltop = $(this).scrollTop();
+        cwp_window.scroll(function(){
+            let scrolltop = $(this).scrollTop();
             if ( typeof scrolltype !== 'undefined' || scrolltype !== null ){
                 if (previousscroll > scrolltop ){
                     scrollup   = true;
@@ -551,7 +577,7 @@ jQuery(document).ready(function($){
             menuStickyFix();
         });
         /* add global widget title and content align class */
-        var cosmoswp_sidebar      = $('.cwp-sidebar'),
+        let cosmoswp_sidebar      = $('.cwp-sidebar'),
         global_widget_title_align   =   cosmoswp_sidebar.data('widget-title'),
         global_widget_content_align =   cosmoswp_sidebar.data('widget-content');
        
@@ -560,7 +586,7 @@ jQuery(document).ready(function($){
 
         /*add footer widget title and  content align class*/
         //top footer 
-        var footer_sidebar              = $('.cwp-footer-sidebar'),
+        let footer_sidebar              = $('.cwp-footer-sidebar'),
         footer_top                      = $('.cwp-top-footer'),
         top_footer_widget_title_align   =   footer_top.data('widget-title'),
         top_footer_widget_content_align =   footer_top.data('widget-content');
@@ -569,21 +595,21 @@ jQuery(document).ready(function($){
         add_widget_element_align_class(footer_top,'widget',top_footer_widget_content_align); 
 
         //main footer
-        var main_top                     = $('.cwp-main-footer'),
+        let main_top                     = $('.cwp-main-footer'),
         main_footer_widget_title_align   =   main_top.data('widget-title'),
         main_footer_widget_content_align =   main_top.data('widget-content');
         add_widget_element_align_class(main_top,'widget-title',main_footer_widget_title_align); 
         add_widget_element_align_class(main_top,'widget',main_footer_widget_content_align); 
 
         //bottom footer
-        var bottom_top                     = $('.cwp-bottom-footer'),
+        let bottom_top                     = $('.cwp-bottom-footer'),
         bottom_footer_widget_title_align   =   bottom_top.data('widget-title'),
         bottom_footer_widget_content_align =   bottom_top.data('widget-content');
         add_widget_element_align_class(bottom_top,'widget-title',bottom_footer_widget_title_align); 
         add_widget_element_align_class(bottom_top,'widget',bottom_footer_widget_content_align);
 
         footer_sidebar.each(function (){
-            var this_footer_sidebar = $(this);
+            let this_footer_sidebar = $(this);
             if ( this_footer_sidebar.hasClass( "cwp-text-left") || this_footer_sidebar.hasClass("cwp-text-right") || this_footer_sidebar.hasClass("cwp-text-center") ) {
                 this_footer_sidebar.find('.widget').removeClass("cwp-text-left cwp-text-right cwp-text-center");
                 this_footer_sidebar.find('.widget-title').removeClass("cwp-text-left cwp-text-right cwp-text-center");
@@ -613,6 +639,7 @@ jQuery(document).ready(function($){
         $('.main-navigation').slideToggle();
     }
     cwp_body.on('click','.navbar-toggle', function(e){
+        e.preventDefault();
         toggleMenu();
     });
 
@@ -627,13 +654,13 @@ jQuery(document).ready(function($){
     }
 
     /*Ajax pagination style*/
-    var paged = parseInt(cosmoswp.paged) + 1,
+    let paged = parseInt(cosmoswp.paged) + 1,
         max_num_pages = parseInt(cosmoswp.max_num_pages),
         next_posts = cosmoswp.next_posts;
 
-    cwp_document.on( 'click', '.cwp-ajax-show-more', function( event ) {
-        event.preventDefault();
-        var show_more = $(this),
+    cwp_document.on( 'click', '.cwp-ajax-show-more', function( e ) {
+        e.preventDefault();
+        let show_more = $(this),
             click = show_more.attr('data-click'),
             page = parseInt( show_more.attr('data-number') );
 
@@ -652,13 +679,13 @@ jQuery(document).ready(function($){
             /*http://stackoverflow.com/questions/17780515/append-ajax-items-to-masonry-with-infinite-scroll*/
             paged++;/*next page number*/
             next_posts = next_posts.replace(/(\/?)page(\/|d=)[0-9]+/, '$1page$2'+ paged);
-            var cwp_temp_post = $('#cwp-ajax-temp-post'),
+            let cwp_temp_post = $('#cwp-ajax-temp-post'),
                 html = cwp_temp_post.html();
 
             cwp_temp_post.html('');
 
             // Make jQuery object from HTML string
-            var $moreBlocks = $( html ).filter('.cwp-article-ajax');
+            let $moreBlocks = $( html ).filter('.cwp-article-ajax');
 
             // Append new blocks to container
             $('.cwp-blog-grid-row').append($moreBlocks);
@@ -672,9 +699,9 @@ jQuery(document).ready(function($){
 
     /*auto ajax*/
     if( 'auto-ajax' === cosmoswp.pagination_option ){
-        var $content = $('body #cwp-main');
+        let $content = $('body #cwp-main');
         cwp_window.scroll(function() {
-            var content_offset = $content.offset();
+            let content_offset = $content.offset();
             if(
                 (cwp_window.scrollTop() + cwp_window.height()) >
                 ($content.scrollTop() + $content.height() + content_offset.top)
@@ -686,7 +713,7 @@ jQuery(document).ready(function($){
 
     /*Woo Grid List*/
     function cwp_woo_view_switcher() {
-        var cwp_woo_view_switcher = $('.cwp-woo-view-switcher'),
+        let cwp_woo_view_switcher = $('.cwp-woo-view-switcher'),
             cosmoswp_woo_archive_grid_row = $('.cosmoswp-woo-archive-grid-row');
 
         cwp_woo_view_switcher.on('click','.cwp-trigger-grid',function(){
@@ -709,13 +736,14 @@ jQuery(document).ready(function($){
 
     /*Edd Grid List*/
     function cwp_edd_view_switcher() {
-        var cwp_edd_view_switcher = $('.cwp-edd-view-switcher'),
+        let cwp_edd_view_switcher = $('.cwp-edd-view-switcher'),
             cosmoswp_edd_archive_grid_row = $('.cosmoswp-edd-grid-row');
 
         if(cosmoswp_edd_archive_grid_row.hasClass('cwp-grid')) {
             $('.cwp-trigger-grid').addClass('active');
         }
-        cwp_edd_view_switcher.on('click load','.cwp-trigger-grid',function(){
+        cwp_edd_view_switcher.on('click load','.cwp-trigger-grid',function(e){
+            e.preventDefault();
             cosmoswp_edd_archive_grid_row.addClass('cwp-grid');
             cosmoswp_edd_archive_grid_row.removeClass('cwp-list');
             $(this).siblings().removeClass('active');
@@ -723,7 +751,8 @@ jQuery(document).ready(function($){
 
         });
 
-        cwp_edd_view_switcher.on('click','.cwp-trigger-list',function(){
+        cwp_edd_view_switcher.on('click','.cwp-trigger-list',function(e){
+            e.preventDefault();
             cosmoswp_edd_archive_grid_row.addClass('cwp-list');
             cosmoswp_edd_archive_grid_row.removeClass('cwp-grid');
             $(this).siblings().removeClass('active');
@@ -732,9 +761,11 @@ jQuery(document).ready(function($){
         });
     }
     cwp_edd_view_switcher();
-    cwp_document.on('change', '#cosmoswp-edd-select-filter', function (event) {
-        var orderby = $('#cosmoswp-edd-select-filter').val();
-        modified_href = '?sortby=' + orderby;
+    cwp_document.on('change', '#cosmoswp-edd-select-filter', function (e) {
+        e.preventDefault();
+        let orderby = $('#cosmoswp-edd-select-filter').val(),
+            modified_href = '?sortby=' + orderby;
+
         modified_href = encodeURI(modified_href);
         window.history.pushState(null, null, modified_href);
         location.reload();

@@ -16,12 +16,14 @@ $disable_sub_menu = ($disable_sub_menu) ? 1 : 0;
 <!-- Start of .navigation -->
 <div class="cwp-primary-menu-wrapper navigation <?php echo esc_attr($menu_align . ' ' . $submenu_display_option); ?>"
      data-submenu-icon="<?php echo esc_attr($submenu_indicator); ?>">
-    <?php wp_nav_menu(array(
+    <?php
+    $nav_menu_args = array(
         'menu'       => $primary_menu,
         'menu_class' => 'cwp-primary-menu',
         'depth'      => $disable_sub_menu,
         'container'  => '',
-    ));
+    );
+    wp_nav_menu(apply_filters('cwp_primary_nav_menu_args', $nav_menu_args));
     ?>
 </div>
 <!-- End of .navigation -->

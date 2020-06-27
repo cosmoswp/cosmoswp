@@ -1,10 +1,13 @@
 /*
 Theme Name: CosmosWP
-Theme URI: https://www.cosmoswp.com/
 Author: cosmoswp
-Author URI: https://www.cosmoswp.com/contact-us/
 Description: CosmosWP is a multi-purpose new generation modern Gutenberg WordPress theme, super-fast, easily customizable, flexible, beautiful, perfect, and highly extendable theme. With a simple download of the CosmosWP, you will have a striking and awesome theme for your website. A great way to design your website with a unique blend of style and technique. It will let you build around several kinds of a website such as a blog, portfolio, business, photography, entertainment etc. Also, specialized sites like Restaurant, Spa, Charity, Meditation, Wedding, Dentist, Education, Medical and much more. Being integrated with WooCommerce and Easy Digital Download you can even build an e-commerce based website. Besides that, it works well with almost all page builders as Gutentor, Elementor, SiteOrigin, Beaver Builder, Visual Composer, Divi, etc. Furthermore, features like SEO friendly, Responsive, RTL Ready, Translation Ready, Gutenberg compatible, and many other WordPress plugins compatible are also included in the theme. Finally, the theme already has an instant demo setup so you can commence your elegant and phenomenal website right away.
-Version: 1.1.5
+Version: 1.1.6
+Requires at least: 5.0
+Tested up to: 5.4.2
+Requires PHP: 5.6
+Theme URI: https://www.cosmoswp.com/
+Author URI: https://www.cosmoswp.com/contact-us/
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: cosmoswp
@@ -1071,29 +1074,29 @@ input[type="submit"],
 /*----------------------------
   Custom CheckBox
 ----------------------------*/
-.checkbox {
+.cwp-checkbox {
   position: relative;
   padding-left: 25px;
   line-height: 25px;
   margin-bottom: 10px;
   margin-top: 10px; }
-  .checkbox label {
+  .cwp-checkbox label {
     cursor: pointer; }
-  .checkbox input[type="checkbox"] {
+  .cwp-checkbox input[type="checkbox"] {
     position: absolute;
     opacity: 0;
     cursor: pointer;
     height: 0;
     width: 0;
     left: 0; }
-  .checkbox-custom {
+  .cwp-checkbox-custom {
     position: absolute;
     top: 0;
     left: 0;
     height: 20px;
     width: 20px;
     background-color: #eee; }
-    .checkbox-custom:after {
+    .cwp-checkbox-custom:after {
       content: "";
       position: absolute;
       display: none;
@@ -1108,11 +1111,11 @@ input[type="submit"],
       -moz-transform: rotate(45deg);
       -ms-transform: rotate(45deg);
       transform: rotate(45deg); }
-  .checkbox:hover input[type="checkbox"] ~ .checkbox-custom {
+  .cwp-checkbox:hover input[type="checkbox"] ~ .cwp-checkbox-custom {
     background-color: #ccc; }
-  .checkbox input[type="checkbox"]:checked ~ .checkbox-custom {
+  .cwp-checkbox input[type="checkbox"]:checked ~ .cwp-checkbox-custom {
     background-color: #2196F3; }
-    .checkbox input[type="checkbox"]:checked ~ .checkbox-custom:after {
+    .cwp-checkbox input[type="checkbox"]:checked ~ .cwp-checkbox-custom:after {
       display: block; }
 
 .wpcf7-form label {
@@ -2265,7 +2268,7 @@ input[type="submit"],
     .cwp-dynamic-header .navigation.cwp-submenu-onhover ul li.menu-item-has-children > .sub-menu li {
       width: 100%;
       display: block; }
-  .cwp-dynamic-header .navigation.cwp-submenu-onhover ul li.menu-item-has-children.cwp-open-submenu > .sub-menu, .cwp-dynamic-header .navigation.cwp-submenu-onhover ul li.menu-item-has-children:focus-within > .sub-menu, .cwp-dynamic-header .navigation.cwp-submenu-onhover ul li.menu-item-has-children:focus > .sub-menu, .cwp-dynamic-header .navigation.cwp-submenu-onhover ul li.menu-item-has-children:hover > .sub-menu {
+  .cwp-dynamic-header .navigation.cwp-submenu-onhover ul li.menu-item-has-children.cwp-open-submenu > .sub-menu, .cwp-dynamic-header .navigation.cwp-submenu-onhover ul li.menu-item-has-children:focus > .sub-menu, .cwp-dynamic-header .navigation.cwp-submenu-onhover ul li.menu-item-has-children:hover > .sub-menu {
     clip: auto;
     opacity: 1;
     -webkit-transform: translate3d(0, 0, 0);
@@ -2277,7 +2280,22 @@ input[type="submit"],
     -ms-transition: all 0.3s ease-in-out 0s;
     -o-transition: all 0.3s ease-in-out 0s;
     transition: all 0.3s ease-in-out 0s; }
-    .cwp-dynamic-header .navigation.cwp-submenu-onhover ul li.menu-item-has-children.cwp-open-submenu > .sub-menu .sub-menu, .cwp-dynamic-header .navigation.cwp-submenu-onhover ul li.menu-item-has-children:focus-within > .sub-menu .sub-menu, .cwp-dynamic-header .navigation.cwp-submenu-onhover ul li.menu-item-has-children:focus > .sub-menu .sub-menu, .cwp-dynamic-header .navigation.cwp-submenu-onhover ul li.menu-item-has-children:hover > .sub-menu .sub-menu {
+    .cwp-dynamic-header .navigation.cwp-submenu-onhover ul li.menu-item-has-children.cwp-open-submenu > .sub-menu .sub-menu, .cwp-dynamic-header .navigation.cwp-submenu-onhover ul li.menu-item-has-children:focus > .sub-menu .sub-menu, .cwp-dynamic-header .navigation.cwp-submenu-onhover ul li.menu-item-has-children:hover > .sub-menu .sub-menu {
+      top: 0;
+      left: 100%; }
+  .cwp-dynamic-header .navigation.cwp-submenu-onhover ul li.menu-item-has-children:focus-within > .sub-menu {
+    clip: auto;
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -o-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    -webkit-transition: all 0.3s ease-in-out 0s;
+    -moz-transition: all 0.3s ease-in-out 0s;
+    -ms-transition: all 0.3s ease-in-out 0s;
+    -o-transition: all 0.3s ease-in-out 0s;
+    transition: all 0.3s ease-in-out 0s; }
+    .cwp-dynamic-header .navigation.cwp-submenu-onhover ul li.menu-item-has-children:focus-within > .sub-menu .sub-menu {
       top: 0;
       left: 100%; }
 
@@ -4352,6 +4370,9 @@ WooCommerce Responsive Primary Sidebar
 .cwp-edd-active .cosmoswp-edd-grid-row .edd-download {
   animation: cwp-grid-animation 2s;
   margin-bottom: 30px; }
+.cwp-edd-active .cosmoswp-edd-grid-row.cwp-grid .edd-download {
+  margin-top: 15px;
+  margin-bottom: 15px; }
 .cwp-edd-active .cosmoswp-edd-grid-row.cwp-list [class*='grid-'],
 .cwp-edd-active .cosmoswp-edd-grid-row.cwp-list [class^='grid-'] {
   flex: 0 0 100%;
@@ -4952,10 +4973,13 @@ Footer
   list-style: none; }
   .cwp-horizontal-menu li {
     display: inline-block; }
+    .cwp-horizontal-menu li a {
+      display: block; }
 
 .cwp-vertical-menu {
   list-style: none; }
-  .cwp-vertical-menu li {
+  .cwp-vertical-menu li,
+  .cwp-vertical-menu a {
     display: block; }
 
 .cwp-bottom-footer .grid-row {

@@ -3,9 +3,9 @@
 Contributors: cosmoswp
 Tags: blog, e-commerce, portfolio, grid-layout, one-column, two-columns, three-columns, four-columns, left-sidebar, right-sidebar, custom-background, custom-colors, custom-header, custom-logo, custom-menu, editor-style, featured-images, flexible-header, footer-widgets, full-width-template, microformats, post-formats, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready, block-styles, wide-blocks
 Requires at least: 5.0
-Tested up to: 5.4.1
+Tested up to: 5.4.2
 Requires PHP: 5.6
-Stable tag: 1.1.5
+Stable tag: 1.1.6
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -64,6 +64,17 @@ https://fontawesome.com/icons
 
 
 == Changelog ==
+
+= 1.1.6 - 2020-06-27 =
+* Updated :  Keyboard Navigation on Header
+* Updated :  Theme JavaScript
+* Updated :  Footer vertical and horizontal CSS
+* Updated :  Removed user_contactmethods and added it to pro plugin, since it is not allowed on theme
+* Fixed :  Theme Check Issues
+* Fixed :  Checkbox issue with checkbox wrap class
+* Fixed :  EDD grid/list button design
+* Fixed :  EDD default CSS
+* Fixed :  Menu Hover Browser Compatibility On Older version of Microsoft Edge
 
 = 1.1.5 - 2020-05-21 =
 * Updated :  Major update specific to EDD

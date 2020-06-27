@@ -251,7 +251,7 @@ class CosmosWP_Intro {
                             </div>
                         </div>
                         <div class="grid-md-5 grid-lg-5">
-                            <img src="<?php echo esc_url(COSMOSWP_URL.'/assets/img/cosmoswp-welcome-page.png' )?>" alt="<?php esc_html_e( 'CosmosWP', 'cosmoswp' ); ?>" />
+                            <img src="<?php echo esc_url(COSMOSWP_URL.'/assets/img/cosmoswp-welcome-page.png' )?>" alt="<?php esc_attr_e( 'CosmosWP', 'cosmoswp' ); ?>" />
                         </div>
                     </div>
                 </div>
@@ -265,7 +265,7 @@ class CosmosWP_Intro {
                                 <div class="cwp-card">
                                     <div class="cwp-intro-profile">
                                         <span>
-                                            <img class="cosmoswp-gsm-screenshot" src="<?php echo esc_url(COSMOSWP_URL .'/assets/img/cosmoswp-larger-logo.png' )?>" alt="<?php esc_html_e( 'CosmosWP', 'cosmoswp' ); ?>" />
+                                            <img class="cosmoswp-gsm-screenshot" src="<?php echo esc_url(COSMOSWP_URL .'/assets/img/cosmoswp-larger-logo.png' )?>" alt="<?php esc_attr_e( 'CosmosWP', 'cosmoswp' ); ?>" />
                                         </span>
                                     </div>
                                     <div class="cwp-intro-profile-info">

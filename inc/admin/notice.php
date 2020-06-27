@@ -129,7 +129,7 @@ class CosmosWP_Theme_Notice {
                 <?php esc_html_e( 'Dismiss', 'cosmoswp' ); ?>
             </a>
             <div class="cosmoswp-gsm-container">
-                <img class="cosmoswp-gsm-screenshot" src="<?php echo esc_url(COSMOSWP_URL.'/screenshot.jpg' )?>" alt="<?php esc_html_e( 'CosmosWP', 'cosmoswp' ); ?>" />
+                <img class="cosmoswp-gsm-screenshot" src="<?php echo esc_url(COSMOSWP_URL.'/screenshot.jpg' )?>" alt="<?php esc_attr_e( 'CosmosWP', 'cosmoswp' ); ?>" />
                 <div class="cosmoswp-gsm-notice">
                     <h2>
                         <?php
@@ -141,7 +141,7 @@ class CosmosWP_Theme_Notice {
 
                     <p class="plugin-install-notice"><?php esc_html_e( 'Clicking the button below will install and activate the Advanced Import plugin.', 'cosmoswp' ); ?></p>
 
-                    <a class="cosmoswp-gsm-btn button button-primary button-hero" href="#" data-name="" data-slug="" aria-label="<?php esc_html_e( 'Get started with CosmosWP', 'cosmoswp' ); ?>">
+                    <a class="cosmoswp-gsm-btn button button-primary button-hero" href="#" data-name="" data-slug="" aria-label="<?php esc_attr_e( 'Get started with CosmosWP', 'cosmoswp' ); ?>">
                         <?php esc_html_e( 'Get started with CosmosWP', 'cosmoswp' );?>
                     </a>
                 </div>

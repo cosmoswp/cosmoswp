@@ -41,11 +41,12 @@ if ($menu_title) { ?>
 <!-- Start of .cwp-navigation -->
 <div class="cwp-footer-navigation <?php echo esc_attr(cosmoswp_string_concator($footer_menu_align_desktop,$footer_menu_align_tablet,$footer_menu_align_mobile)); ?>">
     <?php
-    wp_nav_menu(array(
+    $nav_menu_args = array(
         'menu'       => $custom_menu,
         'menu_class' => 'footer-menu ' . $menu_position,
         'depth'      => 1,
-    ));
+    );
+    wp_nav_menu(apply_filters('cwp_footer_nav_menu_args', $nav_menu_args));
     ?>
 </div>
 <!-- End of .cwp-navigation -->

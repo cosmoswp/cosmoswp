@@ -13,7 +13,7 @@ $dd_search_placeholder = ($dd_search_placeholder) ? $dd_search_placeholder : '';
 	</a>
 
     <div class="cwp-search-form-wrapper <?php echo esc_attr($dd_search_form_align); ?>" id="cwp-dropdown-search-form-wrapper">
-        <form action="<?php echo home_url('/'); ?>" class="search-form">
+        <form action="<?php echo esc_url(home_url('/')); ?>" class="search-form">
             <input type="search" class="search-field" name='s'
                    placeholder="<?php echo esc_attr($dd_search_placeholder); ?>"
                    value="<?php echo get_search_query(); ?>">
