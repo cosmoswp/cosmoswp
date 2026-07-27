@@ -1,0 +1,54 @@
+{
+  "name": "cosmoswp",
+  "version": "3.0.2",
+  "description": "Wordpress Anything Theme",
+  "author": "cosmoswp",
+  "license": "ISC",
+  "scripts": {
+    "build:grid": "wp-scripts build src/wpness-grid/wpness-grid.js --output-path=build/wpness-grid",
+    "build:builder": "wp-scripts build src/customizer/builder/index.js --output-path=build/customizer/builder",
+    "build:customizerControls": "wp-scripts build --webpack-src-dir=src/customizer/controls --output-path=build/customizer/controls",
+    "build:customizerPreview": "wp-scripts build --webpack-src-dir=src/customizer/preview --output-path=build/customizer/preview",
+    "build:adminInfo": "wp-scripts build --webpack-src-dir=src/admin/info --output-path=build/admin/info",
+    "build:adminNotice": "wp-scripts build --webpack-src-dir=src/admin/notice --output-path=build/admin/notice",
+    "build:editor": "wp-scripts build --webpack-src-dir=src/editor --output-path=build/editor",
+    "build:public": "wp-scripts build --webpack-src-dir=src/public --output-path=build/public",
+    "build": "npm-run-all build:public build:editor build:adminNotice build:adminInfo build:customizerPreview build:customizerControls build:builder build:grid",
+    "start:grid": "wp-scripts start src/wpness-grid/wpness-grid.js --output-path=build/wpness-grid",
+    "start:builder": "wp-scripts start src/customizer/builder/index.js --output-path=build/customizer/builder",
+    "start:customizerControls": "wp-scripts start --webpack-src-dir=src/customizer/controls --output-path=build/customizer/controls",
+    "start:customizerPreview": "wp-scripts start --webpack-src-dir=src/customizer/preview --output-path=build/customizer/preview",
+    "start:adminInfo": "wp-scripts start --webpack-src-dir=src/admin/info --output-path=build/admin/info",
+    "start:adminNotice": "wp-scripts start --webpack-src-dir=src/admin/notice --output-path=build/admin/notice",
+    "start:editor": "wp-scripts start --webpack-src-dir=src/editor --output-path=build/editor",
+    "start:public": "wp-scripts start --webpack-src-dir=src/public --output-path=build/public",
+    "start": "npm-run-all --parallel start:public start:editor start:adminNotice start:adminInfo start:customizerPreview start:customizerControls start:builder start:grid",
+    "packages-update": "wp-scripts packages-update",
+    "makejsstring": "node .bin/make-string.js",
+    "makepot": "wp i18n make-pot . languages/cosmoswp.pot --skip-js --exclude=src,vendor,node_modules --merge=languages/js.pot",
+    "copy": "node deploy.js",
+    "deploy": "npm-run-all build makepot copy",
+    "deploy:zip": "node deploy.js",
+    "initial-rename": "node .bin/initial-rename.js",
+    "rename": "node .bin/rename-filename.js"
+  },
+  "devDependencies": {
+    "@babel/preset-react": "^7.27.1",
+    "@wordpress/babel-plugin-makepot": "^6.26.0",
+    "@wordpress/scripts": "^30.19.0",
+    "archiver": "^8.0.0",
+    "autoprefixer": "^10.4.19",
+    "ncp": "^2.0.0",
+    "npm-run-all": "^4.1.5",
+    "replace-in-file": "^7.2.0"
+  },
+  "browserslist": [
+    "last 3 versions",
+    "> 1%"
+  ],
+  "dependencies": {
+    "@wordpress/api-fetch": "^7.26.0",
+    "@wordpress/element": "^6.26.0",
+    "atrc": "^1.0.37"
+  }
+}

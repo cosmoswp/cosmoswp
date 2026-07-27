@@ -1,0 +1,14 @@
+{
+	"presets": [
+		"@wordpress/babel-preset-default",
+		"@babel/preset-react"
+	],
+	"plugins": [
+		[
+			"@wordpress/babel-plugin-makepot",
+			{
+				"output": "languages/js.pot"
+			}
+		]
+	]
+}
