@@ -1,0 +1,14 @@
+node_modules/
+src/
+build/
+deploy/
+.bin/
+.tmp/
+.openclaude/
+.idea/
+.sass-cache/
+package.json
+package-lock.json
+.babelrc
+phpcs.xml.dist
+cosmoswp.zip

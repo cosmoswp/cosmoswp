@@ -11,12 +11,17 @@
  *
  * @package CosmosWP
  */
-$breadcrumb_before_content = cosmoswp_get_theme_options('breadcrumb-before-content');
-get_header();
-do_action('cosmoswp_action_before_edd_single');
-if ($breadcrumb_before_content) {
-    do_action('cosmoswp_action_breadcrumb');
+
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
 }
-do_action('cosmoswp_action_edd_single');
-do_action('cosmoswp_action_after_edd_single', get_the_ID());
+
+$breadcrumb_before_content = cosmoswp_get_theme_options( 'breadcrumb-before-content' );
+get_header();
+do_action( 'cosmoswp_action_before_edd_single' );
+if ( $breadcrumb_before_content ) {
+	do_action( 'cosmoswp_action_breadcrumb' );
+}
+do_action( 'cosmoswp_action_edd_single' );
+do_action( 'cosmoswp_action_after_edd_single', get_the_ID() );
 get_footer();

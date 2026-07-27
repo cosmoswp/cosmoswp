@@ -1,0 +1,5226 @@
+# Copyright (C) 2026 cosmoswp
+# This file is distributed under the GNU General Public License v2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: CosmosWP 3.0.2\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/theme/cosmoswp\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2026-07-27T19:58:27+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.12.0\n"
+"X-Domain: cosmoswp\n"
+
+#: src/components/cosmoswp-repeater.js:100
+msgid "Remove item"
+msgstr ""
+
+#: src/components/cosmoswp-repeater.js:134
+msgid "Add item"
+msgstr ""
+
+#: src/components/cosmoswp-repeater.js:29
+msgid "Enable this field"
+msgstr ""
+
+#: src/components/css-box.js:32
+#: inc/addons/edd/advanced-styling/cwp-edd-options.php:234
+#: inc/addons/edd/advanced-styling/cwp-edd-options.php:251
+#: inc/addons/edd/advanced-styling/cwp-edd-options.php:319
+#: inc/addons/edd/advanced-styling/cwp-edd-options.php:336
+#: inc/addons/edd/advanced-styling/cwp-edd-options.php:434
+#: inc/addons/edd/advanced-styling/cwp-edd-options.php:460
+#: inc/addons/edd/cart/cart.php:355
+#: inc/addons/edd/cart/cart.php:378
+#: inc/addons/edd/cart/cart.php:442
+#: inc/addons/edd/cart/cart.php:465
+#: inc/addons/woocommerce/advanced-styling/cwp-woocommerce-options.php:303
+#: inc/addons/woocommerce/advanced-styling/cwp-woocommerce-options.php:320
+#: inc/addons/woocommerce/advanced-styling/cwp-woocommerce-options.php:387
+#: inc/addons/woocommerce/advanced-styling/cwp-woocommerce-options.php:404
+#: inc/addons/woocommerce/advanced-styling/cwp-woocommerce-options.php:505
+#: inc/addons/woocommerce/advanced-styling/cwp-woocommerce-options.php:522
+#: inc/addons/woocommerce/advanced-styling/cwp-woocommerce-options.php:589
+#: inc/addons/woocommerce/advanced-styling/cwp-woocommerce-options.php:606
+#: inc/addons/woocommerce/advanced-styling/cwp-woocommerce-options.php:704
+#: inc/addons/woocommerce/advanced-styling/cwp-woocommerce-options.php:730
+#: inc/addons/woocommerce/advanced-styling/cwp-woocommerce-options.php:1150
+#: inc/addons/woocommerce/advanced-styling/cwp-woocommerce-options.php:1176
+#: inc/addons/woocommerce/advanced-styling/cwp-woocommerce-options.php:1305
+#: inc/addons/woocommerce/advanced-styling/cwp-woocommerce-options.php:1331
+#: inc/addons/woocommerce/advanced-styling/cwp-woocommerce-options.php:1460
+#: inc/addons/woocommerce/advanced-styling/cwp-woocommerce-options.php:1486
+#: inc/addons/woocommerce/cart/cart.php:362
+#: inc/addons/woocommerce/cart/cart.php:385
+#: inc/addons/woocommerce/cart/cart.php:449
+#: inc/addons/woocommerce/cart/cart.php:472
+#: inc/addons/woocommerce/wishlist/wishlist.php:360
+#: inc/addons/woocommerce/wishlist/wishlist.php:383
+#: inc/addons/woocommerce/wishlist/wishlist.php:446
+#: inc/addons/woocommerce/wishlist/wishlist.php:469
+#: inc/customizer/blog-options/main-content.php:554
+#: inc/customizer/blog-options/main-content.php:581
+#: inc/customizer/footer-options/footer-bottom.php:326
+#: inc/customizer/footer-options/footer-bottom.php:353
+#: inc/customizer/footer-options/footer-bottom.php:542
+#: inc/customizer/footer-options/footer-bottom.php:718
+#: inc/customizer/footer-options/footer-general.php:281
+#: inc/customizer/footer-options/footer-general.php:308
+#: inc/customizer/footer-options/footer-main.php:325
+#: inc/customizer/footer-options/footer-main.php:352
+#: inc/customizer/footer-options/footer-main.php:540
+#: inc/customizer/footer-options/footer-main.php:716
+#: inc/customizer/footer-options/footer-menu.php:439
+#: inc/customizer/footer-options/footer-menu.php:532
+#: inc/customizer/footer-options/footer-menu.php:555
+#: inc/customizer/footer-options/footer-menu.php:589
+#: inc/customizer/footer-options/footer-menu.php:612
+#: inc/customizer/footer-options/footer-menu.php:646
+#: inc/customizer/footer-options/footer-menu.php:669
+#: inc/customizer/footer-options/footer-top.php:325
+#: inc/customizer/footer-options/footer-top.php:352
+#: inc/customizer/footer-options/footer-top.php:541
+#: inc/customizer/footer-options/footer-top.php:717
+#: inc/customizer/header-options/button-one.php:336
+#: inc/customizer/header-options/button-one.php:354
+#: inc/customizer/header-options/button-one.php:423
+#: inc/customizer/header-options/button-one.php:441
+#: inc/customizer/header-options/contact-information.php:524
+#: inc/customizer/header-options/drop-down-search.php:273
+#: inc/customizer/header-options/drop-down-search.php:296
+#: inc/customizer/header-options/drop-down-search.php:360
+#: inc/customizer/header-options/drop-down-search.php:383
+#: inc/customizer/header-options/drop-down-search.php:523
+#: inc/customizer/header-options/drop-down-search.php:546
+#: inc/customizer/header-options/drop-down-search.php:610
+#: inc/customizer/header-options/drop-down-search.php:633
+#: inc/customizer/header-options/header-bottom.php:327
+#: inc/customizer/header-options/header-bottom.php:354
+#: inc/customizer/header-options/header-general.php:333
+#: inc/customizer/header-options/header-general.php:360
+#: inc/customizer/header-options/header-main.php:350
+#: inc/customizer/header-options/header-main.php:377
+#: inc/customizer/header-options/header-top.php:327
+#: inc/customizer/header-options/header-top.php:354
+#: inc/customizer/header-options/menu-icon-sidebar-setting.php:313
+#: inc/customizer/header-options/menu-icon-sidebar-setting.php:336
+#: inc/customizer/header-options/menu-icon-sidebar-setting.php:370
+#: inc/customizer/header-options/menu-icon-sidebar-setting.php:393
+#: inc/customizer/header-options/menu-icon-sidebar-setting.php:427
+#: inc/customizer/header-options/menu-icon-sidebar-setting.php:450
+#: inc/customizer/header-options/menu-icon.php:291
+#: inc/customizer/header-options/menu-icon.php:309
+#: inc/customizer/header-options/menu-icon.php:378
+#: inc/customizer/header-options/menu-icon.php:396
+#: inc/customizer/header-options/menu-icon.php:749
+#: inc/customizer/header-options/menu-icon.php:767
+#: inc/customizer/header-options/menu-icon.php:836
+#: inc/customizer/header-options/menu-icon.php:854
+#: inc/customizer/header-options/normal-search.php:209
+#: inc/customizer/header-options/normal-search.php:232
+#: inc/customizer/header-options/normal-search.php:296
+#: inc/customizer/header-options/normal-search.php:319
+#: inc/customizer/header-options/normal-search.php:459
+#: inc/customizer/header-options/normal-search.php:482
+#: inc/customizer/header-options/normal-search.php:546
+#: inc/customizer/header-options/normal-search.php:569
+#: inc/customizer/header-options/primary-menu.php:300
+#: inc/customizer/header-options/primary-menu.php:323
+#: inc/customizer/header-options/primary-menu.php:357
+#: inc/customizer/header-options/primary-menu.php:380
+#: inc/customizer/header-options/primary-menu.php:414
+#: inc/customizer/header-options/primary-menu.php:437
+#: inc/customizer/header-options/primary-menu.php:700
+#: inc/customizer/header-options/primary-menu.php:723
+#: inc/customizer/header-options/primary-menu.php:757
+#: inc/customizer/header-options/primary-menu.php:780
+#: inc/customizer/header-options/primary-menu.php:814
+#: inc/customizer/header-options/primary-menu.php:837
+#: inc/customizer/header-options/secondary-menu.php:300
+#: inc/customizer/header-options/secondary-menu.php:323
+#: inc/customizer/header-options/secondary-menu.php:357
+#: inc/customizer/header-options/secondary-menu.php:380
+#: inc/customizer/header-options/secondary-menu.php:414
+#: inc/customizer/header-options/secondary-menu.php:437
+#: inc/customizer/header-options/secondary-menu.php:702
+#: inc/customizer/header-options/secondary-menu.php:725
+#: inc/customizer/header-options/secondary-menu.php:759
+#: inc/customizer/header-options/secondary-menu.php:782
+#: inc/customizer/header-options/secondary-menu.php:816
+#: inc/customizer/header-options/secondary-menu.php:839
+#: inc/customizer/main-content/main-content-controller.php:419
+#: inc/customizer/main-content/main-content-controller.php:446
+#: inc/customizer/options.php:265
+#: inc/customizer/theme-options/button-options.php:169
+#: inc/customizer/theme-options/button-options.php:187
+#: inc/customizer/theme-options/button-options.php:256
+#: inc/customizer/theme-options/button-options.php:274
+#: inc/customizer/theme-options/scroll-top.php:256
+#: inc/customizer/theme-options/scroll-top.php:274
+#: inc/customizer/theme-options/scroll-top.php:343
+#: inc/customizer/theme-options/scroll-top.php:361
+#: inc/customizer/theme-options/sidebar-setting.php:260
+#: inc/customizer/theme-options/sidebar-setting.php:465
+msgid "Link"
+msgstr ""
+
+#: src/components/cwp-control-file.js:100
+msgid "Select"
+msgstr ""
+
+#: src/components/cwp-control-file.js:105
+msgid "Select or upload image"
+msgstr ""
+
+#: src/components/cwp-control-file.js:108
+msgid "Remove image"
+msgstr ""
+
+#: src/components/dynamic-select.js:168
+msgid "Failed to load fonts"
+msgstr ""
+
+#: src/components/dynamic-select.js:177
+msgid "Error loading fonts"
+msgstr ""
+
+#: src/components/dynamic-select.js:202
+msgid "Loading..."
+msgstr ""
+
+#: src/components/dynamic-select.js:213
+msgid "Loading font options..."
+msgstr ""
+
+#: src/components/icon-picker.js:49
+msgid "Replace Icon"
+msgstr ""
+
+#: src/components/icon-picker.js:49
+msgid "Add Icon"
+msgstr ""
+
+#: src/components/icon-picker.js:65
+msgid "Search Icon"
+msgstr ""
+
+#. Theme Name of the theme
+#: style.css
+#: inc/admin/intro.php:280
+#: inc/admin/intro.php:294
+#: inc/admin/intro.php:298
+#: inc/admin/notice.php:142
+msgid "CosmosWP"
+msgstr ""
+
+#. Theme URI of the theme
+#: style.css
+msgid "https://www.cosmoswp.com/"
+msgstr ""
+
+#. Description of the theme
+#: style.css
+msgid "CosmosWP is a multi-purpose new generation modern Gutenberg WordPress theme, super-fast, easily customizable, flexible, beautiful, perfect, and highly extendable theme. With a simple download of the CosmosWP, you will have a striking and awesome theme for your website. A great way to design your website with a unique blend of style and technique. It will let you build around several kinds of a website such as a blog, portfolio, business, photography, entertainment etc. Also, specialized sites like Restaurant, Spa, Charity, Meditation, Wedding, Dentist, Education, Medical and much more. Being integrated with WooCommerce and Easy Digital Download you can even build an e-commerce based website. Besides that, it works well with almost all page builders as Gutentor, Elementor, SiteOrigin, Beaver Builder, Visual Composer, Divi, etc. Furthermore, features like SEO friendly, Responsive, RTL Ready, Translation Ready, Gutenberg compatible, and many other WordPress plugins compatible are also included in the theme. Finally, the theme already has an instant demo setup so you can commence your elegant and phenomenal website right away."
+msgstr ""
+
+#. Author of the theme
+#: style.css
+msgid "cosmoswp"
+msgstr ""
+
+#. Author URI of the theme
+#: style.css
+msgid "https://www.cosmoswp.com/contact-us/"
+msgstr ""
+
+#: 404.php:20
+msgid "Oops! That page can&rsquo;t be found."
+msgstr ""
+
+#: 404.php:30
+msgid "It looks like nothing was found at this location. Maybe try one of the links below or a search?"
+msgstr ""
+
+#. translators: 1: title.
+#: comments.php:38
+#, php-format
+msgid "One thought on &ldquo;%1$s&rdquo;"
+msgstr ""
+
+#. translators: 1: comment count number, 2: title.
+#: comments.php:44
+#, php-format
+msgctxt "comments title"
+msgid "%1$s thought on &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
+msgstr[0] ""
+msgstr[1] ""
+
+#: comments.php:71
+msgid "Comments are closed."
+msgstr ""
+
+#: cwp-woo/cwp-woo-archive-main-content.php:46
+msgid "Toggle Sidebar"
+msgstr ""
+
+#: cwp-woo/cwp-woo-archive-main-content.php:55
+msgid "Grid View"
+msgstr ""
+
+#: cwp-woo/cwp-woo-archive-main-content.php:56
+msgid "List View"
+msgstr ""
+
+#: cwp-woo/templates/cosmoswp_woo_cart_header.php:36
+msgid "View shopping cart"
+msgstr ""
+
+#: cwp-woo/templates/cosmoswp_woo_wishlist_header.php:43
+msgid "View your wishlist"
+msgstr ""
+
+#: edd/edd-archive-main-content.php:114
+#: edd/edd-single-main-content.php:137
+#: edd/edd-single-main-content.php:251
+#: inc/addons/edd/single/cwp-edd-single.php:382
+#: template-parts/loop/blog-default.php:62
+#: woocommerce/content-product.php:131
+msgid "Pages:"
+msgstr ""
+
+#: edd/edd-single-main-content.php:77
+#: edd/edd-single-main-content.php:191
+msgid "Author:"
+msgstr ""
+
+#: edd/edd-single-main-content.php:85
+#: edd/edd-single-main-content.php:199
+msgid "Author since:"
+msgstr ""
+
+#: header.php:28
+msgid "Skip to content"
+msgstr ""
+
+#: inc/addons/edd/advanced-styling/cwp-edd-advanced-styling.php:226
+msgid "EDD Option"
+msgstr ""
+
+#: inc/addons/edd/advanced-styling/cwp-edd-advanced-styling.php:237
+msgid "Easy Digital Downloads"
+msgstr ""
+
+#: inc/addons/edd/advanced-styling/cwp-edd-options.php:18
+#: inc/addons/woocommerce/advanced-styling/cwp-woocommerce-options.php:30
+msgid "Advanced Styling"
+msgstr ""
+
+#: inc/addons/edd/advanced-styling/cwp-edd-options.php:36
+#: inc/addons/woocommerce/advanced-styling/cwp-woocommerce-options.php:109
+msgid "Products"
+msgstr ""
+
+#: inc/addons/edd/advanced-styling/cwp-edd-options.php:56
+#: inc/addons/woocommerce/advanced-styling/cwp-woocommerce-options.php:129
+msgid "Product Toolbar"
+msgstr ""
+
+#: inc/addons/edd/advanced-styling/cwp-edd-options.php:63
+#: inc/addons/edd/advanced-styling/cwp-edd-options.php:206
+#: inc/addons/edd/advanced-styling/cwp-edd-options.php:291
+#: inc/addons/edd/advanced-styling/cwp-edd-options.php:516
+#: inc/addons/edd/advanced-styling/cwp-edd-options.php:573
+#: inc/addons/edd/advanced-styling/cwp-edd-options.php:631
+#: inc/addons/edd/advanced-styling/cwp-edd-options.php:711
+#: inc/addons/edd/advanced-styling/cwp-edd-options.php:764
+#: inc/addons/edd/advanced-styling/cwp-edd-options.php:817
+#: inc/addons/edd/cart/cart.php:331
+#: inc/addons/edd/cart/cart.php:418
+#: inc/addons/woocommerce/advanced-styling/cwp-woocommerce-options.php:136
+#: inc/addons/woocommerce/advanced-styling/cwp-woocommerce-options.php:275
+#: inc/addons/woocommerce/advanced-styling/cwp-woocommerce-options.php:359
+#: inc/addons/woocommerce/advanced-styling/cwp-woocommerce-options.php:477
+#: inc/addons/woocommerce/advanced-styling/cwp-woocommerce-options.php:561
+#: inc/addons/woocommerce/advanced-styling/cwp-woocommerce-options.php:786
+#: inc/addons/woocommerce/advanced-styling/cwp-woocommerce-options.php:836
+#: inc/addons/woocommerce/advanced-styling/cwp-woocommerce-options.php:950
+#: inc/addons/woocommerce/advanced-styling/cwp-woocommerce-options.php:1007
+#: inc/addons/woocommerce/advanced-styling/cwp-woocommerce-options.php:1038
+#: inc/addons/woocommerce/advanced-styling/cwp-woocommerce-options.php:1094
+#: inc/addons/woocommerce/advanced-styling/cwp-woocommerce-options.php:1249
+#: inc/addons/woocommerce/advanced-styling/cwp-woocommerce-options.php:1404
+#: inc/addons/woocommerce/cart/cart.php:338
+#: inc/addons/woocommerce/cart/cart.php:425
+#: inc/addons/woocommerce/wishlist/wishlist.php:336
+#: inc/addons/woocommerce/wishlist/wishlist.php:422
+#: inc/customizer/blog-options/main-content.php:641
+#: inc/customizer/footer-options/footer-bottom.php:220
+#: inc/customizer/footer-options/footer-general.php:175
+#: inc/customizer/footer-options/footer-main.php:219
+#: inc/customizer/footer-options/footer-menu.php:508
+#: inc/customizer/footer-options/footer-menu.php:565
+#: inc/customizer/footer-options/footer-menu.php:622
+#: inc/customizer/footer-options/footer-social.php:69
+#: inc/customizer/footer-options/footer-top.php:219
+#: inc/customizer/header-options/button-one.php:307
+#: inc/customizer/header-options/button-one.php:394
+#: inc/customizer/header-options/drop-down-search.php:249
+#: inc/customizer/header-options/drop-down-search.php:336
+#: inc/customizer/header-options/drop-down-search.php:499
+#: inc/customizer/header-options/drop-down-search.php:586
+#: inc/customizer/header-options/header-bottom.php:221
+#: inc/customizer/header-options/header-general.php:227
+#: inc/customizer/header-options/header-main.php:244
+#: inc/customizer/header-options/header-social.php:68
+#: inc/customizer/header-options/header-top.php:221
+#: inc/customizer/header-options/menu-icon-sidebar-setting.php:289
+#: inc/customizer/header-options/menu-icon-sidebar-setting.php:346
+#: inc/customizer/header-options/menu-icon-sidebar-setting.php:403
+#: inc/customizer/header-options/menu-icon.php:262
+#: inc/customizer/header-options/menu-icon.php:349
+#: inc/customizer/header-options/menu-icon.php:720
+#: inc/customizer/header-options/menu-icon.php:807
+#: inc/customizer/header-options/normal-search.php:185
+#: inc/customizer/header-options/normal-search.php:272
+#: inc/customizer/header-options/normal-search.php:435
+#: inc/customizer/header-options/normal-search.php:522
+#: inc/customizer/header-options/primary-menu.php:276
+#: inc/customizer/header-options/primary-menu.php:333
+#: inc/customizer/header-options/primary-menu.php:390
+#: inc/customizer/header-options/primary-menu.php:676
+#: inc/customizer/header-options/primary-menu.php:733
+#: inc/customizer/header-options/primary-menu.php:790
+#: inc/customizer/header-options/secondary-menu.php:276
+#: inc/customizer/header-options/secondary-menu.php:333
+#: inc/customizer/header-options/secondary-menu.php:390
+#: inc/customizer/header-options/secondary-menu.php:678
+#: inc/customizer/header-options/secondary-menu.php:735
+#: inc/customizer/header-options/secondary-menu.php:792
+#: inc/customizer/header-options/sticky-header.php:349
+#: inc/customizer/header-options/sticky-header.php:364
+#: inc/customizer/header-options/sticky-header.php:502
+#: inc/customizer/header-options/sticky-header.php:517
+#: inc/customizer/header-options/sticky-header.php:655
+#: inc/customizer/header-options/sticky-header.php:670
+#: inc/customizer/main-content/main-content-controller.php:313
+#: inc/customizer/options.php:559
+#: inc/customizer/theme-options/button-options.php:140
+#: inc/customizer/theme-options/button-options.php:227
+#: inc/customizer/theme-options/scroll-top.php:227
+#: inc/customizer/theme-options/scroll-top.php:314
+#: inc/customizer/theme-options/sidebar-setting.php:106
+msgid "Background Color"
+msgstr ""
+
+#: inc/addons/edd/advanced-styling/cwp-edd-options.php:67
+#: inc/addons/woocommerce/advanced-styling/cwp-woocommerce-options.php:140
+msgid "Grid/List Color"
+msgstr ""
+
+#: inc/addons/edd/advanced-styling/cwp-edd-options.php:71
+#: inc/addons/woocommerce/advanced-styling/cwp-woocommerce-options.php:144
+msgid "Grid/List Hover/Active Color"
+msgstr ""
+
+#: inc/addons/edd/advanced-styling/cwp-edd-options.php:91
+#: inc/addons/woocommerce/advanced-styling/cwp-woocommerce-options.php:164
+msgid "Product Box"
+msgstr ""
+
+#: inc/addons/edd/advanced-styling/cwp-edd-options.php:98
+#: inc/addons/woocommerce/advanced-styling/cwp-woocommerce-options.php:171
+msgid "Title Font Size (px)"
+msgstr ""
+
+#: inc/addons/edd/advanced-styling/cwp-edd-options.php:102
+#: inc/addons/woocommerce/advanced-styling/cwp-woocommerce-options.php:175
+#: inc/customizer/blog-options/main-content.php:683
+#: inc/customizer/footer-options/footer-bottom.php:443
+#: inc/customizer/footer-options/footer-main.php:442
+#: inc/customizer/footer-options/footer-menu.php:297
+#: inc/customizer/footer-options/footer-top.php:442
+#: inc/customizer/general-setting/general-setting-options.php:148
+#: inc/customizer/header-options/contact-information.php:281
+#: inc/customizer/header-options/menu-icon-sidebar-setting.php:196
+#: inc/customizer/post-options/main-content.php:398
+#: inc/customizer/theme-options/sidebar-setting.php:165
+msgid "Title Color"
+msgstr ""
+
+#: inc/addons/edd/advanced-styling/cwp-edd-options.php:106
+#: inc/addons/woocommerce/advanced-styling/cwp-woocommerce-options.php:179
+#: inc/customizer/blog-options/main-content.php:687
+#: inc/customizer/post-options/main-content.php:402
+msgid "Title Hover Color"
+msgstr ""
+
+#: inc/addons/edd/advanced-styling/cwp-edd-options.php:110
+#: inc/addons/woocommerce/advanced-styling/cwp-woocommerce-options.php:191
+msgid "Price Font Size (px)"
+msgstr ""
+
+#: inc/addons/edd/advanced-styling/cwp-edd-options.php:114
+#: inc/addons/woocommerce/advanced-styling/cwp-woocommerce-options.php:195
+msgid "Price Color"
+msgstr ""
+
+#: inc/addons/edd/advanced-styling/cwp-edd-options.php:118
+#: inc/addons/woocommerce/advanced-styling/cwp-woocommerce-options.php:199
+msgid "Content Font Size (px)"
+msgstr ""
+
+#: inc/addons/edd/advanced-styling/cwp-edd-options.php:122
+#: inc/addons/woocommerce/advanced-styling/cwp-woocommerce-options.php:203
+msgid "Content Color"
+msgstr ""
+
+#: inc/addons/edd/advanced-styling/cwp-edd-options.php:126
+#: inc/addons/woocommerce/advanced-styling/cwp-woocommerce-options.php:207
+msgid "Category Font Size (px)"
+msgstr ""
+
+#: inc/addons/edd/advanced-styling/cwp-edd-options.php:130
+#: inc/addons/woocommerce/advanced-styling/cwp-woocommerce-options.php:211
+msgid "Category Color"
+msgstr ""
+
+#: inc/addons/edd/advanced-styling/cwp-edd-options.php:134
+#: inc/addons/woocommerce/advanced-styling/cwp-woocommerce-options.php:215
+msgid "Category Hover Color"
+msgstr ""
+
+#: inc/addons/edd/advanced-styling/cwp-edd-options.php:138
+msgid "Tag Size (px)"
+msgstr ""
+
+#: inc/addons/edd/advanced-styling/cwp-edd-options.php:142
+msgid "Tag Color"
+msgstr ""
+
+#: inc/addons/edd/advanced-styling/cwp-edd-options.php:146
+msgid "Tag Hover Color"
+msgstr ""
+
+#: inc/addons/edd/advanced-styling/cwp-edd-options.php:164
+msgid "Product Button"
+msgstr ""
+
+#: inc/addons/edd/advanced-styling/cwp-edd-options.php:185
+#: inc/customizer/header-options/button-one.php:286
+#: inc/customizer/theme-options/button-options.php:119
+#: inc/customizer/theme-options/scroll-top.php:206
+msgid "Button Styling"
+msgstr ""
+
+#: inc/addons/edd/advanced-styling/cwp-edd-options.php:192
+#: inc/addons/edd/cart/cart.php:317
+#: inc/addons/woocommerce/advanced-styling/cwp-woocommerce-options.php:261
+#: inc/addons/woocommerce/advanced-styling/cwp-woocommerce-options.php:463
+#: inc/addons/woocommerce/cart/cart.php:324
+#: inc/addons/woocommerce/wishlist/wishlist.php:322
+#: inc/customizer/footer-options/footer-menu.php:491
+#: inc/customizer/header-options/button-one.php:293
+#: inc/customizer/header-options/drop-down-search.php:235
+#: inc/customizer/header-options/drop-down-search.php:485
+#: inc/customizer/header-options/menu-icon-sidebar-setting.php:272
+#: inc/customizer/header-options/menu-icon.php:248
+#: inc/customizer/header-options/menu-icon.php:706
+#: inc/customizer/header-options/normal-search.php:171
+#: inc/customizer/header-options/normal-search.php:421
+#: inc/customizer/header-options/primary-menu.php:259
+#: inc/customizer/header-options/primary-menu.php:659
+#: inc/customizer/header-options/secondary-menu.php:259
+#: inc/customizer/header-options/secondary-menu.php:661
+#: inc/customizer/header-options/site-identity.php:278
+#: inc/customizer/header-options/sticky-header.php:335
+#: inc/customizer/header-options/sticky-header.php:488
+#: inc/customizer/header-options/sticky-header.php:641
+#: inc/customizer/options.php:245
+#: inc/customizer/options.php:417
+#: inc/customizer/options.php:521
+#: inc/customizer/options.php:884
+#: inc/customizer/theme-options/button-options.php:126
+#: inc/customizer/theme-options/scroll-top.php:213
+#: inc/default-hooks.php:228
+msgid "Normal"
+msgstr ""
+
+#: inc/addons/edd/advanced-styling/cwp-edd-options.php:195
+#: inc/addons/edd/cart/cart.php:320
+#: inc/addons/woocommerce/advanced-styling/cwp-woocommerce-options.php:264
+#: inc/addons/woocommerce/advanced-styling/cwp-woocommerce-options.php:466
+#: inc/addons/woocommerce/cart/cart.php:327
+#: inc/addons/woocommerce/wishlist/wishlist.php:325
+#: inc/customizer/footer-options/footer-menu.php:494
+#: inc/customizer/header-options/button-one.php:296
+#: inc/customizer/header-options/drop-down-search.php:238
+#: inc/customizer/header-options/drop-down-search.php:488
+#: inc/customizer/header-options/menu-icon-sidebar-setting.php:275
+#: inc/customizer/header-options/menu-icon.php:251
+#: inc/customizer/header-options/menu-icon.php:709
+#: inc/customizer/header-options/normal-search.php:174
+#: inc/customizer/header-options/normal-search.php:424
+#: inc/customizer/header-options/primary-menu.php:262
+#: inc/customizer/header-options/primary-menu.php:662
+#: inc/customizer/header-options/secondary-menu.php:262
+#: inc/customizer/header-options/secondary-menu.php:664
+#: inc/customizer/header-options/site-identity.php:281
+#: inc/customizer/header-options/sticky-header.php:338
+#: inc/customizer/header-options/sticky-header.php:491
+#: inc/customizer/header-options/sticky-header.php:644
+#: inc/customizer/options.php:636
+#: inc/customizer/theme-options/button-options.php:129
+#: inc/customizer/theme-options/scroll-top.php:216
+msgid "Hover"
+msgstr ""
+
+#: inc/addons/edd/advanced-styling/cwp-edd-options.php:201
+#: inc/addons/edd/advanced-styling/cwp-edd-options.php:524
+#: inc/addons/edd/advanced-styling/cwp-edd-options.php:577
+#: inc/addons/edd/advanced-styling/cwp-edd-options.php:635
+#: inc/addons/edd/advanced-styling/cwp-edd-options.php:662
+#: inc/addons/edd/advanced-styling/cwp-edd-options.php:715
+#: inc/addons/edd/advanced-styling/cwp-edd-options.php:768
+#: inc/addons/edd/advanced-styling/cwp-edd-options.php:821
+#: inc/addons/edd/cart/cart.php:326
+#: inc/addons/woocommerce/advanced-styling/cwp-woocommerce-options.php:270
+#: inc/addons/woocommerce/advanced-styling/cwp-woocommerce-options.php:472
+#: inc/addons/woocommerce/advanced-styling/cwp-woocommerce-options.php:794
+#: inc/addons/woocommerce/advanced-styling/cwp-woocommerce-options.php:867
+#: inc/addons/woocommerce/advanced-styling/cwp-woocommerce-options.php:1011
+#: inc/addons/woocommerce/advanced-styling/cwp-woocommerce-options.php:1098
+#: inc/addons/woocommerce/advanced-styling/cwp-woocommerce-options.php:1253
+#: inc/addons/woocommerce/advanced-styling/cwp-woocommerce-options.php:1408
+#: inc/addons/woocommerce/cart/cart.php:333
+#: inc/addons/woocommerce/wishlist/wishlist.php:331
+#: inc/customizer/blog-options/main-content.php:649
+#: inc/customizer/footer-options/footer-bottom.php:659
+#: inc/customizer/footer-options/footer-main.php:658
+#: inc/customizer/footer-options/footer-menu.php:503
+#: inc/customizer/footer-options/footer-menu.php:617
+#: inc/customizer/footer-options/footer-top.php:659
+#: inc/customizer/general-setting/general-setting-options.php:144
+#: inc/customizer/header-options/button-one.php:302
+#: inc/customizer/header-options/drop-down-search.php:244
+#: inc/customizer/header-options/drop-down-search.php:494
+#: inc/customizer/header-options/html.php:57
+#: inc/customizer/header-options/menu-icon-sidebar-setting.php:192
+#: inc/customizer/header-options/menu-icon-sidebar-setting.php:284
+#: inc/customizer/header-options/menu-icon-sidebar-setting.php:398
+#: inc/customizer/header-options/normal-search.php:180
+#: inc/customizer/header-options/normal-search.php:430
+#: inc/customizer/header-options/primary-menu.php:271
+#: inc/customizer/header-options/primary-menu.php:385
+#: inc/customizer/header-options/primary-menu.php:671
+#: inc/customizer/header-options/primary-menu.php:785
+#: inc/customizer/header-options/secondary-menu.php:271
+#: inc/customizer/header-options/secondary-menu.php:385
+#: inc/customizer/header-options/secondary-menu.php:673
+#: inc/customizer/header-options/secondary-menu.php:787
+#: inc/customizer/header-options/sticky-header.php:257
+#: inc/customizer/header-options/sticky-header.php:344
+#: inc/customizer/header-options/sticky-header.php:410
+#: inc/customizer/header-options/sticky-header.php:497
+#: inc/customizer/header-options/sticky-header.php:563
+#: inc/customizer/header-options/sticky-header.php:650
+#: inc/customizer/theme-options/breadcrumb-options.php:170
+#: inc/customizer/theme-options/button-options.php:135
+#: inc/customizer/theme-options/sidebar-setting.php:366
+msgid "Text Color"
+msgstr ""
+
+#: inc/addons/edd/advanced-styling/cwp-edd-options.php:211
+#: inc/addons/edd/advanced-styling/cwp-edd-options.php:296
+#: inc/addons/edd/advanced-styling/cwp-edd-options.php:412
+#: inc/addons/edd/cart/cart.php:336
+#: inc/addons/edd/cart/cart.php:423
+#: inc/addons/woocommerce/advanced-styling/cwp-woocommerce-options.php:280
+#: inc/addons/woocommerce/advanced-styling/cwp-woocommerce-options.php:364
+#: inc/addons/woocommerce/advanced-styling/cwp-woocommerce-options.php:482
+#: inc/addons/woocommerce/advanced-styling/cwp-woocommerce-options.php:566
+#: inc/addons/woocommerce/advanced-styling/cwp-woocommerce-options.php:682
+#: inc/addons/woocommerce/advanced-styling/cwp-woocommerce-options.php:1128
+#: inc/addons/woocommerce/advanced-styling/cwp-woocommerce-options.php:1283
+#: inc/addons/woocommerce/advanced-styling/cwp-woocommerce-options.php:1438
+#: inc/addons/woocommerce/cart/cart.php:343
+#: inc/addons/woocommerce/cart/cart.php:430
+#: inc/addons/woocommerce/wishlist/wishlist.php:341
+#: inc/addons/woocommerce/wishlist/wishlist.php:427
+#: inc/customizer/blog-options/main-content.php:531
+#: inc/customizer/footer-options/footer-bottom.php:303
+#: inc/customizer/footer-options/footer-bottom.php:518
+#: inc/customizer/footer-options/footer-bottom.php:694
+#: inc/customizer/footer-options/footer-general.php:258
+#: inc/customizer/footer-options/footer-main.php:302
+#: inc/customizer/footer-options/footer-main.php:517
+#: inc/customizer/footer-options/footer-main.php:693
+#: inc/customizer/footer-options/footer-menu.php:416
+#: inc/customizer/footer-options/footer-menu.php:513
+#: inc/customizer/footer-options/footer-menu.php:570
+#: inc/customizer/footer-options/footer-menu.php:627
+#: inc/customizer/footer-options/footer-top.php:302
+#: inc/customizer/footer-options/footer-top.php:518
+#: inc/customizer/footer-options/footer-top.php:694
+#: inc/customizer/header-options/button-one.php:312
+#: inc/customizer/header-options/button-one.php:399
+#: inc/customizer/header-options/contact-information.php:501
+#: inc/customizer/header-options/drop-down-search.php:254
+#: inc/customizer/header-options/drop-down-search.php:341
+#: inc/customizer/header-options/drop-down-search.php:504
+#: inc/customizer/header-options/drop-down-search.php:591
+#: inc/customizer/header-options/header-bottom.php:304
+#: inc/customizer/header-options/header-general.php:310
+#: inc/customizer/header-options/header-main.php:327
+#: inc/customizer/header-options/header-top.php:304
+#: inc/customizer/header-options/menu-icon-sidebar-setting.php:294
+#: inc/customizer/header-options/menu-icon-sidebar-setting.php:351
+#: inc/customizer/header-options/menu-icon-sidebar-setting.php:408
+#: inc/customizer/header-options/menu-icon.php:267
+#: inc/customizer/header-options/menu-icon.php:354
+#: inc/customizer/header-options/menu-icon.php:725
+#: inc/customizer/header-options/menu-icon.php:812
+#: inc/customizer/header-options/normal-search.php:190
+#: inc/customizer/header-options/normal-search.php:277
+#: inc/customizer/header-options/normal-search.php:440
+#: inc/customizer/header-options/normal-search.php:527
+#: inc/customizer/header-options/primary-menu.php:281
+#: inc/customizer/header-options/primary-menu.php:338
+#: inc/customizer/header-options/primary-menu.php:395
+#: inc/customizer/header-options/primary-menu.php:681
+#: inc/customizer/header-options/primary-menu.php:738
+#: inc/customizer/header-options/primary-menu.php:795
+#: inc/customizer/header-options/secondary-menu.php:281
+#: inc/customizer/header-options/secondary-menu.php:338
+#: inc/customizer/header-options/secondary-menu.php:395
+#: inc/customizer/header-options/secondary-menu.php:683
+#: inc/customizer/header-options/secondary-menu.php:740
+#: inc/customizer/header-options/secondary-menu.php:797
+#: inc/customizer/main-content/main-content-controller.php:396
+#: inc/customizer/theme-options/button-options.php:145
+#: inc/customizer/theme-options/button-options.php:232
+#: inc/customizer/theme-options/scroll-top.php:232
+#: inc/customizer/theme-options/scroll-top.php:319
+#: inc/customizer/theme-options/sidebar-setting.php:237
+#: inc/customizer/theme-options/sidebar-setting.php:438
+msgid "Border Style"
+msgstr ""
+
+#: inc/addons/edd/advanced-styling/cwp-edd-options.php:217
+#: inc/addons/edd/advanced-styling/cwp-edd-options.php:302
+#: inc/addons/edd/advanced-styling/cwp-edd-options.php:439
+#: inc/addons/edd/advanced-styling/cwp-edd-options.php:604
+#: inc/addons/edd/advanced-styling/cwp-edd-options.php:719
+#: inc/addons/edd/advanced-styling/cwp-edd-options.php:772
+#: inc/addons/edd/advanced-styling/cwp-edd-options.php:825
+#: inc/addons/edd/cart/cart.php:360
+#: inc/addons/edd/cart/cart.php:447
+#: inc/addons/woocommerce/advanced-styling/cwp-woocommerce-options.php:286
+#: inc/addons/woocommerce/advanced-styling/cwp-woocommerce-options.php:370
+#: inc/addons/woocommerce/advanced-styling/cwp-woocommerce-options.php:488
+#: inc/addons/woocommerce/advanced-styling/cwp-woocommerce-options.php:572
+#: inc/addons/woocommerce/advanced-styling/cwp-woocommerce-options.php:709
+#: inc/addons/woocommerce/advanced-styling/cwp-woocommerce-options.php:898
+#: inc/addons/woocommerce/advanced-styling/cwp-woocommerce-options.php:981
+#: inc/addons/woocommerce/advanced-styling/cwp-woocommerce-options.php:1155
+#: inc/addons/woocommerce/advanced-styling/cwp-woocommerce-options.php:1310
+#: inc/addons/woocommerce/advanced-styling/cwp-woocommerce-options.php:1465
+#: inc/addons/woocommerce/cart/cart.php:367
+#: inc/addons/woocommerce/cart/cart.php:454
+#: inc/addons/woocommerce/wishlist/wishlist.php:365
+#: inc/addons/woocommerce/wishlist/wishlist.php:451
+#: inc/customizer/blog-options/main-content.php:559
+#: inc/customizer/footer-options/footer-bottom.php:331
+#: inc/customizer/footer-options/footer-bottom.php:547
+#: inc/customizer/footer-options/footer-bottom.php:723
+#: inc/customizer/footer-options/footer-general.php:286
+#: inc/customizer/footer-options/footer-main.php:330
+#: inc/customizer/footer-options/footer-main.php:545
+#: inc/customizer/footer-options/footer-main.php:721
+#: inc/customizer/footer-options/footer-menu.php:444
+#: inc/customizer/footer-options/footer-menu.php:537
+#: inc/customizer/footer-options/footer-menu.php:594
+#: inc/customizer/footer-options/footer-menu.php:651
+#: inc/customizer/footer-options/footer-top.php:330
+#: inc/customizer/footer-options/footer-top.php:546
+#: inc/customizer/footer-options/footer-top.php:722
+#: inc/customizer/header-options/button-one.php:318
+#: inc/customizer/header-options/button-one.php:405
+#: inc/customizer/header-options/contact-information.php:530
+#: inc/customizer/header-options/drop-down-search.php:278
+#: inc/customizer/header-options/drop-down-search.php:365
+#: inc/customizer/header-options/drop-down-search.php:528
+#: inc/customizer/header-options/drop-down-search.php:615
+#: inc/customizer/header-options/header-bottom.php:332
+#: inc/customizer/header-options/header-general.php:338
+#: inc/customizer/header-options/header-main.php:355
+#: inc/customizer/header-options/header-top.php:332
+#: inc/customizer/header-options/menu-icon-sidebar-setting.php:318
+#: inc/customizer/header-options/menu-icon-sidebar-setting.php:375
+#: inc/customizer/header-options/menu-icon-sidebar-setting.php:432
+#: inc/customizer/header-options/menu-icon.php:273
+#: inc/customizer/header-options/menu-icon.php:360
+#: inc/customizer/header-options/menu-icon.php:731
+#: inc/customizer/header-options/menu-icon.php:818
+#: inc/customizer/header-options/normal-search.php:214
+#: inc/customizer/header-options/normal-search.php:301
+#: inc/customizer/header-options/normal-search.php:464
+#: inc/customizer/header-options/normal-search.php:551
+#: inc/customizer/header-options/primary-menu.php:305
+#: inc/customizer/header-options/primary-menu.php:362
+#: inc/customizer/header-options/primary-menu.php:419
+#: inc/customizer/header-options/primary-menu.php:705
+#: inc/customizer/header-options/primary-menu.php:762
+#: inc/customizer/header-options/primary-menu.php:819
+#: inc/customizer/header-options/secondary-menu.php:305
+#: inc/customizer/header-options/secondary-menu.php:362
+#: inc/customizer/header-options/secondary-menu.php:419
+#: inc/customizer/header-options/secondary-menu.php:707
+#: inc/customizer/header-options/secondary-menu.php:764
+#: inc/customizer/header-options/secondary-menu.php:821
+#: inc/customizer/header-options/sticky-header.php:354
+#: inc/customizer/header-options/sticky-header.php:369
+#: inc/customizer/header-options/sticky-header.php:507
+#: inc/customizer/header-options/sticky-header.php:522
+#: inc/customizer/header-options/sticky-header.php:660
+#: inc/customizer/header-options/sticky-header.php:675
+#: inc/customizer/main-content/main-content-controller.php:424
+#: inc/customizer/theme-options/button-options.php:151
+#: inc/customizer/theme-options/button-options.php:238
+#: inc/customizer/theme-options/scroll-top.php:238
+#: inc/customizer/theme-options/scroll-top.php:325
+#: inc/customizer/theme-options/sidebar-setting.php:265
+#: inc/customizer/theme-options/sidebar-setting.php:443
+msgid "Border Color"
+msgstr ""
+
+#: inc/addons/edd/advanced-styling/cwp-edd-options.php:222
+#: inc/addons/edd/advanced-styling/cwp-edd-options.php:307
+#: inc/addons/edd/cart/cart.php:342
+#: inc/addons/edd/cart/cart.php:429
+#: inc/addons/woocommerce/advanced-styling/cwp-woocommerce-options.php:291
+#: inc/addons/woocommerce/advanced-styling/cwp-woocommerce-options.php:375
+#: inc/addons/woocommerce/advanced-styling/cwp-woocommerce-options.php:493
+#: inc/addons/woocommerce/advanced-styling/cwp-woocommerce-options.php:577
+#: inc/addons/woocommerce/cart/cart.php:349
+#: inc/addons/woocommerce/cart/cart.php:436
+#: inc/addons/woocommerce/wishlist/wishlist.php:347
+#: inc/addons/woocommerce/wishlist/wishlist.php:433
+#: inc/customizer/blog-options/main-content.php:536
+#: inc/customizer/footer-options/footer-bottom.php:308
+#: inc/customizer/footer-options/footer-bottom.php:523
+#: inc/customizer/footer-options/footer-bottom.php:699
+#: inc/customizer/footer-options/footer-general.php:263
+#: inc/customizer/footer-options/footer-main.php:307
+#: inc/customizer/footer-options/footer-main.php:522
+#: inc/customizer/footer-options/footer-main.php:698
+#: inc/customizer/footer-options/footer-menu.php:421
+#: inc/customizer/footer-options/footer-menu.php:519
+#: inc/customizer/footer-options/footer-menu.php:576
+#: inc/customizer/footer-options/footer-menu.php:633
+#: inc/customizer/footer-options/footer-top.php:307
+#: inc/customizer/footer-options/footer-top.php:523
+#: inc/customizer/footer-options/footer-top.php:699
+#: inc/customizer/header-options/button-one.php:323
+#: inc/customizer/header-options/button-one.php:410
+#: inc/customizer/header-options/contact-information.php:506
+#: inc/customizer/header-options/drop-down-search.php:260
+#: inc/customizer/header-options/drop-down-search.php:347
+#: inc/customizer/header-options/drop-down-search.php:510
+#: inc/customizer/header-options/drop-down-search.php:597
+#: inc/customizer/header-options/header-bottom.php:309
+#: inc/customizer/header-options/header-general.php:315
+#: inc/customizer/header-options/header-main.php:332
+#: inc/customizer/header-options/header-top.php:309
+#: inc/customizer/header-options/menu-icon-sidebar-setting.php:300
+#: inc/customizer/header-options/menu-icon-sidebar-setting.php:357
+#: inc/customizer/header-options/menu-icon-sidebar-setting.php:414
+#: inc/customizer/header-options/menu-icon.php:278
+#: inc/customizer/header-options/menu-icon.php:365
+#: inc/customizer/header-options/menu-icon.php:736
+#: inc/customizer/header-options/menu-icon.php:823
+#: inc/customizer/header-options/normal-search.php:196
+#: inc/customizer/header-options/normal-search.php:283
+#: inc/customizer/header-options/normal-search.php:446
+#: inc/customizer/header-options/normal-search.php:533
+#: inc/customizer/header-options/primary-menu.php:287
+#: inc/customizer/header-options/primary-menu.php:344
+#: inc/customizer/header-options/primary-menu.php:401
+#: inc/customizer/header-options/primary-menu.php:687
+#: inc/customizer/header-options/primary-menu.php:744
+#: inc/customizer/header-options/primary-menu.php:801
+#: inc/customizer/header-options/secondary-menu.php:287
+#: inc/customizer/header-options/secondary-menu.php:344
+#: inc/customizer/header-options/secondary-menu.php:401
+#: inc/customizer/header-options/secondary-menu.php:689
+#: inc/customizer/header-options/secondary-menu.php:746
+#: inc/customizer/header-options/secondary-menu.php:803
+#: inc/customizer/main-content/main-content-controller.php:401
+#: inc/customizer/theme-options/button-options.php:156
+#: inc/customizer/theme-options/button-options.php:243
+#: inc/customizer/theme-options/scroll-top.php:243
+#: inc/customizer/theme-options/scroll-top.php:330
+#: inc/customizer/theme-options/sidebar-setting.php:242
+#: inc/customizer/theme-options/sidebar-setting.php:447
+msgid "Border Width (px)"
+msgstr ""
+
+#: inc/addons/edd/advanced-styling/cwp-edd-options.php:239
+#: inc/addons/edd/advanced-styling/cwp-edd-options.php:324
+#: inc/addons/edd/cart/cart.php:365
+#: inc/addons/edd/cart/cart.php:452
+#: inc/addons/woocommerce/advanced-styling/cwp-woocommerce-options.php:308
+#: inc/addons/woocommerce/advanced-styling/cwp-woocommerce-options.php:392
+#: inc/addons/woocommerce/advanced-styling/cwp-woocommerce-options.php:510
+#: inc/addons/woocommerce/advanced-styling/cwp-woocommerce-options.php:594
+#: inc/addons/woocommerce/cart/cart.php:372
+#: inc/addons/woocommerce/cart/cart.php:459
+#: inc/addons/woocommerce/wishlist/wishlist.php:370
+#: inc/addons/woocommerce/wishlist/wishlist.php:456
+#: inc/customizer/footer-options/footer-bottom.php:335
+#: inc/customizer/footer-options/footer-general.php:290
+#: inc/customizer/footer-options/footer-main.php:334
+#: inc/customizer/footer-options/footer-menu.php:542
+#: inc/customizer/footer-options/footer-menu.php:599
+#: inc/customizer/footer-options/footer-menu.php:656
+#: inc/customizer/footer-options/footer-top.php:334
+#: inc/customizer/header-options/button-one.php:341
+#: inc/customizer/header-options/button-one.php:428
+#: inc/customizer/header-options/drop-down-search.php:283
+#: inc/customizer/header-options/drop-down-search.php:370
+#: inc/customizer/header-options/drop-down-search.php:533
+#: inc/customizer/header-options/drop-down-search.php:620
+#: inc/customizer/header-options/header-bottom.php:336
+#: inc/customizer/header-options/header-general.php:343
+#: inc/customizer/header-options/header-main.php:359
+#: inc/customizer/header-options/header-top.php:336
+#: inc/customizer/header-options/menu-icon-sidebar-setting.php:323
+#: inc/customizer/header-options/menu-icon-sidebar-setting.php:380
+#: inc/customizer/header-options/menu-icon-sidebar-setting.php:437
+#: inc/customizer/header-options/menu-icon.php:296
+#: inc/customizer/header-options/menu-icon.php:383
+#: inc/customizer/header-options/menu-icon.php:754
+#: inc/customizer/header-options/menu-icon.php:841
+#: inc/customizer/header-options/normal-search.php:219
+#: inc/customizer/header-options/normal-search.php:306
+#: inc/customizer/header-options/normal-search.php:469
+#: inc/customizer/header-options/normal-search.php:556
+#: inc/customizer/header-options/primary-menu.php:310
+#: inc/customizer/header-options/primary-menu.php:367
+#: inc/customizer/header-options/primary-menu.php:424
+#: inc/customizer/header-options/primary-menu.php:710
+#: inc/customizer/header-options/primary-menu.php:767
+#: inc/customizer/header-options/primary-menu.php:824
+#: inc/customizer/header-options/secondary-menu.php:310
+#: inc/customizer/header-options/secondary-menu.php:367
+#: inc/customizer/header-options/secondary-menu.php:424
+#: inc/customizer/header-options/secondary-menu.php:712
+#: inc/customizer/header-options/secondary-menu.php:769
+#: inc/customizer/header-options/secondary-menu.php:826
+#: inc/customizer/main-content/main-content-controller.php:428
+#: inc/customizer/theme-options/button-options.php:174
+#: inc/customizer/theme-options/button-options.php:261
+#: inc/customizer/theme-options/scroll-top.php:261
+#: inc/customizer/theme-options/scroll-top.php:348
+msgid "Border Radius (px)"
+msgstr ""
+
+#: inc/addons/edd/advanced-styling/cwp-edd-options.php:256
+#: inc/addons/edd/advanced-styling/cwp-edd-options.php:341
+#: inc/addons/edd/advanced-styling/cwp-edd-options.php:465
+#: inc/addons/edd/cart/cart.php:383
+#: inc/addons/edd/cart/cart.php:470
+#: inc/addons/woocommerce/advanced-styling/cwp-woocommerce-options.php:325
+#: inc/addons/woocommerce/advanced-styling/cwp-woocommerce-options.php:409
+#: inc/addons/woocommerce/advanced-styling/cwp-woocommerce-options.php:527
+#: inc/addons/woocommerce/advanced-styling/cwp-woocommerce-options.php:611
+#: inc/addons/woocommerce/advanced-styling/cwp-woocommerce-options.php:735
+#: inc/addons/woocommerce/advanced-styling/cwp-woocommerce-options.php:1181
+#: inc/addons/woocommerce/advanced-styling/cwp-woocommerce-options.php:1336
+#: inc/addons/woocommerce/advanced-styling/cwp-woocommerce-options.php:1491
+#: inc/addons/woocommerce/cart/cart.php:390
+#: inc/addons/woocommerce/cart/cart.php:477
+#: inc/addons/woocommerce/wishlist/wishlist.php:388
+#: inc/addons/woocommerce/wishlist/wishlist.php:474
+#: inc/customizer/blog-options/main-content.php:586
+#: inc/customizer/footer-options/footer-bottom.php:358
+#: inc/customizer/footer-options/footer-general.php:313
+#: inc/customizer/footer-options/footer-main.php:357
+#: inc/customizer/footer-options/footer-top.php:357
+#: inc/customizer/header-options/button-one.php:359
+#: inc/customizer/header-options/button-one.php:446
+#: inc/customizer/header-options/drop-down-search.php:301
+#: inc/customizer/header-options/drop-down-search.php:388
+#: inc/customizer/header-options/drop-down-search.php:551
+#: inc/customizer/header-options/drop-down-search.php:638
+#: inc/customizer/header-options/header-bottom.php:359
+#: inc/customizer/header-options/header-general.php:365
+#: inc/customizer/header-options/header-main.php:382
+#: inc/customizer/header-options/header-top.php:359
+#: inc/customizer/header-options/menu-icon.php:314
+#: inc/customizer/header-options/menu-icon.php:401
+#: inc/customizer/header-options/menu-icon.php:772
+#: inc/customizer/header-options/menu-icon.php:859
+#: inc/customizer/header-options/normal-search.php:237
+#: inc/customizer/header-options/normal-search.php:324
+#: inc/customizer/header-options/normal-search.php:487
+#: inc/customizer/header-options/normal-search.php:574
+#: inc/customizer/main-content/main-content-controller.php:451
+#: inc/customizer/theme-options/button-options.php:192
+#: inc/customizer/theme-options/button-options.php:279
+#: inc/customizer/theme-options/scroll-top.php:279
+#: inc/customizer/theme-options/scroll-top.php:366
+msgid "Box Shadow Color"
+msgstr ""
+
+#: inc/addons/edd/advanced-styling/cwp-edd-options.php:261
+#: inc/addons/edd/advanced-styling/cwp-edd-options.php:346
+#: inc/addons/edd/advanced-styling/cwp-edd-options.php:469
+#: inc/addons/edd/cart/cart.php:388
+#: inc/addons/edd/cart/cart.php:475
+#: inc/addons/woocommerce/advanced-styling/cwp-woocommerce-options.php:330
+#: inc/addons/woocommerce/advanced-styling/cwp-woocommerce-options.php:414
+#: inc/addons/woocommerce/advanced-styling/cwp-woocommerce-options.php:532
+#: inc/addons/woocommerce/advanced-styling/cwp-woocommerce-options.php:616
+#: inc/addons/woocommerce/advanced-styling/cwp-woocommerce-options.php:739
+#: inc/addons/woocommerce/advanced-styling/cwp-woocommerce-options.php:1185
+#: inc/addons/woocommerce/advanced-styling/cwp-woocommerce-options.php:1340
+#: inc/addons/woocommerce/advanced-styling/cwp-woocommerce-options.php:1495
+#: inc/addons/woocommerce/cart/cart.php:395
+#: inc/addons/woocommerce/cart/cart.php:482
+#: inc/customizer/blog-options/main-content.php:590
+#: inc/customizer/footer-options/footer-bottom.php:362
+#: inc/customizer/footer-options/footer-general.php:317
+#: inc/customizer/footer-options/footer-main.php:361
+#: inc/customizer/footer-options/footer-top.php:361
+#: inc/customizer/header-options/button-one.php:364
+#: inc/customizer/header-options/button-one.php:451
+#: inc/customizer/header-options/drop-down-search.php:306
+#: inc/customizer/header-options/drop-down-search.php:393
+#: inc/customizer/header-options/drop-down-search.php:556
+#: inc/customizer/header-options/drop-down-search.php:643
+#: inc/customizer/header-options/header-bottom.php:363
+#: inc/customizer/header-options/header-general.php:369
+#: inc/customizer/header-options/header-main.php:386
+#: inc/customizer/header-options/header-top.php:363
+#: inc/customizer/header-options/menu-icon.php:319
+#: inc/customizer/header-options/menu-icon.php:406
+#: inc/customizer/header-options/menu-icon.php:777
+#: inc/customizer/header-options/menu-icon.php:864
+#: inc/customizer/header-options/normal-search.php:242
+#: inc/customizer/header-options/normal-search.php:329
+#: inc/customizer/header-options/normal-search.php:492
+#: inc/customizer/header-options/normal-search.php:579
+#: inc/customizer/main-content/main-content-controller.php:455
+#: inc/customizer/theme-options/button-options.php:197
+#: inc/customizer/theme-options/button-options.php:284
+#: inc/customizer/theme-options/scroll-top.php:284
+#: inc/customizer/theme-options/scroll-top.php:371
+msgid "Box Shadow"
+msgstr ""
+
+#: inc/addons/edd/advanced-styling/cwp-edd-options.php:281
+#: inc/addons/edd/advanced-styling/cwp-edd-options.php:365
+#: inc/addons/edd/advanced-styling/cwp-edd-options.php:487
+#: inc/addons/edd/cart/cart.php:408
+#: inc/addons/edd/cart/cart.php:495
+#: inc/addons/woocommerce/advanced-styling/cwp-woocommerce-options.php:349
+#: inc/addons/woocommerce/advanced-styling/cwp-woocommerce-options.php:433
+#: inc/addons/woocommerce/advanced-styling/cwp-woocommerce-options.php:551
+#: inc/addons/woocommerce/advanced-styling/cwp-woocommerce-options.php:635
+#: inc/addons/woocommerce/advanced-styling/cwp-woocommerce-options.php:757
+#: inc/addons/woocommerce/advanced-styling/cwp-woocommerce-options.php:1203
+#: inc/addons/woocommerce/advanced-styling/cwp-woocommerce-options.php:1358
+#: inc/addons/woocommerce/advanced-styling/cwp-woocommerce-options.php:1513
+#: inc/addons/woocommerce/cart/cart.php:415
+#: inc/addons/woocommerce/cart/cart.php:502
+#: inc/addons/woocommerce/wishlist/wishlist.php:412
+#: inc/addons/woocommerce/wishlist/wishlist.php:498
+#: inc/customizer/blog-options/main-content.php:609
+#: inc/customizer/footer-options/footer-bottom.php:381
+#: inc/customizer/footer-options/footer-general.php:335
+#: inc/customizer/footer-options/footer-main.php:380
+#: inc/customizer/footer-options/footer-top.php:380
+#: inc/customizer/header-options/button-one.php:384
+#: inc/customizer/header-options/button-one.php:471
+#: inc/customizer/header-options/drop-down-search.php:326
+#: inc/customizer/header-options/drop-down-search.php:413
+#: inc/customizer/header-options/drop-down-search.php:576
+#: inc/customizer/header-options/drop-down-search.php:663
+#: inc/customizer/header-options/header-bottom.php:382
+#: inc/customizer/header-options/header-general.php:388
+#: inc/customizer/header-options/header-main.php:405
+#: inc/customizer/header-options/header-top.php:382
+#: inc/customizer/header-options/menu-icon.php:339
+#: inc/customizer/header-options/menu-icon.php:426
+#: inc/customizer/header-options/menu-icon.php:797
+#: inc/customizer/header-options/menu-icon.php:884
+#: inc/customizer/header-options/normal-search.php:262
+#: inc/customizer/header-options/normal-search.php:349
+#: inc/customizer/header-options/normal-search.php:512
+#: inc/customizer/header-options/normal-search.php:599
+#: inc/customizer/main-content/main-content-controller.php:474
+#: inc/customizer/theme-options/button-options.php:217
+#: inc/customizer/theme-options/button-options.php:304
+#: inc/customizer/theme-options/scroll-top.php:304
+#: inc/customizer/theme-options/scroll-top.php:391
+msgid "INSET"
+msgstr ""
+
+#: inc/addons/edd/advanced-styling/cwp-edd-options.php:286
+#: inc/addons/edd/cart/cart.php:413
+#: inc/addons/woocommerce/advanced-styling/cwp-woocommerce-options.php:354
+#: inc/addons/woocommerce/advanced-styling/cwp-woocommerce-options.php:556
+#: inc/addons/woocommerce/cart/cart.php:420
+#: inc/addons/woocommerce/wishlist/wishlist.php:417
+#: inc/customizer/footer-options/footer-menu.php:560
+#: inc/customizer/header-options/button-one.php:389
+#: inc/customizer/header-options/drop-down-search.php:331
+#: inc/customizer/header-options/drop-down-search.php:581
+#: inc/customizer/header-options/menu-icon-sidebar-setting.php:341
+#: inc/customizer/header-options/normal-search.php:267
+#: inc/customizer/header-options/normal-search.php:517
+#: inc/customizer/header-options/primary-menu.php:328
+#: inc/customizer/header-options/primary-menu.php:728
+#: inc/customizer/header-options/secondary-menu.php:328
+#: inc/customizer/header-options/secondary-menu.php:730
+#: inc/customizer/header-options/sticky-header.php:359
+#: inc/customizer/header-options/sticky-header.php:512
+#: inc/customizer/header-options/sticky-header.php:665
+#: inc/customizer/theme-options/button-options.php:222
+msgid " Text Color"
+msgstr ""
+
+#: inc/addons/edd/advanced-styling/cwp-edd-options.php:385
+#: inc/addons/woocommerce/advanced-styling/cwp-woocommerce-options.php:655
+msgid "Product Navigation"
+msgstr ""
+
+#: inc/addons/edd/advanced-styling/cwp-edd-options.php:405
+#: inc/addons/woocommerce/advanced-styling/cwp-woocommerce-options.php:675
+#: inc/addons/woocommerce/advanced-styling/cwp-woocommerce-options.php:1121
+#: inc/addons/woocommerce/advanced-styling/cwp-woocommerce-options.php:1276
+#: inc/addons/woocommerce/advanced-styling/cwp-woocommerce-options.php:1431
+#: inc/customizer/footer-options/footer-bottom.php:296
+#: inc/customizer/footer-options/footer-general.php:251
+#: inc/customizer/footer-options/footer-main.php:295
+#: inc/customizer/footer-options/footer-top.php:295
+#: inc/customizer/header-options/header-bottom.php:297
+#: inc/customizer/header-options/header-general.php:303
+#: inc/customizer/header-options/header-main.php:320
+#: inc/customizer/header-options/header-top.php:297
+#: inc/customizer/main-content/main-content-controller.php:389
+msgid "Border and Box Shadow"
+msgstr ""
+
+#: inc/addons/edd/advanced-styling/cwp-edd-options.php:417
+#: inc/addons/woocommerce/advanced-styling/cwp-woocommerce-options.php:687
+#: inc/addons/woocommerce/advanced-styling/cwp-woocommerce-options.php:1133
+#: inc/addons/woocommerce/advanced-styling/cwp-woocommerce-options.php:1288
+#: inc/addons/woocommerce/advanced-styling/cwp-woocommerce-options.php:1443
+msgid "Border Width"
+msgstr ""
+
+#: inc/addons/edd/advanced-styling/cwp-edd-options.php:443
+#: inc/addons/woocommerce/advanced-styling/cwp-woocommerce-options.php:713
+#: inc/addons/woocommerce/advanced-styling/cwp-woocommerce-options.php:1159
+#: inc/addons/woocommerce/advanced-styling/cwp-woocommerce-options.php:1314
+#: inc/addons/woocommerce/advanced-styling/cwp-woocommerce-options.php:1469
+#: inc/customizer/blog-options/main-content.php:563
+msgid "Border Radius"
+msgstr ""
+
+#: inc/addons/edd/advanced-styling/cwp-edd-options.php:509
+#: inc/addons/woocommerce/advanced-styling/cwp-woocommerce-options.php:779
+#: inc/customizer/blog-options/main-content.php:631
+#: inc/customizer/blog-options/main-content.php:674
+#: inc/customizer/footer-options/footer-bottom.php:652
+#: inc/customizer/footer-options/footer-main.php:651
+#: inc/customizer/footer-options/footer-top.php:652
+#: inc/customizer/general-setting/general-setting-options.php:111
+#: inc/customizer/general-setting/general-setting-options.php:132
+#: inc/customizer/header-options/menu-icon-sidebar-setting.php:181
+#: inc/customizer/header-options/site-identity.php:271
+#: inc/customizer/post-options/main-content.php:381
+#: inc/customizer/theme-options/breadcrumb-options.php:154
+msgid "Color Options"
+msgstr ""
+
+#: inc/addons/edd/advanced-styling/cwp-edd-options.php:520
+#: inc/addons/woocommerce/advanced-styling/cwp-woocommerce-options.php:1042
+#: inc/customizer/blog-options/main-content.php:645
+#: inc/customizer/footer-options/footer-social.php:73
+#: inc/customizer/header-options/header-social.php:72
+msgid "Background Hover Color"
+msgstr ""
+
+#: inc/addons/edd/advanced-styling/cwp-edd-options.php:528
+#: inc/addons/edd/advanced-styling/cwp-edd-options.php:666
+#: inc/customizer/blog-options/main-content.php:653
+msgid "Text Hover Color"
+msgstr ""
+
+#: inc/addons/edd/advanced-styling/cwp-edd-options.php:546
+msgid "EDD Cart Table"
+msgstr ""
+
+#: inc/addons/edd/advanced-styling/cwp-edd-options.php:566
+msgid "Table Color"
+msgstr ""
+
+#: inc/addons/edd/advanced-styling/cwp-edd-options.php:597
+#: inc/addons/woocommerce/advanced-styling/cwp-woocommerce-options.php:974
+msgid "Table Border Color"
+msgstr ""
+
+#: inc/addons/edd/advanced-styling/cwp-edd-options.php:624
+#: inc/addons/woocommerce/advanced-styling/cwp-woocommerce-options.php:1000
+msgid "Table Header Color"
+msgstr ""
+
+#: inc/addons/edd/advanced-styling/cwp-edd-options.php:655
+msgid "Remove Text Color option"
+msgstr ""
+
+#: inc/addons/edd/advanced-styling/cwp-edd-options.php:684
+#: inc/addons/woocommerce/advanced-styling/cwp-woocommerce-options.php:1068
+msgid "Notice/Message : Error"
+msgstr ""
+
+#: inc/addons/edd/advanced-styling/cwp-edd-options.php:704
+#: inc/addons/edd/advanced-styling/cwp-edd-options.php:757
+#: inc/addons/edd/advanced-styling/cwp-edd-options.php:810
+#: inc/addons/woocommerce/advanced-styling/cwp-woocommerce-options.php:1087
+#: inc/addons/woocommerce/advanced-styling/cwp-woocommerce-options.php:1242
+#: inc/addons/woocommerce/advanced-styling/cwp-woocommerce-options.php:1397
+msgid "Notice Color Option"
+msgstr ""
+
+#: inc/addons/edd/advanced-styling/cwp-edd-options.php:737
+#: inc/addons/woocommerce/advanced-styling/cwp-woocommerce-options.php:1223
+msgid "Notice/Message : Information"
+msgstr ""
+
+#: inc/addons/edd/advanced-styling/cwp-edd-options.php:790
+#: inc/addons/woocommerce/advanced-styling/cwp-woocommerce-options.php:1378
+msgid "Notice/Message : Success"
+msgstr ""
+
+#: inc/addons/edd/archive/cwp-edd-archive.php:109
+msgid "Edd"
+msgstr ""
+
+#: inc/addons/edd/archive/cwp-edd-archive.php:147
+msgid "Edd Archive"
+msgstr ""
+
+#: inc/addons/edd/archive/cwp-edd-archive.php:158
+#: inc/addons/edd/single/cwp-edd-single.php:151
+#: inc/addons/woocommerce/archive/cwp-woocommerce-archive.php:169
+#: inc/addons/woocommerce/single/cwp-woocommerce-single.php:149
+#: inc/customizer/page-options/builder-page.php:166
+#: inc/customizer/post-options/post-builder.php:179
+msgid " Main Content"
+msgstr ""
+
+#. translators: %1$s represents the opening anchor tag, %2$s represents the closing anchor tag.
+#: inc/addons/edd/archive/main-content.php:24
+#, php-format
+msgid "The options will work on %1$sEDD Archive %2$s page"
+msgstr ""
+
+#: inc/addons/edd/archive/main-content.php:50
+#: inc/addons/edd/single/main-content.php:27
+#: inc/addons/woocommerce/archive/main-content.php:51
+#: inc/addons/woocommerce/single/main-content.php:27
+#: inc/customizer/blog-options/main-content.php:126
+#: inc/customizer/page-options/main-content.php:25
+#: inc/customizer/post-options/main-content.php:26
+msgid "Content/Sidebar"
+msgstr ""
+
+#: inc/addons/edd/archive/main-content.php:71
+#: inc/customizer/blog-options/main-content.php:27
+msgid "Main Title"
+msgstr ""
+
+#: inc/addons/edd/archive/main-content.php:91
+#: inc/addons/woocommerce/archive/main-content.php:71
+msgid "Grid"
+msgstr ""
+
+#: inc/addons/edd/archive/main-content.php:92
+#: inc/addons/woocommerce/archive/main-content.php:72
+msgid "List"
+msgstr ""
+
+#: inc/addons/edd/archive/main-content.php:94
+#: inc/addons/woocommerce/archive/main-content.php:74
+msgid "Default View"
+msgstr ""
+
+#: inc/addons/edd/archive/main-content.php:113
+#: inc/addons/woocommerce/archive/main-content.php:155
+#: inc/customizer/general-setting/general-setting-options.php:29
+msgid "General Setting"
+msgstr ""
+
+#: inc/addons/edd/archive/main-content.php:131
+#: inc/addons/woocommerce/archive/main-content.php:211
+msgid "Show Sort Bar"
+msgstr ""
+
+#: inc/addons/edd/archive/main-content.php:150
+#: inc/addons/woocommerce/archive/main-content.php:173
+msgid "Show Grid List"
+msgstr ""
+
+#: inc/addons/edd/archive/main-content.php:171
+msgid "Downloads Per Row"
+msgstr ""
+
+#: inc/addons/edd/archive/main-content.php:194
+#: inc/addons/woocommerce/archive/main-content.php:230
+msgid "Elements"
+msgstr ""
+
+#: inc/addons/edd/archive/main-content.php:237
+#: inc/addons/woocommerce/archive/main-content.php:274
+msgid "Elements Alignment"
+msgstr ""
+
+#: inc/addons/edd/archive/main-content.php:256
+#: inc/addons/edd/single/main-content.php:148
+#: inc/addons/woocommerce/archive/main-content.php:293
+#: inc/customizer/blog-options/main-content.php:322
+#: inc/customizer/page-options/main-content.php:183
+#: inc/customizer/post-options/main-content.php:218
+msgid "Excerpt length (count words)"
+msgstr ""
+
+#: inc/addons/edd/archive/main-content.php:257
+#: inc/addons/edd/single/main-content.php:149
+#: inc/addons/woocommerce/archive/main-content.php:294
+#: inc/customizer/blog-options/main-content.php:323
+#: inc/customizer/page-options/main-content.php:184
+#: inc/customizer/post-options/main-content.php:219
+msgid "Please enter a number greater than 0."
+msgstr ""
+
+#: inc/addons/edd/archive/main-content.php:278
+#: inc/addons/edd/single/main-content.php:170
+#: inc/addons/woocommerce/single/main-content.php:89
+msgid "Image/Media Width (%)"
+msgstr ""
+
+#: inc/addons/edd/archive/main-content.php:304
+#: inc/customizer/blog-options/main-content.php:471
+#: inc/customizer/post-options/main-content.php:344
+msgid "Pagination Options"
+msgstr ""
+
+#: inc/addons/edd/cart/cart.php:122
+#: inc/addons/edd/cart/cart.php:151
+msgid "Edd Cart"
+msgstr ""
+
+#: inc/addons/edd/cart/cart.php:169
+#: inc/addons/woocommerce/cart/cart.php:176
+msgid "Enable Cart"
+msgstr ""
+
+#: inc/addons/edd/cart/cart.php:190
+#: inc/addons/woocommerce/cart/cart.php:197
+#: inc/addons/woocommerce/wishlist/wishlist.php:195
+#: inc/customizer/header-options/button-one.php:76
+#: inc/customizer/options.php:284
+msgid "Icon"
+msgstr ""
+
+#: inc/addons/edd/cart/cart.php:214
+#: inc/addons/woocommerce/cart/cart.php:221
+#: inc/addons/woocommerce/wishlist/wishlist.php:219
+#: inc/customizer/footer-options/footer-social.php:113
+#: inc/customizer/header-options/header-social.php:112
+msgid "Icon Alignment"
+msgstr ""
+
+#: inc/addons/edd/cart/cart.php:234
+#: inc/addons/woocommerce/cart/cart.php:241
+#: inc/addons/woocommerce/wishlist/wishlist.php:239
+#: inc/customizer/footer-options/footer-social.php:134
+#: inc/customizer/header-options/contact-information.php:216
+#: inc/customizer/header-options/drop-down-search.php:201
+#: inc/customizer/header-options/header-social.php:133
+#: inc/customizer/header-options/menu-icon.php:144
+#: inc/customizer/header-options/normal-search.php:137
+msgid "Icon Size (px)"
+msgstr ""
+
+#: inc/addons/edd/cart/cart.php:261
+#: inc/addons/woocommerce/cart/cart.php:268
+#: inc/customizer/blog-options/main-content.php:789
+#: inc/customizer/footer-options/copyright.php:145
+#: inc/customizer/footer-options/footer-bottom.php:123
+#: inc/customizer/footer-options/footer-bottom.php:465
+#: inc/customizer/footer-options/footer-general.php:100
+#: inc/customizer/footer-options/footer-general.php:374
+#: inc/customizer/footer-options/footer-main.php:123
+#: inc/customizer/footer-options/footer-main.php:464
+#: inc/customizer/footer-options/footer-menu.php:123
+#: inc/customizer/footer-options/footer-menu.php:210
+#: inc/customizer/footer-options/footer-menu.php:319
+#: inc/customizer/footer-options/footer-sidebar-1.php:102
+#: inc/customizer/footer-options/footer-sidebar-2.php:99
+#: inc/customizer/footer-options/footer-sidebar-3.php:99
+#: inc/customizer/footer-options/footer-sidebar-4.php:101
+#: inc/customizer/footer-options/footer-sidebar-5.php:101
+#: inc/customizer/footer-options/footer-sidebar-6.php:101
+#: inc/customizer/footer-options/footer-sidebar-7.php:99
+#: inc/customizer/footer-options/footer-sidebar-8.php:99
+#: inc/customizer/footer-options/footer-top.php:122
+#: inc/customizer/footer-options/footer-top.php:465
+#: inc/customizer/footer-options/html.php:99
+#: inc/customizer/header-options/button-one.php:198
+#: inc/customizer/header-options/contact-information.php:152
+#: inc/customizer/header-options/contact-information.php:448
+#: inc/customizer/header-options/drop-down-search.php:139
+#: inc/customizer/header-options/header-bottom.php:123
+#: inc/customizer/header-options/header-general.php:151
+#: inc/customizer/header-options/header-main.php:147
+#: inc/customizer/header-options/header-top.php:123
+#: inc/customizer/header-options/html.php:97
+#: inc/customizer/header-options/menu-icon-sidebar-setting.php:117
+#: inc/customizer/header-options/menu-icon.php:217
+#: inc/customizer/header-options/menu-icon.php:675
+#: inc/customizer/header-options/normal-search.php:75
+#: inc/customizer/header-options/primary-menu.php:99
+#: inc/customizer/header-options/primary-menu.php:186
+#: inc/customizer/header-options/primary-menu.php:521
+#: inc/customizer/header-options/secondary-menu.php:99
+#: inc/customizer/header-options/secondary-menu.php:186
+#: inc/customizer/header-options/secondary-menu.php:522
+#: inc/customizer/header-options/site-identity.php:206
+#: inc/customizer/main-content/banner-setting-options.php:450
+#: inc/customizer/main-content/main-content-controller.php:239
+#: inc/customizer/page-options/main-content.php:315
+#: inc/customizer/post-options/main-content.php:440
+#: inc/customizer/theme-options/button-options.php:56
+#: inc/customizer/theme-options/scroll-top.php:183
+#: inc/customizer/theme-options/sidebar-setting.php:186
+#: inc/customizer/theme-options/sidebar-setting.php:387
+msgid "Margin (px)"
+msgstr ""
+
+#: inc/addons/edd/cart/cart.php:285
+#: inc/addons/woocommerce/cart/cart.php:292
+#: inc/customizer/blog-options/main-content.php:812
+#: inc/customizer/footer-options/copyright.php:168
+#: inc/customizer/footer-options/footer-bottom.php:146
+#: inc/customizer/footer-options/footer-bottom.php:488
+#: inc/customizer/footer-options/footer-general.php:123
+#: inc/customizer/footer-options/footer-general.php:397
+#: inc/customizer/footer-options/footer-main.php:146
+#: inc/customizer/footer-options/footer-main.php:487
+#: inc/customizer/footer-options/footer-menu.php:146
+#: inc/customizer/footer-options/footer-menu.php:233
+#: inc/customizer/footer-options/footer-menu.php:342
+#: inc/customizer/footer-options/footer-sidebar-1.php:127
+#: inc/customizer/footer-options/footer-sidebar-2.php:123
+#: inc/customizer/footer-options/footer-sidebar-3.php:123
+#: inc/customizer/footer-options/footer-sidebar-4.php:125
+#: inc/customizer/footer-options/footer-sidebar-5.php:125
+#: inc/customizer/footer-options/footer-sidebar-6.php:125
+#: inc/customizer/footer-options/footer-sidebar-7.php:123
+#: inc/customizer/footer-options/footer-sidebar-8.php:123
+#: inc/customizer/footer-options/footer-top.php:145
+#: inc/customizer/footer-options/footer-top.php:488
+#: inc/customizer/footer-options/html.php:122
+#: inc/customizer/header-options/button-one.php:221
+#: inc/customizer/header-options/contact-information.php:175
+#: inc/customizer/header-options/contact-information.php:471
+#: inc/customizer/header-options/drop-down-search.php:162
+#: inc/customizer/header-options/header-bottom.php:146
+#: inc/customizer/header-options/header-general.php:175
+#: inc/customizer/header-options/header-main.php:170
+#: inc/customizer/header-options/header-top.php:146
+#: inc/customizer/header-options/html.php:120
+#: inc/customizer/header-options/menu-icon-sidebar-setting.php:140
+#: inc/customizer/header-options/menu-icon.php:194
+#: inc/customizer/header-options/menu-icon.php:652
+#: inc/customizer/header-options/normal-search.php:98
+#: inc/customizer/header-options/primary-menu.php:122
+#: inc/customizer/header-options/primary-menu.php:209
+#: inc/customizer/header-options/primary-menu.php:544
+#: inc/customizer/header-options/secondary-menu.php:122
+#: inc/customizer/header-options/secondary-menu.php:209
+#: inc/customizer/header-options/secondary-menu.php:545
+#: inc/customizer/header-options/site-identity.php:230
+#: inc/customizer/main-content/banner-setting-options.php:474
+#: inc/customizer/main-content/main-content-controller.php:261
+#: inc/customizer/page-options/main-content.php:337
+#: inc/customizer/post-options/main-content.php:463
+#: inc/customizer/theme-options/button-options.php:78
+#: inc/customizer/theme-options/scroll-top.php:161
+#: inc/customizer/theme-options/sidebar-setting.php:77
+#: inc/customizer/theme-options/sidebar-setting.php:208
+#: inc/customizer/theme-options/sidebar-setting.php:409
+msgid "Padding (px)"
+msgstr ""
+
+#: inc/addons/edd/cart/cart.php:309
+#: inc/addons/woocommerce/cart/cart.php:316
+#: inc/addons/woocommerce/wishlist/wishlist.php:314
+#: inc/customizer/header-options/drop-down-search.php:228
+#: inc/customizer/header-options/normal-search.php:164
+msgid "Icon Styling"
+msgstr ""
+
+#: inc/addons/edd/edd.php:104
+#: inc/addons/woocommerce/woocommerce.php:126
+#: inc/sidebar-widget/sidebar.php:22
+msgid "Displays widgets in Primary Sidebar"
+msgstr ""
+
+#: inc/addons/edd/edd.php:107
+msgid "Edd Primary Sidebar"
+msgstr ""
+
+#: inc/addons/edd/edd.php:116
+#: inc/addons/woocommerce/woocommerce.php:138
+#: inc/sidebar-widget/sidebar.php:34
+msgid "Displays widgets in Secondary Sidebar"
+msgstr ""
+
+#: inc/addons/edd/edd.php:119
+msgid "Edd Secondary Sidebar"
+msgstr ""
+
+#: inc/addons/edd/helper.php:36
+msgid "Older Downloads"
+msgstr ""
+
+#: inc/addons/edd/helper.php:37
+msgid "Newer Downloads"
+msgstr ""
+
+#: inc/addons/edd/helper.php:38
+#: inc/addons/edd/helper.php:48
+msgid "Downloads navigation"
+msgstr ""
+
+#: inc/addons/edd/helper.php:39
+#: inc/addons/edd/helper.php:49
+#: inc/admin/intro.php:309
+msgid "Downloads"
+msgstr ""
+
+#: inc/addons/edd/helper.php:50
+#: inc/hooks/templates.php:232
+msgid "Page"
+msgstr ""
+
+#: inc/addons/edd/helper.php:117
+msgid "Latest"
+msgstr ""
+
+#: inc/addons/edd/helper.php:118
+msgid "Oldest"
+msgstr ""
+
+#: inc/addons/edd/helper.php:119
+msgid "Alphabet"
+msgstr ""
+
+#: inc/addons/edd/helper.php:120
+msgid "Alphabet Desc"
+msgstr ""
+
+#: inc/addons/edd/helper.php:121
+msgid "Sort by price: low to high"
+msgstr ""
+
+#: inc/addons/edd/helper.php:122
+msgid "Sort by price: high to low"
+msgstr ""
+
+#: inc/addons/edd/helper.php:128
+msgid "Sort By:"
+msgstr ""
+
+#: inc/addons/edd/helper.php:211
+#: inc/addons/woocommerce/helper.php:50
+#: inc/customizer/options.php:1025
+msgid "Image"
+msgstr ""
+
+#: inc/addons/edd/helper.php:212
+#: inc/addons/edd/helper.php:235
+#: inc/customizer/options.php:999
+msgid "Categories"
+msgstr ""
+
+#: inc/addons/edd/helper.php:213
+#: inc/addons/edd/helper.php:236
+#: inc/customizer/options.php:1000
+msgid "Tags"
+msgstr ""
+
+#: inc/addons/edd/helper.php:214
+#: inc/addons/edd/helper.php:238
+#: inc/addons/woocommerce/helper.php:49
+#: inc/addons/woocommerce/helper.php:90
+#: inc/customizer/options.php:975
+msgid "Title"
+msgstr ""
+
+#: inc/addons/edd/helper.php:215
+#: inc/addons/edd/helper.php:239
+#: inc/addons/woocommerce/helper.php:51
+#: inc/addons/woocommerce/helper.php:92
+msgid "Price"
+msgstr ""
+
+#: inc/addons/edd/helper.php:216
+#: inc/addons/edd/helper.php:240
+#: inc/addons/woocommerce/helper.php:53
+#: inc/addons/woocommerce/helper.php:93
+#: inc/customizer/options.php:976
+msgid "Excerpt"
+msgstr ""
+
+#: inc/addons/edd/helper.php:217
+#: inc/addons/edd/helper.php:241
+#: inc/addons/woocommerce/helper.php:54
+#: inc/customizer/main-content/main-content-controller.php:201
+#: inc/customizer/options.php:978
+msgid "Content"
+msgstr ""
+
+#: inc/addons/edd/helper.php:218
+#: inc/addons/edd/helper.php:242
+#: inc/addons/woocommerce/helper.php:55
+#: inc/addons/woocommerce/helper.php:94
+msgid "Add To Cart"
+msgstr ""
+
+#: inc/addons/edd/helper.php:237
+#: inc/customizer/options.php:998
+msgid "Author"
+msgstr ""
+
+#: inc/addons/edd/single/cwp-edd-single.php:140
+msgid "Edd Single"
+msgstr ""
+
+#: inc/addons/edd/single/cwp-edd-single.php:301
+msgid "Related Posts"
+msgstr ""
+
+#: inc/addons/edd/single/main-content.php:49
+#: inc/customizer/page-options/main-content.php:264
+#: inc/customizer/post-options/main-content.php:302
+msgid "Feature Image Size"
+msgstr ""
+
+#: inc/addons/edd/single/main-content.php:68
+msgid "Single Main Elements"
+msgstr ""
+
+#: inc/addons/edd/single/main-content.php:108
+msgid "Single Side Elements"
+msgstr ""
+
+#: inc/addons/edd/single/main-content.php:194
+msgid "Related Item Setting"
+msgstr ""
+
+#: inc/addons/edd/single/main-content.php:213
+msgid "EDD Categories"
+msgstr ""
+
+#: inc/addons/edd/single/main-content.php:214
+msgid "EDD Tags"
+msgstr ""
+
+#: inc/addons/edd/single/main-content.php:216
+msgid "Related Item From Options"
+msgstr ""
+
+#: inc/addons/edd/single/main-content.php:235
+msgid "Number of Item"
+msgstr ""
+
+#: inc/addons/edd/single/main-content.php:259
+#: inc/addons/woocommerce/single/main-content.php:279
+msgid "Related Column"
+msgstr ""
+
+#: inc/addons/woocommerce/advanced-styling/cwp-woocommerce-options.php:48
+msgid "General Options"
+msgstr ""
+
+#: inc/addons/woocommerce/advanced-styling/cwp-woocommerce-options.php:68
+msgid "General Color"
+msgstr ""
+
+#: inc/addons/woocommerce/advanced-styling/cwp-woocommerce-options.php:75
+msgid "On Sale Background"
+msgstr ""
+
+#: inc/addons/woocommerce/advanced-styling/cwp-woocommerce-options.php:79
+msgid "On Sale Color"
+msgstr ""
+
+#: inc/addons/woocommerce/advanced-styling/cwp-woocommerce-options.php:83
+msgid "Out of stock Background"
+msgstr ""
+
+#: inc/addons/woocommerce/advanced-styling/cwp-woocommerce-options.php:87
+msgid "Out of stock color"
+msgstr ""
+
+#: inc/addons/woocommerce/advanced-styling/cwp-woocommerce-options.php:91
+msgid "Rating Color"
+msgstr ""
+
+#: inc/addons/woocommerce/advanced-styling/cwp-woocommerce-options.php:183
+msgid "Deleted Price Size (px)"
+msgstr ""
+
+#: inc/addons/woocommerce/advanced-styling/cwp-woocommerce-options.php:187
+msgid "Deleted Price Color"
+msgstr ""
+
+#: inc/addons/woocommerce/advanced-styling/cwp-woocommerce-options.php:233
+msgid "Button Styles"
+msgstr ""
+
+#: inc/addons/woocommerce/advanced-styling/cwp-woocommerce-options.php:254
+msgid "Product Button Styling"
+msgstr ""
+
+#: inc/addons/woocommerce/advanced-styling/cwp-woocommerce-options.php:456
+msgid "Alternative (Checkout,PlaceOrder) Button"
+msgstr ""
+
+#: inc/addons/woocommerce/advanced-styling/cwp-woocommerce-options.php:790
+msgid "Background Active/Hover Color"
+msgstr ""
+
+#: inc/addons/woocommerce/advanced-styling/cwp-woocommerce-options.php:798
+msgid "Text Active/Hover Color"
+msgstr ""
+
+#: inc/addons/woocommerce/advanced-styling/cwp-woocommerce-options.php:816
+msgid "Single Products : Tabs"
+msgstr ""
+
+#: inc/addons/woocommerce/advanced-styling/cwp-woocommerce-options.php:843
+msgid "List Background Color"
+msgstr ""
+
+#: inc/addons/woocommerce/advanced-styling/cwp-woocommerce-options.php:847
+msgid "Active/Hover Background Color"
+msgstr ""
+
+#: inc/addons/woocommerce/advanced-styling/cwp-woocommerce-options.php:874
+msgid "List Text Color"
+msgstr ""
+
+#: inc/addons/woocommerce/advanced-styling/cwp-woocommerce-options.php:878
+msgid "List Text Active/Hover Color"
+msgstr ""
+
+#: inc/addons/woocommerce/advanced-styling/cwp-woocommerce-options.php:905
+msgid "Tab Border Color"
+msgstr ""
+
+#: inc/addons/woocommerce/advanced-styling/cwp-woocommerce-options.php:924
+msgid " Table"
+msgstr ""
+
+#: inc/addons/woocommerce/advanced-styling/cwp-woocommerce-options.php:943
+msgid "Table Background Color"
+msgstr ""
+
+#: inc/addons/woocommerce/advanced-styling/cwp-woocommerce-options.php:954
+msgid "Stripped Color"
+msgstr ""
+
+#: inc/addons/woocommerce/advanced-styling/cwp-woocommerce-options.php:1031
+msgid "Remove Product Icon"
+msgstr ""
+
+#: inc/addons/woocommerce/advanced-styling/cwp-woocommerce-options.php:1046
+#: inc/addons/woocommerce/advanced-styling/cwp-woocommerce-options.php:1102
+#: inc/addons/woocommerce/advanced-styling/cwp-woocommerce-options.php:1257
+#: inc/addons/woocommerce/advanced-styling/cwp-woocommerce-options.php:1412
+#: inc/customizer/footer-options/footer-social.php:61
+#: inc/customizer/header-options/contact-information.php:242
+#: inc/customizer/header-options/header-social.php:60
+msgid "Icon Color"
+msgstr ""
+
+#: inc/addons/woocommerce/advanced-styling/cwp-woocommerce-options.php:1050
+#: inc/customizer/footer-options/footer-social.php:65
+#: inc/customizer/header-options/header-social.php:64
+msgid "Icon Hover Color"
+msgstr ""
+
+#: inc/addons/woocommerce/archive/cwp-woocommerce-archive.php:146
+msgid "WooCommerce Option"
+msgstr ""
+
+#: inc/addons/woocommerce/archive/cwp-woocommerce-archive.php:158
+msgid "WooCommerce Archive"
+msgstr ""
+
+#. translators: %1$s represents the opening anchor tag, %2$s represents the closing anchor tag.
+#: inc/addons/woocommerce/archive/main-content.php:24
+#, php-format
+msgid "The options will work on %1$sWooCommerce Archive %2$s page"
+msgstr ""
+
+#: inc/addons/woocommerce/archive/main-content.php:93
+msgid "Popup primary sidebar on Small Device"
+msgstr ""
+
+#: inc/addons/woocommerce/archive/main-content.php:110
+msgid "Popup open text/html"
+msgstr ""
+
+#: inc/addons/woocommerce/archive/main-content.php:132
+msgid "Popup close text/html"
+msgstr ""
+
+#: inc/addons/woocommerce/archive/main-content.php:192
+msgid "Show Result Number"
+msgstr ""
+
+#: inc/addons/woocommerce/archive/main-content.php:315
+msgid "List View Image/Media Width (%)"
+msgstr ""
+
+#: inc/addons/woocommerce/archive/main-content.php:341
+msgid "Archive Responsive Columns"
+msgstr ""
+
+#: inc/addons/woocommerce/archive/main-content.php:342
+msgid "WooCommerce Archive Responsive Columns. Desktop Column is defined from above \"Products per row\" option."
+msgstr ""
+
+#: inc/addons/woocommerce/archive/main-content.php:349
+msgid "Tab"
+msgstr ""
+
+#: inc/addons/woocommerce/archive/main-content.php:352
+#: inc/customizer/main-content/banner-setting-options.php:321
+msgid "Mobile"
+msgstr ""
+
+#: inc/addons/woocommerce/archive/main-content.php:358
+msgid "Tab Column"
+msgstr ""
+
+#: inc/addons/woocommerce/archive/main-content.php:360
+#: inc/addons/woocommerce/archive/main-content.php:373
+#: inc/customizer/blog-options/main-content.php:81
+msgid "1"
+msgstr ""
+
+#: inc/addons/woocommerce/archive/main-content.php:361
+#: inc/addons/woocommerce/archive/main-content.php:374
+#: inc/customizer/blog-options/main-content.php:82
+msgid "2"
+msgstr ""
+
+#: inc/addons/woocommerce/archive/main-content.php:362
+#: inc/addons/woocommerce/archive/main-content.php:375
+#: inc/customizer/blog-options/main-content.php:83
+msgid "3"
+msgstr ""
+
+#: inc/addons/woocommerce/archive/main-content.php:363
+#: inc/addons/woocommerce/archive/main-content.php:376
+#: inc/customizer/blog-options/main-content.php:84
+msgid "4"
+msgstr ""
+
+#: inc/addons/woocommerce/archive/main-content.php:364
+#: inc/addons/woocommerce/archive/main-content.php:377
+#: inc/customizer/blog-options/main-content.php:85
+msgid "5"
+msgstr ""
+
+#: inc/addons/woocommerce/archive/main-content.php:365
+#: inc/addons/woocommerce/archive/main-content.php:378
+#: inc/customizer/blog-options/main-content.php:86
+msgid "6"
+msgstr ""
+
+#: inc/addons/woocommerce/archive/main-content.php:371
+msgid "Mobile Column"
+msgstr ""
+
+#: inc/addons/woocommerce/cart/cart.php:128
+msgid "Cart"
+msgstr ""
+
+#: inc/addons/woocommerce/cart/cart.php:158
+msgid "WooCommerce Cart"
+msgstr ""
+
+#: inc/addons/woocommerce/helper.php:48
+msgid "Category"
+msgstr ""
+
+#: inc/addons/woocommerce/helper.php:52
+#: inc/addons/woocommerce/helper.php:91
+msgid "Rating"
+msgstr ""
+
+#: inc/addons/woocommerce/helper.php:72
+#: inc/customizer/options.php:223
+#: inc/customizer/options.php:302
+#: inc/customizer/options.php:672
+#: inc/customizer/options.php:712
+#: inc/customizer/options.php:753
+#: inc/customizer/options.php:844
+#: inc/customizer/options.php:923
+#: inc/customizer/options.php:1101
+#: inc/customizer/options.php:1120
+msgid "Default"
+msgstr ""
+
+#: inc/addons/woocommerce/helper.php:73
+#: inc/customizer/options.php:1165
+msgid "Vertical"
+msgstr ""
+
+#: inc/addons/woocommerce/helper.php:95
+msgid "Add To Wishlist"
+msgstr ""
+
+#: inc/addons/woocommerce/helper.php:96
+msgid "Metadata"
+msgstr ""
+
+#: inc/addons/woocommerce/single/cwp-woocommerce-single.php:138
+msgid "WooCommerce Single"
+msgstr ""
+
+#: inc/addons/woocommerce/single/main-content.php:47
+msgid "Grid Elements"
+msgstr ""
+
+#: inc/addons/woocommerce/single/main-content.php:113
+msgid "Tab Setting"
+msgstr ""
+
+#: inc/addons/woocommerce/single/main-content.php:135
+msgid "Tab Design"
+msgstr ""
+
+#: inc/addons/woocommerce/single/main-content.php:154
+msgid "Show Tab Content Heading"
+msgstr ""
+
+#: inc/addons/woocommerce/single/main-content.php:173
+msgid "Upsell Setting"
+msgstr ""
+
+#: inc/addons/woocommerce/single/main-content.php:191
+#: inc/addons/woocommerce/single/main-content.php:256
+msgid "Number"
+msgstr ""
+
+#: inc/addons/woocommerce/single/main-content.php:215
+msgid "Upsell Column"
+msgstr ""
+
+#: inc/addons/woocommerce/single/main-content.php:239
+msgid "Related Setting"
+msgstr ""
+
+#: inc/addons/woocommerce/wishlist/wishlist.php:125
+msgid "WishList"
+msgstr ""
+
+#: inc/addons/woocommerce/wishlist/wishlist.php:154
+msgid "WooCommerce Wishlist"
+msgstr ""
+
+#: inc/addons/woocommerce/wishlist/wishlist.php:172
+msgid "Enable Wishlist"
+msgstr ""
+
+#: inc/addons/woocommerce/wishlist/wishlist.php:266
+msgid "Margin"
+msgstr ""
+
+#: inc/addons/woocommerce/wishlist/wishlist.php:290
+msgid "Padding"
+msgstr ""
+
+#: inc/addons/woocommerce/woocommerce.php:129
+msgid "Woo Primary Sidebar"
+msgstr ""
+
+#: inc/addons/woocommerce/woocommerce.php:141
+msgid "Woo Secondary Sidebar"
+msgstr ""
+
+#: inc/addons/woocommerce/woocommerce.php:401
+msgid " Products"
+msgstr ""
+
+#: inc/admin/intro.php:81
+#: inc/admin/notice.php:92
+msgid "Processing..."
+msgstr ""
+
+#: inc/admin/intro.php:93
+msgid "CosmosWP Intro"
+msgstr ""
+
+#: inc/admin/intro.php:134
+msgid "Advanced Banner"
+msgstr ""
+
+#: inc/admin/intro.php:136
+#: inc/admin/intro.php:141
+#: inc/admin/intro.php:146
+#: inc/admin/intro.php:151
+#: inc/admin/intro.php:156
+#: inc/admin/intro.php:161
+#: inc/admin/intro.php:166
+#: inc/admin/intro.php:171
+#: inc/admin/intro.php:176
+#: inc/admin/intro.php:181
+#: inc/admin/intro.php:186
+#: inc/admin/intro.php:191
+#: inc/admin/intro.php:196
+msgid "View More"
+msgstr ""
+
+#: inc/admin/intro.php:139
+msgid "Advanced Blog"
+msgstr ""
+
+#: inc/admin/intro.php:144
+msgid "Blog Pagination"
+msgstr ""
+
+#: inc/admin/intro.php:149
+msgid "Dropdown Menu"
+msgstr ""
+
+#: inc/admin/intro.php:154
+msgid "Header Sidebar Widgets"
+msgstr ""
+
+#: inc/admin/intro.php:159
+msgid "Masonry Blog"
+msgstr ""
+
+#: inc/admin/intro.php:164
+msgid "News Ticker"
+msgstr ""
+
+#: inc/admin/intro.php:169
+msgid "Off Canvas Sidebar"
+msgstr ""
+
+#: inc/admin/intro.php:174
+msgid "Overlay Search"
+msgstr ""
+
+#: inc/admin/intro.php:179
+msgid "Popup Sidebar"
+msgstr ""
+
+#: inc/admin/intro.php:184
+msgid "Related Post"
+msgstr ""
+
+#: inc/admin/intro.php:189
+msgid "Sticky Footer"
+msgstr ""
+
+#: inc/admin/intro.php:194
+msgid "Sticky Sidebar"
+msgstr ""
+
+#: inc/admin/intro.php:212
+msgid "How to hide/change footer Powered text?"
+msgstr ""
+
+#. translators: %1$s: link to customize footer copyright section, %2$s: closing link tag
+#: inc/admin/intro.php:215
+#, php-format
+msgid "Please go to %1$sFooter Copyright%2$s option, you can edit copyright text, also remove it completely."
+msgstr ""
+
+#: inc/admin/intro.php:221
+msgid "Does this theme support Gutenberg Blocks?"
+msgstr ""
+
+#. translators: %1$s: link to customize footer copyright section, %2$s: closing link tag
+#: inc/admin/intro.php:223
+#, php-format
+msgid "Yes, the theme fully supports Gutenberg Blocks. The demo of CosmosWP theme is created primarily on the base of %1$sGutentor: WordPress Page Building Blocks%2$s "
+msgstr ""
+
+#: inc/admin/intro.php:234
+msgid "Does this theme support Page Builder?"
+msgstr ""
+
+#: inc/admin/intro.php:235
+msgid "Yes, CosmosWP theme support all major page builders including Elementor,  Siteorigin, Divi, BeaverBuilder etc."
+msgstr ""
+
+#: inc/admin/intro.php:238
+msgid "What is Gutentor?"
+msgstr ""
+
+#. translators: %1$s: link to customize footer copyright section, %2$s: closing link tag
+#: inc/admin/intro.php:241
+#, php-format
+msgid "Gutentor is a WordPress plugin based on Gutenberg Blocks, modern drag & drop WordPress page builder Know more about it on %1$sGutentor official website%2$s"
+msgstr ""
+
+#: inc/admin/intro.php:265
+msgid "Welcome to CosmosWP"
+msgstr ""
+
+#: inc/admin/intro.php:267
+msgid "CosmosWP is now installed and ready to use. If you have further queries, you can always contact us. We hope you enjoy it! CosmosWP comes with dozens of Demo Starter Templates. Install the Advanced Import plugin to get started."
+msgstr ""
+
+#: inc/admin/intro.php:269
+#: patterns/landing.php:40
+msgid "Get Started"
+msgstr ""
+
+#: inc/admin/intro.php:270
+msgid "Visit Starter Templates"
+msgstr ""
+
+#: inc/admin/intro.php:273
+msgid "Get CosmosWP Pro"
+msgstr ""
+
+#: inc/admin/intro.php:299
+msgid "Visit Site"
+msgstr ""
+
+#: inc/admin/intro.php:300
+msgid "Gutentor"
+msgstr ""
+
+#: inc/admin/intro.php:305
+msgid "Installation"
+msgstr ""
+
+#: inc/admin/intro.php:306
+#: inc/admin/intro.php:310
+msgid "Counting..."
+msgstr ""
+
+#: inc/admin/intro.php:323
+#: inc/customizer/header-options/contact-information.php:19
+#: inc/customizer/header-options/contact-information.php:43
+#: inc/customizer/header-options/header-builder.php:363
+msgid "Contact Information"
+msgstr ""
+
+#: inc/admin/intro.php:330
+msgid "Support:"
+msgstr ""
+
+#: inc/admin/intro.php:330
+#: inc/admin/intro.php:399
+msgid "Create A Ticket"
+msgstr ""
+
+#: inc/admin/intro.php:334
+msgid "Email:"
+msgstr ""
+
+#: inc/admin/intro.php:334
+msgid "supports@cosmoswp.com"
+msgstr ""
+
+#: inc/admin/intro.php:337
+msgid "Location:"
+msgstr ""
+
+#: inc/admin/intro.php:337
+msgid " Kathmandu, Nepal"
+msgstr ""
+
+#: inc/admin/intro.php:361
+msgid "Knowledge Base"
+msgstr ""
+
+#: inc/admin/intro.php:365
+msgid "In-depth and well documented articles will help you to use the CosmosWP Themes in easiest way."
+msgstr ""
+
+#: inc/admin/intro.php:368
+msgid "Visit Knowledge Base"
+msgstr ""
+
+#: inc/admin/intro.php:377
+msgid "Community"
+msgstr ""
+
+#: inc/admin/intro.php:382
+msgid "We want to make customer experience even better. So, join our Facebook community for instant support from experts."
+msgstr ""
+
+#: inc/admin/intro.php:385
+msgid "Join Facebook Group"
+msgstr ""
+
+#: inc/admin/intro.php:393
+msgid "24x7 Support"
+msgstr ""
+
+#: inc/admin/intro.php:397
+msgid "We have dedicated support team 24*7 to help you in case you encounter any issue during and after the use of CosmosWP."
+msgstr ""
+
+#: inc/admin/intro.php:406
+msgid "Video Guide"
+msgstr ""
+
+#: inc/admin/intro.php:410
+msgid "CosmosWP Theme comes with detailed video tutorials of each and every customization with practical demonstration."
+msgstr ""
+
+#: inc/admin/intro.php:412
+msgid "View Video Guide"
+msgstr ""
+
+#: inc/admin/intro.php:421
+msgid "Links To Customizer Settings"
+msgstr ""
+
+#: inc/admin/intro.php:432
+msgid "Colors/Fonts"
+msgstr ""
+
+#: inc/admin/intro.php:442
+msgid "Upload Logo"
+msgstr ""
+
+#: inc/admin/intro.php:451
+msgid "Header Options"
+msgstr ""
+
+#: inc/admin/intro.php:460
+msgid "Footer Options"
+msgstr ""
+
+#: inc/admin/intro.php:469
+#: inc/customizer/main-content/banner-setting-options.php:17
+msgid "Banner Section"
+msgstr ""
+
+#: inc/admin/intro.php:478
+msgid "Content Section"
+msgstr ""
+
+#: inc/admin/intro.php:487
+#: inc/customizer/blog-options/blog-builder.php:188
+#: inc/customizer/blog-options/blog-builder.php:199
+msgid "Blog Options"
+msgstr ""
+
+#: inc/admin/intro.php:496
+msgid "Page Options"
+msgstr ""
+
+#: inc/admin/intro.php:505
+#: inc/customizer/post-options/post-builder.php:168
+msgid "Post Options"
+msgstr ""
+
+#: inc/admin/intro.php:514
+#: inc/customizer/theme-options/theme-option-controller.php:486
+msgid "Theme Options"
+msgstr ""
+
+#: inc/admin/intro.php:527
+msgid "More Options"
+msgstr ""
+
+#: inc/admin/intro.php:554
+msgid " Change Log"
+msgstr ""
+
+#: inc/admin/intro.php:567
+msgid "Unable to connect to filesystem."
+msgstr ""
+
+#: inc/admin/intro.php:586
+msgid "  Frequently Asked Questions"
+msgstr ""
+
+#: inc/admin/notice.php:111
+msgid "Action failed. Please refresh the page and retry."
+msgstr ""
+
+#: inc/admin/notice.php:115
+msgid "Cheatin&#8217; huh?"
+msgstr ""
+
+#: inc/admin/notice.php:139
+msgid "Dismiss"
+msgstr ""
+
+#. translators: 1: welcome page link starting html tag, 2: welcome page link ending html tag.
+#: inc/admin/notice.php:148
+#, php-format
+msgid "Welcome! Thank you for choosing %1$s! To fully take advantage of the best our theme can offer, please make sure you visit our %2$swelcome page%3$s."
+msgstr ""
+
+#: inc/admin/notice.php:156
+msgid "Clicking the button below will install and activate the Advanced Import plugin."
+msgstr ""
+
+#: inc/admin/notice.php:158
+#: inc/admin/notice.php:159
+msgid "Get started with CosmosWP"
+msgstr ""
+
+#: inc/admin/notice.php:191
+msgid "Sorry, you are not allowed to install plugins on this site."
+msgstr ""
+
+#: inc/admin/notice.php:259
+msgid "Unable to connect to the filesystem. Please confirm your credentials."
+msgstr ""
+
+#. Translators: %1$s current user display name.
+#: inc/admin/notice.php:345
+#, php-format
+msgid "Howdy, %1$s! It seems that you have been using this theme for more than 15 days. We hope you are happy with everything that the theme has to offer. If you can spare a minute, please help us by leaving a 5-star review on WordPress.org.  By spreading the love, we can continue to develop new amazing features in the future, for free!"
+msgstr ""
+
+#: inc/admin/notice.php:357
+msgid "Sure"
+msgstr ""
+
+#: inc/admin/notice.php:362
+msgid "Maybe later"
+msgstr ""
+
+#: inc/admin/notice.php:367
+msgid "I already did"
+msgstr ""
+
+#: inc/admin/notice.php:372
+msgid "Got theme support question?"
+msgstr ""
+
+#: inc/customizer/advance-banner/advanced-banner-controller.php:75
+#: inc/customizer/advance-banner/advanced-banner-controller.php:83
+msgid "Site Banner"
+msgstr ""
+
+#: inc/customizer/advance-banner/advanced-banner-controller.php:111
+#: inc/customizer/advance-banner/advanced-banner-controller.php:240
+#: inc/customizer/advance-banner/advanced-banner-controller.php:260
+msgid "Banner Options"
+msgstr ""
+
+#: inc/customizer/advance-banner/advanced-banner-controller.php:212
+#: inc/customizer/advance-banner/advanced-banner-controller.php:222
+msgid "Banner Setting"
+msgstr ""
+
+#: inc/customizer/blog-options/blog-builder.php:90
+#: inc/starter-content/content.php:34
+#: inc/starter-content/index.php:86
+msgid "Blog"
+msgstr ""
+
+#: inc/customizer/blog-options/blog-builder.php:105
+msgid "Read More"
+msgstr ""
+
+#: inc/customizer/blog-options/main-content.php:56
+msgid "Full Width layout"
+msgstr ""
+
+#: inc/customizer/blog-options/main-content.php:57
+msgid "Column Layout"
+msgstr ""
+
+#: inc/customizer/blog-options/main-content.php:59
+msgid "Blog layout"
+msgstr ""
+
+#: inc/customizer/blog-options/main-content.php:79
+msgid "Column Number"
+msgstr ""
+
+#: inc/customizer/blog-options/main-content.php:110
+msgid "Blog Page Sidebar"
+msgstr ""
+
+#: inc/customizer/blog-options/main-content.php:143
+msgid "Blog Elements Sorting"
+msgstr ""
+
+#: inc/customizer/blog-options/main-content.php:196
+#: inc/customizer/page-options/main-content.php:85
+#: inc/customizer/post-options/main-content.php:93
+msgid "Primary Meta Sorting"
+msgstr ""
+
+#: inc/customizer/blog-options/main-content.php:248
+#: inc/customizer/page-options/main-content.php:125
+#: inc/customizer/post-options/main-content.php:144
+msgid "Secondary Meta Sorting"
+msgstr ""
+
+#: inc/customizer/blog-options/main-content.php:303
+#: inc/customizer/page-options/main-content.php:165
+#: inc/customizer/post-options/main-content.php:199
+msgid "Excerpt Setting"
+msgstr ""
+
+#: inc/customizer/blog-options/main-content.php:344
+msgid "Read More Text"
+msgstr ""
+
+#: inc/customizer/blog-options/main-content.php:360
+msgid "Note: Excerpt Options only works when excerpts is enable in \"BLOG ELEMENTS\"."
+msgstr ""
+
+#: inc/customizer/blog-options/main-content.php:385
+#: inc/customizer/page-options/main-content.php:223
+#: inc/customizer/post-options/main-content.php:259
+msgid "Featured Image Setting"
+msgstr ""
+
+#: inc/customizer/blog-options/main-content.php:406
+msgid "Featured Section Layout"
+msgstr ""
+
+#: inc/customizer/blog-options/main-content.php:429
+msgid "Featured Image Size"
+msgstr ""
+
+#: inc/customizer/blog-options/main-content.php:450
+msgid "Pagination Setting"
+msgstr ""
+
+#: inc/customizer/blog-options/main-content.php:472
+#: inc/customizer/post-options/main-content.php:345
+msgid "Blog and Archive Pages Pagination"
+msgstr ""
+
+#: inc/customizer/blog-options/main-content.php:497
+msgid "Pagination Alignment"
+msgstr ""
+
+#: inc/customizer/blog-options/main-content.php:522
+msgid "Border and Box"
+msgstr ""
+
+#: inc/customizer/blog-options/main-content.php:705
+#: inc/customizer/post-options/main-content.php:323
+msgid "Additional Setting"
+msgstr ""
+
+#: inc/customizer/blog-options/main-content.php:727
+msgid "Exclude Categories In Blog Page"
+msgstr ""
+
+#: inc/customizer/blog-options/main-content.php:728
+msgid "Check categories you want to exclude from blog page"
+msgstr ""
+
+#: inc/customizer/blog-options/main-content.php:769
+#: inc/customizer/page-options/main-content.php:296
+#: inc/customizer/post-options/main-content.php:420
+msgid "Main Content Styling"
+msgstr ""
+
+#: inc/customizer/custom-controls/back-compact/callback.php:197
+msgid "Category is empty"
+msgstr ""
+
+#: inc/customizer/customizer-pro/class-customize.php:89
+msgid "Get More Features in CosmosWP Pro"
+msgstr ""
+
+#: inc/customizer/footer-options/copyright.php:24
+#: inc/customizer/footer-options/footer-builder.php:232
+msgid "Copyright"
+msgstr ""
+
+#: inc/customizer/footer-options/copyright.php:42
+msgid "Copyright Text"
+msgstr ""
+
+#: inc/customizer/footer-options/copyright.php:43
+msgid "Enter Arbitrary HTML Code . Available tags: {current_year}, {site_title}, {theme_author}"
+msgstr ""
+
+#: inc/customizer/footer-options/copyright.php:64
+#: inc/customizer/footer-options/html.php:59
+msgid "Color"
+msgstr ""
+
+#: inc/customizer/footer-options/copyright.php:84
+#: inc/customizer/header-options/contact-information.php:91
+#: inc/customizer/header-options/site-identity.php:144
+msgid "Alignment "
+msgstr ""
+
+#: inc/customizer/footer-options/copyright.php:106
+msgid "Copyright Alignment"
+msgstr ""
+
+#: inc/customizer/footer-options/copyright.php:125
+#: inc/customizer/footer-options/footer-bottom.php:103
+#: inc/customizer/footer-options/footer-main.php:103
+#: inc/customizer/footer-options/footer-menu.php:103
+#: inc/customizer/footer-options/footer-top.php:102
+#: inc/customizer/footer-options/html.php:79
+#: inc/customizer/header-options/button-one.php:178
+#: inc/customizer/header-options/contact-information.php:132
+#: inc/customizer/header-options/header-bottom.php:103
+#: inc/customizer/header-options/header-general.php:131
+#: inc/customizer/header-options/header-main.php:127
+#: inc/customizer/header-options/header-top.php:103
+#: inc/customizer/header-options/html.php:77
+#: inc/customizer/header-options/menu-icon-sidebar-setting.php:97
+#: inc/customizer/header-options/primary-menu.php:79
+#: inc/customizer/header-options/secondary-menu.php:79
+#: inc/customizer/header-options/site-identity.php:186
+#: inc/customizer/main-content/banner-setting-options.php:429
+#: inc/customizer/theme-options/button-options.php:37
+msgid "Margin and Padding"
+msgstr ""
+
+#: inc/customizer/footer-options/copyright.php:189
+#: inc/customizer/footer-options/copyright.php:230
+#: inc/customizer/footer-options/footer-bottom.php:588
+#: inc/customizer/footer-options/footer-bottom.php:777
+#: inc/customizer/footer-options/footer-main.php:586
+#: inc/customizer/footer-options/footer-main.php:763
+#: inc/customizer/footer-options/footer-menu.php:386
+#: inc/customizer/footer-options/footer-menu.php:689
+#: inc/customizer/footer-options/footer-menu.php:730
+#: inc/customizer/footer-options/footer-top.php:587
+#: inc/customizer/footer-options/footer-top.php:764
+#: inc/customizer/footer-options/html.php:143
+#: inc/customizer/footer-options/html.php:184
+#: inc/customizer/header-options/button-one.php:515
+#: inc/customizer/header-options/drop-down-search.php:706
+#: inc/customizer/header-options/html.php:182
+#: inc/customizer/header-options/normal-search.php:642
+#: inc/customizer/header-options/secondary-menu.php:480
+#: inc/customizer/header-options/site-identity.php:322
+#: inc/customizer/theme-options/button-options.php:346
+#: inc/customizer/theme-options/sidebar-setting.php:304
+#: inc/customizer/theme-options/sidebar-setting.php:505
+msgid "Typography"
+msgstr ""
+
+#: inc/customizer/footer-options/copyright.php:208
+#: inc/customizer/footer-options/footer-bottom.php:566
+#: inc/customizer/footer-options/footer-bottom.php:755
+#: inc/customizer/footer-options/footer-main.php:564
+#: inc/customizer/footer-options/footer-main.php:740
+#: inc/customizer/footer-options/footer-menu.php:364
+#: inc/customizer/footer-options/footer-menu.php:708
+#: inc/customizer/footer-options/footer-top.php:565
+#: inc/customizer/footer-options/footer-top.php:741
+#: inc/customizer/footer-options/html.php:162
+#: inc/customizer/header-options/button-one.php:492
+#: inc/customizer/header-options/drop-down-search.php:684
+#: inc/customizer/header-options/html.php:160
+#: inc/customizer/header-options/menu-icon.php:447
+#: inc/customizer/header-options/menu-icon.php:905
+#: inc/customizer/header-options/normal-search.php:620
+#: inc/customizer/header-options/primary-menu.php:458
+#: inc/customizer/header-options/primary-menu.php:858
+#: inc/customizer/header-options/secondary-menu.php:458
+#: inc/customizer/header-options/secondary-menu.php:860
+#: inc/customizer/header-options/site-identity.php:342
+#: inc/customizer/theme-options/button-options.php:324
+#: inc/customizer/theme-options/scroll-top.php:539
+#: inc/customizer/theme-options/sidebar-setting.php:283
+#: inc/customizer/theme-options/sidebar-setting.php:484
+msgid "Typography Options"
+msgstr ""
+
+#: inc/customizer/footer-options/footer-bottom.php:19
+#: inc/customizer/footer-options/footer-builder.php:330
+msgid "Footer Bottom"
+msgstr ""
+
+#: inc/customizer/footer-options/footer-bottom.php:37
+msgid "Footer Bottom Height"
+msgstr ""
+
+#: inc/customizer/footer-options/footer-bottom.php:56
+#: inc/customizer/footer-options/footer-main.php:56
+#: inc/customizer/footer-options/footer-top.php:55
+#: inc/customizer/header-options/header-bottom.php:56
+#: inc/customizer/header-options/header-main.php:60
+#: inc/customizer/header-options/header-top.php:56
+msgid "Height Option"
+msgstr ""
+
+#: inc/customizer/footer-options/footer-bottom.php:78
+msgid "Footer Bottom Height (px)"
+msgstr ""
+
+#: inc/customizer/footer-options/footer-bottom.php:167
+#: inc/customizer/footer-options/footer-bottom.php:186
+#: inc/customizer/footer-options/footer-general.php:144
+#: inc/customizer/footer-options/footer-main.php:167
+#: inc/customizer/footer-options/footer-main.php:185
+#: inc/customizer/footer-options/footer-top.php:166
+#: inc/customizer/footer-options/footer-top.php:185
+#: inc/customizer/header-options/header-bottom.php:167
+#: inc/customizer/header-options/header-bottom.php:187
+#: inc/customizer/header-options/header-general.php:196
+#: inc/customizer/header-options/header-main.php:191
+#: inc/customizer/header-options/header-main.php:210
+#: inc/customizer/header-options/header-top.php:167
+#: inc/customizer/header-options/header-top.php:187
+#: inc/customizer/main-content/main-content-controller.php:282
+msgid "Background Options"
+msgstr ""
+
+#: inc/customizer/footer-options/footer-bottom.php:212
+#: inc/customizer/footer-options/footer-general.php:168
+#: inc/customizer/footer-options/footer-main.php:211
+#: inc/customizer/footer-options/footer-top.php:211
+#: inc/customizer/header-options/header-bottom.php:213
+#: inc/customizer/header-options/header-general.php:220
+#: inc/customizer/main-content/main-content-controller.php:306
+#: inc/customizer/theme-options/sidebar-setting.php:99
+msgid "Background Option"
+msgstr ""
+
+#: inc/customizer/footer-options/footer-bottom.php:224
+#: inc/customizer/footer-options/footer-general.php:179
+#: inc/customizer/footer-options/footer-main.php:223
+#: inc/customizer/footer-options/footer-top.php:223
+#: inc/customizer/header-options/header-bottom.php:225
+#: inc/customizer/header-options/header-general.php:231
+#: inc/customizer/header-options/header-main.php:248
+#: inc/customizer/header-options/header-top.php:225
+#: inc/customizer/main-content/main-content-controller.php:317
+#: inc/customizer/options.php:560
+msgid "Background Image"
+msgstr ""
+
+#: inc/customizer/footer-options/footer-bottom.php:228
+#: inc/customizer/footer-options/footer-general.php:183
+#: inc/customizer/footer-options/footer-main.php:227
+#: inc/customizer/footer-options/footer-top.php:227
+#: inc/customizer/header-options/header-bottom.php:229
+#: inc/customizer/header-options/header-general.php:235
+#: inc/customizer/header-options/header-main.php:252
+#: inc/customizer/header-options/header-top.php:229
+#: inc/customizer/main-content/banner-setting-options.php:328
+#: inc/customizer/main-content/banner-setting-options.php:357
+#: inc/customizer/main-content/banner-setting-options.php:386
+#: inc/customizer/main-content/main-content-controller.php:321
+msgid "Background Size"
+msgstr ""
+
+#: inc/customizer/footer-options/footer-bottom.php:234
+#: inc/customizer/footer-options/footer-general.php:189
+#: inc/customizer/footer-options/footer-main.php:233
+#: inc/customizer/footer-options/footer-top.php:233
+#: inc/customizer/header-options/header-bottom.php:235
+#: inc/customizer/header-options/header-general.php:241
+#: inc/customizer/header-options/header-main.php:258
+#: inc/customizer/header-options/header-top.php:235
+#: inc/customizer/main-content/banner-setting-options.php:335
+#: inc/customizer/main-content/banner-setting-options.php:364
+#: inc/customizer/main-content/banner-setting-options.php:393
+#: inc/customizer/main-content/main-content-controller.php:327
+msgid "Background Position"
+msgstr ""
+
+#: inc/customizer/footer-options/footer-bottom.php:240
+#: inc/customizer/footer-options/footer-general.php:195
+#: inc/customizer/footer-options/footer-main.php:239
+#: inc/customizer/footer-options/footer-top.php:239
+#: inc/customizer/header-options/header-bottom.php:241
+#: inc/customizer/header-options/header-general.php:247
+#: inc/customizer/header-options/header-main.php:264
+#: inc/customizer/header-options/header-top.php:241
+#: inc/customizer/main-content/banner-setting-options.php:342
+#: inc/customizer/main-content/banner-setting-options.php:371
+#: inc/customizer/main-content/banner-setting-options.php:400
+#: inc/customizer/main-content/main-content-controller.php:333
+msgid "Background Repeat"
+msgstr ""
+
+#: inc/customizer/footer-options/footer-bottom.php:246
+#: inc/customizer/footer-options/footer-general.php:201
+#: inc/customizer/footer-options/footer-main.php:245
+#: inc/customizer/footer-options/footer-top.php:245
+#: inc/customizer/header-options/header-bottom.php:247
+#: inc/customizer/header-options/header-general.php:253
+#: inc/customizer/header-options/header-main.php:270
+#: inc/customizer/header-options/header-top.php:247
+#: inc/customizer/main-content/banner-setting-options.php:349
+#: inc/customizer/main-content/banner-setting-options.php:378
+#: inc/customizer/main-content/banner-setting-options.php:407
+#: inc/customizer/main-content/main-content-controller.php:339
+msgid "Background Attachment"
+msgstr ""
+
+#: inc/customizer/footer-options/footer-bottom.php:252
+#: inc/customizer/footer-options/footer-general.php:207
+#: inc/customizer/footer-options/footer-main.php:251
+#: inc/customizer/footer-options/footer-top.php:251
+#: inc/customizer/header-options/header-bottom.php:253
+#: inc/customizer/header-options/header-general.php:259
+#: inc/customizer/header-options/header-main.php:276
+#: inc/customizer/header-options/header-top.php:253
+#: inc/customizer/main-content/main-content-controller.php:345
+msgid "Enable Overlay"
+msgstr ""
+
+#: inc/customizer/footer-options/footer-bottom.php:257
+#: inc/customizer/footer-options/footer-general.php:212
+#: inc/customizer/footer-options/footer-main.php:256
+#: inc/customizer/footer-options/footer-top.php:256
+#: inc/customizer/header-options/header-bottom.php:258
+#: inc/customizer/header-options/header-general.php:264
+#: inc/customizer/header-options/header-main.php:281
+#: inc/customizer/header-options/header-top.php:258
+#: inc/customizer/main-content/main-content-controller.php:350
+msgid "Background Overlay Color"
+msgstr ""
+
+#: inc/customizer/footer-options/footer-bottom.php:276
+#: inc/customizer/footer-options/footer-general.php:231
+#: inc/customizer/footer-options/footer-main.php:275
+#: inc/customizer/footer-options/footer-top.php:275
+#: inc/customizer/header-options/header-bottom.php:277
+#: inc/customizer/header-options/header-general.php:283
+#: inc/customizer/header-options/header-main.php:300
+#: inc/customizer/header-options/header-top.php:277
+#: inc/customizer/main-content/main-content-controller.php:369
+msgid "Border and Box Shadow Options"
+msgstr ""
+
+#: inc/customizer/footer-options/footer-bottom.php:400
+#: inc/customizer/footer-options/footer-main.php:399
+#: inc/customizer/footer-options/footer-top.php:399
+#: inc/customizer/theme-options/sidebar-setting.php:124
+msgid "Widget Title Styling"
+msgstr ""
+
+#: inc/customizer/footer-options/footer-bottom.php:422
+#: inc/customizer/footer-options/footer-main.php:421
+#: inc/customizer/footer-options/footer-menu.php:276
+#: inc/customizer/footer-options/footer-top.php:421
+#: inc/customizer/theme-options/sidebar-setting.php:145
+msgid "Title Alignment"
+msgstr ""
+
+#: inc/customizer/footer-options/footer-bottom.php:511
+#: inc/customizer/footer-options/footer-bottom.php:687
+#: inc/customizer/footer-options/footer-main.php:510
+#: inc/customizer/footer-options/footer-main.php:686
+#: inc/customizer/footer-options/footer-menu.php:409
+#: inc/customizer/footer-options/footer-top.php:511
+#: inc/customizer/footer-options/footer-top.php:687
+#: inc/customizer/header-options/contact-information.php:494
+msgid "Border"
+msgstr ""
+
+#: inc/customizer/footer-options/footer-bottom.php:609
+#: inc/customizer/footer-options/footer-main.php:607
+#: inc/customizer/footer-options/footer-top.php:609
+msgid "Widget Content Styling"
+msgstr ""
+
+#: inc/customizer/footer-options/footer-bottom.php:631
+#: inc/customizer/footer-options/footer-main.php:629
+#: inc/customizer/footer-options/footer-sidebar-1.php:78
+#: inc/customizer/footer-options/footer-sidebar-2.php:77
+#: inc/customizer/footer-options/footer-sidebar-3.php:77
+#: inc/customizer/footer-options/footer-sidebar-4.php:79
+#: inc/customizer/footer-options/footer-sidebar-5.php:78
+#: inc/customizer/footer-options/footer-sidebar-6.php:78
+#: inc/customizer/footer-options/footer-sidebar-7.php:77
+#: inc/customizer/footer-options/footer-sidebar-8.php:77
+#: inc/customizer/footer-options/footer-top.php:631
+msgid "Content Alignment"
+msgstr ""
+
+#: inc/customizer/footer-options/footer-bottom.php:663
+#: inc/customizer/footer-options/footer-main.php:662
+#: inc/customizer/footer-options/footer-top.php:663
+#: inc/customizer/general-setting/general-setting-options.php:152
+#: inc/customizer/header-options/menu-icon-sidebar-setting.php:200
+#: inc/customizer/header-options/sticky-header.php:280
+#: inc/customizer/header-options/sticky-header.php:433
+#: inc/customizer/header-options/sticky-header.php:586
+#: inc/customizer/theme-options/breadcrumb-options.php:162
+msgid "Link Color"
+msgstr ""
+
+#: inc/customizer/footer-options/footer-bottom.php:667
+#: inc/customizer/footer-options/footer-main.php:666
+#: inc/customizer/footer-options/footer-top.php:667
+#: inc/customizer/general-setting/general-setting-options.php:156
+#: inc/customizer/header-options/menu-icon-sidebar-setting.php:204
+#: inc/customizer/header-options/sticky-header.php:303
+#: inc/customizer/header-options/sticky-header.php:456
+#: inc/customizer/header-options/sticky-header.php:609
+#: inc/customizer/theme-options/breadcrumb-options.php:166
+msgid "Link Hover Color"
+msgstr ""
+
+#: inc/customizer/footer-options/footer-bottom.php:735
+msgid "Footer Elements"
+msgstr ""
+
+#: inc/customizer/footer-options/footer-builder.php:224
+#: inc/customizer/footer-options/footer-builder.php:368
+#: inc/customizer/footer-options/footer-builder.php:391
+msgid "Footer Builder"
+msgstr ""
+
+#: inc/customizer/footer-options/footer-builder.php:228
+#: inc/customizer/header-options/header-builder.php:388
+#: inc/customizer/main-content/banner-setting-options.php:315
+#: inc/library/customizer-builder/class-customizer-builder.php:171
+msgid "Desktop"
+msgstr ""
+
+#: inc/customizer/footer-options/footer-builder.php:240
+#: inc/customizer/footer-options/footer-menu.php:23
+msgid "Footer Menu"
+msgstr ""
+
+#: inc/customizer/footer-options/footer-builder.php:248
+#: inc/customizer/footer-options/footer-social.php:19
+#: inc/customizer/header-options/header-builder.php:321
+msgid "Social Icons"
+msgstr ""
+
+#: inc/customizer/footer-options/footer-builder.php:256
+#: inc/customizer/footer-options/html.php:18
+#: inc/customizer/footer-options/html.php:37
+#: inc/customizer/header-options/header-builder.php:371
+#: inc/customizer/header-options/html.php:18
+#: inc/customizer/header-options/html.php:35
+msgid "HTML"
+msgstr ""
+
+#: inc/customizer/footer-options/footer-builder.php:264
+#: inc/customizer/footer-options/footer-sidebar-1.php:19
+msgid "Footer Sidebar 1"
+msgstr ""
+
+#: inc/customizer/footer-options/footer-builder.php:272
+#: inc/customizer/footer-options/footer-sidebar-2.php:19
+msgid "Footer Sidebar 2"
+msgstr ""
+
+#: inc/customizer/footer-options/footer-builder.php:280
+#: inc/customizer/footer-options/footer-sidebar-3.php:19
+msgid "Footer Sidebar 3"
+msgstr ""
+
+#: inc/customizer/footer-options/footer-builder.php:288
+#: inc/customizer/footer-options/footer-sidebar-4.php:19
+msgid "Footer Sidebar 4"
+msgstr ""
+
+#: inc/customizer/footer-options/footer-builder.php:296
+#: inc/customizer/footer-options/footer-sidebar-5.php:19
+msgid "Footer Sidebar 5"
+msgstr ""
+
+#: inc/customizer/footer-options/footer-builder.php:304
+#: inc/customizer/footer-options/footer-sidebar-6.php:19
+msgid "Footer Sidebar 6"
+msgstr ""
+
+#: inc/customizer/footer-options/footer-builder.php:312
+#: inc/customizer/footer-options/footer-sidebar-7.php:19
+msgid "Footer Sidebar 7"
+msgstr ""
+
+#: inc/customizer/footer-options/footer-builder.php:320
+#: inc/customizer/footer-options/footer-sidebar-8.php:19
+msgid "Footer Sidebar 8"
+msgstr ""
+
+#: inc/customizer/footer-options/footer-builder.php:328
+#: inc/customizer/footer-options/footer-top.php:19
+msgid "Footer Top"
+msgstr ""
+
+#: inc/customizer/footer-options/footer-builder.php:329
+#: inc/customizer/footer-options/footer-main.php:19
+msgid "Footer Main"
+msgstr ""
+
+#: inc/customizer/footer-options/footer-builder.php:357
+msgid "Footer Builder/Options"
+msgstr ""
+
+#: inc/customizer/footer-options/footer-builder.php:475
+#: inc/customizer/footer-options/footer-builder.php:616
+msgid "Create New File "
+msgstr ""
+
+#: inc/customizer/footer-options/footer-defaults.php:593
+msgid "Copyright &copy; {current_year} {site_title} - Powered by {theme_author}"
+msgstr ""
+
+#: inc/customizer/footer-options/footer-general.php:19
+msgid "Footer General "
+msgstr ""
+
+#: inc/customizer/footer-options/footer-general.php:38
+msgid "General Layout"
+msgstr ""
+
+#: inc/customizer/footer-options/footer-general.php:59
+msgid "Footer Display Style"
+msgstr ""
+
+#: inc/customizer/footer-options/footer-general.php:80
+msgid "Footer General Styling"
+msgstr ""
+
+#: inc/customizer/footer-options/footer-general.php:354
+msgid "Footer Sidebar Setting"
+msgstr ""
+
+#: inc/customizer/footer-options/footer-general.php:412
+msgid "Footer Rows"
+msgstr ""
+
+#: inc/customizer/footer-options/footer-main.php:37
+msgid "Footer Main Height"
+msgstr ""
+
+#: inc/customizer/footer-options/footer-main.php:78
+msgid "Footer Main Height (px)"
+msgstr ""
+
+#: inc/customizer/footer-options/footer-menu.php:40
+msgid "Menu Title"
+msgstr ""
+
+#: inc/customizer/footer-options/footer-menu.php:61
+msgid "Select  Menu"
+msgstr ""
+
+#: inc/customizer/footer-options/footer-menu.php:83
+msgid "Menu Display Position"
+msgstr ""
+
+#: inc/customizer/footer-options/footer-menu.php:167
+msgid "FOOTER MENU ITEM LAYOUT"
+msgstr ""
+
+#: inc/customizer/footer-options/footer-menu.php:189
+#: inc/customizer/header-options/primary-menu.php:165
+msgid "Menu Alignment"
+msgstr ""
+
+#: inc/customizer/footer-options/footer-menu.php:254
+msgid "Menu Title Styling"
+msgstr ""
+
+#: inc/customizer/footer-options/footer-menu.php:462
+#: inc/customizer/header-options/primary-menu.php:230
+msgid "Menu Item Styling"
+msgstr ""
+
+#: inc/customizer/footer-options/footer-menu.php:483
+#: inc/customizer/header-options/primary-menu.php:251
+msgid "Menu Item Color Styling"
+msgstr ""
+
+#: inc/customizer/footer-options/footer-menu.php:484
+#: inc/customizer/header-options/primary-menu.php:252
+#: inc/customizer/header-options/secondary-menu.php:252
+msgid "This styling for main menu items."
+msgstr ""
+
+#: inc/customizer/footer-options/footer-menu.php:497
+#: inc/customizer/header-options/menu-icon-sidebar-setting.php:278
+#: inc/customizer/header-options/primary-menu.php:265
+#: inc/customizer/header-options/primary-menu.php:665
+#: inc/customizer/header-options/secondary-menu.php:265
+#: inc/customizer/header-options/secondary-menu.php:667
+msgid "Active"
+msgstr ""
+
+#: inc/customizer/footer-options/footer-sidebar-1.php:33
+#: inc/customizer/footer-options/footer-sidebar-2.php:34
+#: inc/customizer/footer-options/footer-sidebar-3.php:34
+#: inc/customizer/footer-options/footer-sidebar-4.php:35
+#: inc/customizer/footer-options/footer-sidebar-5.php:35
+#: inc/customizer/footer-options/footer-sidebar-6.php:34
+#: inc/customizer/footer-options/footer-sidebar-7.php:34
+#: inc/customizer/footer-options/footer-sidebar-8.php:34
+msgid "Widget Setting"
+msgstr ""
+
+#: inc/customizer/footer-options/footer-sidebar-1.php:53
+#: inc/customizer/footer-options/footer-sidebar-2.php:53
+#: inc/customizer/footer-options/footer-sidebar-3.php:53
+#: inc/customizer/footer-options/footer-sidebar-4.php:54
+#: inc/customizer/footer-options/footer-sidebar-5.php:54
+#: inc/customizer/footer-options/footer-sidebar-6.php:53
+#: inc/customizer/footer-options/footer-sidebar-7.php:53
+#: inc/customizer/footer-options/footer-sidebar-8.php:53
+msgid "Widget Setting Option"
+msgstr ""
+
+#: inc/customizer/footer-options/footer-social.php:39
+#: inc/customizer/header-options/header-social.php:38
+msgid "Social Options Selection"
+msgstr ""
+
+#: inc/customizer/footer-options/footer-social.php:40
+#: inc/customizer/header-options/header-social.php:39
+msgid "Select Social Icons and enter link"
+msgstr ""
+
+#: inc/customizer/footer-options/footer-social.php:43
+#: inc/customizer/header-options/header-social.php:42
+msgid "Social Icon"
+msgstr ""
+
+#: inc/customizer/footer-options/footer-social.php:44
+#: inc/customizer/header-options/header-social.php:43
+msgid "Add New Icon"
+msgstr ""
+
+#: inc/customizer/footer-options/footer-social.php:49
+#: inc/customizer/header-options/contact-information.php:49
+#: inc/customizer/header-options/header-social.php:48
+msgid "Select Icon"
+msgstr ""
+
+#: inc/customizer/footer-options/footer-social.php:53
+#: inc/customizer/header-options/header-social.php:52
+msgid "Enter Link"
+msgstr ""
+
+#: inc/customizer/footer-options/footer-social.php:57
+#: inc/customizer/header-options/contact-information.php:73
+#: inc/customizer/header-options/header-social.php:56
+msgid "Open in New Window"
+msgstr ""
+
+#: inc/customizer/footer-options/footer-social.php:91
+#: inc/customizer/header-options/header-social.php:90
+msgid "Icons Styling"
+msgstr ""
+
+#: inc/customizer/footer-options/footer-social.php:160
+#: inc/customizer/header-options/header-social.php:159
+msgid "Icon Radius (px)"
+msgstr ""
+
+#: inc/customizer/footer-options/footer-social.php:186
+#: inc/customizer/header-options/header-social.php:185
+msgid "Icon Width (px)"
+msgstr ""
+
+#: inc/customizer/footer-options/footer-social.php:212
+#: inc/customizer/header-options/header-social.php:211
+msgid "Icon Height (px)"
+msgstr ""
+
+#: inc/customizer/footer-options/footer-social.php:238
+#: inc/customizer/header-options/header-social.php:237
+msgid "Line Height (px)"
+msgstr ""
+
+#: inc/customizer/footer-options/footer-social.php:262
+#: inc/customizer/header-options/header-social.php:261
+msgid "Individual Icon Styling"
+msgstr ""
+
+#: inc/customizer/footer-options/footer-social.php:282
+#: inc/customizer/header-options/header-social.php:281
+msgid "Individual Icon Margin (px)"
+msgstr ""
+
+#: inc/customizer/footer-options/footer-social.php:305
+#: inc/customizer/header-options/header-social.php:304
+msgid "Individual Icon Padding (px)"
+msgstr ""
+
+#: inc/customizer/footer-options/footer-social.php:326
+#: inc/customizer/header-options/header-social.php:325
+msgid "Icon Section Styling"
+msgstr ""
+
+#: inc/customizer/footer-options/footer-social.php:346
+#: inc/customizer/header-options/header-social.php:345
+msgid "Icon Section Margin (px)"
+msgstr ""
+
+#: inc/customizer/footer-options/footer-social.php:369
+#: inc/customizer/header-options/header-social.php:368
+msgid "Icon Section Padding (px)"
+msgstr ""
+
+#: inc/customizer/footer-options/footer-top.php:36
+msgid "Footer Top Height"
+msgstr ""
+
+#: inc/customizer/footer-options/footer-top.php:77
+msgid "Footer Top Height (px)"
+msgstr ""
+
+#: inc/customizer/footer-options/html.php:38
+msgid "Enter HTML Code"
+msgstr ""
+
+#: inc/customizer/general-setting/general-setting-controller.php:314
+msgid "Site Background"
+msgstr ""
+
+#: inc/customizer/general-setting/general-setting-options.php:46
+msgid "Dynamic css options"
+msgstr ""
+
+#: inc/customizer/general-setting/general-setting-options.php:68
+msgid "Site Layout"
+msgstr ""
+
+#: inc/customizer/general-setting/general-setting-options.php:90
+msgid "Content Layout"
+msgstr ""
+
+#: inc/customizer/general-setting/general-setting-options.php:140
+msgid "Primary Color"
+msgstr ""
+
+#: inc/customizer/general-setting/general-setting-options.php:160
+msgid "Meta Data Color"
+msgstr ""
+
+#: inc/customizer/general-setting/general-setting-options.php:178
+msgid "Typography Option"
+msgstr ""
+
+#: inc/customizer/general-setting/general-setting-options.php:200
+msgid "Body and Paragraph"
+msgstr ""
+
+#: inc/customizer/general-setting/general-setting-options.php:223
+msgid "Heading H1"
+msgstr ""
+
+#: inc/customizer/general-setting/general-setting-options.php:246
+msgid "Heading H2"
+msgstr ""
+
+#: inc/customizer/general-setting/general-setting-options.php:270
+msgid "Heading H3"
+msgstr ""
+
+#: inc/customizer/general-setting/general-setting-options.php:293
+msgid "Heading H4"
+msgstr ""
+
+#: inc/customizer/general-setting/general-setting-options.php:317
+msgid "Heading H5"
+msgstr ""
+
+#: inc/customizer/general-setting/general-setting-options.php:341
+msgid "Heading H6"
+msgstr ""
+
+#: inc/customizer/header-options/button-one.php:19
+#: inc/customizer/header-options/header-builder.php:355
+#: inc/customizer/header-options/header-defaults.php:980
+msgid "Button One"
+msgstr ""
+
+#: inc/customizer/header-options/button-one.php:36
+msgid "Button Text"
+msgstr ""
+
+#: inc/customizer/header-options/button-one.php:55
+msgid "Enable Icon"
+msgstr ""
+
+#: inc/customizer/header-options/button-one.php:100
+#: inc/customizer/theme-options/scroll-top.php:493
+msgid "Icon Position"
+msgstr ""
+
+#: inc/customizer/header-options/button-one.php:120
+msgid "Button URL"
+msgstr ""
+
+#: inc/customizer/header-options/button-one.php:140
+msgid "Open link in a new tab"
+msgstr ""
+
+#: inc/customizer/header-options/button-one.php:158
+msgid "Button CSS Class "
+msgstr ""
+
+#: inc/customizer/header-options/button-one.php:159
+msgid "Multiple classes added by space"
+msgstr ""
+
+#: inc/customizer/header-options/button-one.php:242
+msgid "Button One Styling"
+msgstr ""
+
+#: inc/customizer/header-options/button-one.php:264
+msgid "Button Alignment"
+msgstr ""
+
+#: inc/customizer/header-options/contact-information.php:39
+msgid "Contact Options Selection"
+msgstr ""
+
+#: inc/customizer/header-options/contact-information.php:40
+msgid "Select Contact Information and enter text"
+msgstr ""
+
+#: inc/customizer/header-options/contact-information.php:44
+msgid "Add New Contact Information"
+msgstr ""
+
+#: inc/customizer/header-options/contact-information.php:53
+msgid "Enter Title"
+msgstr ""
+
+#: inc/customizer/header-options/contact-information.php:57
+msgid "Enter Sub Title"
+msgstr ""
+
+#: inc/customizer/header-options/contact-information.php:62
+msgid "Link Type"
+msgstr ""
+
+#: inc/customizer/header-options/contact-information.php:68
+msgid "Enter Link URL"
+msgstr ""
+
+#: inc/customizer/header-options/contact-information.php:113
+msgid "Contact Info Alignment"
+msgstr ""
+
+#: inc/customizer/header-options/contact-information.php:196
+msgid "Icon Setting"
+msgstr ""
+
+#: inc/customizer/header-options/contact-information.php:261
+msgid "Title Setting"
+msgstr ""
+
+#: inc/customizer/header-options/contact-information.php:301
+msgid "Title Typography Options"
+msgstr ""
+
+#: inc/customizer/header-options/contact-information.php:323
+msgid "Title Typography"
+msgstr ""
+
+#: inc/customizer/header-options/contact-information.php:344
+msgid "Sub Title Setting"
+msgstr ""
+
+#: inc/customizer/header-options/contact-information.php:364
+msgid "Sub Title Color"
+msgstr ""
+
+#: inc/customizer/header-options/contact-information.php:384
+msgid "Sub Title Typography Options"
+msgstr ""
+
+#: inc/customizer/header-options/contact-information.php:407
+msgid "Sub Title Typography"
+msgstr ""
+
+#: inc/customizer/header-options/contact-information.php:428
+msgid "Contact Information Item Styling"
+msgstr ""
+
+#: inc/customizer/header-options/drop-down-search.php:19
+#: inc/customizer/header-options/header-builder.php:330
+msgid "DropDown Search"
+msgstr ""
+
+#: inc/customizer/header-options/drop-down-search.php:36
+#: inc/customizer/header-options/normal-search.php:36
+msgid "Placeholder"
+msgstr ""
+
+#: inc/customizer/header-options/drop-down-search.php:55
+msgid "Search Layout"
+msgstr ""
+
+#: inc/customizer/header-options/drop-down-search.php:77
+msgid "Search Icon Alignment"
+msgstr ""
+
+#: inc/customizer/header-options/drop-down-search.php:100
+msgid "Search Form Alignment"
+msgstr ""
+
+#: inc/customizer/header-options/drop-down-search.php:119
+#: inc/customizer/header-options/normal-search.php:55
+msgid "Icon ( Margin and Padding )"
+msgstr ""
+
+#: inc/customizer/header-options/drop-down-search.php:183
+#: inc/customizer/header-options/normal-search.php:119
+msgid "Search Icon Styling"
+msgstr ""
+
+#: inc/customizer/header-options/drop-down-search.php:433
+msgid "Search From Styling"
+msgstr ""
+
+#: inc/customizer/header-options/drop-down-search.php:451
+#: inc/customizer/header-options/normal-search.php:387
+msgid "Form Input Height (px)"
+msgstr ""
+
+#: inc/customizer/header-options/drop-down-search.php:478
+#: inc/customizer/header-options/normal-search.php:414
+msgid "Form Styling"
+msgstr ""
+
+#: inc/customizer/header-options/header-bottom.php:19
+#: inc/customizer/header-options/header-builder.php:396
+msgid "Header Bottom"
+msgstr ""
+
+#: inc/customizer/header-options/header-bottom.php:37
+msgid "Header Bottom Height"
+msgstr ""
+
+#: inc/customizer/header-options/header-bottom.php:78
+msgid "Header Bottom Height (px)"
+msgstr ""
+
+#: inc/customizer/header-options/header-bottom.php:395
+msgid "Header Elements"
+msgstr ""
+
+#: inc/customizer/header-options/header-builder.php:296
+msgid "Site Identity and Logo"
+msgstr ""
+
+#: inc/customizer/header-options/header-builder.php:297
+msgid "Site Title, Tagline and Logo"
+msgstr ""
+
+#: inc/customizer/header-options/header-builder.php:305
+#: inc/customizer/header-options/primary-menu.php:20
+msgid "Primary Menu"
+msgstr ""
+
+#: inc/customizer/header-options/header-builder.php:313
+#: inc/customizer/header-options/secondary-menu.php:21
+msgid "Secondary Menu"
+msgstr ""
+
+#: inc/customizer/header-options/header-builder.php:339
+#: inc/customizer/header-options/normal-search.php:19
+msgid "Normal Search"
+msgstr ""
+
+#: inc/customizer/header-options/header-builder.php:347
+#: inc/customizer/header-options/menu-icon-sidebar-setting.php:21
+#: inc/customizer/header-options/menu-icon.php:19
+msgid "Menu Icon"
+msgstr ""
+
+#: inc/customizer/header-options/header-builder.php:383
+#: inc/customizer/header-options/header-builder.php:436
+#: inc/customizer/header-options/header-builder.php:458
+msgid "Header Builder"
+msgstr ""
+
+#: inc/customizer/header-options/header-builder.php:389
+#: inc/library/customizer-builder/class-customizer-builder.php:172
+msgid "Mobile/Tablet"
+msgstr ""
+
+#: inc/customizer/header-options/header-builder.php:390
+#: inc/customizer/header-options/menu-icon-sidebar-setting.php:33
+msgid "Menu Icon Sidebar"
+msgstr ""
+
+#: inc/customizer/header-options/header-builder.php:394
+#: inc/customizer/header-options/header-top.php:19
+msgid "Header Top"
+msgstr ""
+
+#: inc/customizer/header-options/header-builder.php:395
+#: inc/customizer/header-options/header-main.php:23
+msgid "Header Main"
+msgstr ""
+
+#: inc/customizer/header-options/header-builder.php:397
+msgid "Menu Sidebar"
+msgstr ""
+
+#: inc/customizer/header-options/header-builder.php:425
+msgid "Header Builder/Options"
+msgstr ""
+
+#: inc/customizer/header-options/header-defaults.php:273
+#: inc/customizer/header-options/header-defaults.php:351
+#: inc/customizer/theme-options/theme-option-controller.php:452
+#: template-parts/header/drop_down_search.php:28
+#: template-parts/header/normal_search.php:20
+msgid "Search"
+msgstr ""
+
+#: inc/customizer/header-options/header-defaults.php:802
+msgid "Menu Open"
+msgstr ""
+
+#: inc/customizer/header-options/header-defaults.php:803
+msgid "Menu Close"
+msgstr ""
+
+#: inc/customizer/header-options/header-defaults.php:1079
+msgid "Phone Number"
+msgstr ""
+
+#: inc/customizer/header-options/header-defaults.php:1088
+#: inc/customizer/options.php:1291
+#: inc/hooks/templates.php:294
+msgid "Email"
+msgstr ""
+
+#: inc/customizer/header-options/header-general.php:19
+msgid "Header General "
+msgstr ""
+
+#: inc/customizer/header-options/header-general.php:39
+msgid "Header Position"
+msgstr ""
+
+#: inc/customizer/header-options/header-general.php:60
+msgid "Header General Width"
+msgstr ""
+
+#: inc/customizer/header-options/header-general.php:86
+msgid "Vertical Header Position"
+msgstr ""
+
+#: inc/customizer/header-options/header-general.php:106
+msgid "Vertical Header Width (px)"
+msgstr ""
+
+#: inc/customizer/header-options/header-general.php:401
+msgid "Header Rows"
+msgstr ""
+
+#: inc/customizer/header-options/header-main.php:41
+msgid "Header Main Height"
+msgstr ""
+
+#: inc/customizer/header-options/header-main.php:82
+msgid "Header Main Height (px)"
+msgstr ""
+
+#: inc/customizer/header-options/header-main.php:107
+msgid "Enable Box Width"
+msgstr ""
+
+#: inc/customizer/header-options/header-main.php:108
+msgid "Note: Header General Width should not be box width. "
+msgstr ""
+
+#: inc/customizer/header-options/header-main.php:236
+#: inc/customizer/header-options/header-top.php:213
+msgid "Custom Background Options"
+msgstr ""
+
+#: inc/customizer/header-options/header-social.php:19
+msgid "Header Social Icons"
+msgstr ""
+
+#: inc/customizer/header-options/header-top.php:37
+msgid "Top Header Height"
+msgstr ""
+
+#: inc/customizer/header-options/header-top.php:78
+msgid "Header Top Height (px)"
+msgstr ""
+
+#: inc/customizer/header-options/html.php:36
+msgid "Enter Text/Simple HTML Code"
+msgstr ""
+
+#: inc/customizer/header-options/html.php:141
+msgid "Html Styling"
+msgstr ""
+
+#: inc/customizer/header-options/menu-icon-sidebar-setting.php:53
+msgid "Menu Sidebar Display Style"
+msgstr ""
+
+#: inc/customizer/header-options/menu-icon-sidebar-setting.php:73
+msgid "Width (px)"
+msgstr ""
+
+#: inc/customizer/header-options/menu-icon-sidebar-setting.php:161
+msgid "Menu Icon Sidebar Color Options"
+msgstr ""
+
+#: inc/customizer/header-options/menu-icon-sidebar-setting.php:188
+msgid "Menu Icon Sidebar Background Color"
+msgstr ""
+
+#: inc/customizer/header-options/menu-icon-sidebar-setting.php:222
+msgid "Sub Menu Item Color Options"
+msgstr ""
+
+#: inc/customizer/header-options/menu-icon-sidebar-setting.php:242
+#: inc/customizer/header-options/primary-menu.php:629
+#: inc/customizer/header-options/secondary-menu.php:631
+msgid "SubMenu Background Color"
+msgstr ""
+
+#: inc/customizer/header-options/menu-icon-sidebar-setting.php:264
+#: inc/customizer/header-options/primary-menu.php:565
+#: inc/customizer/header-options/primary-menu.php:651
+#: inc/customizer/header-options/secondary-menu.php:566
+#: inc/customizer/header-options/secondary-menu.php:653
+msgid "SubMenu Item Styling"
+msgstr ""
+
+#: inc/customizer/header-options/menu-icon-sidebar-setting.php:265
+#: inc/customizer/header-options/primary-menu.php:652
+#: inc/customizer/header-options/secondary-menu.php:654
+msgid "This styling for submenu items."
+msgstr ""
+
+#: inc/customizer/header-options/menu-icon.php:37
+msgid "Open Icon/Text Setting"
+msgstr ""
+
+#: inc/customizer/header-options/menu-icon.php:57
+msgid "Menu Indicator Option"
+msgstr ""
+
+#: inc/customizer/header-options/menu-icon.php:76
+msgid "Open Text"
+msgstr ""
+
+#: inc/customizer/header-options/menu-icon.php:98
+msgid "Open Icon"
+msgstr ""
+
+#: inc/customizer/header-options/menu-icon.php:122
+#: inc/customizer/header-options/menu-icon.php:579
+msgid "Icon Position Beside Text"
+msgstr ""
+
+#: inc/customizer/header-options/menu-icon.php:173
+#: inc/customizer/header-options/menu-icon.php:630
+msgid "Icon/Text Alignment"
+msgstr ""
+
+#: inc/customizer/header-options/menu-icon.php:241
+#: inc/customizer/header-options/menu-icon.php:699
+msgid "Icon/Text Styling"
+msgstr ""
+
+#: inc/customizer/header-options/menu-icon.php:257
+#: inc/customizer/header-options/menu-icon.php:715
+#: inc/customizer/theme-options/scroll-top.php:222
+msgid "Icon/Text Color"
+msgstr ""
+
+#: inc/customizer/header-options/menu-icon.php:344
+#: inc/customizer/header-options/menu-icon.php:802
+#: inc/customizer/theme-options/scroll-top.php:309
+msgid " Icon/Text Color"
+msgstr ""
+
+#: inc/customizer/header-options/menu-icon.php:470
+#: inc/customizer/header-options/menu-icon.php:928
+#: inc/customizer/theme-options/scroll-top.php:561
+msgid "Text Typography"
+msgstr ""
+
+#: inc/customizer/header-options/menu-icon.php:493
+msgid "Close Icon/Text Setting"
+msgstr ""
+
+#: inc/customizer/header-options/menu-icon.php:513
+msgid "Close Menu Icon Option"
+msgstr ""
+
+#: inc/customizer/header-options/menu-icon.php:532
+msgid "Close Text"
+msgstr ""
+
+#: inc/customizer/header-options/menu-icon.php:555
+msgid "Close Icon"
+msgstr ""
+
+#: inc/customizer/header-options/menu-icon.php:601
+msgid "Menu Icon Size (px)"
+msgstr ""
+
+#: inc/customizer/header-options/normal-search.php:369
+msgid "Search Form Styling"
+msgstr ""
+
+#: inc/customizer/header-options/primary-menu.php:40
+msgid "Select Primary Menu"
+msgstr ""
+
+#: inc/customizer/header-options/primary-menu.php:60
+#: inc/customizer/header-options/secondary-menu.php:60
+msgid "Disable Sub Menu Item"
+msgstr ""
+
+#: inc/customizer/header-options/primary-menu.php:143
+msgid "Primary Menu Item Layout"
+msgstr ""
+
+#: inc/customizer/header-options/primary-menu.php:480
+#: inc/customizer/header-options/primary-menu.php:880
+msgid "Custom Typography"
+msgstr ""
+
+#: inc/customizer/header-options/primary-menu.php:501
+#: inc/customizer/header-options/secondary-menu.php:502
+msgid "Sub Menu Item Layout"
+msgstr ""
+
+#: inc/customizer/header-options/primary-menu.php:587
+#: inc/customizer/header-options/secondary-menu.php:588
+msgid "SubMenu Display Option"
+msgstr ""
+
+#: inc/customizer/header-options/primary-menu.php:608
+#: inc/customizer/header-options/secondary-menu.php:609
+msgid "SubMenu Indicator Icon"
+msgstr ""
+
+#: inc/customizer/header-options/secondary-menu.php:40
+msgid "Select Secondary Menu"
+msgstr ""
+
+#: inc/customizer/header-options/secondary-menu.php:143
+msgid "Secondary Menu Item Layout"
+msgstr ""
+
+#: inc/customizer/header-options/secondary-menu.php:165
+msgid "Secondary Menu Alignment"
+msgstr ""
+
+#: inc/customizer/header-options/secondary-menu.php:230
+msgid "Secondary Menu Styling"
+msgstr ""
+
+#: inc/customizer/header-options/secondary-menu.php:251
+msgid "Secondary Menu Color Styling"
+msgstr ""
+
+#: inc/customizer/header-options/secondary-menu.php:882
+msgid "SubMenu Item Typography"
+msgstr ""
+
+#: inc/customizer/header-options/site-identity.php:33
+msgid "Site Logo "
+msgstr ""
+
+#: inc/customizer/header-options/site-identity.php:54
+msgid "Logo Max Width (px)"
+msgstr ""
+
+#: inc/customizer/header-options/site-identity.php:79
+msgid "Site Identity and Position"
+msgstr ""
+
+#: inc/customizer/header-options/site-identity.php:102
+msgid " Site Identity Sorting"
+msgstr ""
+
+#: inc/customizer/header-options/site-identity.php:124
+msgid "Logo Position"
+msgstr ""
+
+#: inc/customizer/header-options/site-identity.php:166
+msgid " Site Identity Alignment"
+msgstr ""
+
+#: inc/customizer/header-options/site-identity.php:251
+msgid "Site Title and Tagline Styling"
+msgstr ""
+
+#: inc/customizer/header-options/site-identity.php:287
+#: inc/customizer/header-options/site-identity.php:297
+msgid "Site Title Color"
+msgstr ""
+
+#: inc/customizer/header-options/site-identity.php:292
+#: inc/customizer/header-options/site-identity.php:302
+msgid "Site Tagline Color"
+msgstr ""
+
+#: inc/customizer/header-options/site-identity.php:366
+msgid "Site Title Typography"
+msgstr ""
+
+#: inc/customizer/header-options/site-identity.php:390
+msgid "Site Tagline Typography"
+msgstr ""
+
+#: inc/customizer/header-options/sticky-header.php:26
+#: inc/customizer/header-options/sticky-header.php:47
+msgid "Sticky Header Options"
+msgstr ""
+
+#: inc/customizer/header-options/sticky-header.php:69
+msgid "Sticky Header Animation Options"
+msgstr ""
+
+#: inc/customizer/header-options/sticky-header.php:89
+msgid "Sticky header Trigger Height (px)"
+msgstr ""
+
+#: inc/customizer/header-options/sticky-header.php:114
+msgid "Include Header Top on Sticky Header"
+msgstr ""
+
+#: inc/customizer/header-options/sticky-header.php:134
+msgid "Include Header Main on Sticky Header"
+msgstr ""
+
+#: inc/customizer/header-options/sticky-header.php:154
+msgid "Include Header Bottom on Sticky Header"
+msgstr ""
+
+#: inc/customizer/header-options/sticky-header.php:174
+msgid "Enable Sticky Header on Mobile"
+msgstr ""
+
+#: inc/customizer/header-options/sticky-header.php:194
+msgid "Enable Sticky Header Color Options"
+msgstr ""
+
+#: inc/customizer/header-options/sticky-header.php:216
+msgid "Sticky header background color"
+msgstr ""
+
+#: inc/customizer/header-options/sticky-header.php:236
+msgid "Sticky Top header Color Option"
+msgstr ""
+
+#: inc/customizer/header-options/sticky-header.php:326
+#: inc/customizer/header-options/sticky-header.php:479
+#: inc/customizer/header-options/sticky-header.php:632
+msgid "Header Menu Color Options"
+msgstr ""
+
+#: inc/customizer/header-options/sticky-header.php:327
+#: inc/customizer/header-options/sticky-header.php:480
+#: inc/customizer/header-options/sticky-header.php:633
+msgid "This styling for header menu color options."
+msgstr ""
+
+#: inc/customizer/header-options/sticky-header.php:389
+msgid "Sticky Main header Color Option"
+msgstr ""
+
+#: inc/customizer/header-options/sticky-header.php:542
+msgid "Sticky Bottom header Color Option"
+msgstr ""
+
+#: inc/customizer/main-content/banner-setting-options.php:33
+msgid "The banner option does not display if the banner option in the page/post is selected as hide or page template does not display banner.Go to page where Banner Section is not hidden"
+msgstr ""
+
+#: inc/customizer/main-content/banner-setting-options.php:54
+msgid "Single Banner Section Title "
+msgstr ""
+
+#: inc/customizer/main-content/banner-setting-options.php:75
+msgid "Single Custom Banner Title"
+msgstr ""
+
+#: inc/customizer/main-content/banner-setting-options.php:96
+msgid "Single Banner Title Tag"
+msgstr ""
+
+#: inc/customizer/main-content/banner-setting-options.php:121
+msgid "Banner Text Alignment"
+msgstr ""
+
+#: inc/customizer/main-content/banner-setting-options.php:145
+msgid "Banner Content Position"
+msgstr ""
+
+#: inc/customizer/main-content/banner-setting-options.php:168
+msgid "Banner Display Options"
+msgstr ""
+
+#: inc/customizer/main-content/banner-setting-options.php:190
+msgid "Banner Section Color"
+msgstr ""
+
+#: inc/customizer/main-content/banner-setting-options.php:212
+msgid "Banner Section Background Color"
+msgstr ""
+
+#: inc/customizer/main-content/banner-setting-options.php:232
+msgid "Enable Overlay Color"
+msgstr ""
+
+#: inc/customizer/main-content/banner-setting-options.php:254
+msgid "Banner Overlay Color"
+msgstr ""
+
+#: inc/customizer/main-content/banner-setting-options.php:276
+msgid "Banner Height (px)"
+msgstr ""
+
+#: inc/customizer/main-content/banner-setting-options.php:307
+msgid "Background Image Options"
+msgstr ""
+
+#: inc/customizer/main-content/banner-setting-options.php:318
+msgid "Tablet"
+msgstr ""
+
+#: inc/customizer/main-content/main-content-controller.php:192
+msgid "Main Content "
+msgstr ""
+
+#: inc/customizer/main-content/main-content-controller.php:220
+msgid "General Styling"
+msgstr ""
+
+#. translators: %s is the search query.
+#. Translators: %s is the search query entered by the user.
+#: inc/customizer/main-content/main-content-controller.php:563
+#: inc/functions/post-layout.php:31
+#, php-format
+msgid "Search Results for: %s"
+msgstr ""
+
+#: inc/customizer/options.php:25
+msgid "WP Head"
+msgstr ""
+
+#: inc/customizer/options.php:26
+msgid "File"
+msgstr ""
+
+#: inc/customizer/options.php:43
+#: inc/customizer/options.php:61
+#: inc/customizer/options.php:1203
+msgid "Auto"
+msgstr ""
+
+#: inc/customizer/options.php:44
+#: inc/customizer/options.php:62
+#: inc/customizer/options.php:169
+#: inc/customizer/options.php:187
+#: inc/customizer/options.php:205
+#: inc/customizer/options.php:440
+msgid "Custom"
+msgstr ""
+
+#: inc/customizer/options.php:79
+msgid "Full Width Body"
+msgstr ""
+
+#: inc/customizer/options.php:80
+msgid "Boxed Width Body"
+msgstr ""
+
+#: inc/customizer/options.php:81
+msgid "Fluid Width Body"
+msgstr ""
+
+#: inc/customizer/options.php:100
+msgid "Full Width Header"
+msgstr ""
+
+#: inc/customizer/options.php:101
+msgid "Boxed Width Header"
+msgstr ""
+
+#: inc/customizer/options.php:102
+msgid "Fluid Width Header"
+msgstr ""
+
+#: inc/customizer/options.php:105
+#: inc/customizer/options.php:130
+#: inc/customizer/options.php:168
+#: inc/customizer/options.php:408
+#: inc/customizer/options.php:512
+msgid "Inherit"
+msgstr ""
+
+#: inc/customizer/options.php:125
+msgid "Full Width Footer"
+msgstr ""
+
+#: inc/customizer/options.php:126
+msgid "Boxed Width Footer"
+msgstr ""
+
+#: inc/customizer/options.php:127
+msgid "Fluid Width Footer"
+msgstr ""
+
+#: inc/customizer/options.php:149
+msgid "Normal Footer"
+msgstr ""
+
+#: inc/customizer/options.php:150
+msgid "Parallax Footer"
+msgstr ""
+
+#: inc/customizer/options.php:186
+#: inc/customizer/options.php:204
+#: inc/customizer/options.php:360
+#: inc/customizer/options.php:403
+#: inc/customizer/options.php:411
+#: inc/customizer/options.php:507
+#: inc/customizer/options.php:515
+#: inc/customizer/options.php:903
+msgid "None"
+msgstr ""
+
+#: inc/customizer/options.php:224
+msgid "Separate Boxed"
+msgstr ""
+
+#: inc/customizer/options.php:225
+msgid "Content Boxed"
+msgstr ""
+
+#: inc/customizer/options.php:226
+msgid "Content Separate Boxed"
+msgstr ""
+
+#: inc/customizer/options.php:227
+msgid "Sidebar Boxed"
+msgstr ""
+
+#: inc/customizer/options.php:228
+msgid "Sidebar Separate Boxed"
+msgstr ""
+
+#: inc/customizer/options.php:246
+msgid "Overlay Fixed Header"
+msgstr ""
+
+#: inc/customizer/options.php:247
+msgid "Overlay Transparent Header"
+msgstr ""
+
+#: inc/customizer/options.php:248
+msgid "Vertical Header"
+msgstr ""
+
+#: inc/customizer/options.php:266
+msgid "Shortcode"
+msgstr ""
+
+#: inc/customizer/options.php:283
+msgid "Text"
+msgstr ""
+
+#: inc/customizer/options.php:285
+msgid "Icon and Text"
+msgstr ""
+
+#: inc/customizer/options.php:303
+msgid "Template 1"
+msgstr ""
+
+#: inc/customizer/options.php:304
+msgid "Template 2"
+msgstr ""
+
+#: inc/customizer/options.php:321
+msgid "Slide Left"
+msgstr ""
+
+#: inc/customizer/options.php:322
+msgid "Slide Right"
+msgstr ""
+
+#: inc/customizer/options.php:323
+msgid "Push Left"
+msgstr ""
+
+#: inc/customizer/options.php:324
+msgid "Push Right"
+msgstr ""
+
+#: inc/customizer/options.php:341
+#: inc/customizer/options.php:384
+#: inc/customizer/options.php:579
+#: inc/customizer/options.php:597
+#: inc/customizer/options.php:616
+#: inc/customizer/options.php:653
+#: inc/customizer/options.php:673
+#: inc/customizer/options.php:770
+#: inc/customizer/options.php:848
+msgid "Left"
+msgstr ""
+
+#: inc/customizer/options.php:342
+#: inc/customizer/options.php:598
+#: inc/customizer/options.php:617
+#: inc/customizer/options.php:654
+#: inc/customizer/options.php:674
+#: inc/customizer/options.php:693
+#: inc/customizer/options.php:1223
+msgid "Center"
+msgstr ""
+
+#: inc/customizer/options.php:343
+#: inc/customizer/options.php:385
+#: inc/customizer/options.php:580
+#: inc/customizer/options.php:599
+#: inc/customizer/options.php:618
+#: inc/customizer/options.php:655
+#: inc/customizer/options.php:675
+#: inc/customizer/options.php:771
+#: inc/customizer/options.php:846
+msgid "Right"
+msgstr ""
+
+#: inc/customizer/options.php:361
+msgid "Solid"
+msgstr ""
+
+#: inc/customizer/options.php:362
+msgid "Dotted"
+msgstr ""
+
+#: inc/customizer/options.php:363
+msgid "Dashed"
+msgstr ""
+
+#: inc/customizer/options.php:364
+msgid "Double"
+msgstr ""
+
+#: inc/customizer/options.php:365
+msgid "Ridge"
+msgstr ""
+
+#: inc/customizer/options.php:366
+msgid "Inset"
+msgstr ""
+
+#: inc/customizer/options.php:367
+msgid "outset"
+msgstr ""
+
+#: inc/customizer/options.php:404
+#: inc/customizer/options.php:508
+msgid "Capitalize"
+msgstr ""
+
+#: inc/customizer/options.php:405
+#: inc/customizer/options.php:509
+msgid "Uppercase"
+msgstr ""
+
+#: inc/customizer/options.php:406
+#: inc/customizer/options.php:510
+msgid "Lowercase"
+msgstr ""
+
+#: inc/customizer/options.php:407
+#: inc/customizer/options.php:511
+msgid "Initial"
+msgstr ""
+
+#: inc/customizer/options.php:412
+#: inc/customizer/options.php:516
+msgid "Overline"
+msgstr ""
+
+#: inc/customizer/options.php:413
+#: inc/customizer/options.php:517
+msgid "Line-through"
+msgstr ""
+
+#: inc/customizer/options.php:414
+#: inc/customizer/options.php:518
+msgid "Underline"
+msgstr ""
+
+#: inc/customizer/options.php:418
+#: inc/customizer/options.php:522
+msgid "Italic"
+msgstr ""
+
+#: inc/customizer/options.php:419
+#: inc/customizer/options.php:523
+msgid "Bold"
+msgstr ""
+
+#: inc/customizer/options.php:420
+#: inc/customizer/options.php:524
+msgid "Oblique"
+msgstr ""
+
+#: inc/customizer/options.php:423
+msgid "100"
+msgstr ""
+
+#: inc/customizer/options.php:424
+msgid "200"
+msgstr ""
+
+#: inc/customizer/options.php:425
+msgid "300"
+msgstr ""
+
+#: inc/customizer/options.php:426
+msgid "400"
+msgstr ""
+
+#: inc/customizer/options.php:427
+msgid "500"
+msgstr ""
+
+#: inc/customizer/options.php:428
+msgid "600"
+msgstr ""
+
+#: inc/customizer/options.php:429
+msgid "700"
+msgstr ""
+
+#: inc/customizer/options.php:430
+msgid "800"
+msgstr ""
+
+#: inc/customizer/options.php:431
+msgid "900"
+msgstr ""
+
+#: inc/customizer/options.php:436
+msgid "Font Type"
+msgstr ""
+
+#: inc/customizer/options.php:438
+msgid "System"
+msgstr ""
+
+#: inc/customizer/options.php:439
+msgid "Google"
+msgstr ""
+
+#: inc/customizer/options.php:445
+msgid "System Fonts"
+msgstr ""
+
+#: inc/customizer/options.php:450
+msgid "Google Fonts"
+msgstr ""
+
+#: inc/customizer/options.php:455
+msgid "Custom Fonts"
+msgstr ""
+
+#: inc/customizer/options.php:460
+msgid "Font Weight"
+msgstr ""
+
+#: inc/customizer/options.php:465
+#: inc/customizer/options.php:529
+msgid "Font Style"
+msgstr ""
+
+#: inc/customizer/options.php:470
+#: inc/customizer/options.php:534
+msgid "Text Decoration"
+msgstr ""
+
+#: inc/customizer/options.php:475
+#: inc/customizer/options.php:539
+msgid "Text Transform"
+msgstr ""
+
+#: inc/customizer/options.php:480
+msgid "Font Size (px)"
+msgstr ""
+
+#: inc/customizer/options.php:484
+msgid "Line height (px)"
+msgstr ""
+
+#: inc/customizer/options.php:488
+msgid "Letter Spacing (px)"
+msgstr ""
+
+#: inc/customizer/options.php:558
+#: inc/customizer/options.php:752
+msgid "Hide"
+msgstr ""
+
+#: inc/customizer/options.php:561
+msgid "Normal Image"
+msgstr ""
+
+#: inc/customizer/options.php:562
+msgid "Video"
+msgstr ""
+
+#: inc/customizer/options.php:635
+msgid "Click"
+msgstr ""
+
+#: inc/customizer/options.php:692
+#: inc/customizer/options.php:808
+#: inc/customizer/options.php:845
+#: inc/customizer/theme-options/theme-option-controller.php:402
+msgid "Top"
+msgstr ""
+
+#: inc/customizer/options.php:694
+#: inc/customizer/options.php:809
+#: inc/customizer/options.php:847
+msgid "Bottom"
+msgstr ""
+
+#: inc/customizer/options.php:711
+#: inc/customizer/options.php:883
+#: inc/customizer/options.php:1022
+#: inc/customizer/options.php:1071
+#: inc/customizer/options.php:1100
+#: inc/customizer/options.php:1119
+#: inc/customizer/options.php:1292
+msgid "Disable"
+msgstr ""
+
+#: inc/customizer/options.php:713
+msgid "Custom Title"
+msgstr ""
+
+#: inc/customizer/options.php:730
+msgid "H1"
+msgstr ""
+
+#: inc/customizer/options.php:731
+msgid "H2"
+msgstr ""
+
+#: inc/customizer/options.php:732
+msgid "H3"
+msgstr ""
+
+#: inc/customizer/options.php:733
+msgid "H4"
+msgstr ""
+
+#: inc/customizer/options.php:734
+msgid "H5"
+msgstr ""
+
+#: inc/customizer/options.php:735
+msgid "H6"
+msgstr ""
+
+#: inc/customizer/options.php:788
+#: inc/customizer/options.php:806
+msgid "Before"
+msgstr ""
+
+#: inc/customizer/options.php:789
+#: inc/customizer/options.php:807
+msgid "After"
+msgstr ""
+
+#: inc/customizer/options.php:826
+msgid "Overlap"
+msgstr ""
+
+#: inc/customizer/options.php:827
+msgid "Push"
+msgstr ""
+
+#: inc/customizer/options.php:865
+msgid "Site Title"
+msgstr ""
+
+#: inc/customizer/options.php:866
+msgid "Site Tagline"
+msgstr ""
+
+#: inc/customizer/options.php:885
+#: inc/customizer/options.php:906
+msgid "Scroll Down"
+msgstr ""
+
+#: inc/customizer/options.php:886
+msgid "Scroll Up"
+msgstr ""
+
+#: inc/customizer/options.php:904
+msgid "Shrink"
+msgstr ""
+
+#: inc/customizer/options.php:905
+msgid "Fade"
+msgstr ""
+
+#: inc/customizer/options.php:924
+msgid "Full Image"
+msgstr ""
+
+#: inc/customizer/options.php:925
+msgid "Hide Image"
+msgstr ""
+
+#: inc/customizer/options.php:942
+msgid "Full Width Content - No Sidebar"
+msgstr ""
+
+#: inc/customizer/options.php:943
+msgid "Middle Column Content - No Sidebar"
+msgstr ""
+
+#: inc/customizer/options.php:944
+msgid "Left Primary Sidebar - Right Content"
+msgstr ""
+
+#: inc/customizer/options.php:945
+msgid "Left Content - Right Primary Sidebar"
+msgstr ""
+
+#: inc/customizer/options.php:946
+msgid "Left Secondary Sidebar - Middle Content - Right Primary Sidebar"
+msgstr ""
+
+#: inc/customizer/options.php:947
+msgid "Left Secondary Sidebar - Middle Primary Sidebar - Right Content"
+msgstr ""
+
+#: inc/customizer/options.php:948
+msgid "Left Content - Middle Primary Sidebar - Right Secondary Sidebar"
+msgstr ""
+
+#: inc/customizer/options.php:952
+msgid "Default From Customizer"
+msgstr ""
+
+#: inc/customizer/options.php:974
+msgid "Featured Section"
+msgstr ""
+
+#: inc/customizer/options.php:977
+msgid "Primary Meta"
+msgstr ""
+
+#: inc/customizer/options.php:979
+msgid "Secondary Meta"
+msgstr ""
+
+#: inc/customizer/options.php:996
+msgid "Published Date"
+msgstr ""
+
+#: inc/customizer/options.php:997
+msgid "Updated Date"
+msgstr ""
+
+#: inc/customizer/options.php:1001
+msgid "Comments"
+msgstr ""
+
+#: inc/customizer/options.php:1023
+msgid "Default ( Title )"
+msgstr ""
+
+#: inc/customizer/options.php:1024
+msgid "Title and image"
+msgstr ""
+
+#: inc/customizer/options.php:1044
+msgid "No Image"
+msgstr ""
+
+#: inc/customizer/options.php:1049
+msgid "full (original)"
+msgstr ""
+
+#: inc/customizer/options.php:1074
+msgid "Yoast"
+msgstr ""
+
+#: inc/customizer/options.php:1077
+msgid "Rank Math"
+msgstr ""
+
+#: inc/customizer/options.php:1080
+msgid "Breadcrumb NavXT"
+msgstr ""
+
+#: inc/customizer/options.php:1083
+msgid "WooCommerce"
+msgstr ""
+
+#: inc/customizer/options.php:1102
+msgid "Numeric"
+msgstr ""
+
+#: inc/customizer/options.php:1164
+msgid "Horizontal"
+msgstr ""
+
+#: inc/customizer/options.php:1204
+msgid "Cover"
+msgstr ""
+
+#: inc/customizer/options.php:1205
+msgid "Contain"
+msgstr ""
+
+#: inc/customizer/options.php:1224
+msgid "Left Center"
+msgstr ""
+
+#: inc/customizer/options.php:1225
+msgid "Right Center"
+msgstr ""
+
+#: inc/customizer/options.php:1226
+msgid "Top Left"
+msgstr ""
+
+#: inc/customizer/options.php:1227
+msgid "Top Right"
+msgstr ""
+
+#: inc/customizer/options.php:1228
+msgid "Top Center"
+msgstr ""
+
+#: inc/customizer/options.php:1229
+msgid "Bottom Left"
+msgstr ""
+
+#: inc/customizer/options.php:1230
+msgid "Bottom Right"
+msgstr ""
+
+#: inc/customizer/options.php:1231
+msgid "Bottom Center"
+msgstr ""
+
+#: inc/customizer/options.php:1249
+msgid "No Repeat"
+msgstr ""
+
+#: inc/customizer/options.php:1250
+msgid "Repeat"
+msgstr ""
+
+#: inc/customizer/options.php:1251
+msgid "Repeat X"
+msgstr ""
+
+#: inc/customizer/options.php:1252
+msgid "Repeat Y"
+msgstr ""
+
+#: inc/customizer/options.php:1270
+msgid "Scroll"
+msgstr ""
+
+#: inc/customizer/options.php:1271
+msgid "Fixed"
+msgstr ""
+
+#: inc/customizer/options.php:1289
+msgid "Normal Link"
+msgstr ""
+
+#: inc/customizer/options.php:1290
+msgid "Tel"
+msgstr ""
+
+#: inc/customizer/page-options/builder-page.php:155
+msgid " Page Options"
+msgstr ""
+
+#: inc/customizer/page-options/main-content.php:45
+msgid "Page Elements Sorting"
+msgstr ""
+
+#: inc/customizer/page-options/main-content.php:199
+msgid "Note: Excerpt Options only works when excerpts is enable in \"PAGE ELEMENTS SORTING\"."
+msgstr ""
+
+#: inc/customizer/page-options/main-content.php:243
+#: inc/customizer/post-options/main-content.php:280
+msgid "Feature Section Layout"
+msgstr ""
+
+#: inc/customizer/post-options/main-content.php:43
+msgid "Post Elements Sorting"
+msgstr ""
+
+#: inc/customizer/post-options/main-content.php:234
+msgid "Note: Excerpt Options only works when excerpts is enable in \"POST ELEMENTS SORTING\"."
+msgstr ""
+
+#: inc/customizer/post-options/main-content.php:390
+msgid "Next/Prev Color"
+msgstr ""
+
+#: inc/customizer/post-options/main-content.php:394
+msgid "Next/Prev Hover Color"
+msgstr ""
+
+#: inc/customizer/post-options/primary-sidebar.php:21
+msgid "Post Elements"
+msgstr ""
+
+#: inc/customizer/post-options/primary-sidebar.php:32
+#: inc/sidebar-widget/sidebar.php:25
+msgid "Primary Sidebar"
+msgstr ""
+
+#. translators: %1$s and %2$s are the opening and closing anchor tags for the customizer link.
+#: inc/customizer/post-options/primary-sidebar.php:48
+#, php-format
+msgid "Add Primary Sidebar Widgets from %1$s here%2$s"
+msgstr ""
+
+#: inc/customizer/post-options/secondary-sidebar.php:19
+#: inc/sidebar-widget/sidebar.php:37
+msgid "Secondary Sidebar"
+msgstr ""
+
+#. translators: %1$s and %2$s are the opening and closing anchor tags for the customizer link.
+#: inc/customizer/post-options/secondary-sidebar.php:35
+#, php-format
+msgid "Add Secondary Sidebar Widgets from %1$s here%2$s"
+msgstr ""
+
+#: inc/customizer/theme-options/breadcrumb-options.php:18
+#: inc/customizer/theme-options/breadcrumb-options.php:37
+msgid "Breadcrumb Options"
+msgstr ""
+
+#: inc/customizer/theme-options/breadcrumb-options.php:57
+msgid "Breadcrumb Display Location"
+msgstr ""
+
+#: inc/customizer/theme-options/breadcrumb-options.php:58
+msgid "Where to display breadcrumb ?"
+msgstr ""
+
+#: inc/customizer/theme-options/breadcrumb-options.php:76
+msgid "Before Banner Title"
+msgstr ""
+
+#: inc/customizer/theme-options/breadcrumb-options.php:95
+msgid "After Banner Title"
+msgstr ""
+
+#: inc/customizer/theme-options/breadcrumb-options.php:114
+msgid "Before Content"
+msgstr ""
+
+#: inc/customizer/theme-options/breadcrumb-options.php:134
+msgid "Banner Breadcrumb Color Option"
+msgstr ""
+
+#: inc/customizer/theme-options/button-options.php:19
+msgid "Button Design"
+msgstr ""
+
+#: inc/customizer/theme-options/button-options.php:99
+msgid "Site Button Styling"
+msgstr ""
+
+#: inc/customizer/theme-options/comment-setting.php:19
+msgid "Comment Setting"
+msgstr ""
+
+#. translators: %1$s and %2$s are the opening and closing anchor tags linking to the Discussion Settings page.
+#: inc/customizer/theme-options/comment-setting.php:38
+#, php-format
+msgid "%1$s More setting%2$s also while editing post/page"
+msgstr ""
+
+#: inc/customizer/theme-options/comment-setting.php:58
+msgid "Hide Comment"
+msgstr ""
+
+#: inc/customizer/theme-options/comment-setting.php:76
+msgid "Comment Title"
+msgstr ""
+
+#: inc/customizer/theme-options/comment-setting.php:94
+msgid "Comment Button Text"
+msgstr ""
+
+#: inc/customizer/theme-options/comment-setting.php:112
+msgid "Comment Note After"
+msgstr ""
+
+#: inc/customizer/theme-options/scroll-top.php:19
+msgid "Scroll Top"
+msgstr ""
+
+#: inc/customizer/theme-options/scroll-top.php:37
+msgid "Scroll Top Button Setting"
+msgstr ""
+
+#: inc/customizer/theme-options/scroll-top.php:53
+msgid "Enable Scroll Top"
+msgstr ""
+
+#: inc/customizer/theme-options/scroll-top.php:70
+msgid "Remove Scroll Top in mobile."
+msgstr ""
+
+#: inc/customizer/theme-options/scroll-top.php:91
+msgid "Bottom Position"
+msgstr ""
+
+#: inc/customizer/theme-options/scroll-top.php:111
+msgid "Height (px)"
+msgstr ""
+
+#: inc/customizer/theme-options/scroll-top.php:136
+msgid "width (px)"
+msgstr ""
+
+#: inc/customizer/theme-options/scroll-top.php:412
+msgid "Scroll Top Icon/Text"
+msgstr ""
+
+#: inc/customizer/theme-options/scroll-top.php:431
+msgid "Scroll Top Indicator Option"
+msgstr ""
+
+#: inc/customizer/theme-options/scroll-top.php:449
+msgid "Scroll Top Open Text"
+msgstr ""
+
+#: inc/customizer/theme-options/scroll-top.php:470
+msgid "Scroll Top Icon"
+msgstr ""
+
+#: inc/customizer/theme-options/scroll-top.php:514
+msgid "Scroll Top Icon Size (px)"
+msgstr ""
+
+#: inc/customizer/theme-options/search-options.php:19
+msgid "Search Options"
+msgstr ""
+
+#: inc/customizer/theme-options/search-options.php:37
+msgid "Search Option"
+msgstr ""
+
+#: inc/customizer/theme-options/search-options.php:54
+msgid "Search Placeholder"
+msgstr ""
+
+#: inc/customizer/theme-options/search-options.php:74
+msgid "Search Input Template"
+msgstr ""
+
+#: inc/customizer/theme-options/sidebar-setting.php:19
+#: inc/customizer/theme-options/sidebar-setting.php:37
+msgid "Sidebar Setting"
+msgstr ""
+
+#: inc/customizer/theme-options/sidebar-setting.php:56
+msgid "Widget Link Color"
+msgstr ""
+
+#: inc/customizer/theme-options/sidebar-setting.php:230
+#: inc/customizer/theme-options/sidebar-setting.php:431
+msgid "Border Options"
+msgstr ""
+
+#: inc/customizer/theme-options/sidebar-setting.php:325
+msgid "Widget Styling"
+msgstr ""
+
+#: inc/customizer/theme-options/sidebar-setting.php:346
+msgid "Text Alignment"
+msgstr ""
+
+#: inc/customizer/theme-options/theme-option-controller.php:457
+#: inc/hooks/templates.php:282
+msgid "Leave a Reply"
+msgstr ""
+
+#: inc/customizer/theme-options/theme-option-controller.php:458
+#: inc/hooks/templates.php:284
+msgid "Post Comment"
+msgstr ""
+
+#: inc/default-hooks.php:40
+msgid "Default Header Image"
+msgstr ""
+
+#: inc/default-hooks.php:128
+#: inc/starter-content/index.php:496
+msgid "Header Primary Menu"
+msgstr ""
+
+#: inc/default-hooks.php:129
+msgid "Header Secondary Menu"
+msgstr ""
+
+#: inc/default-hooks.php:130
+#: inc/starter-content/index.php:500
+msgid "Footer Menu ( Support First Level Only )"
+msgstr ""
+
+#: inc/default-hooks.php:216
+msgid "Xtra Small"
+msgstr ""
+
+#: inc/default-hooks.php:217
+msgid "XS"
+msgstr ""
+
+#: inc/default-hooks.php:222
+msgid "Small"
+msgstr ""
+
+#: inc/default-hooks.php:223
+msgid "S"
+msgstr ""
+
+#: inc/default-hooks.php:229
+msgid "N"
+msgstr ""
+
+#: inc/default-hooks.php:234
+msgid "Medium"
+msgstr ""
+
+#: inc/default-hooks.php:235
+msgid "M"
+msgstr ""
+
+#: inc/default-hooks.php:240
+msgid "Large"
+msgstr ""
+
+#: inc/default-hooks.php:241
+msgid "L"
+msgstr ""
+
+#: inc/default-hooks.php:246
+msgid "Xtra Large"
+msgstr ""
+
+#: inc/default-hooks.php:247
+msgid "XL"
+msgstr ""
+
+#: inc/functions/custom-functions.php:815
+msgid "Search Results for:"
+msgstr ""
+
+#: inc/functions/custom-functions.php:855
+msgid "No Category"
+msgstr ""
+
+#. translators: used between list items, there is a space after the comma
+#: inc/functions/template-functions.php:1088
+#: inc/functions/template-functions.php:1094
+msgid ", "
+msgstr ""
+
+#: inc/functions/template-functions.php:1101
+msgid "Leave a comment"
+msgstr ""
+
+#: inc/functions/template-functions.php:1101
+msgid "1 Comment"
+msgstr ""
+
+#: inc/functions/template-functions.php:1101
+msgid "% Comments"
+msgstr ""
+
+#. translators: %s: Name of current post
+#: inc/functions/template-functions.php:1112
+#, php-format
+msgid "Edit %s"
+msgstr ""
+
+#: inc/hooks/templates.php:30
+#: inc/hooks/templates.php:31
+msgctxt "label"
+msgid "Search for:"
+msgstr ""
+
+#: inc/hooks/templates.php:31
+msgid "Search&hellip;"
+msgstr ""
+
+#: inc/hooks/templates.php:136
+msgid "Recommended Image Sizes"
+msgstr ""
+
+#: inc/hooks/templates.php:137
+msgid "Slider Image"
+msgstr ""
+
+#: inc/hooks/templates.php:259
+msgid "Previous Post"
+msgstr ""
+
+#: inc/hooks/templates.php:260
+msgid "Next Post"
+msgstr ""
+
+#: inc/hooks/templates.php:293
+msgid "Name"
+msgstr ""
+
+#: inc/hooks/templates.php:295
+msgid "Website URL"
+msgstr ""
+
+#: inc/hooks/templates.php:296
+msgid "Comment"
+msgstr ""
+
+#: inc/library/customizer-builder/class-customizer-builder.php:195
+msgid "Close"
+msgstr ""
+
+#: inc/library/customizer-builder/class-customizer-builder.php:267
+msgid "Menu Icon Sidebar will display when Menu Icon is clicked on frontend"
+msgstr ""
+
+#: inc/library/customizer-builder/class-customizer-builder.php:273
+msgid " Add a Item"
+msgstr ""
+
+#: inc/metabox/meta-box.php:174
+#: inc/metabox/meta-box.php:182
+msgid "Layout"
+msgstr ""
+
+#: inc/metabox/meta-box.php:200
+#: inc/metabox/meta-box.php:222
+#: inc/metabox/meta-box.php:234
+msgid "Default layout"
+msgstr ""
+
+#: inc/metabox/meta-box.php:246
+msgid "General Site Layout"
+msgstr ""
+
+#: inc/metabox/meta-box.php:255
+msgid "Header Layout"
+msgstr ""
+
+#: inc/metabox/meta-box.php:264
+msgid "Footer Layout"
+msgstr ""
+
+#: inc/metabox/meta-box.php:276
+msgid "Sidebar"
+msgstr ""
+
+#. translators: %d: The sidebar number.
+#: inc/sidebar-widget/sidebar.php:51
+#, php-format
+msgid "Footer Sidebar %d "
+msgstr ""
+
+#: inc/sidebar-widget/sidebar.php:55
+msgid "Display widgets footer section of the site."
+msgstr ""
+
+#: inc/starter-content/content.php:29
+msgid "Home"
+msgstr ""
+
+#: inc/starter-content/index.php:71
+#: patterns/landing.php:194
+msgid "About us"
+msgstr ""
+
+#: inc/starter-content/index.php:76
+msgid "Services"
+msgstr ""
+
+#: inc/starter-content/index.php:81
+msgid "Team"
+msgstr ""
+
+#: inc/starter-content/index.php:91
+msgid "Contact"
+msgstr ""
+
+#: inc/starter-content/index.php:101
+msgctxt "Theme starter content"
+msgid "Logo"
+msgstr ""
+
+#: inc/starter-content/index.php:107
+msgctxt "Theme starter title"
+msgid "CosmosWP"
+msgstr ""
+
+#. Template Name of the theme
+msgid "CosmosWP Full Width"
+msgstr ""
+
+#: patterns/landing.php
+msgctxt "Pattern title"
+msgid "Landing"
+msgstr ""
+
+#: patterns/landing.php
+msgctxt "Pattern description"
+msgid "A layout template for displaying the main landing front page."
+msgstr ""
+
+#: patterns/landing.php:32
+msgid "Design Your Idea"
+msgstr ""
+
+#: patterns/landing.php:83
+msgid "Business Consultancy"
+msgstr ""
+
+#: patterns/landing.php:89
+#: patterns/landing.php:117
+#: patterns/landing.php:144
+msgid "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut"
+msgstr ""
+
+#: patterns/landing.php:112
+#: patterns/landing.php:140
+msgid "Help To Grow Business"
+msgstr ""
+
+#: patterns/landing.php:173
+#: patterns/landing.php:210
+#: patterns/landing.php:347
+#: patterns/landing.php:557
+msgid "Powerful, not overpowering"
+msgstr ""
+
+#: patterns/landing.php:177
+msgid "Marketing that gets great results"
+msgstr ""
+
+#: patterns/landing.php:183
+#: patterns/landing.php:220
+#: patterns/landing.php:563
+#: patterns/landing.php:652
+msgid "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas voluptatem maiores eaque similique non distinctio voluptates perspiciatis omnis, repellendus ipsa aperiam, laudantium voluptatum nulla?."
+msgstr ""
+
+#: patterns/landing.php:214
+msgid "Connecting your business with the world"
+msgstr ""
+
+#: patterns/landing.php:257
+msgid "All Services"
+msgstr ""
+
+#: patterns/landing.php:274
+msgid "20+"
+msgstr ""
+
+#: patterns/landing.php:278
+msgid "Winning Award"
+msgstr ""
+
+#: patterns/landing.php:290
+msgid "100K+"
+msgstr ""
+
+#: patterns/landing.php:294
+msgid "Happy Customers"
+msgstr ""
+
+#: patterns/landing.php:306
+msgid "20M+"
+msgstr ""
+
+#: patterns/landing.php:310
+msgid "Working Hours"
+msgstr ""
+
+#: patterns/landing.php:322
+msgid "100+"
+msgstr ""
+
+#: patterns/landing.php:326
+msgid "Completed Projects"
+msgstr ""
+
+#: patterns/landing.php:350
+msgid "Increase your productivity with digital tools created for you"
+msgstr ""
+
+#: patterns/landing.php:368
+#: patterns/landing.php:377
+msgid "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas voluptatem maiores eaque similique non distinctio voluptates perspiciatis omnis, repellendus ipsa aperiam, laudantium voluptatum nulla?"
+msgstr ""
+
+#: patterns/landing.php:381
+msgid "John Doe"
+msgstr ""
+
+#: patterns/landing.php:385
+msgid "CEO &amp; Founder"
+msgstr ""
+
+#: patterns/landing.php:408
+msgid "David Parker"
+msgstr ""
+
+#: patterns/landing.php:412
+msgid "Chief Executive Officer"
+msgstr ""
+
+#: patterns/landing.php:444
+msgid "Jane Moon"
+msgstr ""
+
+#: patterns/landing.php:450
+msgid "Vice President"
+msgstr ""
+
+#: patterns/landing.php:483
+#: patterns/landing.php:522
+msgid "Paul Franky"
+msgstr ""
+
+#: patterns/landing.php:489
+#: patterns/landing.php:528
+msgid "Chief Financial Officer"
+msgstr ""
+
+#: patterns/landing.php:560
+msgid "Clients really love us"
+msgstr ""
+
+#: patterns/landing.php:617
+msgid "Setting up your website only takes a few minutes"
+msgstr ""
+
+#: patterns/landing.php:620
+msgid "Lorem ipsum dolor sit amet, consectetur adipisicing elit.Quas voluptatem maiores eaque similique non distinctio voluptates perspiciatis omnis"
+msgstr ""
+
+#: patterns/landing.php:627
+msgid "Add Contact form shortcode"
+msgstr ""
+
+#: patterns/landing.php:641
+msgid "Latest News"
+msgstr ""
+
+#: patterns/landing.php:645
+msgid "Find out the latest marketing news"
+msgstr ""
+
+#: template-parts/content-author.php:22
+msgid "Written by"
+msgstr ""
+
+#: template-parts/content-none.php:17
+msgid "Nothing Found"
+msgstr ""
+
+#. translators: %1$s is the URL to create a new post.
+#: template-parts/content-none.php:29
+#, php-format
+msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+
+#: template-parts/content-none.php:37
+msgid "Sorry, but nothing matched your search terms. Please try again with some different keywords."
+msgstr ""
+
+#: template-parts/content-none.php:42
+msgid "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help."
+msgstr ""
+
+#: template-parts/main-content/blog-main-content.php:49
+msgid "Blog element are disabled from customize blog options,please vist blog option."
+msgstr ""
+
+#: woocommerce/content-product.php:63
+#: woocommerce/content-product.php:77
+msgid "Out of Stock"
+msgstr ""
+
+#: theme.json
+msgctxt "Color name"
+msgid "Base"
+msgstr ""
+
+#: theme.json
+msgctxt "Color name"
+msgid "Default"
+msgstr ""
+
+#: theme.json
+msgctxt "Color name"
+msgid "Primary"
+msgstr ""
+
+#: theme.json
+msgctxt "Color name"
+msgid "Secondary"
+msgstr ""
+
+#: theme.json
+msgctxt "Color name"
+msgid "Tertiary"
+msgstr ""
+
+#: theme.json
+msgctxt "Color name"
+msgid "Quaternary"
+msgstr ""
+
+#: theme.json
+msgctxt "Color name"
+msgid "Quinary"
+msgstr ""
+
+#: theme.json
+msgctxt "Color name"
+msgid "Accent"
+msgstr ""
+
+#: theme.json
+msgctxt "Color name"
+msgid "Accent Hover"
+msgstr ""
+
+#: theme.json
+msgctxt "Duotone name"
+msgid "Base"
+msgstr ""
+
+#: theme.json
+msgctxt "Duotone name"
+msgid "White"
+msgstr ""
+
+#: theme.json
+msgctxt "Duotone name"
+msgid "Primary"
+msgstr ""
+
+#: theme.json
+msgctxt "Duotone name"
+msgid "Secondary"
+msgstr ""
+
+#: theme.json
+msgctxt "Duotone name"
+msgid "Tertiary"
+msgstr ""
+
+#: theme.json
+msgctxt "Duotone name"
+msgid "Quaternary"
+msgstr ""
+
+#: theme.json
+msgctxt "Duotone name"
+msgid "Quinary"
+msgstr ""
+
+#: theme.json
+msgctxt "Duotone name"
+msgid "Accent"
+msgstr ""
+
+#: theme.json
+msgctxt "Space size name"
+msgid "Tiny"
+msgstr ""
+
+#: theme.json
+msgctxt "Space size name"
+msgid "X-Small"
+msgstr ""
+
+#: theme.json
+msgctxt "Space size name"
+msgid "Small"
+msgstr ""
+
+#: theme.json
+msgctxt "Space size name"
+msgid "Medium"
+msgstr ""
+
+#: theme.json
+msgctxt "Space size name"
+msgid "Regular"
+msgstr ""
+
+#: theme.json
+msgctxt "Space size name"
+msgid "Large"
+msgstr ""
+
+#: theme.json
+msgctxt "Space size name"
+msgid "X-Large"
+msgstr ""
+
+#: theme.json
+msgctxt "Space size name"
+msgid "XX-Large"
+msgstr ""

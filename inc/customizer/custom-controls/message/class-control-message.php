@@ -1,4 +1,4 @@
-<?php
+<?php // phpcs:ignore WordPress.NamingConventions.ValidClassName.Prefix -- Class filename does not follow standard, but this is intentional.
 /**
  * Customizer Control: description
  *
@@ -27,52 +27,26 @@ class CosmosWP_Custom_Control_Message extends WP_Customize_Control {
 	public $type = 'cosmoswp-message';
 
 	/**
-	 * The control type.
+	 * Constructor. Initializes the custom controls..
 	 *
-	 * @access public
-	 * @var string
-	 */
-	public $help = '';
-
-	/**
-	 * Enqueue control related scripts/styles.
+	 * @since 1.0.0
 	 *
-	 * @access public
+	 * @param mixed  $manager The manager object (e.g., responsible for registering the field group).
+	 * @param string $id      The unique ID of the field group.
+	 * @param array  $args    Optional arguments for the field group (e.g., title, context).
+	 * @param array  $fields  An array of field definitions.
 	 */
-	public function enqueue() {}
-
-	/**
-	 * Refresh the parameters passed to the JavaScript via JSON.
-	 *
-	 * @see WP_Customize_Control::to_json()
-	 */
-	public function to_json() {
-		parent::to_json();
-
-		$this->json['label']       = esc_html( $this->label );
-		$this->json['description'] = $this->description;
+	public function __construct( $manager, $id, $args = array(), $fields = array() ) {
+		if ( isset( $args['active_callback'] ) ) {
+			$this->active_callback = $args['active_callback'];
+		}
+		parent::__construct( $manager, $id, $args );
 	}
 
 	/**
-	 * An Underscore (JS) template for this control's content (but not its container).
+	 * Handle by JavaScript.
 	 *
-	 * Class variables for this control class are available in the `data` JS object;
-	 * export custom variables by overriding {@see WP_Customize_Control::to_json()}.
-	 *
-	 * @see WP_Customize_Control::print_template()
-	 *
-	 * @access protected
+	 * @return void
 	 */
-	protected function content_template() {
-		?>
-		<label class="customizer-text">
-			<# if ( data.label ) { #>
-				<span class="customize-control-title">{{{ data.label }}}</span>
-			<# } #>
-			<# if ( data.description ) { #>
-				<span class="description customize-control-description">{{{ data.description }}}</span>
-			<# } #>
-		</label>
-		<?php
-	}
+	public function render_content() {}
 }

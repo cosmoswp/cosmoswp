@@ -1,22 +1,22 @@
 <?php
 /**
- * The template for displaying all pages
+ * The template for displaying all single posts
  *
- * This is the template that displays all pages by default.
- * Please note that this is the WordPress construct of pages
- * and that other 'pages' on your WordPress site may use a
- * different template.
+ * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
  *
- * @link https://codex.wordpress.org/Template_Hierarchy
- *
- * @package CosmosWP
+ * @package cosmoswp
  */
-$breadcrumb_before_content = cosmoswp_get_theme_options('breadcrumb-before-content');
-get_header();
-do_action('cosmoswp_action_before_edd_archive');
-if ($breadcrumb_before_content) {
-    do_action('cosmoswp_action_breadcrumb');
+
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
 }
-do_action('cosmoswp_action_edd_archive');
-do_action('cosmoswp_action_after_edd_archive');
+
+$breadcrumb_before_content = cosmoswp_get_theme_options( 'breadcrumb-before-content' );
+get_header();
+do_action( 'cosmoswp_action_before_edd_archive' );
+if ( $breadcrumb_before_content ) {
+	do_action( 'cosmoswp_action_breadcrumb' );
+}
+do_action( 'cosmoswp_action_edd_archive' );
+do_action( 'cosmoswp_action_after_edd_archive' );
 get_footer();

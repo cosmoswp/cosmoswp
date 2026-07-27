@@ -8,16 +8,21 @@
  * different template.
  *
  * @see     https://docs.woocommerce.com/document/template-structure/
- * @version 3.4.0
+ * @version 8.6.0
  *
  * @package CosmosWP
  */
-$breadcrumb_before_content = cosmoswp_get_theme_options('breadcrumb-before-content');
-get_header();
-do_action('cosmoswp_action_before_woocommerce_archive');
-if ($breadcrumb_before_content) {
-    do_action('cosmoswp_action_breadcrumb');
+
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
 }
-do_action('cosmoswp_action_woocommerce_archive');
-do_action('cosmoswp_action_after_woocommerce_archive');
+
+$breadcrumb_before_content = cosmoswp_get_theme_options( 'breadcrumb-before-content' );
+get_header();
+do_action( 'cosmoswp_action_before_woocommerce_archive' );
+if ( $breadcrumb_before_content ) {
+	do_action( 'cosmoswp_action_breadcrumb' );
+}
+do_action( 'cosmoswp_action_woocommerce_archive' );
+do_action( 'cosmoswp_action_after_woocommerce_archive' );
 get_footer();
