@@ -1,0 +1,60 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=utf-8\n"
+"X-Generator: babel-plugin-makepot\n"
+
+#: src/components/cosmoswp-repeater.js:100
+msgid "Remove item"
+msgstr ""
+
+#: src/components/cosmoswp-repeater.js:134
+msgid "Add item"
+msgstr ""
+
+#: src/components/cosmoswp-repeater.js:29
+msgid "Enable this field"
+msgstr ""
+
+#: src/components/css-box.js:32
+msgid "Link"
+msgstr ""
+
+#: src/components/cwp-control-file.js:100
+msgid "Select"
+msgstr ""
+
+#: src/components/cwp-control-file.js:105
+msgid "Select or upload image"
+msgstr ""
+
+#: src/components/cwp-control-file.js:108
+msgid "Remove image"
+msgstr ""
+
+#: src/components/dynamic-select.js:168
+msgid "Failed to load fonts"
+msgstr ""
+
+#: src/components/dynamic-select.js:177
+msgid "Error loading fonts"
+msgstr ""
+
+#: src/components/dynamic-select.js:202
+msgid "Loading..."
+msgstr ""
+
+#: src/components/dynamic-select.js:213
+msgid "Loading font options..."
+msgstr ""
+
+#: src/components/icon-picker.js:49
+msgid "Replace Icon"
+msgstr ""
+
+#: src/components/icon-picker.js:49
+msgid "Add Icon"
+msgstr ""
+
+#: src/components/icon-picker.js:65
+msgid "Search Icon"
+msgstr ""

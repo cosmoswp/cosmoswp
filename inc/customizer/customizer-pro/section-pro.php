@@ -1,4 +1,15 @@
-<?php
+<?php // phpcs:ignore WordPress.NamingConventions.ValidClassName.Prefix -- Class filename does not follow standard, but this is intentional.
+/**
+ * Pro customizer section.
+ *
+ * @since  1.0.0
+ * @access public
+ */
+
+// Exit if accessed directly.
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
 /**
  * Pro customizer section.
  *
@@ -39,7 +50,7 @@ class CosmosWP_Customize_Section_Pro extends WP_Customize_Section {
 	 *
 	 * @since  1.0.0
 	 * @access public
-	 * @return void
+	 * @return array Json options.
 	 */
 	public function json() {
 		$json = parent::json();
@@ -57,12 +68,13 @@ class CosmosWP_Customize_Section_Pro extends WP_Customize_Section {
 	 * @access public
 	 * @return void
 	 */
-	protected function render_template() { ?>
-        <li id="accordion-section-{{ data.id }}" class="accordion-section control-section control-section-{{ data.type }} cannot-expand control-section-default" aria-owns="sub-accordion-section-cosmoswp-pro">
-            <h3 class="wp-ui-highlight">
-                <a href="{{ data.pro_url }}" class="wp-ui-text-highlight" target="_blank" rel="noopener">{{ data.pro_text }}</a>
-            </h3>
-        </li>
-	<?php
+	protected function render_template() {
+		?>
+		<li id="accordion-section-{{ data.id }}" class="accordion-section control-section control-section-{{ data.type }} cannot-expand control-section-default" aria-owns="sub-accordion-section-cosmoswp-pro">
+			<h3 class="wp-ui-highlight">
+				<a href="{{ data.pro_url }}" class="wp-ui-text-highlight" target="_blank" rel="noopener">{{ data.pro_text }}</a>
+			</h3>
+		</li>
+		<?php
 	}
 }

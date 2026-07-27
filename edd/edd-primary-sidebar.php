@@ -5,6 +5,10 @@
  * Primary Sidebar
  *
  * @package CosmosWP
- * @subpackage CosmosWP
  */
-do_action('cosmoswp_edd_primary_sidebar');
+
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
+do_action( 'cosmoswp_edd_primary_sidebar' );

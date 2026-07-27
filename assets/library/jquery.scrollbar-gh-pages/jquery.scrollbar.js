@@ -1,4 +1,4 @@
-/**
+;/**
  * jQuery CSS Customizable Scrollbar
  *
  * Copyright 2015, Yuriy Khabarov
@@ -11,7 +11,6 @@
  * @url https://github.com/gromo/jquery.scrollbar/
  *
  */
-;
 (function (root, factory) {
     if (typeof define === 'function' && define.amd) {
         define(['jquery'], factory);
@@ -34,7 +33,7 @@
         overlay: null,
         scroll: null,
         scrolls: [],
-        webkit: /webkit/i.test(navigator.userAgent) && !/edge\/\d+/i.test(navigator.userAgent)
+        webkit: /webkit/i.test(navigator.userAgent) && ! /edge\/\d+/i.test(navigator.userAgent)
     };
 
     browser.scrolls.add = function (instance) {
@@ -68,7 +67,6 @@
         "onUpdate": null            // callback function on init/resize (before scrollbar size calculation)
     };
 
-
     var BaseScrollbar = function (container) {
 
         if (!browser.scroll) {
@@ -76,17 +74,19 @@
             browser.scroll = getBrowserScrollSize();
             updateScrollbars();
 
-            $(window).resize(function () {
-                var forceUpdate = false;
-                if (browser.scroll && (browser.scroll.height || browser.scroll.width)) {
-                    var scroll = getBrowserScrollSize();
-                    if (scroll.height !== browser.scroll.height || scroll.width !== browser.scroll.width) {
-                        browser.scroll = scroll;
-                        forceUpdate = true; // handle page zoom
+            $(window).resize(
+                function () {
+                    var forceUpdate = false;
+                    if (browser.scroll && (browser.scroll.height || browser.scroll.width)) {
+                        var scroll = getBrowserScrollSize();
+                        if (scroll.height !== browser.scroll.height || scroll.width !== browser.scroll.width) {
+                            browser.scroll = scroll;
+                            forceUpdate = true; // handle page zoom
+                        }
                     }
+                    updateScrollbars(forceUpdate);
                 }
-                updateScrollbars(forceUpdate);
-            });
+            );
         }
 
         this.container = container;
@@ -115,11 +115,13 @@
             var scrollLeft = this.container.scrollLeft();
             var scrollTop = this.container.scrollTop();
 
-            this.container.insertBefore(this.wrapper).css({
-                "height": "",
-                "margin": "",
-                "max-height": ""
-            })
+            this.container.insertBefore(this.wrapper).css(
+                {
+                    "height": "",
+                    "margin": "",
+                    "max-height": ""
+                }
+            )
                 .removeClass('scroll-content scroll-scrollx_visible scroll-scrolly_visible')
                 .off(this.namespace)
                 .scrollLeft(scrollLeft)
@@ -132,7 +134,7 @@
 
             $(document).add('body').off(this.namespace);
 
-            if ($.isFunction(this.options.onDestroy)){
+            if ($.isFunction(this.options.onDestroy)) {
                 this.options.onDestroy.apply(this, [this.container]);
             }
         },
@@ -144,7 +146,7 @@
                 cw = this.containerWrapper || c,
                 namespace = this.namespace,
                 o = $.extend(this.options, options || {}),
-                s = {x: this.scrollx, y: this.scrolly},
+                s = { x: this.scrollx, y: this.scrolly },
                 w = this.wrapper;
 
             var initScroll = {
@@ -156,7 +158,7 @@
             if ((browser.mobile && o.ignoreMobile)
                 || (browser.overlay && o.ignoreOverlay)
                 || (browser.macosx && !browser.webkit) // still required to ignore nonWebKit browsers on Mac
-                ) {
+            ) {
                 return false;
             }
 
@@ -171,35 +173,47 @@
                     w.addClass('scroll-textarea');
                 }
 
-                cw.addClass('scroll-content').css({
-                    "height": "auto",
-                    "margin-bottom": browser.scroll.height * -1 + 'px',
-                    "margin-right": browser.scroll.width * -1 + 'px',
-                    "max-height": ""
-                });
-
-                c.on('scroll' + namespace, function (event) {
-                    if ($.isFunction(o.onScroll)) {
-                        o.onScroll.call(S, {
-                            "maxScroll": s.y.maxScrollOffset,
-                            "scroll": c.scrollTop(),
-                            "size": s.y.size,
-                            "visible": s.y.visible
-                        }, {
-                            "maxScroll": s.x.maxScrollOffset,
-                            "scroll": c.scrollLeft(),
-                            "size": s.x.size,
-                            "visible": s.x.visible
-                        });
+                cw.addClass('scroll-content').css(
+                    {
+                        "height": "auto",
+                        "margin-bottom": browser.scroll.height * -1 + 'px',
+                        "margin-right": browser.scroll.width * -1 + 'px',
+                        "max-height": ""
                     }
-                    s.x.isVisible && s.x.scroll.bar.css('left', c.scrollLeft() * s.x.kx + 'px');
-                    s.y.isVisible && s.y.scroll.bar.css('top', c.scrollTop() * s.y.kx + 'px');
-                });
+                );
+
+                c.on(
+                    'scroll' + namespace,
+                    function (event) {
+                        if ($.isFunction(o.onScroll)) {
+                            o.onScroll.call(
+                                S,
+                                {
+                                    "maxScroll": s.y.maxScrollOffset,
+                                    "scroll": c.scrollTop(),
+                                    "size": s.y.size,
+                                    "visible": s.y.visible
+                                },
+                                {
+                                    "maxScroll": s.x.maxScrollOffset,
+                                    "scroll": c.scrollLeft(),
+                                    "size": s.x.size,
+                                    "visible": s.x.visible
+                                }
+                            );
+                        }
+                        s.x.isVisible && s.x.scroll.bar.css('left', c.scrollLeft() * s.x.kx + 'px');
+                        s.y.isVisible && s.y.scroll.bar.css('top', c.scrollTop() * s.y.kx + 'px');
+                    }
+                );
 
                 /* prevent native scrollbars to be visible on #anchor click */
-                w.on('scroll' + namespace, function () {
-                    w.scrollTop(0).scrollLeft(0);
-                });
+                w.on(
+                    'scroll' + namespace,
+                    function () {
+                        w.scrollTop(0).scrollLeft(0);
+                    }
+                );
 
                 if (o.disableBodyScroll) {
                     var handleMouseScroll = function (event) {
@@ -211,245 +225,309 @@
                     w.on('mousewheel' + namespace, handleMouseScroll);
 
                     if (browser.mobile) {
-                        w.on('touchstart' + namespace, function (event) {
-                            var touch = event.originalEvent.touches && event.originalEvent.touches[0] || event;
-                            var originalTouch = {
-                                "pageX": touch.pageX,
-                                "pageY": touch.pageY
-                            };
-                            var originalScroll = {
-                                "left": c.scrollLeft(),
-                                "top": c.scrollTop()
-                            };
-                            $(document).on('touchmove' + namespace, function (event) {
-                                var touch = event.originalEvent.targetTouches && event.originalEvent.targetTouches[0] || event;
-                                c.scrollLeft(originalScroll.left + originalTouch.pageX - touch.pageX);
-                                c.scrollTop(originalScroll.top + originalTouch.pageY - touch.pageY);
-                                event.preventDefault();
-                            });
-                            $(document).on('touchend' + namespace, function () {
-                                $(document).off(namespace);
-                            });
-                        });
+                        w.on(
+                            'touchstart' + namespace,
+                            function (event) {
+                                var touch = event.originalEvent.touches && event.originalEvent.touches[0] || event;
+                                var originalTouch = {
+                                    "pageX": touch.pageX,
+                                    "pageY": touch.pageY
+                                };
+                                var originalScroll = {
+                                    "left": c.scrollLeft(),
+                                    "top": c.scrollTop()
+                                };
+                                $(document).on(
+                                    'touchmove' + namespace,
+                                    function (event) {
+                                        var touch = event.originalEvent.targetTouches && event.originalEvent.targetTouches[0] || event;
+                                        c.scrollLeft(originalScroll.left + originalTouch.pageX - touch.pageX);
+                                        c.scrollTop(originalScroll.top + originalTouch.pageY - touch.pageY);
+                                        event.preventDefault();
+                                    }
+                                );
+                                $(document).on(
+                                    'touchend' + namespace,
+                                    function () {
+                                        $(document).off(namespace);
+                                    }
+                                );
+                            }
+                        );
                     }
                 }
-                if ($.isFunction(o.onInit)){
+                if ($.isFunction(o.onInit)) {
                     o.onInit.apply(this, [c]);
                 }
             } else {
-                cw.css({
-                    "height": "auto",
-                    "margin-bottom": browser.scroll.height * -1 + 'px',
-                    "margin-right": browser.scroll.width * -1 + 'px',
-                    "max-height": ""
-                });
+                cw.css(
+                    {
+                        "height": "auto",
+                        "margin-bottom": browser.scroll.height * -1 + 'px',
+                        "margin-right": browser.scroll.width * -1 + 'px',
+                        "max-height": ""
+                    }
+                );
             }
 
             // init scrollbars & recalculate sizes
-            $.each(s, function (d, scrollx) {
+            $.each(
+                s,
+                function (d, scrollx) {
 
-                var scrollCallback = null;
-                var scrollForward = 1;
-                var scrollOffset = (d === 'x') ? 'scrollLeft' : 'scrollTop';
-                var scrollStep = o.scrollStep;
-                var scrollTo = function () {
-                    var currentOffset = c[scrollOffset]();
-                    c[scrollOffset](currentOffset + scrollStep);
-                    if (scrollForward == 1 && (currentOffset + scrollStep) >= scrollToValue)
-                        currentOffset = c[scrollOffset]();
-                    if (scrollForward == -1 && (currentOffset + scrollStep) <= scrollToValue)
-                        currentOffset = c[scrollOffset]();
-                    if (c[scrollOffset]() == currentOffset && scrollCallback) {
-                        scrollCallback();
+                    var scrollCallback = null;
+                    var scrollForward = 1;
+                    var scrollOffset = (d === 'x') ? 'scrollLeft' : 'scrollTop';
+                    var scrollStep = o.scrollStep;
+                    var scrollTo = function () {
+                        var currentOffset = c[scrollOffset]();
+                        c[scrollOffset](currentOffset + scrollStep);
+                        if (scrollForward == 1 && (currentOffset + scrollStep) >= scrollToValue) {
+                            currentOffset = c[scrollOffset]();
+                        }
+                        if (scrollForward == -1 && (currentOffset + scrollStep) <= scrollToValue) {
+                            currentOffset = c[scrollOffset]();
+                        }
+                        if (c[scrollOffset]() == currentOffset && scrollCallback) {
+                            scrollCallback();
+                        }
                     }
-                }
-                var scrollToValue = 0;
+                    var scrollToValue = 0;
 
-                if (!scrollx.scroll) {
+                    if (!scrollx.scroll) {
 
-                    scrollx.scroll = S._getScroll(o['scroll' + d]).addClass('scroll-' + d);
+                        scrollx.scroll = S._getScroll(o['scroll' + d]).addClass('scroll-' + d);
 
-                    if(o.showArrows){
-                        scrollx.scroll.addClass('scroll-element_arrows_visible');
-                    }
-
-                    scrollx.mousewheel = function (event) {
-
-                        if (!scrollx.isVisible || (d === 'x' && isVerticalScroll(event))) {
-                            return true;
-                        }
-                        if (d === 'y' && !isVerticalScroll(event)) {
-                            s.x.mousewheel(event);
-                            return true;
+                        if (o.showArrows) {
+                            scrollx.scroll.addClass('scroll-element_arrows_visible');
                         }
 
-                        var delta = event.originalEvent.wheelDelta * -1 || event.originalEvent.detail;
-                        var maxScrollValue = scrollx.size - scrollx.visible - scrollx.offset;
+                        scrollx.mousewheel = function (event) {
 
-                        if ((delta > 0 && scrollToValue < maxScrollValue) || (delta < 0 && scrollToValue > 0)) {
-                            scrollToValue = scrollToValue + delta;
-                            if (scrollToValue < 0)
-                                scrollToValue = 0;
-                            if (scrollToValue > maxScrollValue)
-                                scrollToValue = maxScrollValue;
-
-                            S.scrollTo = S.scrollTo || {};
-                            S.scrollTo[scrollOffset] = scrollToValue;
-                            setTimeout(function () {
-                                if (S.scrollTo) {
-                                    c.stop().animate(S.scrollTo, 240, 'linear', function () {
-                                        scrollToValue = c[scrollOffset]();
-                                    });
-                                    S.scrollTo = null;
-                                }
-                            }, 1);
-                        }
-
-                        event.preventDefault();
-                        return false;
-                    };
-
-                    scrollx.scroll
-                        .on('MozMousePixelScroll' + namespace, scrollx.mousewheel)
-                        .on('mousewheel' + namespace, scrollx.mousewheel)
-                        .on('mouseenter' + namespace, function () {
-                            scrollToValue = c[scrollOffset]();
-                        });
-
-                    // handle arrows & scroll inner mousedown event
-                    scrollx.scroll.find('.scroll-arrow, .scroll-element_track')
-                        .on('mousedown' + namespace, function (event) {
-
-                            if (event.which != 1) // lmb
+                            if (!scrollx.isVisible || (d === 'x' && isVerticalScroll(event))) {
                                 return true;
-
-                            scrollForward = 1;
-
-                            var data = {
-                                "eventOffset": event[(d === 'x') ? 'pageX' : 'pageY'],
-                                "maxScrollValue": scrollx.size - scrollx.visible - scrollx.offset,
-                                "scrollbarOffset": scrollx.scroll.bar.offset()[(d === 'x') ? 'left' : 'top'],
-                                "scrollbarSize": scrollx.scroll.bar[(d === 'x') ? 'outerWidth' : 'outerHeight']()
-                            };
-                            var timeout = 0, timer = 0;
-
-                            if ($(this).hasClass('scroll-arrow')) {
-                                scrollForward = $(this).hasClass("scroll-arrow_more") ? 1 : -1;
-                                scrollStep = o.scrollStep * scrollForward;
-                                scrollToValue = scrollForward > 0 ? data.maxScrollValue : 0;
-                            } else {
-                                scrollForward = (data.eventOffset > (data.scrollbarOffset + data.scrollbarSize) ? 1
-                                    : (data.eventOffset < data.scrollbarOffset ? -1 : 0));
-                                scrollStep = Math.round(scrollx.visible * 0.75) * scrollForward;
-                                scrollToValue = (data.eventOffset - data.scrollbarOffset -
-                                    (o.stepScrolling ? (scrollForward == 1 ? data.scrollbarSize : 0)
-                                        : Math.round(data.scrollbarSize / 2)));
-                                scrollToValue = c[scrollOffset]() + (scrollToValue / scrollx.kx);
+                            }
+                            if (d === 'y' && !isVerticalScroll(event)) {
+                                s.x.mousewheel(event);
+                                return true;
                             }
 
-                            S.scrollTo = S.scrollTo || {};
-                            S.scrollTo[scrollOffset] = o.stepScrolling ? c[scrollOffset]() + scrollStep : scrollToValue;
+                            var delta = event.originalEvent.wheelDelta * -1 || event.originalEvent.detail;
+                            var maxScrollValue = scrollx.size - scrollx.visible - scrollx.offset;
 
-                            if (o.stepScrolling) {
-                                scrollCallback = function () {
-                                    scrollToValue = c[scrollOffset]();
-                                    clearInterval(timer);
-                                    clearTimeout(timeout);
-                                    timeout = 0;
-                                    timer = 0;
-                                };
-                                timeout = setTimeout(function () {
-                                    timer = setInterval(scrollTo, 40);
-                                }, o.duration + 100);
-                            }
-
-                            setTimeout(function () {
-                                if (S.scrollTo) {
-                                    c.animate(S.scrollTo, o.duration);
-                                    S.scrollTo = null;
+                            if ((delta > 0 && scrollToValue < maxScrollValue) || (delta < 0 && scrollToValue > 0)) {
+                                scrollToValue = scrollToValue + delta;
+                                if (scrollToValue < 0) {
+                                    scrollToValue = 0;
                                 }
-                            }, 1);
+                                if (scrollToValue > maxScrollValue) {
+                                    scrollToValue = maxScrollValue;
+                                }
 
-                            return S._handleMouseDown(scrollCallback, event);
-                        });
+                                S.scrollTo = S.scrollTo || {};
+                                S.scrollTo[scrollOffset] = scrollToValue;
+                                setTimeout(
+                                    function () {
+                                        if (S.scrollTo) {
+                                            c.stop().animate(
+                                                S.scrollTo,
+                                                240,
+                                                'linear',
+                                                function () {
+                                                    scrollToValue = c[scrollOffset]();
+                                                }
+                                            );
+                                            S.scrollTo = null;
+                                        }
+                                    },
+                                    1
+                                );
+                            }
 
-                    // handle scrollbar drag'n'drop
-                    scrollx.scroll.bar.on('mousedown' + namespace, function (event) {
+                            event.preventDefault();
+                            return false;
+                        };
 
-                        if (event.which != 1) // lmb
-                            return true;
+                        scrollx.scroll
+                            .on('MozMousePixelScroll' + namespace, scrollx.mousewheel)
+                            .on('mousewheel' + namespace, scrollx.mousewheel)
+                            .on(
+                                'mouseenter' + namespace,
+                                function () {
+                                    scrollToValue = c[scrollOffset]();
+                                }
+                            );
 
-                        var eventPosition = event[(d === 'x') ? 'pageX' : 'pageY'];
-                        var initOffset = c[scrollOffset]();
+                        // handle arrows & scroll inner mousedown event
+                        scrollx.scroll.find('.scroll-arrow, .scroll-element_track')
+                            .on(
+                                'mousedown' + namespace,
+                                function (event) {
 
-                        scrollx.scroll.addClass('scroll-draggable');
+                                    if (event.which != 1) { // lmb
+                                        return true;
+                                    }
 
-                        $(document).on('mousemove' + namespace, function (event) {
-                            var diff = parseInt((event[(d === 'x') ? 'pageX' : 'pageY'] - eventPosition) / scrollx.kx, 10);
-                            c[scrollOffset](initOffset + diff);
-                        });
+                                    scrollForward = 1;
 
-                        return S._handleMouseDown(function () {
-                            scrollx.scroll.removeClass('scroll-draggable');
-                            scrollToValue = c[scrollOffset]();
-                        }, event);
-                    });
+                                    var data = {
+                                        "eventOffset": event[(d === 'x') ? 'pageX' : 'pageY'],
+                                        "maxScrollValue": scrollx.size - scrollx.visible - scrollx.offset,
+                                        "scrollbarOffset": scrollx.scroll.bar.offset()[(d === 'x') ? 'left' : 'top'],
+                                        "scrollbarSize": scrollx.scroll.bar[(d === 'x') ? 'outerWidth' : 'outerHeight']()
+                                    };
+                                    var timeout = 0, timer = 0;
+
+                                    if ($(this).hasClass('scroll-arrow')) {
+                                        scrollForward = $(this).hasClass("scroll-arrow_more") ? 1 : -1;
+                                        scrollStep = o.scrollStep * scrollForward;
+                                        scrollToValue = scrollForward > 0 ? data.maxScrollValue : 0;
+                                    } else {
+                                        scrollForward = (data.eventOffset > (data.scrollbarOffset + data.scrollbarSize) ? 1
+                                            : (data.eventOffset < data.scrollbarOffset ? -1 : 0));
+                                        scrollStep = Math.round(scrollx.visible * 0.75) * scrollForward;
+                                        scrollToValue = (data.eventOffset - data.scrollbarOffset -
+                                            (o.stepScrolling ? (scrollForward == 1 ? data.scrollbarSize : 0)
+                                                : Math.round(data.scrollbarSize / 2)));
+                                        scrollToValue = c[scrollOffset]() + (scrollToValue / scrollx.kx);
+                                    }
+
+                                    S.scrollTo = S.scrollTo || {};
+                                    S.scrollTo[scrollOffset] = o.stepScrolling ? c[scrollOffset]() + scrollStep : scrollToValue;
+
+                                    if (o.stepScrolling) {
+                                        scrollCallback = function () {
+                                            scrollToValue = c[scrollOffset]();
+                                            clearInterval(timer);
+                                            clearTimeout(timeout);
+                                            timeout = 0;
+                                            timer = 0;
+                                        };
+                                        timeout = setTimeout(
+                                            function () {
+                                                timer = setInterval(scrollTo, 40);
+                                            },
+                                            o.duration + 100
+                                        );
+                                    }
+
+                                    setTimeout(
+                                        function () {
+                                            if (S.scrollTo) {
+                                                c.animate(S.scrollTo, o.duration);
+                                                S.scrollTo = null;
+                                            }
+                                        },
+                                        1
+                                    );
+
+                                    return S._handleMouseDown(scrollCallback, event);
+                                }
+                            );
+
+                        // handle scrollbar drag'n'drop
+                        scrollx.scroll.bar.on(
+                            'mousedown' + namespace,
+                            function (event) {
+
+                                if (event.which != 1) { // lmb
+                                    return true;
+                                }
+
+                                var eventPosition = event[(d === 'x') ? 'pageX' : 'pageY'];
+                                var initOffset = c[scrollOffset]();
+
+                                scrollx.scroll.addClass('scroll-draggable');
+
+                                $(document).on(
+                                    'mousemove' + namespace,
+                                    function (event) {
+                                        var diff = parseInt((event[(d === 'x') ? 'pageX' : 'pageY'] - eventPosition) / scrollx.kx, 10);
+                                        c[scrollOffset](initOffset + diff);
+                                    }
+                                );
+
+                                return S._handleMouseDown(
+                                    function () {
+                                        scrollx.scroll.removeClass('scroll-draggable');
+                                        scrollToValue = c[scrollOffset]();
+                                    },
+                                    event
+                                );
+                            }
+                        );
+                    }
                 }
-            });
+            );
 
             // remove classes & reset applied styles
-            $.each(s, function (d, scrollx) {
-                var scrollClass = 'scroll-scroll' + d + '_visible';
-                var scrolly = (d == "x") ? s.y : s.x;
+            $.each(
+                s,
+                function (d, scrollx) {
+                    var scrollClass = 'scroll-scroll' + d + '_visible';
+                    var scrolly = (d == "x") ? s.y : s.x;
 
-                scrollx.scroll.removeClass(scrollClass);
-                scrolly.scroll.removeClass(scrollClass);
-                cw.removeClass(scrollClass);
-            });
+                    scrollx.scroll.removeClass(scrollClass);
+                    scrolly.scroll.removeClass(scrollClass);
+                    cw.removeClass(scrollClass);
+                }
+            );
 
             // calculate init sizes
-            $.each(s, function (d, scrollx) {
-                $.extend(scrollx, (d == "x") ? {
-                    "offset": parseInt(c.css('left'), 10) || 0,
-                    "size": c.prop('scrollWidth'),
-                    "visible": w.width()
-                } : {
-                    "offset": parseInt(c.css('top'), 10) || 0,
-                    "size": c.prop('scrollHeight'),
-                    "visible": w.height()
-                });
-            });
+            $.each(
+                s,
+                function (d, scrollx) {
+                    $.extend(
+                        scrollx,
+                        (d == "x") ? {
+                            "offset": parseInt(c.css('left'), 10) || 0,
+                            "size": c.prop('scrollWidth'),
+                            "visible": w.width()
+                        } : {
+                            "offset": parseInt(
+                                c.css('top'),
+                                10
+                            ) || 0,
+                            "size": c.prop('scrollHeight'),
+                            "visible": w.height()
+                        }
+                    );
+                }
+            );
 
             // update scrollbar visibility/dimensions
             this._updateScroll('x', this.scrollx);
             this._updateScroll('y', this.scrolly);
 
-            if ($.isFunction(o.onUpdate)){
+            if ($.isFunction(o.onUpdate)) {
                 o.onUpdate.apply(this, [c]);
             }
 
             // calculate scroll size
-            $.each(s, function (d, scrollx) {
+            $.each(
+                s,
+                function (d, scrollx) {
 
-                var cssOffset = (d === 'x') ? 'left' : 'top';
-                var cssFullSize = (d === 'x') ? 'outerWidth' : 'outerHeight';
-                var cssSize = (d === 'x') ? 'width' : 'height';
-                var offset = parseInt(c.css(cssOffset), 10) || 0;
+                    var cssOffset = (d === 'x') ? 'left' : 'top';
+                    var cssFullSize = (d === 'x') ? 'outerWidth' : 'outerHeight';
+                    var cssSize = (d === 'x') ? 'width' : 'height';
+                    var offset = parseInt(c.css(cssOffset), 10) || 0;
 
-                var AreaSize = scrollx.size;
-                var AreaVisible = scrollx.visible + offset;
+                    var AreaSize = scrollx.size;
+                    var AreaVisible = scrollx.visible + offset;
 
-                var scrollSize = scrollx.scroll.size[cssFullSize]() + (parseInt(scrollx.scroll.size.css(cssOffset), 10) || 0);
+                    var scrollSize = scrollx.scroll.size[cssFullSize]() + (parseInt(scrollx.scroll.size.css(cssOffset), 10) || 0);
 
-                if (o.autoScrollSize) {
-                    scrollx.scrollbarSize = parseInt(scrollSize * AreaVisible / AreaSize, 10);
-                    scrollx.scroll.bar.css(cssSize, scrollx.scrollbarSize + 'px');
+                    if (o.autoScrollSize) {
+                        scrollx.scrollbarSize = parseInt(scrollSize * AreaVisible / AreaSize, 10);
+                        scrollx.scroll.bar.css(cssSize, scrollx.scrollbarSize + 'px');
+                    }
+
+                    scrollx.scrollbarSize = scrollx.scroll.bar[cssFullSize]();
+                    scrollx.kx = ((scrollSize - scrollx.scrollbarSize) / (AreaSize - AreaVisible)) || 1;
+                    scrollx.maxScrollOffset = AreaSize - AreaVisible;
                 }
-
-                scrollx.scrollbarSize = scrollx.scroll.bar[cssFullSize]();
-                scrollx.kx = ((scrollSize - scrollx.scrollbarSize) / (AreaSize - AreaVisible)) || 1;
-                scrollx.maxScrollOffset = AreaSize - AreaVisible;
-            });
+            );
 
             c.scrollLeft(initScroll.scrollLeft).scrollTop(initScroll.scrollTop).trigger('scroll');
         },
@@ -505,34 +583,49 @@
             } else {
                 scroll = $(scroll);
             }
-            $.extend(scroll, {
-                bar: scroll.find('.scroll-bar'),
-                size: scroll.find('.scroll-element_size'),
-                track: scroll.find('.scroll-element_track')
-            });
+            $.extend(
+                scroll,
+                {
+                    bar: scroll.find('.scroll-bar'),
+                    size: scroll.find('.scroll-element_size'),
+                    track: scroll.find('.scroll-element_track')
+                }
+            );
             return scroll;
         },
 
-        _handleMouseDown: function(callback, event) {
+        _handleMouseDown: function (callback, event) {
 
             var namespace = this.namespace;
 
-            $(document).on('blur' + namespace, function () {
-                $(document).add('body').off(namespace);
-                callback && callback();
-            });
-            $(document).on('dragstart' + namespace, function (event) {
-                event.preventDefault();
-                return false;
-            });
-            $(document).on('mouseup' + namespace, function () {
-                $(document).add('body').off(namespace);
-                callback && callback();
-            });
-            $('body').on('selectstart' + namespace, function (event) {
-                event.preventDefault();
-                return false;
-            });
+            $(document).on(
+                'blur' + namespace,
+                function () {
+                    $(document).add('body').off(namespace);
+                    callback && callback();
+                }
+            );
+            $(document).on(
+                'dragstart' + namespace,
+                function (event) {
+                    event.preventDefault();
+                    return false;
+                }
+            );
+            $(document).on(
+                'mouseup' + namespace,
+                function () {
+                    $(document).add('body').off(namespace);
+                    callback && callback();
+                }
+            );
+            $('body').on(
+                'selectstart' + namespace,
+                function (event) {
+                    event.preventDefault();
+                    return false;
+                }
+            );
 
             event && event.preventDefault();
             return false;
@@ -562,16 +655,20 @@
             }
 
             if (d === 'y') {
-                if(container.is('textarea') || AreaSize < AreaVisible){
-                    containerWrapper.css({
-                        "height": (AreaVisible + browser.scroll.height) + 'px',
-                        "max-height": "none"
-                    });
+                if (container.is('textarea') || AreaSize < AreaVisible) {
+                    containerWrapper.css(
+                        {
+                            "height": (AreaVisible + browser.scroll.height) + 'px',
+                            "max-height": "none"
+                        }
+                    );
                 } else {
-                    containerWrapper.css({
-                        //"height": "auto", // do not reset height value: issue with height:100%!
-                        "max-height": (AreaVisible + browser.scroll.height) + 'px'
-                    });
+                    containerWrapper.css(
+                        {
+                            //"height": "auto", // do not reset height value: issue with height:100%!
+                            "max-height": (AreaVisible + browser.scroll.height) + 'px'
+                        }
+                    );
                 }
             }
 
@@ -581,17 +678,23 @@
                 || scrolly.visible != wrapper.height()
                 || scrollx.offset != (parseInt(container.css('left'), 10) || 0)
                 || scrolly.offset != (parseInt(container.css('top'), 10) || 0)
-                ) {
-                $.extend(this.scrollx, {
-                    "offset": parseInt(container.css('left'), 10) || 0,
-                    "size": container.prop('scrollWidth'),
-                    "visible": wrapper.width()
-                });
-                $.extend(this.scrolly, {
-                    "offset": parseInt(container.css('top'), 10) || 0,
-                    "size": this.container.prop('scrollHeight'),
-                    "visible": wrapper.height()
-                });
+            ) {
+                $.extend(
+                    this.scrollx,
+                    {
+                        "offset": parseInt(container.css('left'), 10) || 0,
+                        "size": container.prop('scrollWidth'),
+                        "visible": wrapper.width()
+                    }
+                );
+                $.extend(
+                    this.scrolly,
+                    {
+                        "offset": parseInt(container.css('top'), 10) || 0,
+                        "size": this.container.prop('scrollHeight'),
+                        "visible": wrapper.height()
+                    }
+                );
                 this._updateScroll(d === 'x' ? 'y' : 'x', scrolly);
             }
         }
@@ -617,18 +720,20 @@
         if (!$.isArray(args)) {
             args = [args];
         }
-        this.not('body, .scroll-wrapper').each(function () {
-            var element = $(this),
-                instance = element.data(browser.data.name);
-            if (instance || command === 'init') {
-                if (!instance) {
-                    instance = new CustomScrollbar(element);
-                }
-                if (instance[command]) {
-                    instance[command].apply(instance, args);
+        this.not('body, .scroll-wrapper').each(
+            function () {
+                var element = $(this),
+                    instance = element.data(browser.data.name);
+                if (instance || command === 'init') {
+                    if (!instance) {
+                        instance = new CustomScrollbar(element);
+                    }
+                    if (instance[command]) {
+                        instance[command].apply(instance, args);
+                    }
                 }
             }
-        });
+        );
         return this;
     };
 
@@ -636,7 +741,6 @@
      * Connect default options to global object
      */
     $.fn.scrollbar.options = defaults;
-
 
     /**
      * Check if scroll content/container size is changed
@@ -660,19 +764,22 @@
                     scroll.init();
 
                     if (options.debug) {
-                        window.console && console.log({
-                            scrollHeight: container.prop('scrollHeight') + ':' + scroll.scrolly.size,
-                            scrollWidth: container.prop('scrollWidth') + ':' + scroll.scrollx.size,
-                            visibleHeight: wrapper.height() + ':' + scroll.scrolly.visible,
-                            visibleWidth: wrapper.width() + ':' + scroll.scrollx.visible
-                        }, true);
+                        window.console && console.log(
+                            {
+                                scrollHeight: container.prop('scrollHeight') + ':' + scroll.scrolly.size,
+                                scrollWidth: container.prop('scrollWidth') + ':' + scroll.scrollx.size,
+                                visibleHeight: wrapper.height() + ':' + scroll.scrolly.visible,
+                                visibleWidth: wrapper.width() + ':' + scroll.scrollx.visible
+                            },
+                            true
+                        );
                         timerCounter++;
                     }
                 }
             }
             if (debug && timerCounter > 10) {
                 window.console && console.log('Scroll updates exceed 10');
-                updateScrollbars = function () {};
+                updateScrollbars = function () { };
             } else {
                 clearTimeout(timer);
                 timer = setTimeout(updateScrollbars, 300);
@@ -706,12 +813,17 @@
                 "width": "200px"
             };
             browser.data.inner = $("<div>").css($.extend({}, css));
-            browser.data.outer = $("<div>").css($.extend({
-                "left": "-1000px",
-                "overflow": "scroll",
-                "position": "absolute",
-                "top": "-1000px"
-            }, css)).append(browser.data.inner).appendTo("body");
+            browser.data.outer = $("<div>").css(
+                $.extend(
+                    {
+                        "left": "-1000px",
+                        "overflow": "scroll",
+                        "position": "absolute",
+                        "top": "-1000px"
+                    },
+                    css
+                )
+            ).append(browser.data.inner).appendTo("body");
         }
 
         browser.data.outer.scrollLeft(1000).scrollTop(1000);
@@ -734,13 +846,14 @@
 
     function isVerticalScroll(event) {
         var e = event.originalEvent;
-        if (e.axis && e.axis === e.HORIZONTAL_AXIS)
+        if (e.axis && e.axis === e.HORIZONTAL_AXIS) {
             return false;
-        if (e.wheelDeltaX)
+        }
+        if (e.wheelDeltaX) {
             return false;
+        }
         return true;
     }
-
 
     /**
      * Extend AngularJS as UI directive
@@ -750,32 +863,41 @@
     if (window.angular) {
         (function (angular) {
             angular.module('jQueryScrollbar', [])
-                .provider('jQueryScrollbar', function () {
-                    var defaultOptions = defaults;
-                    return {
-                        setOptions: function (options) {
-                            angular.extend(defaultOptions, options);
-                        },
-                        $get: function () {
-                            return {
-                                options: angular.copy(defaultOptions)
-                            };
-                        }
-                    };
-                })
-                .directive('jqueryScrollbar', ['jQueryScrollbar', '$parse', function (jQueryScrollbar, $parse) {
-                    return {
-                        "restrict": "AC",
-                        "link": function (scope, element, attrs) {
-                            var model = $parse(attrs.jqueryScrollbar),
-                                options = model(scope);
-                            element.scrollbar(options || jQueryScrollbar.options)
-                                .on('$destroy', function () {
-                                    element.scrollbar('destroy');
-                                });
-                        }
-                    };
-                }]);
+                .provider(
+                    'jQueryScrollbar',
+                    function () {
+                        var defaultOptions = defaults;
+                        return {
+                            setOptions: function (options) {
+                                angular.extend(defaultOptions, options);
+                            },
+                            $get: function () {
+                                return {
+                                    options: angular.copy(defaultOptions)
+                                };
+                            }
+                        };
+                    }
+                )
+                .directive(
+                    'jqueryScrollbar',
+                    ['jQueryScrollbar', '$parse', function (jQueryScrollbar, $parse) {
+                        return {
+                            "restrict": "AC",
+                            "link": function (scope, element, attrs) {
+                                var model = $parse(attrs.jqueryScrollbar),
+                                    options = model(scope);
+                                element.scrollbar(options || jQueryScrollbar.options)
+                                    .on(
+                                        '$destroy',
+                                        function () {
+                                            element.scrollbar('destroy');
+                                        }
+                                    );
+                            }
+                        };
+                    }]
+                );
         })(window.angular);
     }
 }));

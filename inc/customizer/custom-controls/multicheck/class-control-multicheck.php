@@ -1,11 +1,9 @@
-<?php
+<?php // phpcs:ignore WordPress.NamingConventions.ValidClassName.Prefix -- Class filename does not follow standard, but this is intentional.
 /**
  * Customizer Control: cosmoswp-multicheck.
  *
  * @package     CosmosWP WordPress theme
  * @subpackage  Controls
- * @see   		https://github.com/aristath/kirki
- * @license     http://opensource.org/licenses/https://opensource.org/licenses/MIT
  * @since       1.0
  */
 
@@ -28,11 +26,21 @@ class CosmosWP_Customize_Multicheck_Control extends WP_Customize_Control {
 	public $type = 'cosmoswp-multicheck';
 
 	/**
-	 * Enqueue control related scripts/styles.
+	 * Constructor. Initializes the custom controls..
 	 *
-	 * @access public
+	 * @since 1.0.0
+	 *
+	 * @param mixed  $manager The manager object (e.g., responsible for registering the field group).
+	 * @param string $id      The unique ID of the field group.
+	 * @param array  $args    Optional arguments for the field group (e.g., title, context).
+	 * @param array  $fields  An array of field definitions.
 	 */
-	public function enqueue() {}
+	public function __construct( $manager, $id, $args = array(), $fields = array() ) {
+		if ( isset( $args['active_callback'] ) ) {
+			$this->active_callback = $args['active_callback'];
+		}
+		parent::__construct( $manager, $id, $args );
+	}
 
 	/**
 	 * Refresh the parameters passed to the JavaScript via JSON.
@@ -41,55 +49,12 @@ class CosmosWP_Customize_Multicheck_Control extends WP_Customize_Control {
 	 */
 	public function to_json() {
 		parent::to_json();
-
-		if ( isset( $this->default ) ) {
-			$this->json['default'] = $this->default;
-		} else {
-			$this->json['default'] = $this->setting->default;
-		}
-		$this->json['value']       = $this->value();
-		$this->json['choices']     = $this->choices;
-		$this->json['link']        = $this->get_link();
-		$this->json['id']          = $this->id;
-
-		$this->json['inputAttrs'] = '';
-		foreach ( $this->input_attrs as $attr => $value ) {
-			$this->json['inputAttrs'] .= $attr . '="' . esc_attr( $value ) . '" ';
-		}
+		$this->json['choices'] = $this->choices;
 	}
-
 	/**
-	 * An Underscore (JS) template for this control's content (but not its container).
+	 * Handle by JavaScript.
 	 *
-	 * Class variables for this control class are available in the `data` JS object;
-	 * export custom variables by overriding {@see WP_Customize_Control::to_json()}.
-	 *
-	 * @see WP_Customize_Control::print_template()
-	 *
-	 * @access protected
+	 * @return void
 	 */
-	protected function content_template() {
-		?>
-		<# if ( ! data.choices ) { return; } #>
-
-		<# if ( data.label ) { #>
-			<span class="customize-control-title">{{ data.label }}</span>
-		<# } #>
-
-		<# if ( data.description ) { #>
-			<span class="description customize-control-description">{{{ data.description }}}</span>
-		<# } #>
-
-		<ul>
-			<# for ( key in data.choices ) { #>
-				<li>
-					<label>
-						<input {{{ data.inputAttrs }}} type="checkbox" value="{{ key }}"<# if ( _.contains( data.value, key ) ) { #> checked<# } #> />
-						{{ data.choices[ key ] }}
-					</label>
-				</li>
-			<# } #>
-		</ul>
-		<?php
-	}
+	public function render_content() {}
 }

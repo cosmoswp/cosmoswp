@@ -2,9 +2,9 @@
   font-family: 'cwp-fontawesome';
   src:  url('../webfonts/fontawesome.eot?m879jw');
   src:  url('../webfonts/fontawesome.eot?m879jw#iefix') format('embedded-opentype'),
-    url('../webfonts/fontawesome.ttf?m879jw') format('truetype'),
-    url('../webfonts/fontawesome.woff?m879jw') format('woff'),
-    url('../webfonts/fontawesome.svg?m879jw#fontawesome') format('svg');
+	url('../webfonts/fontawesome.ttf?m879jw') format('truetype'),
+	url('../webfonts/fontawesome.woff?m879jw') format('woff'),
+	url('../webfonts/fontawesome.svg?m879jw#fontawesome') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;

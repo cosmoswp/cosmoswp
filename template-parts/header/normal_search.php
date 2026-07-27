@@ -1,14 +1,26 @@
-<?php 
-$normal_search_placeholder = cosmoswp_get_theme_options('normal-search-placeholder');
+<?php
+/**
+ * Normal Search
+ *
+ * @package CosmosWP
+ */
+
+// Exit if accessed directly.
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
+$normal_search_placeholder = cosmoswp_get_theme_options( 'normal-search-placeholder' );
 $normal_search_placeholder = ( $normal_search_placeholder ) ? $normal_search_placeholder : 'search';
 ?>
 <!-- Start of .cwp-search-box -->
 <div class="search cwp-search-box">
 	<div class="cwp-search-form-wrapper">
-		<form action="<?php echo esc_url(home_url( '/' )); ?>" class="search-form">
-			<input type="search" class="search-field" name='s' placeholder="<?php echo esc_attr( $normal_search_placeholder ); ?>"  value="<?php echo get_search_query() ?>">
+		<form action="<?php echo esc_url( home_url( '/' ) ); ?>" class="search-form">
+			<label for="cwp-normal-search-field" class="screen-reader-text"><?php esc_html_e( 'Search', 'cosmoswp' ); ?></label>
+			<input type="search" class="search-field" name='s' id="cwp-normal-search-field" placeholder="<?php echo esc_attr( $normal_search_placeholder ); ?>"  value="<?php echo get_search_query(); ?>">
 			<button class="search-submit" type="submit">
-				<i class="<?php echo esc_attr(cosmoswp_get_correct_fa_font('fas fa-search'));?>"></i>
+				<i class="<?php echo esc_attr( cosmoswp_get_correct_fa_font( 'fas fa-search' ) ); ?>"></i>
 			</button>
 		</form>
 	</div>

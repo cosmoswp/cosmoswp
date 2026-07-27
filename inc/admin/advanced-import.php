@@ -1,4 +1,4 @@
-<?php
+<?php // phpcs:ignore WordPress.NamingConventions.ValidClassName.Prefix -- Class filename does not follow standard, but this is intentional.
 /**
  * CosmosWP Notice Handler
  *
@@ -7,7 +7,10 @@
  * @since   1.0.0
  */
 
-defined( 'ABSPATH' ) || exit;
+// Exit if accessed directly.
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
 
 /**
  * Class to handle notices and Advanced Demo Import
@@ -31,22 +34,19 @@ class CosmosWP_Advanced_Import {
 	 * @return object
 	 */
 	public static function instance() {
-		// Store the instance locally to avoid private static replication
 		static $instance = null;
 
-		// Only run these methods if they haven't been ran previously
 		if ( null === $instance ) {
 			$instance = new self();
 		}
 
-		// Always return the instance
 		return $instance;
 	}
 
 	/**
 	 * Initialize the class
-     *
-     * 3 Different Process
+	 *
+	 * 3 Different Process
 	 */
 	public function run() {
 		$this->advanced_demo_import();
@@ -56,7 +56,7 @@ class CosmosWP_Advanced_Import {
 	 * Help if user use demo import
 	 * return array
 	 */
-	public function advanced_demo_import(){
+	public function advanced_demo_import() {
 		add_action( 'advanced_import_replace_post_ids', array( $this, 'replace_post_ids' ), 20 );
 		add_action( 'advanced_import_replace_term_ids', array( $this, 'replace_term_ids' ), 20 );
 	}
@@ -66,7 +66,7 @@ class CosmosWP_Advanced_Import {
 	 * Active callback of advanced_import_replace_post_ids
 	 * return array
 	 */
-	public function replace_post_ids( $replace_post_ids ){
+	public function replace_post_ids( $replace_post_ids ) {
 
 		/*Post IDS*/
 		$post_ids = array(
@@ -74,19 +74,19 @@ class CosmosWP_Advanced_Import {
 			'cosmoswp-feature-post-two',
 		);
 
-		return array_merge( $replace_post_ids,$post_ids );
-    }
+		return array_merge( $replace_post_ids, $post_ids );
+	}
 
 	/**
 	 * Advance Demo import process
 	 * Active callback of advanced_import_replace_term_ids
 	 * return array
 	 */
-	public function replace_term_ids( $replace_term_ids ){
+	public function replace_term_ids( $replace_term_ids ) {
 
 		/*Terms IDS*/
 		$term_ids = array(
-			'cosmoswp-feature-cat'
+			'cosmoswp-feature-cat',
 		);
 
 		return array_merge( $replace_term_ids, $term_ids );
@@ -98,7 +98,7 @@ class CosmosWP_Advanced_Import {
  *
  * @since    1.0.0
  */
-function cosmoswp_advanced_import( ) {
+function cosmoswp_advanced_import() {
 	return CosmosWP_Advanced_Import::instance();
 }
 cosmoswp_advanced_import()->run();

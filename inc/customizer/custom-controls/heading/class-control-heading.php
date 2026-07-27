@@ -1,4 +1,4 @@
-<?php
+<?php // phpcs:ignore WordPress.NamingConventions.ValidClassName.Prefix -- Class filename does not follow standard, but this is intentional.
 /**
  * Customizer Control: cosmoswp-heading.
  *
@@ -26,25 +26,25 @@ class CosmosWP_Custom_Control_Heading extends WP_Customize_Control {
 	public $type = 'cosmoswp-heading';
 
 	/**
-	 * Enqueue control related scripts/styles.
+	 * Constructor. Initializes the custom controls..
 	 *
-	 * @access public
+	 * @since 1.0.0
+	 *
+	 * @param mixed  $manager The manager object (e.g., responsible for registering the field group).
+	 * @param string $id      The unique ID of the field group.
+	 * @param array  $args    Optional arguments for the field group (e.g., title, context).
+	 * @param array  $fields  An array of field definitions.
 	 */
-	public function enqueue() {}
-
-	/**
-	 * An Underscore (JS) template for this control's content (but not its container).
-	 *
-	 * Class variables for this control class are available in the `data` JS object;
-	 * export custom variables by overriding {@see WP_Customize_Control::to_json()}.
-	 *
-	 * @see WP_Customize_Control::print_template()
-	 *
-	 * @access protected
-	 */
-	protected function content_template() {
-		?>
-		<h4 class="cosmoswp-customizer-heading">{{{ data.label }}}</h4>
-		<?php
+	public function __construct( $manager, $id, $args = array(), $fields = array() ) {
+		if ( isset( $args['active_callback'] ) ) {
+			$this->active_callback = $args['active_callback'];
+		}
+		parent::__construct( $manager, $id, $args );
 	}
+	/**
+	 * Handle by JavaScript.
+	 *
+	 * @return void
+	 */
+	public function render_content() {}
 }

@@ -1,37 +1,57 @@
-<?php
-if ( class_exists( 'WP_Customize_Control' ) && ! class_exists( 'CosmosWP_WP_Customize_Section_H3' )):
-	class CosmosWP_WP_Customize_Section_H3 extends WP_Customize_Section {
+<?php // phpcs:ignore WordPress.NamingConventions.ValidClassName.Prefix -- Class filename does not follow standard, but this is intentional.
+/**
+ * Custom Common Section Class
+ *
+ * @package CosmosWP
+ * @since 1.0.0
+ */
 
-		public $section;
-		public $type = 'cosmoswp_section_h3';
+// Exit if accessed directly.
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
 
-		protected function render_template() {
-			?>
-            <li id="accordion-section-{{ data.id }}" class="accordion-section control-section cosmoswp-section-separator cannot-expand control-section-{{ data.type }}">
-                <h3 class="accordion-section-title accordion-section-h3" tabindex="0">
-                    {{ data.title }}
-                </h3>
-            </li>
-			<?php
+if ( ! class_exists( 'CosmosWP_WP_Customize_Section' ) ) :
+
+	/**
+	 * Custom Common Section Class
+	 *
+	 * @package CosmosWP
+	 * @since 1.0.0
+	 */
+	class CosmosWP_WP_Customize_Section extends WP_Customize_Section {
+
+		/**
+		 * The section type.
+		 *
+		 * @access public
+		 * @var string
+		 */
+		public $type = 'cosmoswp-section';
+
+		/**
+		 * Constructor for the section.
+		 *
+		 * @param WP_Customize_Manager $manager The Customizer manager object.
+		 * @param string               $id      The section ID.
+		 * @param array                $args    The section arguments.
+		 */
+		public function __construct( $manager, $id, $args = array() ) {
+			parent::__construct( $manager, $id, $args );
+
+			// Default to 'h3' type if not provided.
+			$this->type = isset( $args['type'] ) ? $args['type'] : 'h3';
+			if ( isset( $args['active_callback'] ) ) {
+				$this->active_callback = $args['active_callback'];
+			}
 		}
 
+		/**
+		 * Handle by JavaScript.
+		 *
+		 * @return void
+		 */
+		public function render_content() {}
 	}
-endif;
 
-if ( class_exists( 'WP_Customize_Control' ) && ! class_exists( 'CosmosWP_WP_Customize_Section_P' )):
-	class CosmosWP_WP_Customize_Section_P extends WP_Customize_Section {
-
-		public $section;
-		public $type = 'cosmoswp_section_p';
-
-		protected function render_template() {
-			?>
-            <li id="accordion-section-{{ data.id }}" class="accordion-section control-section cosmoswp-section-separator cannot-expand control-section-{{ data.type }}">
-                <p class="accordion-section-title accordion-section-p" tabindex="0">
-                    {{ data.title }}
-                </p>
-            </li>
-			<?php
-		}
-	}
 endif;

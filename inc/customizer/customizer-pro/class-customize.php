@@ -1,4 +1,15 @@
-<?php
+<?php // phpcs:ignore WordPress.NamingConventions.ValidClassName.Prefix -- Class filename does not follow standard, but this is intentional.
+/**
+ * Singleton class for handling the theme's customizer integration.
+ *
+ * @since  1.0.0
+ * @access public
+ */
+
+// Exit if accessed directly.
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
 /**
  * Singleton class for handling the theme's customizer integration.
  *
@@ -19,7 +30,7 @@ final class CosmosWP_Customize {
 		static $instance = null;
 
 		if ( is_null( $instance ) ) {
-			$instance = new self;
+			$instance = new self();
 			$instance->setup_actions();
 		}
 
@@ -56,15 +67,15 @@ final class CosmosWP_Customize {
 	 *
 	 * @since  1.0.0
 	 * @access public
-	 * @param  object  $manager
+	 * @param  object $manager Customizer object.
 	 * @return void
 	 */
 	public function sections( $manager ) {
 
 		// Load custom sections.
-        require_once cosmoswp_file_directory('inc/customizer/customizer-pro/section-pro.php');
+		require_once cosmoswp_file_directory( 'inc/customizer/customizer-pro/section-pro.php' );
 
-        // Register custom section types.
+		// Register custom section types.
 		$manager->register_section_type( 'CosmosWP_Customize_Section_Pro' );
 
 		// Register sections.
@@ -72,11 +83,14 @@ final class CosmosWP_Customize {
 			new CosmosWP_Customize_Section_Pro(
 				$manager,
 				'cosmoswp',
-                apply_filters('cosmoswp_customizer_upgrade_msg',array(
-                    'pro_text' => esc_html__( 'Get More Features in CosmosWP Pro','cosmoswp' ),
-                    'pro_url'  => 'https://www.cosmoswp.com/pricing/',
-                    'priority' => 0
-                ))
+				apply_filters(
+					'cosmoswp_customizer_upgrade_msg',
+					array(
+						'pro_text' => esc_html__( 'Get More Features in CosmosWP Pro', 'cosmoswp' ),
+						'pro_url'  => 'https://www.cosmoswp.com/pricing/',
+						'priority' => 0,
+					)
+				)
 			)
 		);
 	}
@@ -89,10 +103,10 @@ final class CosmosWP_Customize {
 	 * @return void
 	 */
 	public function enqueue_control_scripts() {
-        require_once cosmoswp_file_directory('inc/customizer/customizer-pro/section-pro.php');
+		require_once cosmoswp_file_directory( 'inc/customizer/customizer-pro/section-pro.php' );
 
-        wp_enqueue_script( 'cosmoswp-customize-controls', trailingslashit( get_template_directory_uri() ) . 'inc/customizer/customizer-pro/customize-controls.js', array( 'customize-controls' ) );
-		wp_enqueue_style( 'cosmoswp-customize-controls', trailingslashit( get_template_directory_uri() ) . 'inc/customizer/customizer-pro/customize-controls.css' );
+		wp_enqueue_script( 'cosmoswp-customize-controls', trailingslashit( get_template_directory_uri() ) . 'inc/customizer/customizer-pro/customize-controls.js', array( 'customize-controls' ), COSMOSWP_VERSION, false );
+		wp_enqueue_style( 'cosmoswp-customize-controls', trailingslashit( get_template_directory_uri() ) . 'inc/customizer/customizer-pro/customize-controls.css', array(), COSMOSWP_VERSION );
 	}
 }
 // Doing this customizer thang!
