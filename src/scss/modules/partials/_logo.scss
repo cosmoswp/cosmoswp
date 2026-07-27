@@ -1,0 +1,250 @@
+@use "../../base/mixins";
+
+/*------------------------
+	Logo
+------------------------*/
+
+
+
+.cwp-logo {
+    &.cwp-site-identity-sorting {
+
+        display: flex;
+        align-items: center;
+    }
+
+    &:not(.cwp-site-identity-sorting) {
+        .custom-logo-link {
+            display: inline-block;
+        }
+    }
+
+    .site-title {
+        margin: 0 0 5px 0;
+    }
+
+    .site-tagline {
+        margin: 0;
+    }
+
+    .custom-logo-link {
+        max-width: 50px;
+        font-size: 0;
+        line-height: normal;
+    }
+
+
+
+    &.cwp-left {
+
+        &-mobile {
+            justify-content: flex-start;
+
+            .custom-logo-link {
+                +span {
+                    margin-left: 15px;
+                    margin-top: 0;
+                }
+            }
+        }
+
+    }
+
+    &.cwp-right {
+
+        &-mobile {
+            flex-direction: row-reverse;
+            align-items: self-end;
+
+            .custom-logo-link {
+                +span {
+                    margin-right: 15px;
+                    margin-top: 0;
+                }
+            }
+        }
+
+    }
+
+    &.cwp-top {
+        &-mobile {
+            flex-direction: column;
+            align-items: self-start;
+
+            .custom-logo-link {
+                +span {
+                    margin-top: 15px;
+                }
+            }
+        }
+    }
+
+    &.cwp-bottom {
+        &-mobile {
+            flex-direction: column-reverse;
+            align-items: self-start;
+
+            .custom-logo-link {
+                +span {
+                    margin-bottom: 15px;
+                }
+            }
+        }
+    }
+
+    &.cwp-text-center-mobile {
+
+        &.cwp-top-mobile,
+        &.cwp-bottom-mobile {
+
+            .custom-logo-link,
+            span {
+                margin: 0 auto;
+            }
+        }
+    }
+
+    @media (min-width:720px) {
+        &.cwp-left {
+
+            &-tablet {
+                justify-content: flex-start;
+
+                .custom-logo-link {
+                    +span {
+                        margin-left: 15px;
+                        margin-top: 0;
+                    }
+                }
+            }
+
+        }
+
+        &.cwp-right {
+
+            &-tablet {
+                flex-direction: row-reverse;
+                align-items: self-end;
+
+                .custom-logo-link {
+                    +span {
+                        margin-right: 15px;
+                        margin-top: 0;
+                    }
+                }
+            }
+
+        }
+
+        &.cwp-top {
+            &-tablet {
+                flex-direction: column;
+                align-items: self-start;
+
+                .custom-logo-link {
+                    +span {
+                        margin-top: 15px;
+                    }
+                }
+            }
+        }
+
+        &.cwp-bottom {
+            &-tablet {
+                flex-direction: column-reverse;
+                align-items: self-start;
+
+                .custom-logo-link {
+                    +span {
+                        margin-bottom: 15px;
+                    }
+                }
+            }
+        }
+
+        &.cwp-text-center-tablet {
+
+            &.cwp-top-tablet,
+            &.cwp-bottom-tablet {
+
+                .custom-logo-link,
+                span {
+                    margin: 0 auto;
+                }
+            }
+        }
+    }
+
+    @include mixins.respond-above(md) {
+        &.cwp-left {
+            &-desktop {
+                justify-content: flex-start;
+                flex-direction: row;
+                align-items: self-start;
+
+                .custom-logo-link {
+                    +span {
+                        margin-left: 15px;
+                        margin-top: 0;
+                    }
+                }
+            }
+        }
+
+        &.cwp-right {
+
+            &-desktop {
+                flex-direction: row-reverse;
+                align-items: self-end;
+
+                .custom-logo-link {
+                    +span {
+                        margin-right: 15px;
+                        margin-top: 0;
+                    }
+                }
+            }
+
+        }
+
+        &.cwp-top {
+            &-desktop {
+                flex-direction: column;
+                align-items: self-start;
+
+                .custom-logo-link {
+                    +span {
+                        margin-top: 15px;
+                    }
+                }
+            }
+        }
+
+        &.cwp-bottom {
+            &-desktop {
+                flex-direction: column-reverse;
+                align-items: self-start;
+
+                .custom-logo-link {
+                    +span {
+                        margin-bottom: 15px;
+                    }
+                }
+            }
+        }
+
+        &.cwp-text-center-desktop {
+
+            &.cwp-top-desktop,
+            &.cwp-bottom-desktop {
+
+                .custom-logo-link,
+                span {
+                    margin: 0 auto;
+                }
+            }
+        }
+
+    }
+
+}

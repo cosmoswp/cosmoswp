@@ -1,0 +1,35 @@
+@use "../base/variables";
+
+#{variables.$varClass} {
+    &-czr {
+        &-ctrl {
+            &--btn {
+                &-grp {
+                    --at-gap: 5px;
+                }
+
+                &-outln {
+                    --at-bdr-rad: 3px;
+                    --at-fnt-sz: 11px;
+                    --at-fnt-wt: 600;
+                    --at-p: 7px 10px;
+                    --at-txt-tf: uppercase;
+                    --at-ltr-sp: 0.04rem;
+                    --at-bg-cl: var(#{variables.$varPrefix}-gray-100);
+                    --at-cl: var(#{variables.$varPrefix}-gray-950);
+                    font-weight: var(--at-fnt-wt);
+                    text-transform: var(--at-txt-tf);
+                    letter-spacing: var(--at-ltr-sp);
+
+                    &.at-btn-active,
+                    &:hover,
+                    &:focus {
+                        --at-bg-cl: var(#{variables.$varPrefix}-primary-color);
+                        --at-bdr-cl: var(#{variables.$varPrefix}-primary-color);
+                        --at-cl: var(#{variables.$varPrefix}-white-color);
+                    }
+                }
+            }
+        }
+    }
+}

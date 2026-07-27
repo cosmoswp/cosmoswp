@@ -1,0 +1,148 @@
+// @use "sass:color";
+
+// Variables for CosmosWP Theme
+// These variables are used throughout the theme for consistent styling and theming.
+$varClass: ".cwp";
+$varPrefix: "--cwp";
+
+// ** Global Variables
+// ** Global variables are used to define the base styles and colors for the theme.
+//Font 
+$font-size-base : 15px;
+$line-height-base : 1.5;
+$font-family-base : 'PT Sans',
+sans-serif;
+$font-weight-regular : 400;
+$font-weight-bold : 700;
+
+
+
+$heading-font-family : 'PT Sans Narrow',
+sans-serif;
+$heading-regular-weight : 400;
+$heading-bold-weight : 700;
+
+$font-size-base-ratio : 1.125;
+
+
+//Gray Color Base
+//$gray-base : #000 !default;
+//$gray-darker : color.adjust($gray-base, $lightness: 13.5%) !default; // #222
+$gray-dark : #333;
+//$gray : color.adjust($gray-base, $lightness: 33.5%) !default; // #555
+//$gray-medium-light : color.adjust($gray-base, $lightness: 86.7%) !default; // #ddd
+//$gray-light : color.adjust($gray-base, $lightness: 46.7%) !default; // #777
+//$gray-lighter : color.adjust($gray-base, $lightness: 93.5%) !default; // #eee
+//$gray-medium-lighter : color.adjust($gray-base, $lightness: 98.43%) !default; // #fbfbfb
+
+
+
+
+//** Background color for `<body>`.
+//$body-bg : #fff !default;
+//** Global text color on `<body>`.
+//$text-color : $gray-dark !default;
+
+//** Global textual link color.
+//$link-color : $brand-primary !default;
+//** Link hover color set via `darken()` function.
+//$link-hover-color : color.adjust($link-color, $lightness: -15%) !default;
+//** Link hover decoration.
+$link-hover-decoration : underline !default;
+
+//** Disabled cursor for form controls and buttons.
+$cursor-disabled : not-allowed !default;
+$cursor-pointer : pointer !default;
+//$input-bg-disabled : $gray-light;
+
+//Helper Classes
+$text-center : center;
+$text-right : right;
+$text-left : left;
+
+// Forms Variables
+$input-height-base : 40px;
+//$input-bg : $default-color;
+//$input-color : $gray-dark;
+$padding-base-vertical : 6px;
+$padding-base-horizontal : 12px;
+
+//Spacer
+$size__spacing-unit : 16px;
+$size__site-main : 100%;
+$size__site-sidebar : 25%;
+$size__site-margins : calc(10% + 60px);
+$size__site-tablet-content : calc(8 * (100vw / 12) - 28px);
+$size__site-desktop-content : calc(6 * (100vw / 12) - 28px);
+
+$colors: (
+    // ========================
+    // Base Colors
+    // ========================
+    white-color : #ffffff,
+    black-color : #000000,
+
+    // Brand Colors
+    primary-color : #275cf6,
+    primary-light: #5c85f8,
+    primary-lighter: #a5bbfb,
+    primary-dark: #1d45c4,
+    primary-darker: #122c99,
+    primary-soft: #ebf0fe,
+
+    // ========================
+    // Red Colors
+    // ========================
+    red-base : #ff2828,
+
+    // ========================
+    // Green Colors
+    // ========================
+    green-base : #77a464,
+
+    // ========================
+    // Yellow Colors
+    // ========================
+    yellow-olive : #958e09,
+
+
+    // ========================
+    // Neutral Grays
+    // ========================
+    gray-100: #fafafa,
+    gray-125: #fbfbfb,
+    gray-150: #f7f7f7,
+    gray-175: #f5f5f5,
+    gray-200: #f1f1f1,
+    gray-250: #ededed,
+    gray-300: #ebebeb,
+    gray-350: #eee,
+    gray-400: #ddd,
+    gray-450: #d3d3d3,
+    gray-500: #ccc,
+    gray-600: #bbbbbb,
+    gray-700: #adadad,
+    gray-750 : #999999,
+    gray-800: #82878c,
+    gray-825: #767676,
+    gray-850: #555d66,
+    gray-900: #555555,
+    gray-950: #444,
+    gray-975: #333,
+    gray-1000: #191e23,
+
+    // ========================
+    // Tinted Neutrals
+    // ========================
+    gray-lavender : #d3ced2,
+);
+
+:root {
+    @each $name, $value in $colors {
+        #{$varPrefix}-#{$name}: #{$value};
+
+    }
+}
+
+$white-color : #ffffff;
+$primary-color : #275cf6;

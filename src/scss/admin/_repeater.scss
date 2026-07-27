@@ -1,0 +1,25 @@
+@use "../base/variables";
+
+#{variables.$varClass} {
+    &-czr {
+        &-ctrl {
+            &--rpt {
+                #{variables.$varClass} {
+                    &-czr {
+                        &-ctrl {
+                            &--wrp {
+                                --at-gap: 5px 0;
+                            }
+                        }
+                    }
+                }
+
+                .at-rpt-grp-itms-fields {
+                    .at-checkbox {
+                        flex-grow: 1;
+                    }
+                }
+            }
+        }
+    }
+}

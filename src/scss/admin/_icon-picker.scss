@@ -1,0 +1,87 @@
+@use "../base/variables";
+@use "../base/mixins";
+
+
+#{variables.$varClass} {
+    &-czr {
+        &-ctrl {
+            &--icon {
+                &-wrp {}
+
+                &-itms {
+                    --at-gap: 8px;
+                    --at-m: 15px 0 0 0;
+                }
+
+                &-itm {
+                    --at-p: 8px;
+                    --at-h: 20px;
+                    --at-w: 20px;
+                    --at-fnt-sz: 18px;
+                    font-size: var(--at-fnt-sz);
+                    --at-bdr-rad: 3px;
+                    --at-bg-cl: var(#{variables.$varPrefix}-gray-350);
+                    --at-cl: var(#{variables.$varPrefix}-gray-950);
+                    --at-cur: pointer;
+                    --at-trs: all 0.5s ease-in-out 0s;
+
+                    &:hover {
+                        --at-bg-cl:var(#{variables.$varPrefix}-gray-400);
+                        --at-cl: var(#{variables.$varPrefix}-gray-950);
+                    }
+
+                    &.is-selected {
+                        --at-bg-cl:var(#{variables.$varPrefix}-primary-color);
+                        --at-cl: var(#{variables.$varPrefix}-white-color);
+                    }
+
+
+                    &-cont {
+                        --at-p: 10px;
+                        --at-h: 200px;
+                        --at-ovf-y: scroll;
+                        --at-bg-cl:var(#{variables.$varPrefix}-white-color);
+                        --at-bdr-w: 1px;
+                        --at-bdr-sty: solid;
+                        --at-bdr-cl:var(#{variables.$varPrefix}-gray-500);
+                        --at-w: calc(100% - var(--at-p) * 2);
+                        --at-m: 15px 0 0 0;
+                        --at-bdr-rad: 3px;
+
+                    }
+                }
+
+                &-tog {
+
+                    --at-p: 10px;
+                    --at-bdr-sty: dashed;
+                    --at-bdr-w: 1px;
+                    --at-bdr-cl:var(#{variables.$varPrefix}-gray-700);
+                    --at-bdr-rad: 3px;
+                    --at-bg-cl: var(#{variables.$varPrefix}-gray-100);
+                    --at-cl: var(#{variables.$varPrefix}-gray-1000);
+                    --at-cur: pointer;
+
+                    &.isOpen {
+                        --at-bdr-cl:var(#{variables.$varPrefix}-primary-color);
+                        --at-bg-cl: var(#{variables.$varPrefix}-primary-soft);
+                        --at-cl: var(--cwp-primary-color);
+                    }
+                }
+
+                &-view {
+                    --at-h: 40px;
+                    --at-w: 40px;
+                    --at-bdr-sty: solid;
+                    --at-bdr-rad: 3px;
+                    --at-bdr-w: 1px;
+                    --at-bdr-cl:var(#{variables.$varPrefix}-primary-color);
+                    --at-cl: var(#{variables.$varPrefix}-white-color);
+                    --at-bg-cl: var(--cwp-primary-color);
+                    --at-fnt-sz: 18px;
+                    font-size: var(--at-fnt-sz);
+                }
+            }
+        }
+    }
+}

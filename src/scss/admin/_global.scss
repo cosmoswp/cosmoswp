@@ -1,0 +1,240 @@
+/*!
+ * Project   : CosmosWP WordPress Theme
+ * Purpose   : Customizer Tweaks
+ */
+@use "../base/variables";
+@use "admin-variables";
+@use "../base/mixins";
+@use "sass:color";
+
+a:focus,
+a:active {
+    @include mixins.prefix(box-shadow, none, webkit moz ms o);
+}
+
+input,
+select {
+    margin: 0;
+    padding: 5px 10px;
+}
+
+label:empty {
+    display: none;
+}
+
+.cwp-czr-bldr *,
+.wp-full-overlay-sidebar-content * {
+    --at-fnt-fam: -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        Oxygen-Sans,
+        Ubuntu,
+        Cantarell,
+        "Helvetica Neue",
+        sans-serif !important;
+}
+
+input:not([type="checkbox"]):not([type="radio"]):not([type="range"]),
+select {
+    --at-h: 33px;
+    --at-bdr-rad: 3px;
+    height: var(--at-h);
+    border-radius: var(--at-bdr-rad) !important;
+    border-color:var(#{variables.$varPrefix}-gray-400) !important;
+
+}
+
+select {
+    &:hover {
+
+        color: var(#{variables.$varPrefix}-primary-color) !important;
+    }
+}
+
+//atrc reset
+
+
+#{variables.$varClass} {
+    &-czr {
+        &-ctrl {
+            --at-gap: 15px;
+
+            &--ttl {
+                --at-fnt-wt: 600;
+                --at-fnt-sz: 13px;
+                --at-cl:var(#{variables.$varPrefix}-gray-950);
+            }
+
+            &--desc {
+                --at-fnt-sz: 13px;
+                --at-cl:var(#{variables.$varPrefix}-gray-800);
+                --at-m: 0 0 15px 0;
+            }
+
+            .at-pnl-body {
+                &.is-opened {
+                    --at-bdr-cl:var(#{variables.$varPrefix}-primary-lighter);
+                    --at-bdr-sty: dashed;
+
+                    >.components-panel__body-title {
+                        --at-bg-cl: var(#{variables.$varPrefix}-primary-soft);
+                        --at-cl: var(#{variables.$varPrefix}-primary-color);
+
+                        svg {
+                            fill: var(#{variables.$varPrefix}-primary-color);
+                        }
+                    }
+                }
+            }
+
+            .at-rst-wrp {
+
+                .at-btn-rst-i {
+                    --at-p: 0;
+                    --at-m: 30px 0 0 0;
+
+                    .at-svg {
+                        --at-cl:var(#{variables.$varPrefix}-gray-700);
+                    }
+
+                    &:hover,
+                    &:focus {
+                        .at-svg {
+                            --at-cl:var(#{variables.$varPrefix}-gray-1000);
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+
+}
+
+
+/*custom section separator*/
+%spereator {
+    background: transparent !important;
+    border: medium none !important;
+    padding: 15px 0 !important;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    line-height: normal;
+    font-weight: 700;
+    text-shadow: 2px 1px 0 variables.$white-color;
+    cursor: initial;
+    pointer-events: none;
+}
+
+#customize-theme-controls {
+    .accordion-section-title {
+        button {
+
+            &:hover,
+            &:focus {
+                color: var(#{variables.$varPrefix}-primary-color) !important;
+            }
+
+            &:focus {
+                box-shadow: none !important;
+                outline: none !important;
+            }
+        }
+
+        &:hover,
+        &:focus {
+            &:after {
+
+                color: var(#{variables.$varPrefix}-primary-color) !important;
+            }
+        }
+    }
+
+    .control-section {
+        &:hover {
+            >.accordion-section-title {
+
+                color: var(#{variables.$varPrefix}-primary-color) !important;
+                border-left-color: var(#{variables.$varPrefix}-primary-color) !important;
+
+                &:after {
+                    color: var(#{variables.$varPrefix}-primary-color) !important;
+
+                }
+            }
+        }
+
+        &.cosmoswp-section-separator,
+        &.control-section-h3 {
+            &:hover {
+                >.accordion-section-title {
+                    color: #50575e !important;
+                }
+            }
+        }
+
+        &-h3 {
+            display: block !important;
+
+            .accordion-section-title {
+
+                @extend %spereator;
+
+                &:after {
+                    display: none !important;
+                }
+
+                button {
+                    &:hover {
+                        background: transparent !important;
+                        border-left-color: inherit !important;
+                    }
+                }
+            }
+        }
+
+        &.cosmoswp-section-separator {
+            display: block !important;
+
+            .accordion-section-title {
+
+                @extend %spereator;
+
+                &:after {
+                    display: none !important;
+                }
+
+            }
+
+            &.cannot-expand {
+
+                .accordion-section-title {
+                    padding: 20px !important;
+                }
+            }
+
+
+        }
+    }
+}
+
+//Responsive options removed from border style control due to backward compatibility issues
+.border-width,
+.border-radius,
+.box-shadow-css,
+.normal-border-width,
+.hover-border-width,
+.normal-border-radius,
+.hover-border-radius,
+.active-border-width,
+.active-border-radius,
+.normal-box-shadow-css,
+.hover-box-shadow-css,
+.active-box-shadow-css,
+.normal-border-shadow-css,
+.hover-border-shadow-css {
+    .cwp-czr-ctrl--resp-swch {
+        display: none !important;
+    }
+}

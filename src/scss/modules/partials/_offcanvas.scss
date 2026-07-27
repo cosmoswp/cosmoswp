@@ -1,0 +1,168 @@
+@use "../../base/mixins";
+@use "../../base/variables";
+
+/*--------------------- 
+	Offcanvas Sidebar 
+---------------------*/
+
+.cwp-offcanvas-btn {
+    .cwp-toggle-btn-text {
+        transition: all 0.5s ease-in-out 0s;
+    }
+}
+
+.cwp-offcanvas-body-wrapper {
+    width: 100%;
+}
+
+.cwp-offcanvas-sidebar {
+    position: fixed;
+    z-index: 999999;
+    top: 0;
+    width: 280px;
+    padding: 40px 20px 20px;
+    height: 100%;
+    transition: all 0.5s ease-in-out 0s;
+    overflow-x: hidden;
+    overflow-y: scroll;
+
+    .navigation {
+        ul {
+            flex-direction: column;
+
+            li {
+                margin-top: 0;
+                padding-top: 0;
+
+                &.menu-item-has-children {
+                    >a {
+                        &:after {
+                            float: right;
+                        }
+                    }
+                }
+
+                ul {
+                    margin-top: 0;
+                    padding-top: 0;
+                    padding-left: 0;
+                }
+
+                &.open {
+                    >a {
+                        &:after {
+                            content: "\f106";
+                        }
+                    }
+
+                    >.sub-menu {
+                        padding-left: 15px;
+                        position: static;
+                        min-width: 100%;
+
+                        li {
+                            a {
+                                &:after {
+                                    float: right;
+                                    transform: rotate(0deg);
+                                    margin: 0;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                a {
+                    padding: 10px;
+                }
+            }
+        }
+    }
+
+    &.cwp-offcanvas-right {
+        right: -280px;
+    }
+
+    &.cwp-offcanvas-left {
+        left: -280px;
+    }
+
+    .cwp-close-btn {
+        display: flex;
+
+        .cwp-toggle-btn-text {
+            transition: all 0.5s ease-in-out 0s;
+        }
+    }
+}
+
+.cwp-offcanvas-right-push {
+    right: 0;
+    transition: all 0.5s ease-in-out 0s;
+    position: relative;
+
+    #wpadminbar {
+        top: -46px;
+    }
+
+    @include mixins.respond-above(sm) {
+        #wpadminbar {
+            top: 0;
+        }
+    }
+}
+
+.cwp-offcanvas-left-push {
+    left: 0;
+    transition: all 0.5s ease-in-out 0s;
+    position: relative;
+
+    #wpadminbar {
+        top: -46px;
+    }
+
+    @include mixins.respond-above(sm) {
+        #wpadminbar {
+            top: 0;
+        }
+    }
+}
+
+.cwp-show-offcanvas-sidebar {
+    overflow: hidden;
+    position: relative;
+    transition: all 0.5s ease-in-out 0s;
+
+    .cwp-offcanvas-body-wrapper {
+        &:after {
+            position: absolute;
+            content: '';
+            background: rgba(0, 0, 0, .5);
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 999991;
+        }
+    }
+
+    .cwp-offcanvas-right-push {
+        right: 280px;
+
+        .cwp-offcanvas-sidebar {
+            &.cwp-offcanvas-right {
+                right: 0;
+            }
+        }
+    }
+
+    .cwp-offcanvas-left-push {
+        left: 280px;
+
+        .cwp-offcanvas-sidebar {
+            &.cwp-offcanvas-left {
+                left: 0;
+            }
+        }
+    }
+}

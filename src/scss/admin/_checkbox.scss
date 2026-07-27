@@ -1,0 +1,88 @@
+@use "../base/variables";
+
+.customize-control-checkbox {
+    .customize-inside-control-row {
+        --at-pos: relative;
+        --at-m: 0;
+        --at-p: 0 0 0 40px;
+        position: var(--at-pos);
+        padding: var(--at-p);
+        margin: var(--at-m);
+
+
+
+        label {
+            --at-cur: pointer;
+            cursor: var(--at-cur);
+
+            &:after,
+            &:before {
+                --at-pos: absolute;
+                --at-t: 50%;
+                --at-tf: translateY(-50%);
+                --at-trs: all .5s ease-in-out 0s;
+                --at-bdr-rad: 50px;
+                display: block;
+                content: "";
+                position: var(--at-pos);
+                top: var(--at-t);
+                transform: var(--at-tf);
+                transition: var(--at-trs);
+                border-radius: var(--at-bdr-rad);
+            }
+
+            &:before {
+                --at-w: 32px;
+                --at-bg-cl: var(#{variables.$varPrefix}-white-color);
+                --at-bdr-w: 1px;
+                --at-bdr-sty: solid;
+                --at-bdr-cl:var(#{variables.$varPrefix}-gray-700);
+                --at-l: 0;
+                --at-h: 18px;
+
+                width: var(--at-w);
+                background: var(--at-bg-cl);
+                border-width: var(--at-bdr-w);
+                border-style: var(--at-bdr-sty);
+                border-color: var(--at-bdr-cl);
+                height: var(--at-h);
+                left: var(--at-l);
+            }
+
+            &:after {
+                --at-w: 12px;
+                --at-bg-cl: var(#{variables.$varPrefix}-gray-700);
+                --at-h: 12px;
+                --at-tf: translate(-35px, -6px);
+
+                width: var(--at-w);
+                background: var(--at-bg-cl);
+                height: var(--at-h);
+                transform: var(--at-tf);
+            }
+        }
+
+        input {
+            --at-vis: hidden;
+            --at-opa: 0;
+            visibility: var(--at-vis);
+            opacity: var(--at-opa);
+
+            &:checked {
+                +label {
+                    &:before {
+                        --at-bdr-cl:var(#{variables.$varPrefix}-primary-color);
+                        border-color: var(--at-bdr-cl);
+                    }
+
+                    &:after {
+                        --at-bg-cl: var(#{variables.$varPrefix}-primary-color);
+                        --at-tf: translate(-23px, -6px);
+                        background: var(--at-bg-cl);
+                        transform: var(--at-tf);
+                    }
+                }
+            }
+        }
+    }
+}

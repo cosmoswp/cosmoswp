@@ -1,0 +1,20 @@
+@use "../base/variables";
+@use "admin-variables";
+
+#{variables.$varClass} {
+    &-czr {
+        &-ttl {
+            --at-bg-cl: var(#{variables.$varPrefix}-white-color);
+            --at-m: 0 -12px;
+            --at-p: 13px 12px;
+            --at-fnt-sz: 12px;
+            --at-fnt-wt: 700;
+            --at-ltr-sp: 1;
+            --at-txt-tf: uppercase;
+            --at-bdr-cl: var(#{variables.$varPrefix}-gray-400);
+            --at-bdr-w: 1px 0;
+            --at-bdr-sty: solid;
+            --at-cl: var(#{variables.$varPrefix}-gray-900);
+        }
+    }
+}

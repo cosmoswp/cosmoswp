@@ -1,0 +1,81 @@
+@use "sass:math";
+@use "./grid_base/variables";
+
+/*custom 5th col */
+
+@mixin make-col-5($size, $columns: $grid-columns5) {
+    flex: 0 0 math.percentage(math.div($size, $columns));
+    max-width: math.percentage(math.div($size, $columns));
+}
+
+@mixin make-col-offset5($size, $columns: $grid-columns5) {
+    $num: math.div($size, $columns);
+    margin-left: if($num==0, 0, math.percentage($num));
+}
+
+.grid-xl-2m3,
+.grid-lg-2m3,
+.grid-md-2m3,
+.grid-sm-2m3,
+.grid-xs-2m3 {
+    @extend %grid-column;
+}
+
+$xs: 0;
+$sm: 576px;
+$md: 768px;
+$lg: 992px;
+$xl: 1200px;
+@media (min-width:$xs) {
+    .grid-xs-2m3 {
+        @include make-col-5(1, 5);
+    }
+
+    .offset-xs-2m3 {
+        @include make-col-offset5(1, 5);
+    }
+
+}
+
+@media (min-width:$sm) {
+    .grid-sm-2m3 {
+        @include make-col-5(1, 5);
+    }
+
+    .offset-sm-2m3 {
+        @include make-col-offset5(1, 5);
+    }
+}
+
+@media (min-width:$md) {
+    .grid-md-2m3 {
+        @include make-col-5(1, 5);
+    }
+
+    .offset-xl-2m3 {
+        @include make-col-offset5(1, 5);
+    }
+
+}
+
+@media (min-width:$lg) {
+    .grid-lg-2m3 {
+        @include make-col-5(1, 5);
+    }
+
+    .offset-lg-2m3 {
+        @include make-col-offset5(1, 5);
+    }
+
+}
+
+@media (min-width:$xl) {
+    .grid-xl-2m3 {
+        @include make-col-5(1, 5);
+    }
+
+    .offset-xl-2m3 {
+        @include make-col-offset5(1, 5);
+    }
+
+}

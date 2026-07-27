@@ -1,0 +1,26 @@
+@use "../../base/variables";
+
+/*--------------------- 
+	404 Page
+---------------------*/
+.cwp-error-404 {
+    padding: 40px 0 80px 0;
+
+    .search-form {
+        width: 40%;
+        margin: 0 auto;
+
+        label {
+            margin: 0;
+            width: 78%;
+        }
+
+        input {
+            &[type="submit"] {
+                width: 20%;
+                color:var(#{variables.$varPrefix}-white-color);
+                vertical-align: top;
+            }
+        }
+    }
+}

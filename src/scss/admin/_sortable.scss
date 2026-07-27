@@ -1,0 +1,58 @@
+@use "../base/variables";
+
+
+#{variables.$varClass} {
+    &-czr {
+        &-ctrl {
+            &--sort {
+                &-cont {
+                    --at-gap: 5px;
+                }
+
+                &-itm {
+                    --at-p: 8px;
+                    --at-bg-cl: var(#{variables.$varPrefix}-gray-100);
+                    --at-bdr-rad: 3px;
+                    --at-bdr-cl: var(#{variables.$varPrefix}-gray-400);
+                    --at-bdr-sty: dashed;
+                    --at-bdr-w: 1px;
+                    --at-gap: 5px;
+                    --at-cur: move;
+                    --at-m: 0;
+                    --at-pos: relative;
+                    --at-cur: move;
+
+                    &::before {
+                        content: '.';
+                        position: absolute;
+                        right: 24px;
+                        font-size: 20px;
+                        line-height: 26px;
+                        top: -9px;
+                        color: var(#{variables.$varPrefix}-gray-700);
+                        text-shadow: 0 5px var(#{variables.$varPrefix}-gray-700),
+                        0 10px var(#{variables.$varPrefix}-gray-700),
+                        5px 0 var(#{variables.$varPrefix}-gray-700),
+                        5px 5px var(#{variables.$varPrefix}-gray-700),
+                        5px 10px var(#{variables.$varPrefix}-gray-700),
+                        10px 0 var(#{variables.$varPrefix}-gray-700),
+                        10px 5px var(#{variables.$varPrefix}-gray-700),
+                        10px 10px var(#{variables.$varPrefix}-gray-700);
+                    }
+
+                    &-disabled {
+                        --at-opa: 0.5;
+                        --at-bdr-sty: solid;
+                    }
+                }
+
+                &-icon {
+                    --at-cur: pointer;
+                }
+            }
+        }
+    }
+}
+
+
+/* Sortable Styles */

@@ -1,0 +1,118 @@
+@use "../base/variables";
+@use "admin-variables";
+
+#{variables.$varClass} {
+    &-czr {
+        &-ctrl {
+            &--resp {
+                &-swch {
+                    --at-gap: 5px;
+
+                    button {
+                        --at-bg-cl: var(#{variables.$varPrefix}-gray-450);
+                        --at-cl: var(#{variables.$varPrefix}-gray-800);
+                        --at-trs: background 0.5s ease 0s;
+                        --at-bdr-rad: 3px;
+                        --at-p: 4px;
+                        --at-fnt-sz: 12px;
+
+                        &:hover {
+                            --at-bg-cl: var(#{variables.$varPrefix}-primary-color);
+                            --at-cl: var(#{variables.$varPrefix}-white-color);
+                        }
+
+                        &.active {
+                            --at-bg-cl: var(#{variables.$varPrefix}-primary-color);
+                            --at-cl: var(#{variables.$varPrefix}-white-color);
+                        }
+
+                        i {
+                            --at-w: auto;
+                            --at-h: auto;
+                            --at-fnt-sz: inherit;
+                            font-size: var(--at-fnt-sz);
+                        }
+                    }
+
+
+
+                    &-itm {
+                        --at-m: 0;
+                    }
+
+                    &-fld {
+                        ul {
+
+                            --at-gap: 5px;
+                        }
+
+                        &-itms {
+                            --at-m: 0;
+                            --at-gap: 5px;
+                        }
+                    }
+
+                    &-lnk {
+                        --at-m: 0;
+                        --at-gap: 5px;
+
+                        .at-wrp-lib {
+                            --at-m: 10px 0 0 0;
+                        }
+
+                        label {
+                            margin: 0;
+                        }
+
+                        .at-tog {
+                            .components-form-toggle {
+                                input[type="checkbox"] {
+                                    &:focus {
+                                        box-shadow: none;
+                                        outline: 0;
+
+                                        +.components-form-toggle__track {
+                                            box-shadow: none;
+                                            outline: 0;
+                                        }
+                                    }
+                                }
+
+                                &__track {
+                                    width: 24px;
+                                    border-color:var(#{variables.$varPrefix}-gray-700);
+                                }
+
+                                &__thumb {
+                                    height: 10px;
+                                    left: 3px;
+                                    top: 3px;
+                                    width: 10px;
+                                    border: medium none;
+                                    background:var(#{variables.$varPrefix}-gray-700);
+                                }
+
+                                &.is-checked {
+                                    .components-form-toggle {
+                                        &__track {
+                                            --at-success:var(#{variables.$varPrefix}-white-color);
+                                            background-color: var(--at-success);
+                                            border-color: var(#{variables.$varPrefix}-primary-color);
+                                        }
+
+                                        &__thumb {
+                                            background-color: var(#{variables.$varPrefix}-primary-color);
+                                            transform: translateX(8px);
+
+                                        }
+                                    }
+
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

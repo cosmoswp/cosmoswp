@@ -1,0 +1,44 @@
+@use "../../base/variables";
+
+/*--------------------- 
+	Search Page
+---------------------*/
+.no-results {
+    .search-form {
+        label {
+            margin: 0;
+            width: 78%;
+        }
+
+        input {
+            &[type="submit"] {
+                width: 20%;
+                height: 40px;
+                color:var(#{variables.$varPrefix}-white-color);
+            }
+        }
+    }
+}
+
+.search-results {
+    article {
+        &.page {
+            margin-bottom: 30px;
+            padding-bottom: 30px;
+            border-bottom: 1px dashed var(#{variables.$varPrefix}-gray-500);
+        }
+    }
+
+}
+
+.search-no-results {
+    .cwp-body-main-wrap {
+        .entry-header {
+            .page-title {
+                span {
+                    word-wrap: break-word;
+                }
+            }
+        }
+    }
+}

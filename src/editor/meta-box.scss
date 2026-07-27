@@ -1,0 +1,30 @@
+.cosmoswp-custom-meta .components-select-control__input {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    width: 100%;
+}
+
+.cosmoswp-custom-meta .components-base-control__field {
+    margin-bottom: 8px;
+}
+
+.cosmoswp-custom-meta .components-base-control__label {
+    margin-bottom: 4px;
+    display: inline-block;
+}
+
+.cosmoswp-custom-meta .cosmoswp-banner-img-wrap .button,
+.cosmoswp-custom-meta .cwp-video-upload-wrap .button {
+    display: block;
+    margin: 5px 0;
+}
+
+.cosmoswp-custom-meta .cosmoswp-banner-img-wrap .cwp-image-preview-wrap,
+.cosmoswp-custom-meta .cwp-video-upload-wrap .cwp-video-preview-wrap {
+    display: block;
+    border: 1px dashed #ddd;
+    min-height: 100px;
+    margin: 10px auto;
+    background: #fbfbfb;
+}

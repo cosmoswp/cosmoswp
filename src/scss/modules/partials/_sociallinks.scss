@@ -1,0 +1,30 @@
+@use "../../base/mixins";
+
+/*------------------------
+	Social Links
+------------------------*/
+.cwp-social-links {
+
+    ul {
+        list-style-type: none;
+        margin: 0;
+
+        li {
+            display: inline-block;
+
+            &:first-child {
+                margin-left: 0;
+            }
+
+            &:last-child {
+                margin-right: 0;
+            }
+
+            a {
+                display: block;
+                text-align: center;
+                transition: all 0.5s ease-in-out 0s;
+            }
+        }
+    }
+}

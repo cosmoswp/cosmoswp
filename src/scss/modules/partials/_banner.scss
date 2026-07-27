@@ -1,0 +1,121 @@
+@use "../../base/mixins";
+
+/*------------------------
+	Banner
+------------------------*/
+.cwp-has-banner {
+
+    .cwp-body-main-wrap,
+    .cwp-single-post,
+    .cwp-blog {
+        padding-top: 0;
+    }
+
+    &.gutentor-active {
+        .cwp-body-main-wrap {
+            padding-top: 0;
+        }
+    }
+
+    .cwp-banner {
+        position: relative;
+        z-index: 1;
+
+        &.cwp-enable-overlay {
+            img {
+                z-index: -1;
+            }
+
+            &:after {
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                content: '';
+                z-index: -1;
+            }
+
+            iframe {
+                position: relative;
+                z-index: -1;
+            }
+        }
+
+        .wp-custom-header {
+            height: 100%;
+            overflow: hidden;
+            font-size: 0;
+            line-height: 0;
+
+            .wp-custom-header-video-button {
+                display: none;
+            }
+        }
+
+        video,
+        iframe {
+            width: 100%;
+            height: 100%;
+        }
+
+        video {
+            object-fit: cover;
+            z-index: -1;
+            position: relative;
+        }
+
+        .has-bg-color,
+        .has-bg-image,
+        .has-normal-image,
+        .has-video {
+            position: absolute;
+            width: 100%;
+            z-index: 1;
+        }
+
+        &.cwp-content-position {
+
+            &-top {
+
+                .has-bg-color,
+                .has-normal-image,
+                .has-bg-image,
+                .has-video {
+                    top: 50px;
+                    left: 0;
+                }
+            }
+
+            &-center {
+
+                .has-bg-color,
+                .has-normal-image,
+                .has-bg-image,
+                .has-video {
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                }
+            }
+
+            &-bottom {
+
+                .has-bg-color,
+                .has-normal-image,
+                .has-bg-image,
+                .has-video {
+                    bottom: 50px;
+                    left: 0;
+                }
+            }
+        }
+
+        .breadcrumbs {
+            margin-bottom: 0;
+            background: transparent;
+            padding: 0;
+        }
+    }
+
+}

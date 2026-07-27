@@ -1,0 +1,420 @@
+@use "../../base/mixins";
+@use "../../base/variables";
+
+/*----------------------------
+	Default Search Templates
+------------------------------*/
+.cwp-search-1 {
+    .search-form {
+        .search-submit {
+            width: 100%;
+        }
+    }
+}
+
+.cwp-search-2 {
+    .search-form {
+        position: relative;
+        z-index: 1;
+
+        input {
+            &.search-field {
+                padding-right: 55px;
+
+            }
+
+            &[type="submit"] {
+                position: absolute;
+                font-family: 'fontawesome';
+                right: 0;
+                top: 0;
+                height: 100%;
+                padding: 10px 15px;
+                z-index: 2;
+                cursor: pointer;
+                margin: 0;
+            }
+        }
+    }
+
+    /* Fontawesome Fix */
+    &.gutentor-active {
+        .search {
+            &-form {
+                input {
+                    &[type="submit"] {
+                        font-family: "Font Awesome 5 Free";
+                        font-weight: 900;
+                        margin: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*----------------------------
+	Search
+----------------------------*/
+
+
+.cwp-search {
+    $cwp-prefix: &;
+
+    &-box {
+        width: 100%;
+
+        #{$cwp-prefix}-form-wrapper {
+            width: 100%;
+        }
+
+        .search-form {
+            position: relative;
+        }
+
+        .search-submit {
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            padding: 10px 15px;
+            border: medium;
+            background: transparent;
+            font-size: 16px;
+            z-index: 2;
+            cursor: pointer;
+            width: auto !important;
+        }
+    }
+
+    &-dropdown {
+        #{$cwp-prefix}-form-wrapper {
+            display: none;
+        }
+
+        &.is-active-dropdown {
+            #{$cwp-prefix}-form-wrapper {
+                display: block;
+                position: absolute;
+                top: 100%;
+                z-index: 10;
+                min-width: 285px;
+                transition: all 0.5s ease-in-out 0s;
+
+                &.cwp-search-align {
+                    &-left {
+                        right: 0;
+
+                        .search-form {
+                            &:before {
+                                right: 15px;
+                            }
+                        }
+                    }
+
+                    &-right {
+                        left: 0;
+
+                        .search-form {
+                            &:before {
+                                left: 15px;
+                            }
+                        }
+                    }
+
+                    &-center {
+                        left: 0;
+                        right: 0;
+                        margin: 0 auto;
+
+                        .search-form {
+                            &:before {
+                                left: 0;
+                                right: 0;
+                                margin: 0 auto;
+                            }
+                        }
+                    }
+                }
+
+            }
+
+        }
+
+        .search-form {
+            border: 1px solid var(#{variables.$varPrefix}-gray-350);
+            padding: 1.25em;
+            background: var(#{variables.$varPrefix}-white-color);
+            position: relative;
+            margin-top: 15px;
+            box-shadow: 0 3px 30px rgba(0, 0, 0, 0.1);
+
+            &:before {
+                @include mixins.respond-above(sm) {
+                    border-top: 1px solid var(#{variables.$varPrefix}-gray-350);
+                    border-left: 1px solid var(#{variables.$varPrefix}-gray-350);
+                    background: var(#{variables.$varPrefix}-white-color);
+                    content: "";
+                    display: block;
+                    position: absolute;
+                    top: -5px;
+                    width: 10px;
+                    height: 10px;
+                    z-index: 27;
+                    transform: rotate(45deg);
+                }
+            }
+        }
+
+        .search-submit {
+            position: absolute;
+            right: 18px;
+            top: 50%;
+            padding: 10px 15px;
+            border: medium;
+            background: transparent;
+            font-size: 16px;
+            z-index: 2;
+            cursor: pointer;
+            width: auto !important;
+            transform: translateY(-50%);
+        }
+    }
+}
+
+.search {
+    $parent: &;
+    display: flex;
+
+    input {
+        &[type="search"] {
+            padding-right: 40px;
+
+            &::-webkit-search-decoration,
+            &::-webkit-search-cancel-button,
+            &::-webkit-search-results-button,
+            &::-webkit-search-results-decoration {
+                -webkit-appearance: none;
+            }
+        }
+    }
+
+    &-icon {
+        cursor: pointer;
+        display: block;
+        transition: all 0.5s ease-in-out 0s;
+
+    }
+
+
+}
+
+/*----------------------------
+    	Search fullscreen
+----------------------------*/
+
+.cwp-search-fullscreen-wrapper {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .85);
+    top: 0;
+    left: 0;
+    z-index: 999999;
+    @include mixins.fade(hide);
+    transition: all 0.5s ease-in-out 0s;
+
+
+    &.cwp-show-search {
+        @include mixins.fade(show);
+    }
+
+    .search-form {
+        position: absolute;
+        width: 80%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        @include mixins.respond-above(sm) {
+            width: 60%;
+        }
+
+        input {
+            [type="submit"] {
+                font-family: 'fontawesome';
+            }
+        }
+
+        .search-field {
+            border-width: 0 0 1px 0;
+            border-style: solid;
+            border-color: var(#{variables.$varPrefix}-white-color);
+            background: transparent;
+            color: var(#{variables.$varPrefix}-white-color);
+            ;
+            opacity: 1;
+            font-size: 18px;
+            font-weight: 300;
+            padding-right: 45px;
+        }
+
+        .search-submit {
+            position: absolute;
+            right: 0;
+            top: 0;
+            cursor: pointer;
+            color: var(#{variables.$varPrefix}-white-color);
+            width: auto;
+        }
+    }
+
+    .cwp-close-btn {
+        position: absolute;
+        right: 50px;
+        top: 50px;
+        width: 32px;
+        height: 32px;
+        color: var(#{variables.$varPrefix}-white-color);
+
+        &:before,
+        &:after {
+            position: absolute;
+            content: '';
+            top: 18px;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+        }
+
+        &:before {
+            width: 32px;
+            border-top: 1px solid currentColor;
+            transform: rotate(45deg);
+        }
+
+        &:after {
+            width: 32px;
+            border-top: 1px solid currentColor;
+            transform: rotate(-45deg);
+        }
+    }
+}
+
+
+/*----------------------------
+    Search Overlay
+----------------------------*/
+
+.cwp-search-overlay-wrapper {
+    position: absolute;
+    max-width: 1170px;
+    margin: 0 auto;
+    right: 0;
+    left: 0;
+    top: 0;
+    height: 100%;
+    padding: 0 15px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    flex-direction: row-reverse;
+    align-items: center;
+    @include mixins.fade(hide);
+    transition: all 0.5s ease-in-out 0s;
+
+    @include mixins.respond-above(md) {
+        padding: 0 30px;
+    }
+
+
+    &.cwp-show-search {
+        @include mixins.fade(show);
+    }
+
+    .cwp-search-form-wrapper {
+        position: relative;
+        flex-basis: 90%;
+
+        @include mixins.respond-above(md) {
+
+            flex-basis: 95%;
+
+        }
+
+
+        .search-field {}
+
+        .search-submit {
+            position: absolute;
+            right: 0;
+            top: 0;
+            cursor: pointer;
+            background: transparent;
+            border: medium;
+            font-size: 16px;
+            padding: 6px 15px;
+            width: auto;
+        }
+    }
+
+    .cwp-close-btn {
+        position: relative;
+        width: 32px;
+        height: 32px;
+        color: var(#{variables.$varPrefix}-gray-400);
+        flex-basis: 10%;
+
+        @include mixins.respond-above(md) {
+            flex-basis: 5%;
+
+        }
+
+
+        &:before,
+        &:after {
+            position: absolute;
+            content: '';
+            top: 18px;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+        }
+
+        &:before {
+            width: 12px;
+            border-top: 1px solid currentColor;
+            transform: rotate(45deg);
+
+        }
+
+        &:after {
+            width: 12px;
+            border-top: 1px solid currentColor;
+            transform: rotate(-45deg);
+        }
+
+        @include mixins.respond-above(md) {
+            &:before {
+                width: 32px;
+            }
+
+            &:after {
+                width: 32px;
+            }
+        }
+    }
+}
+
+/*Dropdown Fix In Menu Sidebar*/
+.cwp-header-menu-sidebar {
+    .cwp-search-dropdown {
+        position: relative;
+
+        &.is-active-dropdown {
+            .cwp-search-form-wrapper {
+                min-width: 100%;
+            }
+        }
+    }
+}

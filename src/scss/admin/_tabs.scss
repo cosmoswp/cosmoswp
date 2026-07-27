@@ -1,0 +1,59 @@
+@use "../base/variables";
+
+#{variables.$varClass} {
+    &-czr {
+        &-ctrl {
+            &--tab {
+                &-pnl {
+                    &-tabs {
+                        .components {
+                            &-tab {
+                                &-panel {
+                                    &__tabs {
+                                        background: var(#{variables.$varPrefix}-gray-200);
+                                        border: 1px solid var(#{variables.$varPrefix}-gray-400);
+
+                                        &-item {
+                                            height: auto !important;
+                                            padding: 10px 20px;
+
+                                            &.is-active {
+                                                color: var(#{variables.$varPrefix}-primary-color);
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        &-cont {
+                            --at-bg-cl:var(#{variables.$varPrefix}-white-color);
+                            --at-p: 10px;
+                            --at-bdr-sty: solid;
+                            --at-bdr-w: 0 1px 1px 1px;
+                            --at-bdr-cl:var(#{variables.$varPrefix}-gray-400);
+
+                            &#{variables.$varClass}-on-bdr-sty {
+
+                                .normal,
+                                .hover,
+                                .active {
+                                    &-border {
+
+                                        &-width,
+                                        &-color {
+                                            display: none;
+                                        }
+                                    }
+                                }
+
+                            }
+
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+}

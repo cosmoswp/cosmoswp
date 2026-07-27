@@ -1,0 +1,433 @@
+@use "sass:color";
+@use "../../base/mixins";
+@use "../../base/variables";
+
+/* ------------------
+	Blog & Page Styles
+-------------------- */
+
+.cwp-dynamic-blog-content {
+    .cwp-blog-grid {
+        box-sizing: border-box;
+        display: block;
+        width: 100%;
+        padding-left: 15px;
+        padding-right: 15px;
+
+        figure {
+            &:not(.gallery-item):not(.wp-caption) {
+                width: 100% !important;
+            }
+
+            &.wp-caption.alignnone {
+                width: 100% !important;
+            }
+        }
+
+        ul {
+            li {
+                margin-bottom: 10px;
+            }
+
+            ul {
+                margin-left: 20px;
+            }
+        }
+
+        ol {
+            li {
+                margin-bottom: 10px;
+            }
+
+            ol {
+                margin-left: 20px;
+            }
+        }
+    }
+}
+
+article {
+    &.post {
+        &:after {
+            content: '';
+            clear: both;
+            display: table;
+        }
+
+        .post-password-form {
+            label {
+                margin: 0;
+            }
+        }
+
+        .entry-content {
+            figure {
+                &:not(.gallery-item):not(.wp-block-image) {
+                    max-width: 100%;
+                }
+            }
+        }
+
+        &.sticky {
+            color: var(#{variables.$varPrefix}-white-color);
+            padding: 30px;
+            border-bottom: medium;
+            border-radius: 3px;
+
+            .entry-content {
+                a:not(.cosmoswp-btn) {
+                    color: var(#{variables.$varPrefix}-black-color);
+                }
+            }
+
+            .entry-title {
+                a {
+                    color: var(#{variables.$varPrefix}-white-color);
+                }
+            }
+
+            .entry-meta {
+
+                a,
+                span {
+                    color: var(#{variables.$varPrefix}-white-color);
+                }
+
+                span {
+                    &:not(:last-child) {
+                        &:before {
+                            background: currentColor;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.single-post {
+    article {
+        &.post {
+            margin-bottom: 0;
+            padding-bottom: 30px;
+            border-bottom: medium none;
+        }
+    }
+}
+
+.entry-meta {
+    margin-top: 5px;
+
+    span {
+        position: relative;
+        font-size: 14px;
+
+        &:not(:last-child) {
+            margin-right: 15px;
+            padding-right: 15px;
+
+            &:before {
+                content: "";
+                position: absolute;
+                right: 0;
+                top: 50%;
+                width: 1px;
+                height: 10px;
+                transform: translateY(-50%);
+                background: currentColor;
+            }
+        }
+    }
+
+    .tags-links,
+    .posted-on,
+    .author,
+    .cat-links,
+    .comments-link,
+    .edit-link {
+        display: inline-block;
+
+        i {
+            margin-right: 5px;
+        }
+    }
+}
+
+.entry-title {
+    -ms-word-wrap: break-word;
+    word-wrap: break-word;
+}
+
+.entry-content {
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        margin-top: 35px;
+        margin-bottom: 20px;
+    }
+
+    margin-top: 15px;
+
+    .btn,
+    .cosmoswp-btn {
+        display: table;
+        margin-top: 15px;
+
+        &:not(:last-child) {
+            margin-right: 15px;
+        }
+
+        &.cosmoswp-btn-inline {
+            display: inline-table;
+        }
+    }
+
+    +.entry-meta {
+        margin-top: 15px;
+    }
+
+    p,
+    address,
+    pre {
+        margin-bottom: 25px;
+    }
+
+    iframe {
+        width: 100%;
+    }
+}
+
+.post-thumbnail {
+    margin-bottom: 15px;
+    display: block;
+
+    img {
+        height: auto;
+    }
+
+    +.entry-title,
+    +.entry-meta {
+        margin-top: 15px;
+    }
+}
+
+.entry-content,
+.entry-meta,
+.entry-header,
+.entry-title {
+    +.post-thumbnail {
+        margin-top: 15px;
+    }
+}
+
+.entry-header {
+    margin-bottom: 10px;
+
+    +.post-thumbnail {
+        margin-top: 25px;
+    }
+}
+
+.cwp-blog-grid {
+    article {
+        &:not(.sticky) {
+            margin-bottom: 30px;
+            padding-bottom: 30px;
+            border-bottom: 1px dashed var(#{variables.$varPrefix}-gray-500);
+        }
+    }
+}
+
+.cwp-blog {
+    .entry-content {
+        p {
+            &:first-child {
+                margin-bottom: 0;
+            }
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+
+/* -----------------------
+	Paginations Menu
+----------------------- */
+
+.navigation {
+    .page-numbers {
+
+        margin: 0 3px;
+        border-radius: 3px;
+        display: inline-block;
+        text-align: center;
+        line-height: 32px;
+        padding: 3px 15px;
+        color: inherit;
+        transition: all 0.5s ease-in-out 0s;
+
+        &.current,
+        &:hover,
+        &:focus {
+            &:not(.dots) {
+                background: var(#{variables.$varPrefix}-gray-900);
+                border-color: var(#{variables.$varPrefix}-gray-900);
+                color: var(#{variables.$varPrefix}-white-color);
+            }
+        }
+    }
+
+    .nav-links {
+        display: flex;
+
+        .nav-next {
+            margin-left: auto;
+        }
+    }
+
+    &.posts-navigation {
+        margin: 0 auto;
+
+        .nav-links {
+            justify-content: space-between;
+
+            a {
+                display: block;
+            }
+        }
+    }
+
+    &.pagination {
+        margin: 0 auto;
+
+        .nav-links {
+            justify-content: center;
+        }
+
+        .page-numbers {
+            width: 40px;
+            height: 40px;
+            text-align: center;
+            line-height: 40px;
+            padding: 0;
+        }
+    }
+}
+
+.page-links {
+    .post-page-numbers {
+        padding: 2px 10px;
+        border: 1px solid;
+        margin: 0 3px;
+        transition: all 0.5s ease-in-out 0s;
+
+        &.current,
+        &:hover,
+        &:focus {
+            &:not(.dots) {
+                background: var(#{variables.$varPrefix}-gray-350);
+                border-color:var(#{variables.$varPrefix}-gray-350);
+            }
+        }
+    }
+}
+
+.single-post {
+    .navigation {
+        &.post-navigation {
+            border-top: 1px solid var(#{variables.$varPrefix}-gray-400);
+            border-bottom: 1px solid var(#{variables.$varPrefix}-gray-400);
+            padding-top: 20px;
+            padding-bottom: 20px;
+
+            .nav-links {
+                .title {
+                    display: block;
+                    line-height: normal;
+                    font-size: 14px;
+                }
+
+                .post-title {
+                    font-size: 20px;
+                    word-break: break-word;
+                }
+
+                .nav-previous {
+                    .title {
+                        i {
+                            margin-right: 8px;
+                        }
+                    }
+                }
+
+                .nav-next {
+                    text-align: right;
+
+                    .title {
+                        display: flex;
+                        justify-content: flex-end;
+                        align-items: center;
+
+                        i {
+                            order: 2;
+                            margin-left: 8px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.cwp-blog-pagination {
+    &.cwp-flex-align-left {
+        .nav-links {
+            justify-content: flex-start;
+        }
+
+        .cwp-ajax-show-more {
+            float: left;
+        }
+    }
+
+    &.cwp-flex-align-right {
+        .nav-links {
+            justify-content: flex-end;
+        }
+
+        .cwp-ajax-show-more {
+            float: right;
+        }
+    }
+
+    &.cwp-flex-align-center {
+        text-align: center;
+
+        .cwp-ajax-show-more {
+            margin: 0 auto;
+        }
+    }
+}
+
+
+/* -----------------------
+	Related Post
+----------------------- */
+
+#cosmoswp-related-posts {
+    .grid-row {
+
+        [class*="grid-"],
+        [class^="grid-"] {
+            margin-top: 15px;
+            margin-bottom: 15px;
+        }
+    }
+}

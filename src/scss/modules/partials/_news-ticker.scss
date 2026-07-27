@@ -1,0 +1,45 @@
+@use "../../base/mixins";
+
+/*----------------------------
+	News Ticker
+----------------------------*/
+.cwp-news-ticker {
+    display: flex;
+    align-items: center;
+
+    #webTicker {
+        display: none;
+    }
+
+    .cwp-new-ticker-text {
+        padding: 5px;
+        flex-basis: 20%;
+        text-align: center;
+        position: relative;
+        margin-right: 15px;
+
+        @include mixins.respond-above(sm) {
+            &:after {
+                position: absolute;
+                right: -8px;
+                top: 50%;
+                content: '';
+                @include mixins.triangle($direction: right, $size: 8px);
+                transform: translateY(-50%);
+            }
+        }
+    }
+
+    .tickercontainer {
+        flex-basis: 80%;
+
+        .mask {
+            padding-left: 25%;
+
+            li {
+                font-size: 13px;
+                font-weight: 400;
+            }
+        }
+    }
+}

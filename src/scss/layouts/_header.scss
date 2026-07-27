@@ -1,0 +1,527 @@
+@use "../base/mixins";
+
+/*------------------------
+	Header
+------------------------*/
+.cwp-dynamic-header {
+    .widget {
+        margin: 0;
+    }
+
+    &.cwp-header-sticky {
+        transition: all 0.5s ease-in-out 0s;
+    }
+
+    &.cwp-enable-overlay {
+        position: relative;
+        z-index: 1;
+
+        &:after {
+            position: absolute;
+            content: '';
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+    }
+
+
+    .cwp-top-header {
+        &.cwp-enable-overlay {
+            position: relative;
+            z-index: 1;
+
+            &:after {
+                position: absolute;
+                content: '';
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                z-index: -1;
+            }
+        }
+
+    }
+
+    .cwp-main-header {
+        &.cwp-enable-overlay {
+            position: relative;
+            z-index: 1;
+
+            &:after {
+                position: absolute;
+                content: '';
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                z-index: -1;
+            }
+        }
+
+    }
+
+    .cwp-bottom-header {
+        &.cwp-enable-overlay {
+            position: relative;
+            z-index: 1;
+
+            &:after {
+                position: absolute;
+                content: '';
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                z-index: -1;
+            }
+        }
+
+    }
+}
+
+.site {
+    &-tagline {
+        display: block;
+    }
+
+    .custom-logo-link {
+        font-size: 0;
+        line-height: 0;
+        display: block;
+    }
+}
+
+.header-wrapper {
+    .cwp-header-button {
+        .btn {
+            width: 100%;
+        }
+    }
+}
+
+.cwp-top-header,
+.cwp-main-header,
+.cwp-bottom-header {
+    position: relative;
+    transition: all 0.5s ease-in-out 0s;
+
+    .grid-row {
+        align-items: center;
+    }
+}
+
+.cwp-box-width {
+    padding-bottom: 10px;
+
+    .cwp-main-header {
+        @include mixins.respond-above(md) {
+            max-width: 1140px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+
+    &.cwp-scroll-up-sticky,
+    &.cwp-scroll-down-sticky {
+        padding-bottom: 0;
+
+        .cwp-main-header {
+            @include mixins.respond-above(md) {
+                max-width: 100%;
+            }
+        }
+
+        &.cwp-shrink-animation {
+            &.cwp-dynamic-header {
+                padding: 0;
+
+            }
+        }
+    }
+
+    &.cwp-header-sticky {
+        &.cwp-shrink-animation {
+            &.cwp-dynamic-header {
+                padding: 0;
+
+                .cwp-sticky-disable {
+                    +.cwp-main-header {
+                        padding: 0;
+                    }
+                }
+
+            }
+        }
+
+    }
+
+    &.cwp-fade-animation {
+        padding-bottom: 0;
+    }
+}
+
+.cwp-overlay-fixed {
+    .cwp-dynamic-header {
+        position: fixed;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        z-index: 101;
+    }
+}
+
+.cwp-overlay-transparent {
+    .cwp-dynamic-header {
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        z-index: 101;
+    }
+}
+
+.cwp-boxed-width-header {
+    .cwp-dynamic-header {
+        max-width: 1170px;
+        margin: 0 auto;
+
+    }
+}
+
+.cwp-fluid-width-header {
+    .cwp-dynamic-header {
+        margin: 0 auto;
+
+        .grid-container {
+            width: 100%;
+            max-width: 100%;
+        }
+
+    }
+}
+
+.cwp-vertical-header {
+
+    &:not(.home) {
+        &:not(.cwp-has-banner) {
+            &:not(.gutentor-active) {
+                .cwp-body-main-wrap {
+                    padding: 40px 0;
+                }
+            }
+
+        }
+    }
+
+    @include mixins.respond-above(md) {
+
+        .cwp-dynamic-header {
+            position: fixed;
+            height: 100%;
+            overflow: auto;
+            transition: all 0.5s ease-in-out 0s;
+            padding: 20px;
+
+            &.cwp-vertical-header-left {
+                left: 0;
+            }
+
+            &.cwp-vertical-header-right {
+                right: 0;
+            }
+
+            .grid-row {
+                flex-direction: column;
+            }
+
+            [class*="grid-"],
+            [class*="grid-"] {
+                max-width: 100%;
+                flex: 100%;
+                padding: 0;
+                margin: 0;
+            }
+
+            .navigation {
+                margin-top: 30px;
+
+                ul {
+                    flex-direction: column;
+
+                    li {
+                        &.menu-item-has-children {
+                            &.open {
+                                >.sub-menu {
+                                    position: static;
+
+                                    li {
+                                        a {
+                                            &:after {
+                                                transform: rotate(0deg);
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        a {
+                            padding-left: 0;
+                            padding-right: 0;
+                        }
+                    }
+                }
+
+            }
+
+            .cwp-contact-info-list {
+                flex-direction: column;
+            }
+        }
+
+
+        &.cwp-show-menu-sidebar {
+            .cwp-vertical-header-left {
+                left: inherit;
+            }
+
+            .cwp-left-push {
+                .cwp-vertical-body-content-left {
+                    .cwp-dynamic-header {
+                        &.cwp-vertical-header-left {
+
+                            transition: all 0.5s ease-in-out 0s;
+                        }
+                    }
+                }
+
+                .cwp-vertical-body-content-right {
+                    .cwp-dynamic-header {
+                        &.cwp-vertical-header-right {
+
+                            transition: all 0.5s ease-in-out 0s;
+                        }
+                    }
+                }
+            }
+
+            .cwp-right-push {
+                .cwp-vertical-body-content-left {
+                    .cwp-dynamic-header {
+                        &.cwp-vertical-header-left {
+
+                            transition: all 0.5s ease-in-out 0s;
+                        }
+                    }
+
+                }
+
+                .cwp-vertical-body-content-right {
+                    .cwp-dynamic-header {
+                        &.cwp-vertical-header-right {
+
+                            transition: all 0.5s ease-in-out 0s;
+                        }
+                    }
+
+                }
+            }
+        }
+
+        &.cwp-show-offcanvas-sidebar {
+            .cwp-offcanvas-left-push {
+                .cwp-vertical-body-content-left {
+                    .cwp-dynamic-header {
+                        &.cwp-vertical-header-left {
+
+                            transition: all 0.5s ease-in-out 0s;
+                        }
+                    }
+                }
+
+                .cwp-vertical-body-content-right {
+                    .cwp-dynamic-header {
+                        &.cwp-vertical-header-right {
+
+                            transition: all 0.5s ease-in-out 0s;
+                        }
+                    }
+                }
+            }
+
+            .cwp-offcanvas-right-push {
+                .cwp-vertical-body-content-left {
+                    .cwp-dynamic-header {
+                        &.cwp-vertical-header-left {
+
+                            transition: all 0.5s ease-in-out 0s;
+                        }
+                    }
+                }
+
+                .cwp-vertical-body-content-right {
+                    .cwp-dynamic-header {
+                        &.cwp-vertical-header-right {
+
+                            transition: all 0.5s ease-in-out 0s;
+                        }
+                    }
+                }
+            }
+        }
+
+        &:not(.home) {
+            &:not(.cwp-has-banner) {
+                &:not(.gutentor-active) {
+                    .cwp-body-main-wrap {
+                        padding: 60px 0;
+                    }
+                }
+
+            }
+        }
+    }
+
+}
+
+
+.cwp-header-sticky,
+.cwp-scroll-down-sticky,
+.cwp-scroll-up-sticky {
+    position: fixed;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    z-index: 101;
+
+
+    @include mixins.respond-above(md) {
+
+        .cwp-top-header,
+        .cwp-main-header,
+        .cwp-bottom-header {
+            &.cwp-sticky-disable {
+                display: none;
+            }
+        }
+
+        &.cwp-sticky-disable {
+            position: fixed !important;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+        }
+    }
+
+    &.cwp-sticky-disable {
+        position: static;
+    }
+}
+
+.cwp-header-sticky,
+.cwp-scroll-down-sticky,
+.cwp-scroll-up-sticky {
+    &.cwp-scrolldown-animation {
+        @include mixins.animation(0, 0.7s, animate-scroll-down, alternate, $fillmode: both);
+    }
+
+    &.cwp-fade-animation {
+        @include mixins.animation(0, 0.7s, cwp-fade-animation, alternate, $fillmode: both);
+    }
+
+    &.cwp-shrink-animation {
+
+        .cwp-top-header,
+        .cwp-main-header,
+        .cwp-bottom-header,
+        &.cwp-dynamic-header {
+            padding: 5px 0;
+            height: auto;
+            transition: all 0.5s ease-in-out 0s;
+
+            .cwp-logo {
+                .site-title {
+                    transition: all 0.5s ease-in-out 0s;
+                }
+
+                .site-description {
+                    transition: all 0.5s ease-in-out 0s;
+                }
+
+                .custom-logo {
+                    transition: transform 0.5s ease-in-out 0s;
+                    transform: scale(0.8);
+                    transform-origin: left;
+                }
+            }
+
+            .navigation {
+                ul {
+                    li {
+                        a {
+                            font-size: 13px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include mixins.keyframe (animate-scroll-down) {
+    0% {
+        transform: translateY(-100%);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@include mixins.keyframe (cwp-fade-animation) {
+    0% {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+
+    100% {
+        opacity: 0.9;
+        transform: translateY(0);
+    }
+}
+
+
+.admin-bar {
+
+    .cwp-header-sticky,
+    .cwp-scroll-down-sticky,
+    .cwp-scroll-up-sticky {
+        top: 0;
+
+        @include mixins.respond-above(md) {
+            top: 32px;
+        }
+    }
+
+    .cwp-header-sticky {
+        top: 46px;
+
+        @include mixins.respond-above(md) {
+            top: 32px;
+        }
+    }
+
+}
+
+
+.has-banner {
+    .cwp-header-sticky {
+        +.cwp-body-main-wrap {
+            padding-top: 0px;
+        }
+    }
+}

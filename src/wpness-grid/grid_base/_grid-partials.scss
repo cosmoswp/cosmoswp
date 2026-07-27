@@ -1,0 +1,62 @@
+@use "../grid_mixin/grid-framework";
+@use "../grid_mixin/grid-mixin";
+@use "variables";
+
+/*Grid*/
+// Grid Container widths
+
+@if variables.$enable-grid-classes {
+    .grid-container {
+        @include grid-mixin.make-container();
+        @include grid-mixin.make-container-max-widths();
+    }
+}
+
+// Grid Fluid container
+//
+// Utilizes the mixin meant for fixed width containers, but with 100% width for
+// fluid, full width layouts.
+
+@if variables.$enable-grid-classes {
+    .grid-container-fluid {
+        @include grid-mixin.make-container();
+    }
+}
+
+// Grid Row
+//
+// Grid Rows contain and clear the floats of your columns.
+
+@if variables.$enable-grid-classes {
+    .grid-row {
+        @include grid-mixin.make-row();
+
+        [class*=grid-],
+        [class^=grid-] {
+            box-sizing: border-box;
+        }
+    }
+
+    // Remove the negative margin from default .row, then the horizontal padding
+    // from all immediate children columns (to prevent runaway style inheritance).
+    .grid-no-gutters {
+        margin-right: 0;
+        margin-left: 0;
+
+        >.grid,
+        >[class*="grid-"] {
+            padding-right: 0;
+            padding-left: 0;
+        }
+    }
+}
+
+// Grid
+//
+// Common styles for small and large grid columns
+
+@if variables.$enable-grid-classes {
+    @include grid-framework.make-grid-columns();
+
+
+}

@@ -1,0 +1,62 @@
+@use '../base/variables';
+
+#{variables.$varClass} {
+    &-czr {
+        &-ctrl {
+            &--grp {
+                .at-rst-wrp {
+                    --at-gap: 0 10px;
+                }
+
+                #{variables.$varClass} {
+                    &-czr {
+                        &-ctrl {
+                            &--resp-swch-fld {
+                                .at-btn-rst-i {
+                                    --at-m: 10px 0 0 0;
+                                }
+                            }
+                        }
+                    }
+                }
+
+
+                &:not(#{variables.$varClass}-bg-ovl-show) {
+                    .background {
+                        &-overlay-color {
+                            display: none;
+                        }
+                    }
+                }
+
+                &#{variables.$varClass}-on-bdr-sty {
+                    .border {
+
+                        &-width,
+                        &-color {
+                            display: none;
+                        }
+                    }
+
+                }
+
+                &:not(#{variables.$varClass}-bg-img-opt-show) {
+                    .background {
+
+                        &-size,
+                        &-position,
+                        &-repeat,
+                        &-attachment,
+                        &-overlay-color {
+                            display: none;
+                        }
+                    }
+
+                    .enable-overlay {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}

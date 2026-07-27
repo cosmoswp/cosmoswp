@@ -1,0 +1,67 @@
+@use "../../base/mixins";
+
+/*-----------------------
+    Popup
+ -----------------------*/
+.open-popup {
+    overflow: hidden;
+}
+
+.cwp-popup {
+    display: none;
+    position: fixed;
+    z-index: 999999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+    color: initial;
+
+    &-content {
+        margin: 0 auto;
+        transform: translateY(-50%);
+        position: relative;
+        top: 50%;
+
+    }
+
+    &-header {
+
+        position: relative;
+
+        .cwp-close {
+            position: absolute;
+            top: -20px;
+            right: -20px;
+        }
+
+        .cwp-close {
+            cursor: pointer;
+        }
+
+    }
+
+    &-body {
+        padding: 20px;
+        max-height: 90vh;
+        overflow: auto;
+        overflow-x: hidden;
+    }
+
+    &-footer {
+        padding: 20px;
+    }
+
+}
+
+
+
+/* The Close Button */
+
+.close:hover,
+.close:focus {
+    text-decoration: none;
+    cursor: pointer;
+}

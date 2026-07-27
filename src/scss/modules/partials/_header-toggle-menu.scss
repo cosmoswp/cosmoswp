@@ -1,0 +1,67 @@
+@use "../../base/mixins";
+
+/*----------------------------
+	Menu Toggle Dropdown
+----------------------------*/
+
+.cwp-toggle-dropdown-btn {
+    display: flex;
+
+    .cwp-toggle-btn-icon {
+        .cwp-close-icon {
+            display: none;
+        }
+    }
+}
+
+.cwp-header-menu-toggle-dropdown {
+    margin: 0 auto;
+    display: none;
+    width: 100%;
+    position: absolute;
+    top: 100%;
+    z-index: 999;
+    left: 0;
+    right: 0;
+
+    .cwp-horizontal-menu {
+        li {
+            display: block !important;
+        }
+
+        @include mixins.respond-above(md) {
+            li {
+                display: inline-block;
+            }
+        }
+    }
+
+    .cwp-vertical-menu {
+        ul {
+            flex-direction: column;
+        }
+
+        &.cwp-submenu-onclick {
+            .sub-menu {
+                position: static !important;
+                width: 100% !important;
+            }
+        }
+
+        &.cwp-flex-align {
+            &-center {
+                ul {
+                    align-items: center;
+                }
+            }
+
+            &-right {
+                ul {
+                    align-items: flex-end;
+                }
+            }
+        }
+
+    }
+
+}

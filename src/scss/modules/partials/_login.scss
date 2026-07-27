@@ -1,0 +1,71 @@
+@use "../../base/mixins";
+@use "../../base/variables";
+
+/*----------------------------
+	Login / Register
+----------------------------*/
+.login {
+    position: relative;
+
+    .form {
+
+        &-wrapper {
+            position: absolute;
+            right: 0;
+            top: 100%;
+            width: 300px;
+            background:var(#{variables.$varPrefix}-white-color);
+
+            box-shadow: 0 3px 30px rgba(0, 0, 0, 0.1);
+            z-index: 2;
+            margin-top: 20px;
+            @include mixins.fade(hide);
+
+            &.show-form {
+                @include mixins.fade(show);
+            }
+
+            &:before {
+                border-top: 1px solid var(#{variables.$varPrefix}-gray-350);
+                border-left: 1px solid var(#{variables.$varPrefix}-gray-350);
+                background: var(#{variables.$varPrefix}-white-color);
+                content: "";
+                display: block;
+                position: absolute;
+                top: -5px;
+                right: 15px;
+                width: 10px;
+                height: 10px;
+                transform: rotate(45deg);
+                z-index: 2;
+            }
+        }
+
+        &-body {
+            padding: 30px;
+        }
+
+        &-title {
+            margin-bottom: 20px;
+        }
+
+        &-group {
+            margin-bottom: 15px;
+        }
+
+        &-label {
+            font-weight: 400;
+        }
+
+        &-footer {
+            background: var(#{variables.$varPrefix}-gray-350);
+            padding: 15px;
+        }
+
+        &-submitBtn {
+            font-size: 16px;
+        }
+    }
+
+
+}

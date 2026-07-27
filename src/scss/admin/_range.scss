@@ -1,0 +1,30 @@
+@use "../base/variables";
+
+/* Range Styles */
+#{variables.$varClass} {
+
+    &-czr {
+        &-ctrl {
+            &--range {
+                --at-m: 15px 0 0 0;
+
+                .at {
+                    &-rst {
+                        &-wrp {
+                            &.at {
+                                &-range {
+                                    &-rst {
+                                        .at-btn-rst-i {
+                                            --at-m: 10px 0 0 0;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+}

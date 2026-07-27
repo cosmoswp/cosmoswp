@@ -1,0 +1,43 @@
+@use "../../base/mixins";
+
+/*----------------------------
+	Header Button
+----------------------------*/
+.cwp-header-button {
+    display: flex;
+
+    .btn {
+        display: block;
+        transition: all 0.5s ease-in-out 0s;
+
+        i {
+            color: currentColor;
+        }
+    }
+
+    +.search {
+        margin-left: 10px;
+    }
+
+    .search+& {
+        margin-left: 10px;
+    }
+
+    &.cwp-icon-after {
+        .btn {
+            i {
+                margin-left: 10px;
+                margin-right: 0;
+            }
+        }
+    }
+
+    &.cwp-icon-before {
+        .btn {
+            i {
+                margin-right: 10px;
+                margin-left: 0;
+            }
+        }
+    }
+}

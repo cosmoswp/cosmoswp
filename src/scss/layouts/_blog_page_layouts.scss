@@ -1,0 +1,13 @@
+@use "../base/mixins";
+
+/*------------------------
+	Blog Page Layouts
+------------------------*/
+.cwp-middle-ct{
+	.grid-container{
+		@include mixins.respond-above(md) {
+			// max-width: 1000px;
+		}
+	}
+}
+

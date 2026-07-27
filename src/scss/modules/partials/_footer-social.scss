@@ -1,0 +1,47 @@
+@use "../../base/mixins";
+
+/*------------------------
+	Footer Social Links
+------------------------*/
+.cwp-footer-social-links,
+.cwp-sticky-footer-social-links {
+    display: flex;
+
+
+
+    ul {
+        list-style-type: none;
+
+        li {
+            display: inline-block;
+
+            &:first-child {
+                margin-left: 0;
+            }
+
+            &:last-child {
+                margin-right: 0;
+            }
+
+            a {
+                display: block;
+                text-align: center;
+                transition: all 0.5s ease-in-out 0s;
+            }
+        }
+    }
+
+
+}
+
+.cwp-bottom-footer {
+    .cwp-footer-social-links {
+        margin-top: 10px;
+    }
+
+    @include mixins.respond-above(sm) {
+        .cwp-footer-social-links {
+            margin-top: 0;
+        }
+    }
+}
