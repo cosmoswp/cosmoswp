@@ -41,6 +41,10 @@ jobs:
           php --version | head -1
           wp --info
 
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
       - name: Build theme
         run: |
           if [ -f package.json ]; then
