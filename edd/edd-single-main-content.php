@@ -80,15 +80,21 @@ while ( have_posts() ) :
 											<?php echo esc_html( get_the_author() ); ?>
 										</span>
 									</li>
+									<?php
+									/*get_userdata() returns false when the author no longer exists; skip the row rather than warning.*/
+									$author_data     = get_userdata( $author_id );
+									$registered_date = $author_data ? $author_data->user_registered : '';
+									?>
+									<?php if ( $registered_date ) : ?>
 									<li class="download-author-signupdate">
 										<span class="download-author-name">
 											<?php esc_html_e( 'Author since:', 'cosmoswp' ); ?>
 										</span>
-										<?php $registered_date = get_userdata( $author_id )->user_registered; ?>
 										<span class="download-author-value">
 											<?php echo esc_html( wp_date( 'M d, Y', strtotime( $registered_date ) ) ); ?>
 										</span>
 									</li>
+									<?php endif; ?>
 								</ul>
 							</div>
 						</div>
@@ -194,15 +200,21 @@ while ( have_posts() ) :
 												<?php echo esc_html( get_the_author() ); ?>
 											</span>
 										</li>
+										<?php
+										/*get_userdata() returns false when the author no longer exists; skip the row rather than warning.*/
+										$author_data     = get_userdata( $author_id );
+										$registered_date = $author_data ? $author_data->user_registered : '';
+										?>
+										<?php if ( $registered_date ) : ?>
 										<li class="download-author-signupdate">
 											<span class="download-author-name">
 												<?php esc_html_e( 'Author since:', 'cosmoswp' ); ?>
 											</span>
-											<?php $registered_date = get_userdata( $author_id )->user_registered; ?>
 											<span class="download-author-value">
 												<?php echo esc_html( wp_date( 'M d, Y', strtotime( $registered_date ) ) ); ?>
 											</span>
 										</li>
+										<?php endif; ?>
 									</ul>
 								</div>
 							</div>

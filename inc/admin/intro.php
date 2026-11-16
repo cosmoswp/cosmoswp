@@ -74,8 +74,8 @@ class CosmosWP_Intro {
 		}
 		wp_enqueue_style( 'wpness-grid', COSMOSWP_URL . '/build/wpness-grid/wpness-grid.css', array(), '1.0.0' );
 
-		wp_enqueue_style( 'cosmoswp-notice', COSMOSWP_URL . '/build/admin/notice/index.css', array(), '1.0.0' );
-		wp_enqueue_script( 'cosmoswp-adi-install', COSMOSWP_URL . '/build/admin/notice/index.js', array( 'jquery' ), '1.0.0', true );
+		wp_enqueue_style( 'cosmoswp-notice', COSMOSWP_URL . '/build/admin/notice/index.css', array(), COSMOSWP_VERSION );
+		wp_enqueue_script( 'cosmoswp-adi-install', COSMOSWP_URL . '/build/admin/notice/index.js', array( 'jquery' ), COSMOSWP_VERSION, true );
 
 		$translation = array(
 			'btn_text' => esc_html__( 'Processing...', 'cosmoswp' ),

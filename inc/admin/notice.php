@@ -85,8 +85,8 @@ class CosmosWP_Theme_Notice {
 		/*Check for notice nag*/
 		$notice_nag = get_option( 'cosmoswp_admin_notice_' . cosmoswp_theme_notice()->notice_type );
 		if ( ! $notice_nag ) {
-			wp_enqueue_style( 'cosmoswp-notice', COSMOSWP_URL . '/build/admin/notice/index.css', array(), '1.0.0' );
-			wp_enqueue_script( 'cosmoswp-adi-install', COSMOSWP_URL . '/build/admin/notice/index.js', array( 'jquery' ), '1.0.0', true );
+			wp_enqueue_style( 'cosmoswp-notice', COSMOSWP_URL . '/build/admin/notice/index.css', array(), COSMOSWP_VERSION );
+			wp_enqueue_script( 'cosmoswp-adi-install', COSMOSWP_URL . '/build/admin/notice/index.js', array( 'jquery' ), COSMOSWP_VERSION, true );
 
 			$translation = array(
 				'btn_text' => esc_html__( 'Processing...', 'cosmoswp' ),
@@ -336,6 +336,10 @@ class CosmosWP_Theme_Notice {
 		if ( ( get_option( 'cosmoswp_theme_installed_time' ) > strtotime( '-15 day' ) ) || ( $ignored_notice_partially > strtotime( '-15 day' ) ) || ( $ignored_notice ) ) {
 			return;
 		}
+
+		/*get_userdata() returns false for a deleted user; guard before reading a property.*/
+		$notice_user  = get_userdata( $user_id );
+		$display_name = ( $notice_user && $notice_user->exists() ) ? $notice_user->display_name : '';
 		?>
 		<div class="notice updated cosmoswp-review-notice">
 			<p>
@@ -346,7 +350,7 @@ class CosmosWP_Theme_Notice {
 						'Howdy, %1$s! It seems that you have been using this theme for more than 15 days. We hope you are happy with everything that the theme has to offer. If you can spare a minute, please help us by leaving a 5-star review on WordPress.org.  By spreading the love, we can continue to develop new amazing features in the future, for free!',
 						'cosmoswp'
 					),
-					'<strong>' . esc_html( get_userdata( $user_id )->display_name ) . '</strong>'
+					'<strong>' . esc_html( $display_name ) . '</strong>'
 				);
 				?>
 			</p>
